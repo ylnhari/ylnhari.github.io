@@ -3,13 +3,11 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Hari Yelesetty · AI/ML Engineer · MLOps · Data Scientist</title>
-<meta name="description" content="Hari Laxmi Narasimha Yelesetty — AI/ML Engineer & MLOps Specialist driving AI innovation at Best Buy. From mainframes to machine learning, across Google Cloud and Azure." />
+<title>Hari Yelesetty · Production LLM/ML Systems Engineer</title>
+<meta name="description" content="Hari Laxmi Narasimha Yelesetty — Lead AI Engineer @ Best Buy India. I build the layer between 'the model works in a notebook' and 'the model serves real traffic.' LLM fine-tuning (LoRA/QLoRA, vLLM, multi-GPU), real-time ML at 40k events/sec, GPU-accelerated ML on 8×A100 DGX." />
 <meta name="author" content="Hari Laxmi Narasimha Yelesetty" />
-
-<!-- Open Graph -->
-<meta property="og:title" content="Hari Yelesetty · AI/ML Engineer & MLOps Specialist" />
-<meta property="og:description" content="Driving AI innovation at Best Buy. Generative AI, LLMs, forecasting & production MLOps across GCP and Azure." />
+<meta property="og:title" content="Hari Yelesetty · Production LLM/ML Systems Engineer" />
+<meta property="og:description" content="Lead AI Engineer @ Best Buy India. LLM fine-tuning & serving, real-time fraud detection at 40k events/sec, GPU-accelerated ML on 8×A100 DGX. 10 years — from mainframes to frontier-scale AI." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://ylnhari.github.io" />
 
@@ -19,36 +17,22 @@
 
 <style>
 :root{
-  --bg:#06070d;
-  --bg-soft:#0c0e1a;
-  --card:rgba(255,255,255,.035);
-  --card-brd:rgba(255,255,255,.09);
-  --txt:#e9ecf5;
-  --muted:#9aa3bf;
-  --faint:#646c89;
-  --acc:#6ea8ff;
-  --acc2:#a78bfa;
-  --acc3:#22d3ee;
+  --bg:#06070d;--bg-soft:#0c0e1a;
+  --card:rgba(255,255,255,.035);--card-brd:rgba(255,255,255,.09);
+  --txt:#e9ecf5;--muted:#9aa3bf;--faint:#646c89;
+  --acc:#6ea8ff;--acc2:#a78bfa;--acc3:#22d3ee;
   --grad:linear-gradient(120deg,#6ea8ff 0%,#a78bfa 45%,#22d3ee 100%);
   --shadow:0 24px 60px -22px rgba(0,0,0,.7);
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{
-  background:var(--bg);
-  color:var(--txt);
-  font-family:'Inter',system-ui,sans-serif;
-  line-height:1.6;
-  overflow-x:hidden;
-  -webkit-font-smoothing:antialiased;
-}
+body{background:var(--bg);color:var(--txt);font-family:'Inter',system-ui,sans-serif;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 h1,h2,h3,.brand{font-family:'Sora',sans-serif}
 a{color:inherit;text-decoration:none}
 .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
 .mono{font-family:'JetBrains Mono',monospace}
 .grad-txt{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 
-/* ---------- animated backdrop ---------- */
 .bg-orbs{position:fixed;inset:0;z-index:-2;overflow:hidden}
 .orb{position:absolute;border-radius:50%;filter:blur(90px);opacity:.45;animation:float 22s ease-in-out infinite}
 .orb.a{width:520px;height:520px;background:#3b5bdb;top:-160px;left:-120px}
@@ -59,12 +43,9 @@ a{color:inherit;text-decoration:none}
   background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
   background-size:46px 46px;
   mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,#000 30%,transparent 80%);
-  -webkit-mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,#000 30%,transparent 80%);
-}
+  -webkit-mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,#000 30%,transparent 80%);}
 
-/* ---------- nav ---------- */
-nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);
-  background:rgba(6,7,13,.6);border-bottom:1px solid rgba(255,255,255,.06)}
+nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:rgba(6,7,13,.6);border-bottom:1px solid rgba(255,255,255,.06)}
 nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
 .brand{font-weight:800;font-size:18px;letter-spacing:.3px}
 .brand span{color:var(--acc2)}
@@ -72,24 +53,21 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .nav-links a{color:var(--muted);font-size:14px;font-weight:500;transition:color .2s}
 .nav-links a:hover{color:var(--txt)}
 .nav-cta{padding:8px 16px;border-radius:10px;background:var(--grad);color:#06070d!important;font-weight:600}
-@media(max-width:760px){.nav-links a:not(.nav-cta){display:none}}
+@media(max-width:820px){.nav-links a:not(.nav-cta){display:none}}
 
-/* ---------- hero ---------- */
-header{padding:84px 0 64px;position:relative}
-.pill{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border:1px solid var(--card-brd);
-  border-radius:999px;background:var(--card);font-size:13px;color:var(--muted);margin-bottom:26px}
-.dot{width:8px;height:8px;border-radius:50%;background:#3ddc84;box-shadow:0 0 0 0 rgba(61,220,132,.6);animation:pulse 2s infinite}
+header{padding:84px 0 60px;position:relative}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border:1px solid var(--card-brd);border-radius:999px;background:var(--card);font-size:13px;color:var(--muted);margin-bottom:26px}
+.dot{width:8px;height:8px;border-radius:50%;background:#3ddc84;animation:pulse 2s infinite}
 @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(61,220,132,.55)}70%{box-shadow:0 0 0 10px rgba(61,220,132,0)}100%{box-shadow:0 0 0 0 rgba(61,220,132,0)}}
-h1.title{font-size:clamp(40px,7vw,76px);font-weight:800;line-height:1.02;letter-spacing:-1.5px;margin-bottom:18px}
-.role-line{font-size:clamp(18px,2.6vw,26px);font-weight:600;color:var(--muted);min-height:1.4em;margin-bottom:22px}
+h1.title{font-size:clamp(38px,6.4vw,72px);font-weight:800;line-height:1.03;letter-spacing:-1.5px;margin-bottom:18px}
+.role-line{font-size:clamp(17px,2.5vw,25px);font-weight:600;color:var(--muted);min-height:1.4em;margin-bottom:22px}
 .role-line .rot{color:var(--acc);font-family:'JetBrains Mono',monospace}
 .cursor{display:inline-block;width:2px;height:1.05em;background:var(--acc2);margin-left:2px;vertical-align:-3px;animation:blink 1s steps(1) infinite}
 @keyframes blink{50%{opacity:0}}
-.lede{max-width:680px;font-size:18px;color:var(--muted);margin-bottom:34px}
+.lede{max-width:700px;font-size:17.5px;color:var(--muted);margin-bottom:32px}
 .lede b{color:var(--txt);font-weight:600}
-.cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:46px}
-.btn{display:inline-flex;align-items:center;gap:9px;padding:13px 22px;border-radius:13px;font-weight:600;font-size:15px;
-  border:1px solid var(--card-brd);transition:transform .18s,box-shadow .18s,border-color .2s}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:44px}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:13px 22px;border-radius:13px;font-weight:600;font-size:15px;border:1px solid var(--card-brd);transition:transform .18s,box-shadow .18s,border-color .2s}
 .btn:hover{transform:translateY(-3px)}
 .btn.primary{background:var(--grad);color:#06070d;box-shadow:0 14px 34px -12px rgba(110,168,255,.6)}
 .btn.primary:hover{box-shadow:0 20px 40px -10px rgba(167,139,250,.7)}
@@ -98,17 +76,24 @@ h1.title{font-size:clamp(40px,7vw,76px);font-weight:800;line-height:1.02;letter-
 
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .stat{padding:20px;border:1px solid var(--card-brd);border-radius:16px;background:var(--card)}
-.stat .n{font-family:'Sora';font-weight:800;font-size:30px;line-height:1}
-.stat .l{font-size:13px;color:var(--faint);margin-top:7px}
+.stat .n{font-family:'Sora';font-weight:800;font-size:28px;line-height:1}
+.stat .l{font-size:12.5px;color:var(--faint);margin-top:7px}
 @media(max-width:680px){.stats{grid-template-columns:repeat(2,1fr)}}
 
-/* ---------- sections ---------- */
-section{padding:74px 0;position:relative}
+section{padding:72px 0;position:relative}
 .eyebrow{font-family:'JetBrains Mono';font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--acc2);margin-bottom:12px}
 .h2{font-size:clamp(28px,4vw,42px);font-weight:800;letter-spacing:-1px;margin-bottom:16px}
-.sub{color:var(--muted);max-width:640px;margin-bottom:42px;font-size:17px}
+.sub{color:var(--muted);max-width:660px;margin-bottom:42px;font-size:17px}
 
-/* about / journey */
+/* impact */
+.impact{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:820px){.impact{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.impact{grid-template-columns:1fr}}
+.metric{padding:26px;border:1px solid var(--card-brd);border-radius:18px;background:var(--card);transition:.25s;position:relative;overflow:hidden}
+.metric:hover{transform:translateY(-5px);border-color:rgba(34,211,238,.45)}
+.metric .big{font-family:'Sora';font-weight:800;font-size:34px;line-height:1;margin-bottom:10px}
+.metric .d{font-size:14.5px;color:var(--muted)}
+
 .journey{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:start}
 @media(max-width:820px){.journey{grid-template-columns:1fr}}
 .about-card{padding:30px;border:1px solid var(--card-brd);border-radius:20px;background:var(--card);box-shadow:var(--shadow)}
@@ -119,14 +104,12 @@ section{padding:74px 0;position:relative}
 .timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--acc),var(--acc2),transparent)}
 .tl-item{position:relative;margin-bottom:26px}
 .tl-item:last-child{margin-bottom:0}
-.tl-item::before{content:"";position:absolute;left:-28px;top:5px;width:16px;height:16px;border-radius:50%;
-  background:var(--bg);border:3px solid var(--acc2)}
+.tl-item::before{content:"";position:absolute;left:-28px;top:5px;width:16px;height:16px;border-radius:50%;background:var(--bg);border:3px solid var(--acc2)}
 .tl-item.now::before{border-color:#3ddc84;box-shadow:0 0 0 4px rgba(61,220,132,.18)}
 .tl-when{font-family:'JetBrains Mono';font-size:12px;color:var(--acc)}
 .tl-what{font-weight:600;font-size:17px;margin:3px 0 2px}
 .tl-desc{font-size:14px;color:var(--faint)}
 
-/* skills */
 .skill-groups{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
 @media(max-width:820px){.skill-groups{grid-template-columns:1fr}}
 .sgroup{padding:24px;border:1px solid var(--card-brd);border-radius:18px;background:var(--card);transition:border-color .25s,transform .25s}
@@ -134,16 +117,14 @@ section{padding:74px 0;position:relative}
 .sgroup h3{font-size:15px;display:flex;align-items:center;gap:9px;margin-bottom:16px}
 .sgroup h3 .ic{font-size:18px}
 .tags{display:flex;flex-wrap:wrap;gap:8px}
-.tag{font-family:'JetBrains Mono';font-size:12.5px;padding:6px 11px;border-radius:9px;
-  background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.07);color:var(--muted);transition:.2s}
+.tag{font-family:'JetBrains Mono';font-size:12.5px;padding:6px 11px;border-radius:9px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.07);color:var(--muted);transition:.2s}
 .tag:hover{color:var(--txt);border-color:var(--acc);background:rgba(110,168,255,.1)}
+.tag.star{color:var(--acc3);border-color:rgba(34,211,238,.3)}
 
-/* projects */
 .proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 @media(max-width:920px){.proj-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:600px){.proj-grid{grid-template-columns:1fr}}
-.proj{display:flex;flex-direction:column;padding:24px;border:1px solid var(--card-brd);border-radius:18px;
-  background:var(--card);position:relative;overflow:hidden;transition:transform .25s,border-color .25s}
+.proj{display:flex;flex-direction:column;padding:24px;border:1px solid var(--card-brd);border-radius:18px;background:var(--card);position:relative;overflow:hidden;transition:transform .25s,border-color .25s}
 .proj::after{content:"";position:absolute;inset:0;background:var(--grad);opacity:0;transition:opacity .3s;z-index:0;mix-blend-mode:overlay}
 .proj:hover{transform:translateY(-6px);border-color:rgba(110,168,255,.45)}
 .proj:hover::after{opacity:.07}
@@ -154,8 +135,8 @@ section{padding:74px 0;position:relative}
 .proj p{font-size:14px;color:var(--muted);flex-grow:1;margin-bottom:16px}
 .proj .arrow{font-size:13px;color:var(--acc);font-weight:600}
 .proj-cta{text-align:center;margin-top:34px}
+.badge-soon{font-family:'JetBrains Mono';font-size:10.5px;padding:3px 8px;border-radius:6px;border:1px solid rgba(167,139,250,.4);color:var(--acc2);background:rgba(167,139,250,.08)}
 
-/* writing */
 .write-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
 @media(max-width:680px){.write-grid{grid-template-columns:1fr}}
 .write{padding:30px;border:1px solid var(--card-brd);border-radius:18px;background:var(--card);transition:.25s}
@@ -164,21 +145,17 @@ section{padding:74px 0;position:relative}
 .write h3{font-size:20px;margin-bottom:8px}
 .write p{color:var(--muted);font-size:15px}
 
-/* contact */
-.contact-card{text-align:center;padding:60px 30px;border:1px solid var(--card-brd);border-radius:26px;
-  background:radial-gradient(120% 130% at 50% 0%,rgba(110,168,255,.12),transparent 60%),var(--card);box-shadow:var(--shadow)}
+.contact-card{text-align:center;padding:60px 30px;border:1px solid var(--card-brd);border-radius:26px;background:radial-gradient(120% 130% at 50% 0%,rgba(110,168,255,.12),transparent 60%),var(--card);box-shadow:var(--shadow)}
 .contact-card h2{font-size:clamp(30px,5vw,48px);font-weight:800;letter-spacing:-1px;margin-bottom:14px}
-.contact-card p{color:var(--muted);max-width:520px;margin:0 auto 30px;font-size:17px}
+.contact-card p{color:var(--muted);max-width:540px;margin:0 auto 30px;font-size:17px}
 .socials{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-.soc{width:50px;height:50px;display:grid;place-items:center;border-radius:14px;border:1px solid var(--card-brd);
-  background:var(--card);transition:.22s;color:var(--muted)}
+.soc{width:50px;height:50px;display:grid;place-items:center;border-radius:14px;border:1px solid var(--card-brd);background:var(--card);transition:.22s;color:var(--muted)}
 .soc:hover{transform:translateY(-5px);color:#fff;border-color:var(--acc)}
 .soc svg{width:22px;height:22px;fill:currentColor}
 
 footer{padding:40px 0;text-align:center;color:var(--faint);font-size:14px;border-top:1px solid rgba(255,255,255,.06)}
 footer .brand{font-size:15px;color:var(--muted)}
 
-/* reveal */
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
 .reveal.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}.orb{animation:none}}
@@ -193,9 +170,10 @@ footer .brand{font-size:15px;color:var(--muted)}
   <div class="wrap">
     <a class="brand" href="#top">HARI<span>.</span>Y</a>
     <div class="nav-links">
+      <a href="#impact">Impact</a>
       <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
+      <a href="#skills">Stack</a>
+      <a href="#projects">Work</a>
       <a href="#writing">Writing</a>
       <a class="nav-cta" href="https://www.linkedin.com/in/hari-laxmi-narasimha-yelesetty-1a891b156/" target="_blank" rel="noopener">Hire me</a>
     </div>
@@ -204,56 +182,72 @@ footer .brand{font-size:15px;color:var(--muted)}
 
 <header id="top">
   <div class="wrap">
-    <div class="pill reveal"><span class="dot"></span> Available for AI/ML collaboration &amp; opportunities</div>
-    <h1 class="title reveal">Hi, I'm <span class="grad-txt">Hari</span>.<br/>I turn data into <span class="grad-txt">decisions</span>.</h1>
-    <div class="role-line reveal">I build <span class="rot" id="rot">production AI systems</span><span class="cursor"></span></div>
-    <p class="lede reveal">AI/ML Engineer, Data Scientist &amp; <b>MLOps Specialist</b> currently <b>driving AI innovation at Best Buy</b>. I take models from notebook to production — <b>Generative AI, LLMs, forecasting and large-scale optimization</b> — across <b>Google Cloud</b> and <b>Azure</b>. My path runs from enterprise mainframes to modern machine learning, and I bring that full-stack-of-the-data-world perspective to everything I ship.</p>
+    <div class="pill reveal"><span class="dot"></span> Lead AI Engineer @ Best Buy India · open to frontier-AI roles &amp; collaboration</div>
+    <h1 class="title reveal">I build the layer between<br/><span class="grad-txt">"it works in a notebook"</span><br/>and <span class="grad-txt">"it serves real traffic."</span></h1>
+    <div class="role-line reveal">Production engineer for <span class="rot" id="rot">LLM fine-tuning</span><span class="cursor"></span></div>
+    <p class="lede reveal">I'm <b>Hari</b> — a production <b>LLM/ML systems engineer</b> with <b>10 years</b> shipping models at scale. Today I lead AI engineering at <b>Best Buy India</b>: <b>LLM fine-tuning</b> (LoRA/QLoRA via Unsloth/PEFT, multi-GPU) and <b>serving</b> (vLLM, GKE, hot-swappable adapters), plus <b>real-time fraud detection at 40k events/sec</b>. Before that, GPU-accelerated cybersecurity ML on <b>8×A100 DGX</b> with NVIDIA Morpheus, supply-chain optimization, and computer vision for semiconductor QA. My roots run all the way back to enterprise mainframes — so I know how real systems stay up.</p>
     <div class="cta-row reveal">
       <a class="btn primary" href="https://www.linkedin.com/in/hari-laxmi-narasimha-yelesetty-1a891b156/" target="_blank" rel="noopener">Let's work together →</a>
       <a class="btn ghost" href="#projects">View my work</a>
       <a class="btn ghost" href="mailto:ylnharimailme@gmail.com">Email me</a>
     </div>
     <div class="stats reveal">
-      <div class="stat"><div class="n grad-txt">8+</div><div class="l">Years across data &amp; ML</div></div>
-      <div class="stat"><div class="n grad-txt">2</div><div class="l">Clouds — GCP &amp; Azure</div></div>
-      <div class="stat"><div class="n grad-txt">End→End</div><div class="l">Data ➜ Model ➜ MLOps</div></div>
-      <div class="stat"><div class="n grad-txt">∞</div><div class="l">Never-ending learner</div></div>
+      <div class="stat"><div class="n grad-txt">10 yrs</div><div class="l">Production ML &amp; data</div></div>
+      <div class="stat"><div class="n grad-txt">40K/s</div><div class="l">Real-time ML events</div></div>
+      <div class="stat"><div class="n grad-txt">8×A100</div><div class="l">DGX multi-GPU training</div></div>
+      <div class="stat"><div class="n grad-txt">LoRA→vLLM</div><div class="l">Fine-tune ➜ serve in prod</div></div>
     </div>
   </div>
 </header>
 
+<section id="impact">
+  <div class="wrap">
+    <div class="eyebrow reveal">// impact</div>
+    <h2 class="h2 reveal">Proof, not adjectives</h2>
+    <p class="sub reveal">Selected outcomes from production work. Numbers reflect real systems I've built, trained, and shipped.</p>
+    <div class="impact">
+      <div class="metric reveal"><div class="big grad-txt">40k/sec</div><div class="d">Real-time fraud detection throughput in production.</div></div>
+      <div class="metric reveal"><div class="big grad-txt">8×A100</div><div class="d">GPU-accelerated cybersecurity ML on DGX with NVIDIA Morpheus.</div></div>
+      <div class="metric reveal"><div class="big grad-txt">LoRA → vLLM</div><div class="d">LLM fine-tuning to serving with hot-swappable adapters on GKE.</div></div>
+      <div class="metric reveal"><div class="big grad-txt">130→160</div><div class="d">Trucks/day unlocked via supply-chain route optimization.</div></div>
+      <div class="metric reveal"><div class="big grad-txt">2,400/sec</div><div class="d">Email/document throughput — 2× the previous pipeline.</div></div>
+      <div class="metric reveal"><div class="big grad-txt">Billion-row</div><div class="d">Datasets engineered &amp; modeled on GPU (RAPIDS cuDF / CuPy).</div></div>
+    </div>
+  </div>
+</section>
+
 <section id="about">
   <div class="wrap">
     <div class="eyebrow reveal">// about</div>
-    <h2 class="h2 reveal">From mainframes to machine learning</h2>
-    <p class="sub reveal">A rare engineer who has worked both ends of the enterprise stack — the COBOL/Db2 systems that run businesses, and the AI systems that reinvent them.</p>
+    <h2 class="h2 reveal">From mainframes to frontier-scale AI</h2>
+    <p class="sub reveal">A rare engineer who has worked both ends of the stack — the COBOL/Db2 systems that quietly run enterprises, and the LLM systems reinventing them.</p>
     <div class="journey">
       <div class="about-card reveal">
-        <p>I started where the world's most critical business logic still lives — <b>mainframes, COBOL, JCL and Db2</b> — learning how real enterprises actually keep the lights on at scale.</p>
-        <p>That foundation became my edge. I moved into <b>data science and machine learning</b>, and then into the discipline that makes ML actually <i>matter</i>: <b>MLOps</b> — reproducible pipelines, automated training, monitoring and clean deployment.</p>
-        <p>Today I'm <b>driving AI innovation at Best Buy</b>, working across <b>Generative AI, LLMs, time-series forecasting, recommendation systems and optimization</b>. I care about systems that survive contact with production: observable, retrainable, and trusted by the people who depend on them.</p>
-        <p>Off the clock, I'm a relentless <b>builder and learner</b> — shipping local-first AI tools, writing about what I learn, and grinding algorithms for fun.</p>
+        <p>I'm a <b>production LLM/ML systems engineer</b>. My focus is the unglamorous, decisive part: taking a model from <i>"works in a notebook"</i> to <i>"serves real traffic"</i> — reliably, observably, and at scale.</p>
+        <p>I started on <b>enterprise mainframes</b> — COBOL, JCL, Db2 — where reliability isn't optional. That foundation became my edge: I moved through <b>data science</b>, <b>GPU-accelerated ML</b> (8×A100 DGX, NVIDIA Morpheus), and into <b>LLM engineering</b> — fine-tuning with LoRA/QLoRA via Unsloth/PEFT and serving with vLLM and hot-swappable adapters.</p>
+        <p>Today I <b>lead AI engineering at Best Buy India</b>: real-time fraud detection at 40k events/sec, self-hosted LLM initiatives, and the MLOps that keeps it all alive across <b>GCP and Azure</b>.</p>
+        <p>I'm now going deeper — toward <b>inference internals and frontier-scale AI</b>: turning "framework user" into "framework builder." I build in public, write what I learn, and chase the hard problems.</p>
       </div>
       <div class="timeline reveal">
         <div class="tl-item now">
-          <div class="tl-when">NOW · Best Buy</div>
-          <div class="tl-what">AI/ML Engineer — Driving AI Innovation</div>
-          <div class="tl-desc">GenAI &amp; LLMs, forecasting, recommendation &amp; optimization in production.</div>
+          <div class="tl-when">NOW · Best Buy India</div>
+          <div class="tl-what">Lead AI Engineer</div>
+          <div class="tl-desc">LLM fine-tuning (LoRA/QLoRA, Unsloth/PEFT) &amp; serving (vLLM, GKE, hot-swap adapters); real-time fraud detection @ 40k events/sec.</div>
         </div>
         <div class="tl-item">
-          <div class="tl-when">MLOps &amp; Cloud</div>
-          <div class="tl-what">MLOps Specialist · GCP + Azure</div>
-          <div class="tl-desc">Vertex AI &amp; Azure ML pipelines, CI/CD, Docker, monitoring &amp; observability.</div>
+          <div class="tl-when">GPU &amp; Security ML</div>
+          <div class="tl-what">GPU-Accelerated ML Engineer</div>
+          <div class="tl-desc">8×A100 DGX with NVIDIA Morpheus; anomaly detection on billion-row datasets via RAPIDS.</div>
         </div>
         <div class="tl-item">
-          <div class="tl-when">Data Science</div>
-          <div class="tl-what">Data Scientist · Predictive Modeling</div>
-          <div class="tl-desc">Forecasting, anomaly detection, NLP, computer vision &amp; BI.</div>
+          <div class="tl-when">Optimization &amp; CV</div>
+          <div class="tl-what">Data Scientist</div>
+          <div class="tl-desc">Supply-chain route optimization (130→160 trucks/day); computer vision for semiconductor QA; forecasting &amp; BI.</div>
         </div>
         <div class="tl-item">
           <div class="tl-when">Foundations</div>
           <div class="tl-what">Enterprise Systems · Mainframe</div>
-          <div class="tl-desc">COBOL, JCL, Db2 — scale, reliability and how businesses really run.</div>
+          <div class="tl-desc">COBOL, JCL, Db2 — scale, reliability, and how businesses really run.</div>
         </div>
       </div>
     </div>
@@ -262,44 +256,43 @@ footer .brand{font-size:15px;color:var(--muted)}
 
 <section id="skills">
   <div class="wrap">
-    <div class="eyebrow reveal">// toolbox</div>
-    <h2 class="h2 reveal">Skills that ship to production</h2>
-    <p class="sub reveal">Not just models — the full lifecycle. Research, engineering, deployment and the operations that keep it all alive.</p>
+    <div class="eyebrow reveal">// stack</div>
+    <h2 class="h2 reveal">The tools, end to end</h2>
+    <p class="sub reveal">Leading with the LLM systems stack — then the full lifecycle that gets a model into production and keeps it there.</p>
     <div class="skill-groups">
       <div class="sgroup reveal">
-        <h3><span class="ic">🧠</span> AI / ML Expertise</h3>
+        <h3><span class="ic">🧠</span> LLM Engineering</h3>
         <div class="tags">
-          <span class="tag">Generative AI</span><span class="tag">LLMs</span><span class="tag">NLP</span>
-          <span class="tag">Computer Vision</span><span class="tag">Time-Series Forecasting</span>
-          <span class="tag">Recommendation Systems</span><span class="tag">Anomaly Detection</span>
-          <span class="tag">Predictive Modeling</span><span class="tag">Linear Optimization</span>
+          <span class="tag star">LLM Fine-Tuning</span><span class="tag star">LoRA / QLoRA</span><span class="tag star">PEFT</span>
+          <span class="tag star">Unsloth</span><span class="tag star">vLLM</span><span class="tag">Hot-Swap Adapters</span>
+          <span class="tag">Generative AI</span><span class="tag">RAG</span><span class="tag">Eval &amp; Prompting</span><span class="tag">NLP</span>
         </div>
       </div>
       <div class="sgroup reveal">
-        <h3><span class="ic">⚙️</span> MLOps &amp; Orchestration</h3>
+        <h3><span class="ic">⚡</span> ML at Scale</h3>
         <div class="tags">
-          <span class="tag">Vertex AI</span><span class="tag">Azure ML</span><span class="tag">MLflow</span>
-          <span class="tag">Kubeflow</span><span class="tag">Airflow</span><span class="tag">Dataflow</span>
-          <span class="tag">Cloud Build</span><span class="tag">Azure DevOps</span><span class="tag">GitHub Actions</span>
-          <span class="tag">Pub/Sub</span>
+          <span class="tag star">Real-Time ML</span><span class="tag star">Multi-GPU / Distributed</span><span class="tag">8×A100 DGX</span>
+          <span class="tag">NVIDIA Morpheus</span><span class="tag">RAPIDS cuDF</span><span class="tag">CuPy</span>
+          <span class="tag">Forecasting</span><span class="tag">Anomaly Detection</span><span class="tag">Recommendation</span>
+          <span class="tag">Computer Vision</span><span class="tag">Optimization</span>
         </div>
       </div>
       <div class="sgroup reveal">
         <h3><span class="ic">🐍</span> Languages &amp; Frameworks</h3>
         <div class="tags">
-          <span class="tag">Python</span><span class="tag">SQL</span><span class="tag">PyTorch</span>
-          <span class="tag">TensorFlow</span><span class="tag">Keras</span><span class="tag">scikit-learn</span>
-          <span class="tag">Pandas</span><span class="tag">FastAPI</span><span class="tag">Flask</span>
-          <span class="tag">COBOL</span><span class="tag">JCL</span><span class="tag">Shell</span>
+          <span class="tag star">Python</span><span class="tag star">PyTorch</span><span class="tag star">HF Transformers</span>
+          <span class="tag">scikit-learn</span><span class="tag">Pandas</span><span class="tag">TensorFlow / Keras</span>
+          <span class="tag">FastAPI</span><span class="tag">SQL</span><span class="tag">Shell</span>
+          <span class="tag">COBOL · JCL <i>(heritage)</i></span>
         </div>
       </div>
       <div class="sgroup reveal">
-        <h3><span class="ic">☁️</span> Cloud, Data &amp; Ops</h3>
+        <h3><span class="ic">☁️</span> Cloud · MLOps · Infra</h3>
         <div class="tags">
-          <span class="tag">Google Cloud</span><span class="tag">Azure</span><span class="tag">Docker</span>
-          <span class="tag">RAPIDS cuDF</span><span class="tag">CuPy</span><span class="tag">Distributed Training</span>
-          <span class="tag">MS SQL Server</span><span class="tag">IBM Db2</span><span class="tag">Power BI</span>
-          <span class="tag">Grafana</span><span class="tag">Prometheus</span><span class="tag">ELK Stack</span>
+          <span class="tag star">GCP — Vertex AI</span><span class="tag">GKE</span><span class="tag">Dataflow</span><span class="tag">Pub/Sub</span>
+          <span class="tag">Azure ML</span><span class="tag">Kubernetes</span><span class="tag">Docker</span>
+          <span class="tag">MLflow</span><span class="tag">Kubeflow</span><span class="tag">Airflow</span>
+          <span class="tag">CI/CD</span><span class="tag">Grafana · Prometheus</span><span class="tag">Power BI</span>
         </div>
       </div>
     </div>
@@ -308,9 +301,9 @@ footer .brand{font-size:15px;color:var(--muted)}
 
 <section id="projects">
   <div class="wrap">
-    <div class="eyebrow reveal">// selected work</div>
-    <h2 class="h2 reveal">Things I've built</h2>
-    <p class="sub reveal">A sample of open-source projects — from local-first AI tooling to production-minded utilities. All on GitHub.</p>
+    <div class="eyebrow reveal">// work</div>
+    <h2 class="h2 reveal">Building in public</h2>
+    <p class="sub reveal">Open-source work, from local-first AI tooling to production-minded utilities — plus the deeper systems I'm building now.</p>
     <div class="proj-grid">
       <a class="proj reveal" href="https://github.com/ylnhari/ai-news-aggregator" target="_blank" rel="noopener">
         <div class="top"><span class="lang">Python</span><span>⭐ GenAI</span></div>
@@ -330,24 +323,24 @@ footer .brand{font-size:15px;color:var(--muted)}
         <p>Remote command executor &amp; project launcher — single binary, zero dependencies, real-time SSE streaming.</p>
         <span class="arrow">Explore repo →</span>
       </a>
-      <a class="proj reveal" href="https://github.com/ylnhari/family-finance-app" target="_blank" rel="noopener">
-        <div class="top"><span class="lang">Python · JS</span><span>🔒 Local-first</span></div>
-        <h3>Family Finance App</h3>
-        <p>A self-contained personal &amp; family finance tracker that runs entirely on your machine. No accounts, no cloud — just Python and a browser.</p>
+      <a class="proj reveal" href="https://github.com/ylnhari/MLOps-Best-Practices-Code-Snippets" target="_blank" rel="noopener">
+        <div class="top"><span class="lang">Shell</span><span>⚙️ MLOps</span></div>
+        <h3>MLOps Best Practices</h3>
+        <p>A living knowledge base of MLOps configurations, snippets and resources distilled from real production work.</p>
         <span class="arrow">Explore repo →</span>
       </a>
       <a class="proj reveal" href="https://github.com/ylnhari/AzurePythonSDKUtilities" target="_blank" rel="noopener">
         <div class="top"><span class="lang">Python</span><span>⭐ Azure</span></div>
         <h3>Azure Python SDK Utilities</h3>
-        <p>Battle-tested utility functions wrapping Azure's Python SDKs to streamline operations across Azure cloud services.</p>
+        <p>Battle-tested utilities wrapping Azure's Python SDKs to streamline operations across Azure cloud services.</p>
         <span class="arrow">Explore repo →</span>
       </a>
-      <a class="proj reveal" href="https://github.com/ylnhari/MLOps-Best-Practices-Code-Snippets" target="_blank" rel="noopener">
-        <div class="top"><span class="lang">Shell</span><span>⚙️ MLOps</span></div>
-        <h3>MLOps Best Practices</h3>
-        <p>A living knowledge base of MLOps configurations, code snippets and development resources gathered from real production work.</p>
-        <span class="arrow">Explore repo →</span>
-      </a>
+      <div class="proj reveal">
+        <div class="top"><span class="lang">PyTorch</span><span class="badge-soon">IN PROGRESS</span></div>
+        <h3>LLM Fine-Tuning Framework</h3>
+        <p>Config-driven LoRA → eval → vLLM serve. Plus inference internals from scratch — KV-cache, paged attention, speculative decoding.</p>
+        <span class="arrow">Shipping in public, 2026</span>
+      </div>
     </div>
     <div class="proj-cta reveal">
       <a class="btn ghost" href="https://github.com/ylnhari?tab=repositories" target="_blank" rel="noopener">See all repositories on GitHub →</a>
@@ -359,17 +352,17 @@ footer .brand{font-size:15px;color:var(--muted)}
   <div class="wrap">
     <div class="eyebrow reveal">// words</div>
     <h2 class="h2 reveal">I write &amp; I solve</h2>
-    <p class="sub reveal">Sharing what I learn, and keeping my problem-solving sharp.</p>
+    <p class="sub reveal">Sharing what I learn, and keeping the fundamentals sharp.</p>
     <div class="write-grid">
       <a class="write reveal" href="https://ylnhari.medium.com/" target="_blank" rel="noopener">
         <div class="ic">✍️</div>
         <h3>Medium &amp; Blog →</h3>
-        <p>Articles on applied machine learning, MLOps and AI engineering. Also mirrored at <span class="mono">ylnhari.github.io/blog</span>.</p>
+        <p>Applied machine learning, LLM engineering and MLOps. Also at <span class="mono">ylnhari.github.io/blog</span>.</p>
       </a>
       <a class="write reveal" href="https://leetcode.com/ylnhari/" target="_blank" rel="noopener">
         <div class="ic">🧩</div>
         <h3>LeetCode →</h3>
-        <p>Data structures &amp; algorithms, kept sharp. I document approaches and solutions in my DSA repo too.</p>
+        <p>Data structures &amp; algorithms, kept sharp — approaches and solutions documented in my DSA repo.</p>
       </a>
     </div>
   </div>
@@ -379,33 +372,19 @@ footer .brand{font-size:15px;color:var(--muted)}
   <div class="wrap">
     <div class="contact-card reveal">
       <h2>Let's build something <span class="grad-txt">intelligent</span>.</h2>
-      <p>I'm open to AI/ML, Data Science and MLOps opportunities and collaborations. If you're working on something ambitious — let's talk.</p>
+      <p>Open to senior AI / ML / research-engineering roles and ambitious collaborations. If you're pushing the frontier — let's talk.</p>
       <div class="cta-row" style="justify-content:center;margin-bottom:34px">
         <a class="btn primary" href="mailto:ylnharimailme@gmail.com">📩 ylnharimailme@gmail.com</a>
         <a class="btn ghost" href="https://www.linkedin.com/in/hari-laxmi-narasimha-yelesetty-1a891b156/" target="_blank" rel="noopener">Connect on LinkedIn</a>
       </div>
       <div class="socials">
-        <a class="soc" href="https://www.linkedin.com/in/hari-laxmi-narasimha-yelesetty-1a891b156/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
-          <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8.34 9.5H5.67V18h2.67V9.5zM7 5.88a1.55 1.55 0 1 0 0 3.1 1.55 1.55 0 0 0 0-3.1zM18.34 18v-4.67c0-2.5-1.34-3.66-3.12-3.66-1.44 0-2.08.8-2.44 1.36V9.5h-2.67V18h2.67v-4.5c0-1.2.63-1.78 1.4-1.78.78 0 1.49.55 1.49 1.85V18h2.67z"/></svg>
-        </a>
-        <a class="soc" href="https://github.com/ylnhari" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
-          <svg viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.22.66-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.1-1.47-1.1-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.16.57.67.48A10 10 0 0 0 22 12 10 10 0 0 0 12 2z"/></svg>
-        </a>
-        <a class="soc" href="https://ylnhari.medium.com/" target="_blank" rel="noopener" aria-label="Medium" title="Medium">
-          <svg viewBox="0 0 24 24"><path d="M13.54 12a6.8 6.8 0 0 1-6.77 6.82A6.8 6.8 0 0 1 0 12a6.8 6.8 0 0 1 6.77-6.82A6.8 6.8 0 0 1 13.54 12zm7.42 0c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42S20.96 8.46 20.96 12zM24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg>
-        </a>
-        <a class="soc" href="https://leetcode.com/ylnhari/" target="_blank" rel="noopener" aria-label="LeetCode" title="LeetCode">
-          <svg viewBox="0 0 24 24"><path d="M13.48 0a1.37 1.37 0 0 0-.98.42L7.4 5.65a4.92 4.92 0 0 0 0 6.95l5.1 5.23a1.37 1.37 0 0 0 1.96-1.92l-5.1-5.23a2.18 2.18 0 0 1 0-3.11l5.1-5.23A1.37 1.37 0 0 0 13.48 0zm-2.6 9.86a1.37 1.37 0 0 0 0 2.74h9.43a1.37 1.37 0 0 0 0-2.74h-9.43z"/></svg>
-        </a>
-        <a class="soc" href="https://twitter.com/ylnhari1" target="_blank" rel="noopener" aria-label="Twitter / X" title="Twitter / X">
-          <svg viewBox="0 0 24 24"><path d="M18.9 2H22l-7.5 8.6L23 22h-6.9l-5.4-7-6.2 7H1.4l8-9.2L1 2h7l4.9 6.5L18.9 2zm-1.2 18h1.9L7.1 4H5.1l12.6 16z"/></svg>
-        </a>
-        <a class="soc" href="https://www.facebook.com/yln.hari" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook">
-          <svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg>
-        </a>
-        <a class="soc" href="mailto:ylnharimailme@gmail.com" aria-label="Email" title="Email">
-          <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.24-8 5-8-5V6l8 5 8-5v2.24z"/></svg>
-        </a>
+        <a class="soc" href="https://www.linkedin.com/in/hari-laxmi-narasimha-yelesetty-1a891b156/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8.34 9.5H5.67V18h2.67V9.5zM7 5.88a1.55 1.55 0 1 0 0 3.1 1.55 1.55 0 0 0 0-3.1zM18.34 18v-4.67c0-2.5-1.34-3.66-3.12-3.66-1.44 0-2.08.8-2.44 1.36V9.5h-2.67V18h2.67v-4.5c0-1.2.63-1.78 1.4-1.78.78 0 1.49.55 1.49 1.85V18h2.67z"/></svg></a>
+        <a class="soc" href="https://github.com/ylnhari" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.22.66-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.1-1.47-1.1-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.16.57.67.48A10 10 0 0 0 22 12 10 10 0 0 0 12 2z"/></svg></a>
+        <a class="soc" href="https://ylnhari.medium.com/" target="_blank" rel="noopener" aria-label="Medium" title="Medium"><svg viewBox="0 0 24 24"><path d="M13.54 12a6.8 6.8 0 0 1-6.77 6.82A6.8 6.8 0 0 1 0 12a6.8 6.8 0 0 1 6.77-6.82A6.8 6.8 0 0 1 13.54 12zm7.42 0c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42S20.96 8.46 20.96 12zM24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg></a>
+        <a class="soc" href="https://leetcode.com/ylnhari/" target="_blank" rel="noopener" aria-label="LeetCode" title="LeetCode"><svg viewBox="0 0 24 24"><path d="M13.48 0a1.37 1.37 0 0 0-.98.42L7.4 5.65a4.92 4.92 0 0 0 0 6.95l5.1 5.23a1.37 1.37 0 0 0 1.96-1.92l-5.1-5.23a2.18 2.18 0 0 1 0-3.11l5.1-5.23A1.37 1.37 0 0 0 13.48 0zm-2.6 9.86a1.37 1.37 0 0 0 0 2.74h9.43a1.37 1.37 0 0 0 0-2.74h-9.43z"/></svg></a>
+        <a class="soc" href="https://twitter.com/ylnhari1" target="_blank" rel="noopener" aria-label="Twitter / X" title="Twitter / X"><svg viewBox="0 0 24 24"><path d="M18.9 2H22l-7.5 8.6L23 22h-6.9l-5.4-7-6.2 7H1.4l8-9.2L1 2h7l4.9 6.5L18.9 2zm-1.2 18h1.9L7.1 4H5.1l12.6 16z"/></svg></a>
+        <a class="soc" href="https://www.facebook.com/yln.hari" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg></a>
+        <a class="soc" href="mailto:ylnharimailme@gmail.com" aria-label="Email" title="Email"><svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.24-8 5-8-5V6l8 5 8-5v2.24z"/></svg></a>
       </div>
     </div>
   </div>
@@ -414,13 +393,12 @@ footer .brand{font-size:15px;color:var(--muted)}
 <footer>
   <div class="wrap">
     <div class="brand">Hari Laxmi Narasimha Yelesetty</div>
-    <p style="margin-top:6px">AI/ML Engineer · Data Scientist · MLOps Specialist · Built with care &amp; hosted on GitHub Pages.</p>
+    <p style="margin-top:6px">Production LLM/ML Systems Engineer · Bengaluru · Built with care &amp; hosted on GitHub Pages.</p>
   </div>
 </footer>
 
 <script>
-// rotating role words
-const roles=["production AI systems","Generative AI & LLMs","forecasting models","MLOps pipelines","recommendation engines","data-driven decisions"];
+const roles=["LLM fine-tuning","LoRA / QLoRA at scale","vLLM serving","real-time fraud ML","8×A100 distributed training","inference internals","notebook → real traffic"];
 const el=document.getElementById('rot');
 let ri=0,ci=0,del=false;
 function type(){
@@ -432,11 +410,7 @@ function type(){
   setTimeout(type,s);
 }
 type();
-
-// scroll reveal
-const io=new IntersectionObserver((es)=>{
-  es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
-},{threshold:.12});
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
 document.querySelectorAll('.reveal').forEach((n,i)=>{n.style.transitionDelay=(i%6*40)+'ms';io.observe(n);});
 </script>
 </body>
