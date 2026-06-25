@@ -3,754 +3,314 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hari Yelesetty — Resume 2026</title>
+<title>Hari Yelesetty — Resume Hub</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-
-/* ===== RESET & BASE ===== */
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
-:root {
-  --navy:         #0f172a;
-  --indigo:       #4338ca;
-  --indigo-light: #6366f1;
-  --slate-50:     #f8fafc;
-  --slate-100:    #f1f5f9;
-  --slate-200:    #e2e8f0;
-  --slate-300:    #cbd5e1;
-  --slate-400:    #94a3b8;
-  --slate-500:    #64748b;
-  --slate-600:    #475569;
-  --slate-700:    #334155;
-  --slate-800:    #1e293b;
-  --indigo-50:    #eef2ff;
-  --indigo-100:   #e0e7ff;
-  --indigo-200:   #c7d2fe;
-  --indigo-800:   #3730a3;
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --navy:#0f172a;--navy2:#1e293b;--indigo:#4338ca;--indigo-light:#6366f1;
+  --sl50:#f8fafc;--sl100:#f1f5f9;--sl200:#e2e8f0;--sl300:#cbd5e1;
+  --sl400:#94a3b8;--sl500:#64748b;--sl600:#475569;--sl700:#334155;--sl800:#1e293b;
+  --in50:#eef2ff;--in100:#e0e7ff;--in200:#c7d2fe;--in800:#3730a3;
+  --green:#059669;--amber:#d97706;
 }
+body{font-family:'Inter',-apple-system,sans-serif;background:var(--sl100);color:var(--sl800);min-height:100vh}
 
-body {
-  font-family: 'Inter', -apple-system, sans-serif;
-  background: #dde3ee;
-  color: var(--slate-800);
-  font-size: 9pt;
-  line-height: 1.5;
-}
+/* NAV */
+nav{background:var(--navy);padding:14px 40px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:50;box-shadow:0 2px 12px rgba(0,0,0,.3)}
+.nav-name{font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;color:white}
+.nav-name span{color:#7dd3fc}
+.nav-links{display:flex;gap:20px}
+.nav-links a{font-size:13px;color:var(--sl400);text-decoration:none;transition:color .15s}
+.nav-links a:hover{color:white}
 
-/* ===== PRINT CONTROLS (hidden on print) ===== */
-.print-bar {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: white;
-  border-bottom: 1px solid var(--slate-200);
-  padding: 10px 24px;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
-}
+/* HERO */
+.hero{background:var(--navy);padding:48px 40px 56px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.04) 1px,transparent 1px);background-size:20px 20px}
+.hero::after{content:'';position:absolute;bottom:-60px;right:-60px;width:300px;height:300px;background:radial-gradient(circle,rgba(99,102,241,.18) 0%,transparent 70%)}
+.grad-bar{height:3px;background:linear-gradient(90deg,#4338ca 0%,#7c3aed 45%,#0891b2 100%)}
+.hero-inner{max-width:900px;margin:0 auto;position:relative;z-index:1}
+.hero-tag{display:inline-block;background:rgba(99,102,241,.25);color:#a5b4fc;font-size:11px;font-weight:600;padding:4px 10px;border-radius:20px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:12px;border:1px solid rgba(165,180,252,.2)}
+.hero h1{font-family:'Space Grotesk',sans-serif;font-size:40px;font-weight:800;color:white;line-height:1.1;margin-bottom:8px;letter-spacing:-1px}
+.hero-sub{font-size:14px;color:var(--sl400);margin-bottom:28px}
+.hero-metrics{display:flex;gap:28px;flex-wrap:wrap}
+.metric-chip{display:flex;flex-direction:column}
+.metric-val{font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700;color:white;line-height:1}
+.metric-label{font-size:11px;color:var(--sl400);margin-top:2px}
 
-.print-btn {
-  background: var(--indigo);
-  color: white;
-  border: none;
-  padding: 8px 18px;
-  border-radius: 6px;
-  font-family: 'Inter', sans-serif;
-  font-size: 13px;
-  font-weight: 500;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  transition: background 0.15s;
-}
-.print-btn:hover { background: var(--indigo-light); }
+/* MAIN */
+main{max-width:900px;margin:0 auto;padding:36px 24px 60px}
 
-.print-hint {
-  font-size: 11.5px;
-  color: var(--slate-500);
-}
+/* SECTION */
+.section-head{display:flex;align-items:center;gap:10px;margin-bottom:20px;margin-top:36px}
+.section-head:first-child{margin-top:0}
+.section-title{font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--sl500)}
+.section-line{flex:1;height:1px;background:var(--sl200)}
 
-.print-hint strong { color: var(--slate-700); }
+/* RESUME CARDS */
+.cards-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
 
-/* ===== PAGE SHELL ===== */
-.resume {
-  width: 210mm;
-  margin: 20px auto 40px;
-  background: white;
-  box-shadow: 0 8px 40px rgba(15,23,42,0.18);
-}
+.resume-card{background:white;border-radius:10px;border:1px solid var(--sl200);overflow:hidden;transition:box-shadow .2s,transform .15s;text-decoration:none;display:flex;flex-direction:column}
+.resume-card:hover{box-shadow:0 8px 30px rgba(15,23,42,.12);transform:translateY(-2px)}
+.resume-card.featured{border-color:var(--indigo);box-shadow:0 0 0 2px var(--in200)}
 
-/* ===== HEADER ===== */
-.header {
-  background: var(--navy);
-  padding: 30px 36px 26px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 20px;
-  position: relative;
-  overflow: hidden;
-}
+.card-top{padding:18px 18px 14px;flex:1}
+.card-badges{display:flex;gap:6px;margin-bottom:10px;flex-wrap:wrap}
+.badge{font-size:10px;font-weight:600;padding:3px 8px;border-radius:12px;letter-spacing:.04em}
+.badge-current{background:#d1fae5;color:#065f46}
+.badge-new{background:var(--in50);color:var(--in800);border:1px solid var(--in200)}
+.badge-archive{background:var(--sl100);color:var(--sl500);border:1px solid var(--sl200)}
+.badge-soon{background:#fff7ed;color:#92400e;border:1px solid #fde68a}
+.card-title{font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;color:var(--sl800);margin-bottom:4px}
+.card-date{font-size:11px;color:var(--sl400);margin-bottom:8px}
+.card-desc{font-size:12.5px;color:var(--sl600);line-height:1.6}
 
-/* Subtle dot grid overlay */
-.header::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: radial-gradient(circle, rgba(255,255,255,0.045) 1px, transparent 1px);
-  background-size: 18px 18px;
-  pointer-events: none;
-}
+.card-footer{padding:12px 18px;background:var(--sl50);border-top:1px solid var(--sl200);display:flex;align-items:center;justify-content:space-between}
+.card-link{font-size:12px;font-weight:600;color:var(--indigo);display:flex;align-items:center;gap:5px}
+.card-link svg{transition:transform .15s}
+.resume-card:hover .card-link svg{transform:translateX(3px)}
+.card-format{font-size:11px;color:var(--sl400)}
 
-/* Indigo glow blob top-right */
-.header::after {
-  content: '';
-  position: absolute;
-  top: -40px;
-  right: -40px;
-  width: 200px;
-  height: 200px;
-  background: radial-gradient(circle, rgba(99,102,241,0.22) 0%, transparent 70%);
-  pointer-events: none;
-}
+/* PREVIEW STRIP — mini resume visual */
+.card-preview{height:80px;background:linear-gradient(135deg,var(--navy) 0%,#1e1b4b 100%);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.card-preview::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.05) 1px,transparent 1px);background-size:10px 10px}
+.preview-lines{position:relative;z-index:1;width:130px;display:flex;flex-direction:column;gap:4px}
+.pl{height:5px;border-radius:2px;background:rgba(255,255,255,.15)}
+.pl.name{height:9px;width:90%;background:rgba(255,255,255,.35)}
+.pl.title{width:70%;background:rgba(125,211,252,.3)}
+.pl.w60{width:60%}
+.pl.w45{width:45%}
+.pl.w75{width:75%}
+.pl.w50{width:50%}
+.pl.accent{background:rgba(99,102,241,.5)}
 
-.header-left { position: relative; z-index: 1; }
+/* ARCHIVE TABLE */
+.archive-table{width:100%;border-collapse:collapse;background:white;border-radius:10px;border:1px solid var(--sl200);overflow:hidden}
+.archive-table th{text-align:left;font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--sl500);padding:10px 16px;background:var(--sl50);border-bottom:1px solid var(--sl200)}
+.archive-table td{padding:11px 16px;font-size:12.5px;border-bottom:1px solid var(--sl100);vertical-align:middle}
+.archive-table tr:last-child td{border-bottom:none}
+.archive-table tr:hover td{background:var(--sl50)}
+.dl-btn{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:500;color:var(--indigo);text-decoration:none;padding:4px 9px;border-radius:5px;border:1px solid var(--in200);background:var(--in50);transition:background .15s}
+.dl-btn:hover{background:var(--in100)}
+.role-tag{font-size:10.5px;color:var(--sl500);background:var(--sl100);padding:2px 7px;border-radius:10px;border:1px solid var(--sl200)}
 
-.name-pre {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 8pt;
-  font-weight: 500;
-  color: var(--slate-400);
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  display: block;
-  margin-bottom: 3px;
-}
-
-.name-main {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 32pt;
-  font-weight: 800;
-  color: #f8fafc;
-  letter-spacing: -1px;
-  line-height: 1;
-  display: block;
-  margin-bottom: 9px;
-}
-
-.title-line {
-  font-size: 8.5pt;
-  font-weight: 400;
-  color: #7dd3fc;
-  display: block;
-  letter-spacing: 0.02em;
-}
-
-.header-right {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  align-items: flex-end;
-  padding-top: 2px;
-  flex-shrink: 0;
-}
-
-.c-row {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  font-size: 7.5pt;
-  color: var(--slate-300);
-}
-
-.c-icon {
-  width: 13px;
-  height: 13px;
-  flex-shrink: 0;
-  color: #818cf8;
-}
-
-/* ===== GRADIENT BAR ===== */
-.grad-bar {
-  height: 3px;
-  background: linear-gradient(90deg, #4338ca 0%, #7c3aed 45%, #0891b2 100%);
-}
-
-/* ===== BODY GRID ===== */
-.body {
-  display: grid;
-  grid-template-columns: 194px 1fr;
-}
-
-/* ===== LEFT COLUMN ===== */
-.left-col {
-  background: var(--slate-50);
-  border-right: 1px solid var(--slate-200);
-  padding: 22px 15px;
-}
-
-.l-section { margin-bottom: 19px; }
-
-.l-heading {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 6.5pt;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--indigo);
-  padding-bottom: 5px;
-  border-bottom: 1.5px solid var(--indigo-100);
-  margin-bottom: 9px;
-}
-
-.skill-group { margin-bottom: 9px; }
-
-.skill-label {
-  font-size: 7pt;
-  font-weight: 600;
-  color: var(--slate-500);
-  display: block;
-  margin-bottom: 4px;
-}
-
-.tags { display: flex; flex-wrap: wrap; gap: 3px; }
-
-.tag {
-  font-size: 6.5pt;
-  font-weight: 500;
-  padding: 2px 6px;
-  border-radius: 3px;
-}
-
-.t-light {
-  background: var(--indigo-50);
-  color: var(--indigo-800);
-  border: 1px solid var(--indigo-200);
-}
-
-.t-dark {
-  background: #1e1b4b;
-  color: #a5b4fc;
-  border: 1px solid #312e81;
-}
-
-.cert { margin-bottom: 7px; }
-
-.cert-org {
-  font-size: 7.5pt;
-  font-weight: 600;
-  color: var(--slate-800);
-  display: block;
-  line-height: 1.3;
-}
-
-.cert-name {
-  font-size: 7pt;
-  color: var(--slate-500);
-  display: block;
-  line-height: 1.3;
-}
-
-.edu-degree {
-  font-size: 8pt;
-  font-weight: 600;
-  color: var(--slate-800);
-  display: block;
-  margin-bottom: 2px;
-}
-
-.edu-detail {
-  font-size: 7pt;
-  color: var(--slate-500);
-  display: block;
-  line-height: 1.5;
-}
-
-/* ===== RIGHT COLUMN ===== */
-.right-col { padding: 22px 26px; }
-
-/* Summary */
-.summary {
-  background: linear-gradient(135deg, #eef2ff 0%, #f0f4ff 100%);
-  border-left: 3px solid var(--indigo);
-  border-radius: 0 5px 5px 0;
-  padding: 11px 14px;
-  margin-bottom: 18px;
-}
-
-.summary p {
-  font-size: 8.5pt;
-  color: var(--slate-700);
-  line-height: 1.7;
-}
-
-.metric {
-  font-weight: 700;
-  color: var(--indigo);
-}
-
-/* Section headings */
-.r-heading {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 7.5pt;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--navy);
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 12px;
-  padding-bottom: 4px;
-  border-bottom: 1px solid var(--slate-200);
-}
-
-.r-heading::before {
-  content: '';
-  display: block;
-  width: 14px;
-  height: 2.5px;
-  background: var(--indigo);
-  flex-shrink: 0;
-}
-
-/* Timeline */
-.timeline { position: relative; }
-
-.exp-item {
-  position: relative;
-  padding-left: 18px;
-  margin-bottom: 14px;
-  page-break-inside: avoid;
-}
-
-/* Dot */
-.exp-item::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 6px;
-  width: 8px;
-  height: 8px;
-  background: var(--indigo);
-  border-radius: 50%;
-  border: 2px solid white;
-  box-shadow: 0 0 0 1.5px var(--indigo);
-  z-index: 1;
-}
-
-/* Connecting line */
-.exp-item:not(:last-child)::after {
-  content: '';
-  position: absolute;
-  left: 3.5px;
-  top: 15px;
-  width: 1px;
-  bottom: -7px;
-  background: var(--indigo-200);
-}
-
-.exp-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 10px;
-  margin-bottom: 3px;
-}
-
-.exp-role {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 9pt;
-  font-weight: 700;
-  color: var(--slate-800);
-  line-height: 1.3;
-}
-
-.exp-company {
-  font-size: 7.5pt;
-  font-weight: 500;
-  color: var(--indigo-light);
-  margin-top: 1px;
-  display: block;
-}
-
-.exp-date {
-  font-size: 7pt;
-  font-weight: 500;
-  color: var(--slate-500);
-  white-space: nowrap;
-  flex-shrink: 0;
-  background: var(--slate-100);
-  padding: 2px 7px;
-  border-radius: 3px;
-  border: 1px solid var(--slate-200);
-  margin-top: 1px;
-}
-
-.bullets { list-style: none; margin-top: 5px; }
-
-.bullets li {
-  font-size: 8pt;
-  color: var(--slate-600);
-  padding-left: 11px;
-  position: relative;
-  margin-bottom: 3px;
-  line-height: 1.55;
-}
-
-.bullets li::before {
-  content: '▸';
-  position: absolute;
-  left: 0;
-  top: 0.5px;
-  color: var(--indigo-light);
-  font-size: 7pt;
-}
-
-/* Earlier roles cards */
-.earlier-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 7px;
-  margin-top: 4px;
-}
-
-.mini-card {
-  background: var(--slate-50);
-  border: 1px solid var(--slate-200);
-  border-top: 2.5px solid var(--indigo-200);
-  border-radius: 4px;
-  padding: 8px 10px;
-  page-break-inside: avoid;
-}
-
-.mini-role {
-  font-size: 7.5pt;
-  font-weight: 700;
-  color: var(--slate-800);
-  display: block;
-  margin-bottom: 1px;
-  font-family: 'Space Grotesk', sans-serif;
-}
-
-.mini-co {
-  font-size: 7pt;
-  font-weight: 600;
-  color: var(--indigo);
-  display: block;
-}
-
-.mini-date {
-  font-size: 6.5pt;
-  color: var(--slate-400);
-  display: block;
-  margin-bottom: 4px;
-}
-
-.mini-desc {
-  font-size: 7pt;
-  color: var(--slate-500);
-  line-height: 1.5;
-}
-
-/* ===== PRINT ===== */
-@media print {
-  body { background: white; }
-  .print-bar { display: none !important; }
-  .resume {
-    width: 100%;
-    margin: 0;
-    box-shadow: none;
-  }
-  * {
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust: exact !important;
-  }
-}
-
-@page {
-  size: A4;
-  margin: 0;
-}
-
+/* FOOTER */
+footer{text-align:center;padding:24px;font-size:12px;color:var(--sl400)}
+footer a{color:var(--indigo);text-decoration:none}
 </style>
 </head>
 <body>
 
-<!-- Print bar — hidden when printing -->
-<div class="print-bar">
-  <button class="print-btn" onclick="window.print()">
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
-    Print / Save as PDF
-  </button>
-  <span class="print-hint">In the print dialog → Paper: <strong>A4</strong> · Margins: <strong>None</strong> · Enable <strong>Background graphics</strong></span>
-</div>
+<nav>
+  <div class="nav-name">Hari <span>Yelesetty</span></div>
+  <div class="nav-links">
+    <a href="https://ylnhari.github.io">Portfolio</a>
+    <a href="https://linkedin.com/in/ylnhari" target="_blank">LinkedIn</a>
+    <a href="https://github.com/ylnhari" target="_blank">GitHub</a>
+  </div>
+</nav>
 
-<div class="resume">
-
-  <!-- ===== HEADER ===== -->
-  <div class="header">
-    <div class="header-left">
-      <span class="name-pre">Laxmi Narasimha</span>
-      <span class="name-main">Hari Yelesetty</span>
-      <span class="title-line">Lead AI Engineer &nbsp;·&nbsp; LLM Systems &amp; Production GenAI &nbsp;·&nbsp; GCP · Azure · GPU Infra</span>
-    </div>
-
-    <div class="header-right">
-      <div class="c-row">
-        <!-- Email -->
-        <svg class="c-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/></svg>
-        ylnharimailme@gmail.com
-      </div>
-      <div class="c-row">
-        <!-- Phone -->
-        <svg class="c-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.6 19.79 19.79 0 0 1 1.54 5c-.11-1.2.73-2.2 1.93-2.2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 10.09a16 16 0 0 0 6 6l.72-.72a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.03z"/></svg>
-        +91 99161 12881
-      </div>
-      <div class="c-row">
-        <!-- LinkedIn -->
-        <svg class="c-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-        linkedin.com/in/hari-laxmi-narasimha-yelesetty
-      </div>
-      <div class="c-row">
-        <!-- GitHub -->
-        <svg class="c-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-        github.com/ylnhari
-      </div>
-      <div class="c-row">
-        <!-- Globe / Portfolio -->
-        <svg class="c-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-        ylnhari.github.io
-      </div>
+<div class="hero">
+  <div class="hero-inner">
+    <span class="hero-tag">Resume Hub</span>
+    <h1>Hari Yelesetty</h1>
+    <p class="hero-sub">Lead AI Engineer &nbsp;·&nbsp; LLM Systems &amp; Production GenAI &nbsp;·&nbsp; GCP · Azure · GPU Infra</p>
+    <div class="hero-metrics">
+      <div class="metric-chip"><span class="metric-val">$300K</span><span class="metric-label">saved via self-hosted LLMs</span></div>
+      <div class="metric-chip"><span class="metric-val">40k/sec</span><span class="metric-label">fraud detection throughput</span></div>
+      <div class="metric-chip"><span class="metric-val">8×A100</span><span class="metric-label">GPU cybersecurity ML</span></div>
+      <div class="metric-chip"><span class="metric-val">130→160</span><span class="metric-label">trucks/day optimized</span></div>
+      <div class="metric-chip"><span class="metric-val">2,400/sec</span><span class="metric-label">email/doc throughput</span></div>
+      <div class="metric-chip"><span class="metric-val">10+</span><span class="metric-label">years experience</span></div>
     </div>
   </div>
+</div>
+<div class="grad-bar"></div>
 
-  <!-- Gradient accent bar -->
-  <div class="grad-bar"></div>
+<main>
 
-  <!-- ===== BODY ===== -->
-  <div class="body">
+  <!-- CURRENT VARIANTS -->
+  <div class="section-head">
+    <span class="section-title">Current Resumes</span>
+    <div class="section-line"></div>
+    <span style="font-size:11px;color:var(--sl400)">June 2026</span>
+  </div>
 
-    <!-- ======= LEFT COLUMN ======= -->
-    <div class="left-col">
+  <div class="cards-grid">
 
-      <div class="l-section">
-        <div class="l-heading">LLM &amp; GenAI</div>
-        <div class="tags">
-          <span class="tag t-dark">vLLM</span>
-          <span class="tag t-dark">Unsloth</span>
-          <span class="tag t-dark">LoRA / QLoRA</span>
-          <span class="tag t-dark">PEFT</span>
-          <span class="tag t-dark">Transformers</span>
-          <span class="tag t-dark">Self-hosted LLM Ops</span>
-          <span class="tag t-dark">RAG</span>
-          <span class="tag t-dark">Prompt Engineering</span>
-          <span class="tag t-dark">LLM Evaluation</span>
+    <a class="resume-card featured" href="/resume/full/">
+      <div class="card-preview">
+        <div class="preview-lines">
+          <div class="pl name"></div>
+          <div class="pl title"></div>
+          <div class="pl w60 accent" style="margin-top:3px"></div>
+          <div class="pl w75"></div>
+          <div class="pl w45"></div>
+          <div class="pl w60"></div>
+          <div class="pl w50"></div>
         </div>
       </div>
+      <div class="card-top">
+        <div class="card-badges">
+          <span class="badge badge-current">● Current</span>
+          <span class="badge badge-new">Full Length</span>
+        </div>
+        <div class="card-title">Full Resume</div>
+        <div class="card-date">June 2026 · 2 pages (A4)</div>
+        <div class="card-desc">Complete 2-page resume. Designed for AI/ML engineer roles. Includes all experience, metrics ($300K, 40k/sec, 8×A100), LoRA framework, RAPIDS, NVIDIA Morpheus, and full skills breakdown.</div>
+      </div>
+      <div class="card-footer">
+        <span class="card-link">View &amp; Print <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        <span class="card-format">HTML → PDF</span>
+      </div>
+    </a>
 
-      <div class="l-section">
-        <div class="l-heading">ML &amp; Deep Learning</div>
-        <div class="tags">
-          <span class="tag t-light">PyTorch</span>
-          <span class="tag t-light">TensorFlow</span>
-          <span class="tag t-light">Keras</span>
-          <span class="tag t-light">Scikit-learn</span>
-          <span class="tag t-light">RAPIDS (cuDF/CuPy)</span>
-          <span class="tag t-light">CUDA</span>
-          <span class="tag t-light">Computer Vision</span>
-          <span class="tag t-light">NLP</span>
-          <span class="tag t-light">Time-Series</span>
+    <a class="resume-card" href="/resume/short/">
+      <div class="card-preview">
+        <div class="preview-lines">
+          <div class="pl name"></div>
+          <div class="pl title"></div>
+          <div class="pl w60 accent" style="margin-top:3px"></div>
+          <div class="pl w45"></div>
+          <div class="pl w60"></div>
         </div>
       </div>
-
-      <div class="l-section">
-        <div class="l-heading">MLOps &amp; Platforms</div>
-
-        <div class="skill-group">
-          <span class="skill-label">Cloud</span>
-          <div class="tags">
-            <span class="tag t-light">GCP Vertex AI</span>
-            <span class="tag t-light">Azure ML Studio</span>
-            <span class="tag t-light">Kubeflow</span>
-            <span class="tag t-light">GCP Dataflow</span>
-            <span class="tag t-light">Azure DevOps</span>
-            <span class="tag t-light">GCP Pub/Sub</span>
-          </div>
+      <div class="card-top">
+        <div class="card-badges">
+          <span class="badge badge-new">New</span>
+          <span class="badge badge-new">1 Page</span>
         </div>
+        <div class="card-title">Short Resume</div>
+        <div class="card-date">June 2026 · 1 page (A4)</div>
+        <div class="card-desc">Condensed 1-page version for referrals, cold outreach, and quick applications. All key metrics front-loaded in the summary. Same design language.</div>
+      </div>
+      <div class="card-footer">
+        <span class="card-link">View &amp; Print <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        <span class="card-format">HTML → PDF</span>
+      </div>
+    </a>
 
-        <div class="skill-group">
-          <span class="skill-label">Serving &amp; Packaging</span>
-          <div class="tags">
-            <span class="tag t-light">Kubernetes</span>
-            <span class="tag t-light">Docker</span>
-            <span class="tag t-light">FastAPI</span>
-            <span class="tag t-light">Flask</span>
-            <span class="tag t-light">MLflow</span>
-            <span class="tag t-light">Artifact Registry</span>
-          </div>
-        </div>
-
-        <div class="skill-group">
-          <span class="skill-label">Observability</span>
-          <div class="tags">
-            <span class="tag t-light">Grafana</span>
-            <span class="tag t-light">Prometheus</span>
-            <span class="tag t-light">ELK Stack</span>
-            <span class="tag t-light">Power BI</span>
-          </div>
+    <div class="resume-card" style="opacity:.65;cursor:default">
+      <div class="card-preview" style="background:linear-gradient(135deg,#1e293b,#0f172a)">
+        <div class="preview-lines">
+          <div class="pl name" style="background:rgba(255,255,255,.15)"></div>
+          <div class="pl title" style="background:rgba(255,255,255,.1)"></div>
+          <div class="pl w60" style="margin-top:3px"></div>
+          <div class="pl w45"></div>
         </div>
       </div>
+      <div class="card-top">
+        <div class="card-badges"><span class="badge badge-soon">Coming soon</span><span class="badge badge-soon">Targeted</span></div>
+        <div class="card-title">Anthropic / OpenAI</div>
+        <div class="card-date">Targeted variant · create when applying</div>
+        <div class="card-desc">Reordered and re-weighted for frontier lab roles — emphasizes LoRA framework, LLM evaluation, and alignment-adjacent infrastructure work.</div>
+      </div>
+      <div class="card-footer">
+        <span class="card-link" style="color:var(--sl400)">Not yet created</span>
+        <span class="card-format">HTML → PDF</span>
+      </div>
+    </div>
 
-      <div class="l-section">
-        <div class="l-heading">Languages &amp; Data</div>
-        <div class="tags">
-          <span class="tag t-light">Python</span>
-          <span class="tag t-light">SQL</span>
-          <span class="tag t-light">Pandas</span>
-          <span class="tag t-light">Jupyter</span>
-          <span class="tag t-light">GitHub Actions</span>
-          <span class="tag t-light">MS SQL Server</span>
-          <span class="tag t-light">IBM DB2</span>
+    <div class="resume-card" style="opacity:.65;cursor:default">
+      <div class="card-preview" style="background:linear-gradient(135deg,#1e293b,#0f172a)">
+        <div class="preview-lines">
+          <div class="pl name" style="background:rgba(255,255,255,.15)"></div>
+          <div class="pl title" style="background:rgba(255,255,255,.1)"></div>
+          <div class="pl w60" style="margin-top:3px"></div>
+          <div class="pl w45"></div>
         </div>
       </div>
-
-      <div class="l-section">
-        <div class="l-heading">Certifications</div>
-        <div class="cert">
-          <span class="cert-org">Oracle Cloud</span>
-          <span class="cert-name">GenAI Certified Professional</span>
-        </div>
-        <div class="cert">
-          <span class="cert-org">Microsoft Certified</span>
-          <span class="cert-name">Azure AI Engineer Associate</span>
-        </div>
-        <div class="cert">
-          <span class="cert-org">Microsoft Certified</span>
-          <span class="cert-name">Azure Data Scientist Associate</span>
-        </div>
-        <div class="cert">
-          <span class="cert-org">Microsoft Certified</span>
-          <span class="cert-name">Power BI Data Analyst Associate</span>
-        </div>
-        <div class="cert">
-          <span class="cert-org">Microsoft Certified</span>
-          <span class="cert-name">Power Platform Fundamentals</span>
-        </div>
-        <div class="cert">
-          <span class="cert-org">Coursera</span>
-          <span class="cert-name">Neural Networks &amp; Deep Learning</span>
-        </div>
+      <div class="card-top">
+        <div class="card-badges"><span class="badge badge-soon">Coming soon</span><span class="badge badge-soon">Targeted</span></div>
+        <div class="card-title">Google / NVIDIA</div>
+        <div class="card-date">Targeted variant · create when applying</div>
+        <div class="card-desc">Emphasizes GCP-native experience (Vertex AI, GKE, Cloud Build), RAPIDS/GPU compute, and NVIDIA Morpheus cybersecurity work.</div>
       </div>
-
-      <div class="l-section">
-        <div class="l-heading">Education</div>
-        <span class="edu-degree">B.E. Electrical &amp; Electronics</span>
-        <span class="edu-detail">Andhra University, Visakhapatnam</span>
-        <span class="edu-detail">2012 – 2016</span>
+      <div class="card-footer">
+        <span class="card-link" style="color:var(--sl400)">Not yet created</span>
+        <span class="card-format">HTML → PDF</span>
       </div>
+    </div>
 
-    </div><!-- /left-col -->
+  </div>
 
-    <!-- ======= RIGHT COLUMN ======= -->
-    <div class="right-col">
+  <!-- ARCHIVE -->
+  <div class="section-head">
+    <span class="section-title">Historical Archive</span>
+    <div class="section-line"></div>
+  </div>
 
-      <!-- Summary -->
-      <div class="summary">
-        <p>10+ years engineering AI systems from research to real traffic. Currently leading GenAI and LLM infrastructure at Best Buy on GCP — architecting high-availability inference pipelines for search, fraud detection, and personalization at <span class="metric">40k+ transactions/sec</span>. Built LoRA fine-tuning frameworks running on <span class="metric">NVIDIA DGX (8×A100)</span>, deployed self-hosted open-source LLMs at enterprise scale, and optimized logistics from <span class="metric">130 → 160+ delivery trucks</span> through OR-Tools simulation. The specialist for the gap between <em>works in a notebook</em> and <em>serves real traffic</em>.</p>
-      </div>
+  <table class="archive-table">
+    <thead>
+      <tr>
+        <th>Version</th>
+        <th>Date</th>
+        <th>Format</th>
+        <th>Notes</th>
+        <th>Source</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Original May 2026</strong></td>
+        <td>Jun 2026</td>
+        <td><span class="role-tag">PDF</span></td>
+        <td style="color:var(--sl500);font-size:12px">Pre-redesign version — photo, qualitative bullets, no metrics</td>
+        <td><a class="dl-btn" href="https://drive.google.com/file/d/1NCQ-V2Vs9KxQVUyewFA45zLXQTDaarsZ/view" target="_blank">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Google Drive
+        </a></td>
+      </tr>
+      <tr>
+        <td><strong>June 2025</strong></td>
+        <td>Jun 2025</td>
+        <td><span class="role-tag">PDF</span></td>
+        <td style="color:var(--sl500);font-size:12px">Before Best Buy role — Wipro era</td>
+        <td><a class="dl-btn" href="https://drive.google.com/file/d/1csaOKpyyt-UffQP60qUfsMPXWNoRBhf7/view" target="_blank">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Google Drive
+        </a></td>
+      </tr>
+      <tr>
+        <td><strong>March 2025</strong></td>
+        <td>Mar 2025</td>
+        <td><span class="role-tag">DOCX</span></td>
+        <td style="color:var(--sl500);font-size:12px">Wipro era — editable source</td>
+        <td><a class="dl-btn" href="https://drive.google.com/file/d/1C8-fPNuov9IADka4-_3Xvx3zqcpyypMe/view" target="_blank">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Google Drive
+        </a></td>
+      </tr>
+      <tr>
+        <td><strong>May 2023</strong></td>
+        <td>May 2023</td>
+        <td><span class="role-tag">PDF</span> <span class="role-tag">DOCX</span></td>
+        <td style="color:var(--sl500);font-size:12px">Accenture era — ML Engineer variant also available</td>
+        <td><a class="dl-btn" href="https://drive.google.com/file/d/1yOr7sr7CK-obsd0vAAibd79trZjySRJY/view" target="_blank">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Google Drive
+        </a></td>
+      </tr>
+      <tr>
+        <td><strong>2020 (earliest)</strong></td>
+        <td>Jan 2020</td>
+        <td><span class="role-tag">PDF</span></td>
+        <td style="color:var(--sl500);font-size:12px">TCS / GD Research era — 3.5 years experience</td>
+        <td><a class="dl-btn" href="https://drive.google.com/file/d/1L2bEmt89FwYluXkrBXVUi8BF21sRW9MA/view" target="_blank">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Google Drive
+        </a></td>
+      </tr>
+    </tbody>
+  </table>
 
-      <!-- Work Experience -->
-      <div class="r-heading">Work Experience</div>
+</main>
 
-      <div class="timeline">
-
-        <!-- Best Buy -->
-        <div class="exp-item">
-          <div class="exp-row">
-            <div>
-              <div class="exp-role">Lead Artificial Intelligence Engineer</div>
-              <span class="exp-company">Best Buy &nbsp;·&nbsp; Bengaluru, India</span>
-            </div>
-            <div class="exp-date">Jul 2025 – Present</div>
-          </div>
-          <ul class="bullets">
-            <li>Architecting and productionalizing GenAI &amp; LLM solutions on GCP for high-availability, low-latency inference across retail use cases — search, personalization, fraud detection, cybersecurity — at <span class="metric">40k+ transactions/sec</span>.</li>
-            <li>Leading cross-functional delivery with Data Science teams on end-to-end training and inference pipelines; championing self-hosted open-source LLMs to eliminate external API dependency and strengthen data governance.</li>
-            <li>Defining AI engineering standards, infrastructure patterns, and deployment best practices for large-scale retail GenAI on Vertex AI and GCP.</li>
-          </ul>
-        </div>
-
-        <!-- Wipro -->
-        <div class="exp-item">
-          <div class="exp-row">
-            <div>
-              <div class="exp-role">ML Lead Engineer — ML Engineering &amp; Operations</div>
-              <span class="exp-company">Wipro &nbsp;·&nbsp; Client: Major US Retail Corporation</span>
-            </div>
-            <div class="exp-date">Aug 2023 – Jul 2025</div>
-          </div>
-          <ul class="bullets">
-            <li>Built a config-driven <span class="metric">LoRA adapter fine-tuning framework</span> for open-source causal LLMs on <span class="metric">NVIDIA DGX (8×A100)</span> — enabling rapid experimentation and production deployment for classification, information extraction, and free-form generation tasks.</li>
-            <li>Engineered GPU-accelerated ML pipelines for cybersecurity: phishing email detection, digital fingerprinting, malware classification, and managed reporting — cutting threat detection latency and improving incident response throughput.</li>
-            <li>Led AI fraud detection system processing <span class="metric">millions of transactional events</span> across multiple retail lifecycle stages using GCP ML capabilities and on-prem GPU computing.</li>
-            <li>Deployed and operated self-hosted open-source LLMs end-to-end, eliminating external API reliance and improving data privacy, compliance, and cost posture.</li>
-          </ul>
-        </div>
-
-        <!-- Accenture -->
-        <div class="exp-item">
-          <div class="exp-row">
-            <div>
-              <div class="exp-role">Application Development Team Lead — Data Science / Azure ML</div>
-              <span class="exp-company">Accenture</span>
-            </div>
-            <div class="exp-date">May 2021 – Aug 2023</div>
-          </div>
-          <ul class="bullets">
-            <li>Led last-mile delivery optimization using OR-Tools, scaling delivery coverage from <span class="metric">130 → 160+ trucks</span> with significant annual logistics cost savings through improved route planning and departure scheduling.</li>
-            <li>Developed and operationalized end-to-end ML model for warehouse product quality prediction, improving inspection efficiency and customer satisfaction scores.</li>
-            <li>Designed cross-functional supply chain simulation framework for strategic hub location optimization, improving distribution efficiency and reducing the global carbon footprint.</li>
-            <li>Led computer vision solution for semiconductor manufacturing defect detection, reducing production losses and eliminating manual inspection bottlenecks.</li>
-          </ul>
-        </div>
-
-      </div><!-- /timeline -->
-
-      <!-- Earlier Experience -->
-      <div class="r-heading" style="margin-top: 16px;">Earlier Experience</div>
-      <div class="earlier-grid">
-        <div class="mini-card">
-          <span class="mini-role">Data Scientist</span>
-          <span class="mini-co">GD Research Centre Pvt Ltd</span>
-          <span class="mini-date">May 2020 – May 2021</span>
-          <span class="mini-desc">Built company-wide time-series forecasting system across multiple intelligence centers. Delivered ML-driven insights across diverse industrial domains.</span>
-        </div>
-        <div class="mini-card">
-          <span class="mini-role">Systems Engineer</span>
-          <span class="mini-co">Tata Consultancy Services</span>
-          <span class="mini-date">Jul 2019 – Mar 2020</span>
-          <span class="mini-desc">Deployed hybrid cloud + on-prem computer vision system for multi-class image classification in manufacturing using transfer learning.</span>
-        </div>
-        <div class="mini-card">
-          <span class="mini-role">Senior System Engineer</span>
-          <span class="mini-co">Infosys</span>
-          <span class="mini-date">May 2016 – Jul 2019</span>
-          <span class="mini-desc">Built Business Intelligence applications including an ML-powered Lead Conversion Prediction system using Microsoft BI tools.</span>
-        </div>
-      </div>
-
-    </div><!-- /right-col -->
-
-  </div><!-- /body -->
-</div><!-- /resume -->
+<footer>
+  <p>Hari Yelesetty &nbsp;·&nbsp; <a href="https://ylnhari.github.io">ylnhari.github.io</a> &nbsp;·&nbsp; <a href="https://linkedin.com/in/ylnhari">LinkedIn</a> &nbsp;·&nbsp; <a href="https://github.com/ylnhari">GitHub</a></p>
+</footer>
 
 </body>
 </html>
