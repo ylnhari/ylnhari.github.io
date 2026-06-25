@@ -192,45 +192,33 @@ footer a{color:var(--indigo);text-decoration:none}
       </div>
     </a>
 
-    <div class="resume-card" style="opacity:.65;cursor:default">
-      <div class="card-preview" style="background:linear-gradient(135deg,#1e293b,#0f172a)">
-        <div class="preview-lines">
-          <div class="pl name" style="background:rgba(255,255,255,.15)"></div>
-          <div class="pl title" style="background:rgba(255,255,255,.1)"></div>
-          <div class="pl w60" style="margin-top:3px"></div>
-          <div class="pl w45"></div>
-        </div>
-      </div>
-      <div class="card-top">
-        <div class="card-badges"><span class="badge badge-soon">Coming soon</span><span class="badge badge-soon">Targeted</span></div>
-        <div class="card-title">Anthropic / OpenAI</div>
-        <div class="card-date">Targeted variant · create when applying</div>
-        <div class="card-desc">Reordered and re-weighted for frontier lab roles — emphasizes LoRA framework, LLM evaluation, and alignment-adjacent infrastructure work.</div>
-      </div>
-      <div class="card-footer">
-        <span class="card-link" style="color:var(--sl400)">Not yet created</span>
-        <span class="card-format">HTML → PDF</span>
-      </div>
-    </div>
+  </div>
 
-    <div class="resume-card" style="opacity:.65;cursor:default">
-      <div class="card-preview" style="background:linear-gradient(135deg,#1e293b,#0f172a)">
-        <div class="preview-lines">
-          <div class="pl name" style="background:rgba(255,255,255,.15)"></div>
-          <div class="pl title" style="background:rgba(255,255,255,.1)"></div>
-          <div class="pl w60" style="margin-top:3px"></div>
-          <div class="pl w45"></div>
+  <!-- TARGETED VARIANTS -->
+  <div class="section-head" style="margin-top:36px">
+    <span class="section-title">Targeted Variants</span>
+    <div class="section-line"></div>
+    <span style="font-size:11px;color:var(--sl400)">Per company &amp; role</span>
+  </div>
+
+  <div class="cards-grid" id="targeted-cards">
+
+    <!-- Targeted variant cards are added here when created -->
+    <!-- Each new application gets its own card with a link to /resume/targeted/<company>/ -->
+
+    <div style="grid-column:1/-1;background:white;border-radius:10px;border:1px solid var(--sl200);padding:28px 24px;display:flex;gap:24px;align-items:flex-start">
+      <div style="flex-shrink:0;width:40px;height:40px;background:var(--in50);border-radius:8px;border:1px solid var(--in200);display:flex;align-items:center;justify-content:center">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4338ca" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+      </div>
+      <div>
+        <div style="font-family:'Space Grotesk',sans-serif;font-size:14px;font-weight:700;color:var(--sl800);margin-bottom:6px">Create a targeted variant for any company or role</div>
+        <div style="font-size:12.5px;color:var(--sl600);line-height:1.7;max-width:600px">Open a Claude Code session in the <code style="background:var(--sl100);padding:1px 5px;border-radius:3px;font-size:11px">resume-vault</code> repo, paste the job description, and say <em>"Create a targeted resume for [Company] — [Role]."</em> A new card will appear here when it's deployed.</div>
+        <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+          <span style="font-size:11px;color:var(--sl500);background:var(--sl100);padding:3px 9px;border-radius:12px;border:1px solid var(--sl200)">Frontier AI labs</span>
+          <span style="font-size:11px;color:var(--sl500);background:var(--sl100);padding:3px 9px;border-radius:12px;border:1px solid var(--sl200)">Big Tech</span>
+          <span style="font-size:11px;color:var(--sl500);background:var(--sl100);padding:3px 9px;border-radius:12px;border:1px solid var(--sl200)">Startups</span>
+          <span style="font-size:11px;color:var(--sl500);background:var(--sl100);padding:3px 9px;border-radius:12px;border:1px solid var(--sl200)">Any JD</span>
         </div>
-      </div>
-      <div class="card-top">
-        <div class="card-badges"><span class="badge badge-soon">Coming soon</span><span class="badge badge-soon">Targeted</span></div>
-        <div class="card-title">Google / NVIDIA</div>
-        <div class="card-date">Targeted variant · create when applying</div>
-        <div class="card-desc">Emphasizes GCP-native experience (Vertex AI, GKE, Cloud Build), RAPIDS/GPU compute, and NVIDIA Morpheus cybersecurity work.</div>
-      </div>
-      <div class="card-footer">
-        <span class="card-link" style="color:var(--sl400)">Not yet created</span>
-        <span class="card-format">HTML → PDF</span>
       </div>
     </div>
 
