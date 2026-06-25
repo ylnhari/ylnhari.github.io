@@ -197,7 +197,7 @@ footer .brand{font-size:15px;color:var(--muted)}
     <p class="lede reveal">I'm <b>Hari</b> — a production <b>LLM/ML systems engineer</b> with <b>10+ years</b> shipping models at scale. Today I lead AI engineering at <b>Best Buy India</b>: <b>LLM fine-tuning</b> (LoRA/QLoRA via Unsloth/PEFT, multi-GPU) and <b>serving</b> (vLLM, GKE, hot-swappable adapters), plus <b>real-time fraud detection at 40k events/sec</b>. Before that, GPU-accelerated cybersecurity ML on <b>8×A100 DGX</b> with NVIDIA Morpheus, supply-chain optimization, and computer vision for semiconductor QA. My roots run all the way back to enterprise mainframes — so I know how real systems stay up.</p>
     <div class="cta-row reveal">
       <a class="btn primary" href="https://www.linkedin.com/in/hari-laxmi-narasimha-yelesetty-1a891b156/" target="_blank" rel="noopener">Let's work together →</a>
-      <a class="btn ghost" id="resumeBtn" href="./Hari_Yelesetty_Resume.pdf" target="_blank" rel="noopener" style="display:none">📄 Résumé</a>
+      <a class="btn ghost" id="resumeBtn" href="/resume/full/" target="_blank" rel="noopener">Resume</a>
       <a class="btn ghost" href="#projects">View my work</a>
       <a class="btn ghost" href="mailto:ylnharimailme@gmail.com">Email me</a>
     </div>
@@ -416,8 +416,6 @@ footer .brand{font-size:15px;color:var(--muted)}
   img.onload=function(){box.innerHTML='';box.appendChild(img);};
   img.alt='Hari Yelesetty';img.src='assets/profile.jpg';
 })();
-// reveal Résumé button only if the PDF has been uploaded
-fetch('./Hari_Yelesetty_Resume.pdf',{method:'HEAD'}).then(r=>{if(r.ok)document.getElementById('resumeBtn').style.display='';}).catch(()=>{});
 
 const roles=["LLM fine-tuning","LoRA / QLoRA at scale","vLLM serving","real-time fraud ML","8×A100 distributed training","inference internals","notebook → real traffic"];
 const el=document.getElementById('rot');
