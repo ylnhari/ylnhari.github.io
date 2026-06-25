@@ -158,6 +158,32 @@ main{max-width:860px;margin:0 auto;padding:32px 24px 80px}
 .lang-name{font-size:13.5px;font-weight:600;color:var(--sl800)}
 .lang-level{font-size:11.5px;color:var(--sl400)}
 
+/* IMPACT */
+.impact-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:13px}
+.impact-item{padding:16px 18px;border:1px solid var(--sl200);border-radius:11px;background:linear-gradient(160deg,var(--in50),var(--sl50))}
+.impact-num{font-family:'Space Grotesk',sans-serif;font-size:25px;font-weight:700;color:var(--indigo);line-height:1}
+.impact-txt{font-size:12.5px;color:var(--sl600);margin-top:7px;line-height:1.5}
+.impact-emp{font-size:10px;color:var(--sl400);margin-top:8px;text-transform:uppercase;letter-spacing:.05em;font-weight:700}
+
+/* PER-PROJECT IMPACT + period */
+.proj-period{font-size:11px;color:var(--sl400);margin:-2px 0 8px}
+.proj-role{font-size:11px;color:var(--sl500);font-weight:600;margin:-2px 0 8px}
+.proj-impact{font-size:12.5px;color:var(--sl700);line-height:1.6;margin:9px 0 10px;padding:8px 11px;background:var(--in50);border-left:3px solid var(--indigo);border-radius:0 6px 6px 0}
+.proj-impact b{color:var(--indigo)}
+.proj-impact .lbl{font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--indigo);display:block;margin-bottom:3px}
+.proj-impact.tbd{color:var(--sl400);font-style:italic;border-left-color:var(--sl300);background:var(--sl50)}
+.proj-links{display:flex;gap:14px;margin-top:9px;flex-wrap:wrap}
+.proj-links a{font-size:11.5px;font-weight:600;color:var(--indigo);text-decoration:none}
+.proj-links a:hover{text-decoration:underline}
+
+/* LINK ROWS (writing / presence) */
+.link-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px}
+.link-item{display:flex;align-items:center;gap:13px;padding:13px 15px;background:var(--sl50);border-radius:9px;border:1px solid var(--sl200);text-decoration:none;transition:background .15s,border-color .15s}
+.link-item:hover{background:white;border-color:var(--in200)}
+.link-ico{width:34px;height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:17px;background:var(--in50)}
+.link-title{font-size:13.5px;font-weight:600;color:var(--sl800)}
+.link-sub{font-size:12px;color:var(--sl500);margin-top:1px}
+
 /* FOOTER */
 footer{text-align:center;padding:28px 24px;font-size:12px;color:var(--sl400)}
 footer a{color:var(--indigo);text-decoration:none}
@@ -263,6 +289,56 @@ footer a{color:var(--indigo);text-decoration:none}
   </div>
 </div>
 
+<!-- ── IMPACT ─────────────────────────────────────── -->
+<div class="card">
+  <div class="card-head">
+    <div class="card-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4338ca" stroke-width="2"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+    <h2 class="card-title">Impact &amp; Signature Outcomes</h2>
+  </div>
+  <div class="impact-grid">
+    <div class="impact-item">
+      <div class="impact-num">$300K</div>
+      <div class="impact-txt">Annual savings by self-hosting open-source LLMs and eliminating external API dependency.</div>
+      <div class="impact-emp">Best Buy</div>
+    </div>
+    <div class="impact-item">
+      <div class="impact-num">40,000/sec</div>
+      <div class="impact-txt">Real-time events processed for fraud scoring at peak, held to a 200&nbsp;ms inference SLA.</div>
+      <div class="impact-emp">Best Buy</div>
+    </div>
+    <div class="impact-item">
+      <div class="impact-num">2,400/sec</div>
+      <div class="impact-txt">Phishing emails scored — double the previous pipeline's throughput.</div>
+      <div class="impact-emp">Wipro</div>
+    </div>
+    <div class="impact-item">
+      <div class="impact-num">2×</div>
+      <div class="impact-txt">Cybersecurity case volume vs. the prior pipeline, each threat auto-routed to the right team.</div>
+      <div class="impact-emp">Wipro</div>
+    </div>
+    <div class="impact-item">
+      <div class="impact-num">1B+ rows</div>
+      <div class="impact-txt">Per training run for AWS behavioral fingerprinting on NVIDIA DGX (8×A100, 1TB RAM).</div>
+      <div class="impact-emp">Wipro</div>
+    </div>
+    <div class="impact-item">
+      <div class="impact-num">$2.5M</div>
+      <div class="impact-txt">Annual savings from quality prediction — trucks inspected/day 130→160, +17% defect detection, +20% customer approval.</div>
+      <div class="impact-emp">Accenture · BamaGruppen</div>
+    </div>
+    <div class="impact-item">
+      <div class="impact-num">300+ / 50</div>
+      <div class="impact-txt">Résumés reviewed and interviews conducted to scale the India AI engineering hub.</div>
+      <div class="impact-emp">Wipro · Best Buy</div>
+    </div>
+    <div class="impact-item">
+      <div class="impact-num">10+ yrs</div>
+      <div class="impact-txt">Production AI/ML — from mainframes to frontier-scale LLM systems, across 6 companies.</div>
+      <div class="impact-emp">Career</div>
+    </div>
+  </div>
+</div>
+
 <!-- ── EXPERIENCE ─────────────────────────────────── -->
 <div class="card">
   <div class="card-head">
@@ -279,13 +355,14 @@ footer a{color:var(--indigo);text-decoration:none}
           <div class="exp-period">Jul 2025 – Present · 1 yr</div>
         </div>
         <div class="exp-co">Best Buy India</div>
-        <div class="exp-sub">Bengaluru, India · Full-time</div>
+        <div class="exp-sub">Bengaluru, India · Hybrid · Full-time</div>
         <ul class="exp-ul">
+          <li>Productionalise and scale enterprise AI for Best Buy's US retail operations — partnering with Data Science teams to turn validated models (XGBoost → LLMs) into high-availability, low-latency services powering search, recommendations, fraud detection, cyber security, and personalisation.</li>
           <li>Built a <strong>config-driven LoRA adapter fine-tuning framework</strong> for open-source causal LLMs — Unsloth (2× speedup, 60–80% VRAM reduction via QLoRA) + HuggingFace PEFT dual-backend; zero-Python task addition via YAML; multi-task single-adapter training.</li>
-          <li>Deployed <strong>vLLM OpenAI-compatible serving on GKE</strong> with HPA autoscaling, Istio traffic routing, hot-swap adapter support; GCS model store, Artifact Registry versioning, Cloud Build CI, GMP PodMonitoring, Prometheus/Grafana observability stack.</li>
-          <li>Self-hosted open-source LLMs at enterprise scale — eliminated external API dependency, <strong>saved $300K annually</strong>, strengthened data governance and compliance posture.</li>
-          <li>Architecting GenAI and LLM solutions on GCP Vertex AI for <strong>40,000+ transactions per second</strong> across retail use cases: search, personalization, fraud detection, cybersecurity.</li>
-          <li>Defining AI engineering standards, infrastructure patterns, and deployment best practices for large-scale retail GenAI.</li>
+          <li>Deployed <strong>vLLM OpenAI-compatible serving on GKE</strong> with HPA autoscaling, Istio routing, and hot-swap adapter support; GCS model store, Artifact Registry versioning, Cloud Build CI, GMP PodMonitoring, Prometheus/Grafana observability — self-hosting open-source LLMs that <strong>saved $300K annually</strong> and strengthened data governance.</li>
+          <li>Designed <strong>real-time streaming on Apache Beam / GCP Dataflow at 40,000 events/sec</strong> feeding Vertex AI Feature Store and GKE inference endpoints (Seldon Core) under a 200&nbsp;ms fraud-scoring SLA.</li>
+          <li>Championed <strong>GitOps</strong> — Git workflows for CI, Cloud Build for CD, Google KCC for infrastructure automation, and ArgoCD for scalable Kubernetes deployments; defined AI engineering standards across the org.</li>
+          <li>Scaled the India AI engineering hub through technical screening and interviews.</li>
         </ul>
       </div>
     </div>
@@ -305,7 +382,7 @@ footer a{color:var(--indigo);text-decoration:none}
           <li>Built <strong>unsupervised autoencoder models per entity</strong> (account/user/service/machine) for AWS account behavioral fingerprinting — training on billion-row CloudTrail datasets; model management via MLflow; Grafana alerts to security analysts.</li>
           <li>Processed <strong>billion-row datasets</strong> for fraud and cybersecurity feature extraction using RAPIDS (cuDF/CuPy) on GPU; orchestrated batch inference and training across concurrent DGX workloads.</li>
           <li>Led AI fraud detection processing <strong>millions of transactional events</strong> across multiple retail lifecycle stages using GCP ML and on-prem GPU computing.</li>
-          <li>Led team of ML/MLOps engineers; served as <strong>offshore SPOC for the Applied Machine Learning (AML) team</strong>.</li>
+          <li>Led a team of ML/MLOps engineers and served as <strong>offshore SPOC for the Applied Machine Learning (AML) team</strong> — reviewing 300+ résumés and conducting 50+ interviews to expand the India practice.</li>
         </ul>
       </div>
     </div>
@@ -314,11 +391,12 @@ footer a{color:var(--indigo);text-decoration:none}
       <div class="exp-dot-col"><div class="exp-dot"></div><div class="exp-connector"></div></div>
       <div class="exp-content">
         <div class="exp-row">
-          <div class="exp-title">Application Development Team Lead — Data Science / Azure ML</div>
-          <div class="exp-period">May 2021 – Aug 2023 · 2 yrs 4 mo</div>
+          <div class="exp-title">Application Development Team Lead → Senior Analyst — Data Science / ML</div>
+          <div class="exp-period">May 2021 – Sep 2023 · 2 yrs 4 mo</div>
         </div>
         <div class="exp-co">Accenture</div>
-        <div class="exp-sub">India · Full-time</div>
+        <div class="exp-sub">India · Hybrid · Full-time</div>
+        <div class="exp-client">Two positions: Team Lead (Nov 2022 – Sep 2023) · Senior Analyst (May 2021 – Nov 2022)</div>
         <ul class="exp-ul">
           <li>Led <strong>last-mile delivery optimization using OR-Tools VRP</strong>, scaling daily delivery coverage from <strong>130 to 160+ trucks</strong> through improved route planning, time windows, capacity constraints, and departure scheduling.</li>
           <li>Developed end-to-end <strong>Azure ML quality prediction pipeline for BamaGruppen (Norway)</strong> — predicts product quality at warehouse arrival to enable proactive inspection scheduling. Stack: Azure ML Studio, Logic Apps, Azure Pipelines, Azure Storage.</li>
@@ -349,11 +427,11 @@ footer a{color:var(--indigo);text-decoration:none}
       <div class="exp-dot-col"><div class="exp-dot"></div><div class="exp-connector"></div></div>
       <div class="exp-content">
         <div class="exp-row">
-          <div class="exp-title">Systems Engineer</div>
+          <div class="exp-title">Deep Learning Engineer</div>
           <div class="exp-period">Jul 2019 – Mar 2020 · 9 mo</div>
         </div>
         <div class="exp-co">Tata Consultancy Services (TCS)</div>
-        <div class="exp-sub">India · Full-time</div>
+        <div class="exp-sub">Hyderabad Area, India · Full-time</div>
         <ul class="exp-ul">
           <li>Deployed <strong>hybrid cloud + on-prem computer vision system</strong> for multi-class image classification in semiconductor manufacturing using transfer learning.</li>
           <li>Successfully deployed at <strong>Amkor Technology's South Korea manufacturing site</strong>, enhancing quality control and reducing production losses.</li>
@@ -365,11 +443,11 @@ footer a{color:var(--indigo);text-decoration:none}
       <div class="exp-dot-col"><div class="exp-dot"></div></div>
       <div class="exp-content">
         <div class="exp-row">
-          <div class="exp-title">Senior System Engineer</div>
+          <div class="exp-title">Senior Software Engineer — Machine Learning</div>
           <div class="exp-period">May 2016 – Jul 2019 · 3 yrs 2 mo</div>
         </div>
         <div class="exp-co">Infosys</div>
-        <div class="exp-sub">India · Full-time</div>
+        <div class="exp-sub">Bhubaneshwar Area, India · Full-time</div>
         <ul class="exp-ul">
           <li>Built Business Intelligence applications and <strong>ML-powered Lead Conversion Prediction</strong> system using Microsoft BI tools and classical ML (logistic regression).</li>
           <li>Career started in <strong>Mainframe (COBOL/JCL)</strong> before transitioning into data science and ML within the same tenure.</li>
@@ -527,87 +605,131 @@ footer a{color:var(--indigo);text-decoration:none}
         <div class="proj-name">LLM Fine-tuning Framework</div>
         <span class="proj-emp">Best Buy</span>
       </div>
-      <p class="proj-desc">Config-driven LoRA adapter fine-tuning for open-source causal LLMs. Enabled rapid experimentation and production deployment for classification, information extraction, and generation. Eliminated external API dependency — <strong>$300K saved</strong>. Multi-task single-adapter training; zero-Python task addition via YAML.</p>
+      <div class="proj-period">Dec 2025 – Present</div>
+      <p class="proj-desc">A config-driven framework for LoRA adapter fine-tuning of open-source causal LLMs — enabling rapid experimentation and production deployment for classification, information extraction, and free-form generation. <strong>Training layer:</strong> dual-backend engine (Unsloth — ~2× faster, 60–80% less VRAM via QLoRA — plus HuggingFace PEFT/Transformers), single- and multi-GPU via Accelerate with automatic backend selection. <strong>Inference layer:</strong> standard PEFT adapters hot-loadable into a vLLM OpenAI-compatible server alongside a frozen base model — no separate deployment per fine-tuned model; containerised on GKE with HPA autoscaling and Istio routing. <strong>MLOps:</strong> end-to-end artefact lifecycle (model resolution local HF cache → GCS → HF Hub), automated post-training evaluation, and GCS artefact upload. Zero-Python task addition via YAML + prompt file + CSV; multi-task single-adapter training.</p>
+      <div class="proj-impact"><span class="lbl">Impact</span><strong>$300K annual savings</strong> by self-hosting open-source LLMs and eliminating external API dependency; stronger data governance and compliance; sharply faster time-to-value for new GenAI use cases.</div>
       <div class="proj-stack">
-        <span class="proj-tag">LoRA / QLoRA</span><span class="proj-tag">Unsloth</span><span class="proj-tag">PEFT</span><span class="proj-tag">HuggingFace Accelerate</span><span class="proj-tag">vLLM</span><span class="proj-tag">GKE</span><span class="proj-tag">Istio</span>
+        <span class="proj-tag">LoRA / QLoRA</span><span class="proj-tag">Unsloth</span><span class="proj-tag">PEFT</span><span class="proj-tag">HF Accelerate</span><span class="proj-tag">vLLM</span><span class="proj-tag">GKE</span><span class="proj-tag">Istio</span><span class="proj-tag">GCS</span><span class="proj-tag">Prometheus/Grafana</span>
       </div>
     </div>
 
     <div class="proj-card">
       <div class="proj-head">
-        <div class="proj-name">AWS Account Behavioral Fingerprinting</div>
+        <div class="proj-name">Retail Fraud Detection &amp; Prevention Ecosystem</div>
+        <span class="proj-emp">Best Buy</span>
+      </div>
+      <div class="proj-period">Aug 2025 – Jan 2026</div>
+      <p class="proj-desc">A high-scale fraud detection ecosystem that intercepts threats across the fulfilment journey — payment, refund, reship — by analysing real-time behavioural signals, clickstream, and historical patterns. <strong>Streaming:</strong> Apache Beam pipelines on GCP Dataflow processing 40k events/sec at peak, transforming raw interactions into dynamic features for the Vertex AI Feature Store. <strong>Inference:</strong> real-time endpoints on GKE holding a 200&nbsp;ms scoring SLA. <strong>Training:</strong> continued training via Vertex AI Pipelines. Transitioned validated XGBoost models to production with Helm + Vertex AI Model Registry; provisioned GCP resources (Pub/Sub, Buckets, Dataflow) via Google KCC; GitOps with Cloud Build + ArgoCD; JWT-secured endpoints with rigorous load testing; Prometheus/Grafana + Cloud Monitoring alerting to Slack/email.</p>
+      <div class="proj-impact"><span class="lbl">Impact</span>Real-time fraud scoring at <strong>40,000 events/sec</strong> under a <strong>200&nbsp;ms SLA</strong>, intercepting chargebacks and "item not received" abuse early across the fulfilment lifecycle — preventing an estimated multi-million-USD annual fraud loss.</div>
+      <div class="proj-stack">
+        <span class="proj-tag">Apache Beam</span><span class="proj-tag">Dataflow</span><span class="proj-tag">Vertex AI</span><span class="proj-tag">Seldon Core</span><span class="proj-tag">XGBoost</span><span class="proj-tag">GKE</span><span class="proj-tag">ArgoCD</span><span class="proj-tag">Pub/Sub</span><span class="proj-tag">KCC</span>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-head">
+        <div class="proj-name">Brand Infringement — Abuse Inbox Analysis</div>
         <span class="proj-emp">Wipro</span>
       </div>
-      <p class="proj-desc">Behavioral anomaly detection for AWS account security. Each entity (account/user/service/machine) gets an unsupervised autoencoder fingerprint trained on its historical activity. Scale: 20 days × 3 accounts = 1 billion+ rows per training run. Alerts via Grafana to cybersecurity team.</p>
+      <div class="proj-period">May 2024 – Aug 2025</div>
+      <p class="proj-desc">Helped Cyber Security act faster on critical threats reported to the "abuse" mailbox. Two-part solution in active use: (1) an <strong>email-routing structure</strong> that classifies inbound abuse mail with ML, strips junk, and forwards to the right action teams; (2) an <strong>extraction pipeline</strong> that pulls scammers' email addresses and phone numbers — even when hidden in HTML, images, PDFs/PNGs, multi-coloured digits, or whitespace tricks — using OCR (pytesseract) and rule-based parsing, then notifies stakeholders (mail partners such as Google and iCloud, the cyber threat-response team, and the phishing team) so partners can block the numbers and shut down the scammers.</p>
+      <div class="proj-impact"><span class="lbl">Impact</span>Reduced brand infringement by automating triage of the abuse inbox and feeding actionable scammer identifiers to telecom/mail partners for takedown — cutting manual review and accelerating threat response.</div>
       <div class="proj-stack">
-        <span class="proj-tag">NVIDIA Morpheus</span><span class="proj-tag">NVIDIA DGX</span><span class="proj-tag">Autoencoders</span><span class="proj-tag">cuDF / RAPIDS</span><span class="proj-tag">MLflow</span><span class="proj-tag">Grafana</span>
+        <span class="proj-tag">Python</span><span class="proj-tag">cuDF (GPU)</span><span class="proj-tag">pytesseract / OCR</span><span class="proj-tag">Outlook API SDK</span><span class="proj-tag">ML Classification</span>
       </div>
     </div>
 
     <div class="proj-card">
       <div class="proj-head">
-        <div class="proj-name">Phishing Mail Detection</div>
+        <div class="proj-name">AWS Account Digital Fingerprinting</div>
         <span class="proj-emp">Wipro</span>
       </div>
-      <p class="proj-desc">End-to-end ML pipeline to detect phishing emails and protect users from malicious attacks. Classification models trained on email content and metadata, integrated into the real-time cybersecurity pipeline.</p>
+      <div class="proj-period">Jan 2024 – Aug 2025</div>
+      <p class="proj-desc">Profiled AWS account activity from security logs to surface anomalous/nefarious behaviour. Every account, user, service, and machine gets a <strong>digital fingerprint</strong> — an unsupervised autoencoder trained per entity to learn its normal moment-by-moment activity; deviations trigger alerts, and models are continuously retrained as behaviour evolves. Engineered training and inference pipelines on NVIDIA Morpheus, exploiting GPU-accelerated libraries on an NVIDIA DGX server (8×A100, 1TB RAM). Operating these per-account pipelines means handling enormous data — ~20 days across 3 AWS accounts can exceed a billion rows — with high feature cardinality. Predictions served to the cyber team via Grafana; models managed with MLflow.</p>
+      <div class="proj-impact"><span class="lbl">Impact</span>Real-time behavioural anomaly detection at <strong>billion-row scale</strong> per training run, giving the cybersecurity team continuously-updated, per-entity threat detection across the AWS estate.</div>
       <div class="proj-stack">
-        <span class="proj-tag">NLP</span><span class="proj-tag">Classification</span><span class="proj-tag">GCP</span><span class="proj-tag">Cybersecurity ML</span>
+        <span class="proj-tag">NVIDIA Morpheus</span><span class="proj-tag">NVIDIA DGX (8×A100)</span><span class="proj-tag">Autoencoders</span><span class="proj-tag">cuDF / RAPIDS</span><span class="proj-tag">MLflow</span><span class="proj-tag">Grafana</span>
       </div>
     </div>
 
     <div class="proj-card">
       <div class="proj-head">
-        <div class="proj-name">Abuse Inbox Management</div>
+        <div class="proj-name">Proofpoint Phishing Mail Detection</div>
         <span class="proj-emp">Wipro</span>
       </div>
-      <p class="proj-desc">Extracted structured information from customer-forwarded suspicious, fraud, and spam emails. Automated routing to the appropriate security response team — eliminating manual triage and handling double the case volume of the prior system.</p>
+      <div class="proj-period">Oct 2023 – Feb 2024 · MLOps Engineer</div>
+      <p class="proj-desc">Training and inference pipelines that score phishing probability and analyse trends in incoming mail — augmenting existing Proofpoint defences by catching attempts that slipped past initial filters and accelerating quarantine. Data moved from Elastic Search to Microsoft Sentinel; Morpheus pipelines run multi-stage on a GPU server (raw download in a time-delta loop → pre-processing → featurization → inference → alerting), with the training pipeline folding in security-team feedback for continuous improvement. Detections let the security team pull mail from inboxes, warn employees, or open investigations.</p>
+      <div class="proj-impact"><span class="lbl">Impact</span><strong>2,400 emails/sec</strong> processing throughput — <strong>double the previous rate</strong> — with faster quarantine response and detection of phishing that bypassed Proofpoint's initial filters.</div>
       <div class="proj-stack">
-        <span class="proj-tag">NLP / NER</span><span class="proj-tag">Information Extraction</span><span class="proj-tag">Automated Routing</span><span class="proj-tag">GCP</span>
+        <span class="proj-tag">NVIDIA Morpheus</span><span class="proj-tag">cuDF / cuPy</span><span class="proj-tag">Microsoft Sentinel</span><span class="proj-tag">Elastic Search</span><span class="proj-tag">GPU Pipelines</span>
       </div>
     </div>
 
     <div class="proj-card">
       <div class="proj-head">
-        <div class="proj-name">Vehicle Routing &amp; Transportation Optimization</div>
+        <div class="proj-name">Vehicle Routing &amp; Last-Mile Optimization</div>
         <span class="proj-emp">Accenture</span>
       </div>
-      <p class="proj-desc">OR-Tools Vehicle Routing Problem (VRP) for last-mile delivery optimization. Constrained by time windows, vehicle capacity, geographic clustering, departure schedules, and product load rules. Scaled daily fleet from 130 to 160+ active trucks — significant annual cost savings.</p>
+      <div class="proj-period">Aug 2022 – Dec 2023 · Data Scientist / App Developer</div>
+      <p class="proj-desc">Optimised the last mile — transporting pallets from a depot to many grocery-chain stores by distribution truck. Replaced manual, ad-hoc route planning with an OR-Tools Vehicle Routing Problem formulation honouring real constraints: number of vehicles, store time windows, waiting times, and demand fulfilment for every store. Computed key performance metrics, compared generated vs. manually-planned routes, and ran many input scenarios to analyse model behaviour. Used Google Maps services for coordinates/directions; built and analysed in Python + Jupyter with GitHub version control.</p>
+      <div class="proj-impact"><span class="lbl">Impact</span>More efficient routes and better resource utilisation for timely deliveries, yielding significant annual logistics cost savings. <em>(Exact figure not yet quantified — to confirm.)</em></div>
       <div class="proj-stack">
-        <span class="proj-tag">OR-Tools</span><span class="proj-tag">VRP</span><span class="proj-tag">Python</span><span class="proj-tag">Operations Research</span>
+        <span class="proj-tag">OR-Tools</span><span class="proj-tag">VRP</span><span class="proj-tag">Google Maps API</span><span class="proj-tag">Python</span><span class="proj-tag">Operations Research</span>
       </div>
     </div>
 
     <div class="proj-card">
       <div class="proj-head">
-        <div class="proj-name">Quality Prediction in Supply Chain</div>
+        <div class="proj-name">Norsk Oppstrøm — Supply-Chain Simulation</div>
         <span class="proj-emp">Accenture</span>
       </div>
-      <p class="proj-desc">End-to-end Azure ML pipeline predicting product quality at warehouse arrival for BamaGruppen (Norway). Routes defective shipments to inspection before they enter the warehouse, improving efficiency and reducing customer complaints.</p>
+      <div class="proj-period">Nov 2022 – Jul 2023 · Data Scientist, MLOps</div>
+      <p class="proj-desc">Designed and built a simulation framework modelling the movement of products from vendors and producers to customers and intermediate warehouses, with an embedded optimisation model for the flow of goods across every touchpoint. Tracked KPIs such as operational cost, product freshness, and carbon footprint; ran scenario simulations that informed critical business decisions. Built robust pipelines to feed simulation results into Power BI and managed MLOps for smooth deployment and monitoring.</p>
+      <div class="proj-impact"><span class="lbl">Impact</span>Identified the need for — and the optimal number and locations of — multiple small distribution hubs, improving product distribution between vendors, customers, and warehouses while informing strategic supply-chain decisions.</div>
       <div class="proj-stack">
-        <span class="proj-tag">Azure ML Studio</span><span class="proj-tag">Logic Apps</span><span class="proj-tag">Azure Pipelines</span><span class="proj-tag">Azure Storage</span>
+        <span class="proj-tag">Google OR-Tools</span><span class="proj-tag">Azure ML</span><span class="proj-tag">Azure Blob</span><span class="proj-tag">Power BI</span><span class="proj-tag">Python / Jupyter</span>
       </div>
     </div>
 
     <div class="proj-card">
       <div class="proj-head">
-        <div class="proj-name">Computer Vision — Semiconductor Defect Detection</div>
-        <span class="proj-emp">Accenture · TCS</span>
-      </div>
-      <p class="proj-desc">Deep learning for multi-class defect detection in semiconductor manufacturing. Transfer learning on a pre-trained CNN deployed on hybrid cloud + on-prem at Amkor Technology's South Korea site. Replaced manual visual inspection, reducing production losses.</p>
-      <div class="proj-stack">
-        <span class="proj-tag">Computer Vision</span><span class="proj-tag">Transfer Learning</span><span class="proj-tag">CNN</span><span class="proj-tag">Hybrid Cloud</span><span class="proj-tag">PyTorch</span>
-      </div>
-    </div>
-
-    <div class="proj-card">
-      <div class="proj-head">
-        <div class="proj-name">Supply Chain Optimization Simulation</div>
+        <div class="proj-name">Mellom Transport Optimization</div>
         <span class="proj-emp">Accenture</span>
       </div>
-      <p class="proj-desc">Simulation framework for supply chain network optimization — identifying strategic hub locations to improve distribution efficiency and reduce the global carbon footprint. Operations Research-based evaluation of hub placement scenarios.</p>
+      <div class="proj-period">Feb 2022 – Jul 2023 · Azure ML Developer</div>
+      <p class="proj-desc">Minimised transportation costs for daily transport between a city's terminals and distribution centres for Norway's largest fruit &amp; vegetable distributor. Replaced a highly-manual Excel process ("ProductTransport") with an OR-Tools MIP assignment model. The transport model was hosted on Azure Function Apps behind API endpoints, fronted by a Logic App that routes requests by location; a scheduled RPA process retrieves optimised plans and Slack notifications keep stakeholders updated. CI/CD via Azure DevOps + GitHub.</p>
+      <div class="proj-impact"><span class="lbl">Impact</span>Replaced manual, experience-based planning with automated daily transport plans planners could act on directly — reducing transportation cost and planning effort.</div>
       <div class="proj-stack">
-        <span class="proj-tag">Operations Research</span><span class="proj-tag">Simulation</span><span class="proj-tag">Network Optimization</span><span class="proj-tag">Python</span>
+        <span class="proj-tag">OR-Tools (MIP)</span><span class="proj-tag">Azure Function Apps</span><span class="proj-tag">Logic Apps</span><span class="proj-tag">Azure DevOps</span><span class="proj-tag">RPA</span><span class="proj-tag">Slack</span>
       </div>
+      <div class="proj-links"><a href="https://github.com/bamaml/mellomtransport" target="_blank" rel="noopener">Project repo ↗</a></div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-head">
+        <div class="proj-name">Hub Analytics (Distribution-Hub POC)</div>
+        <span class="proj-emp">Accenture</span>
+      </div>
+      <div class="proj-period">Aug 2021 – Dec 2021 · Data Scientist</div>
+      <p class="proj-desc">A proof-of-concept analysing the impact of introducing distribution centres at strategic locations in a logistics network for Norway's largest vegetable distributor — assessing whether they could reduce volume through main warehouses, cut cost, and deliver fresher product. Collected, cleaned, and pre-processed raw network data; analysed current goods flow; designed approaches to simulate real-world scenarios; surfaced new opportunities and the customers/vendors who would benefit most; and communicated actionable recommendations to stakeholders.</p>
+      <div class="proj-impact"><span class="lbl">Impact</span>Demonstrated that strategically-placed hubs could reduce main-warehouse volumes — driving cost savings and fresher deliveries — and pinpointed the highest-benefit customers and vendors.</div>
+      <div class="proj-stack">
+        <span class="proj-tag">Python</span><span class="proj-tag">Pandas</span><span class="proj-tag">Azure Cloud</span><span class="proj-tag">Azure DevOps</span><span class="proj-tag">Simulation</span>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-head">
+        <div class="proj-name">Product Quality Prediction</div>
+        <span class="proj-emp">Accenture · BamaGruppen</span>
+      </div>
+      <div class="proj-period">May 2021 – Dec 2021 · Azure ML / MLOps Engineer</div>
+      <p class="proj-desc">Designed, implemented, and maintained an ML model to predict the quality of goods on arrival at the warehouse for Norway's largest fruit &amp; vegetable distributor, so the inspection team could prioritise efficiently. Built end-to-end on Azure — ML Studio, Logic Apps for workflow, Pipelines for automated retraining, and Azure Storage. Owned retraining strategy (MLOps), model optimisation, client demos, performance monitoring, and ongoing support; worked closely with stakeholders to measure and track impact.</p>
+      <div class="proj-impact"><span class="lbl">Impact</span>Trucks inspected per day rose <strong>130 → 160</strong>, low-quality detection improved <strong>+17%</strong>, customer approval <strong>+20%</strong>, delivering <strong>$2.5M in annual savings</strong> through optimised inspections.</div>
+      <div class="proj-stack">
+        <span class="proj-tag">Azure ML Studio</span><span class="proj-tag">Logic Apps</span><span class="proj-tag">Azure Pipelines</span><span class="proj-tag">Azure Storage</span><span class="proj-tag">Python</span>
+      </div>
+      <div class="proj-links"><a href="https://drive.google.com/file/d/1JZLFRq6xTeIDfWlb5slipLibGdKjZS1K/view" target="_blank" rel="noopener">Project write-up ↗</a></div>
     </div>
 
     <div class="proj-card">
@@ -615,12 +737,179 @@ footer a{color:var(--indigo);text-decoration:none}
         <div class="proj-name">Global Forecasting System</div>
         <span class="proj-emp">GD Research</span>
       </div>
-      <p class="proj-desc">Company-wide time-series forecasting delivering intelligence across 8 verticals: Consumer Goods, Oil &amp; Gas, Power, Financial Services, Retail, Technology, Construction, and Mining. Informed strategic decisions for UK-based clients.</p>
+      <div class="proj-period">May 2020 – Apr 2021 · Data Scientist</div>
+      <p class="proj-desc">Built and deployed a forecasting system predicting company-wide data across many intelligence centres for a UK-based global business-intelligence provider. Domains spanned Consumer, Oil &amp; Gas, Power, Financial Services, Retail, Technology, Construction, Mining, Aerospace, Defense &amp; Security, Telecommunication, Automotive, Travel &amp; Tourism, and more — conducting in-depth data research, generating forecasts, and adjusting them for domain-specific scenarios.</p>
+      <div class="proj-impact"><span class="lbl">Impact</span>Delivered company-wide, domain-aware forecasts that informed strategic decisions and resource allocation across the firm's intelligence centres.</div>
       <div class="proj-stack">
         <span class="proj-tag">Time-Series</span><span class="proj-tag">Forecasting</span><span class="proj-tag">Python</span><span class="proj-tag">Multi-Domain ML</span>
       </div>
     </div>
 
+    <div class="proj-card">
+      <div class="proj-head">
+        <div class="proj-name">Computer Vision — Semiconductor Defect Detection</div>
+        <span class="proj-emp">TCS · Amkor</span>
+      </div>
+      <div class="proj-period">Jun 2019 – Mar 2020 · ML / Deep Learning Engineer</div>
+      <p class="proj-desc">A robust hybrid on-prem/cloud computer-vision system for multi-class classification of faulty chips on the production line. Built concurrent training and inference pipelines: raw data downloaded to a GCP compute cluster via multi-processing/threading, converted to TF records, ingested and pre-processed on CPU, with training distributed across multiple GPUs and a parallel evaluation job gathering checkpoints and signalling when to stop. A DenseNet trained on ~1 million images in about 3 hours; inference served via Docker + TensorFlow Serving. Led the team on inference, database, and data-handling, deployed at the client's South Korea site, and trained the client team.</p>
+      <div class="proj-impact"><span class="lbl">Impact</span>Deployed in production at Amkor's South Korea manufacturing site, replacing manual visual inspection — enhancing quality control and reducing production losses.</div>
+      <div class="proj-stack">
+        <span class="proj-tag">TensorFlow / Keras</span><span class="proj-tag">DenseNet</span><span class="proj-tag">GCP</span><span class="proj-tag">TF Serving</span><span class="proj-tag">Docker</span><span class="proj-tag">Distributed GPU</span>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-head">
+        <div class="proj-name">Business Insights — Opportunity Win/Lose Prediction</div>
+        <span class="proj-emp">Infosys</span>
+      </div>
+      <div class="proj-period">Apr 2018 – May 2019 · Data Scientist</div>
+      <p class="proj-desc">Developed an opportunity win/lose prediction system for the sales &amp; marketing team of a US-based multinational internet-technologies company, enabling data-driven decisions through predicted probability scores. Used classical ML (logistic regression), built a data extraction/load system with SQL Server Integration Services (SSIS), and integrated the predictions into a Power BI dashboard backed by an SSAS cube and SQL Server.</p>
+      <div class="proj-impact"><span class="lbl">Impact</span>Gave the sales &amp; marketing team data-driven opportunity scoring through an integrated Power BI dashboard, supporting smarter pursuit decisions.</div>
+      <div class="proj-stack">
+        <span class="proj-tag">Logistic Regression</span><span class="proj-tag">SSIS</span><span class="proj-tag">SSAS Cube</span><span class="proj-tag">SQL Server</span><span class="proj-tag">Power BI</span>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-head">
+        <div class="proj-name">Automated ID-Card Generation System</div>
+        <span class="proj-emp">Infosys</span>
+      </div>
+      <div class="proj-period">Sep 2016 – Dec 2017 · Software Engineer</div>
+      <p class="proj-desc">Generated ID cards for new members enrolled under a leading US health-insurance client's policies — spanning estimation, impact analysis, design, coding, review, unit and integration testing across both agile and waterfall. Built on the mainframe stack (JCL, COBOL, DB2, VSAM, CICS), with post-implementation support, enhancements, and knowledge-transfer sessions for the team.</p>
+      <div class="proj-impact"><span class="lbl">Impact</span>Delivered reliable, tested ID-card generation for the insurer's new-member adjudication workflow — the foundational "what production really means" experience early in the career.</div>
+      <div class="proj-stack">
+        <span class="proj-tag">COBOL</span><span class="proj-tag">JCL</span><span class="proj-tag">DB2</span><span class="proj-tag">VSAM</span><span class="proj-tag">CICS</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ── OPEN-SOURCE & PERSONAL PROJECTS ─────────────── -->
+<div class="card">
+  <div class="card-head">
+    <div class="card-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4338ca" stroke-width="2"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.22.66-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.1-1.47-1.1-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.16.57.67.48A10 10 0 0 0 22 12 10 10 0 0 0 12 2z"/></svg></div>
+    <h2 class="card-title">Open-Source &amp; Personal Projects</h2>
+  </div>
+  <div class="proj-grid">
+
+    <div class="proj-card">
+      <div class="proj-head">
+        <div class="proj-name">vLLM Model Chooser</div>
+        <span class="proj-emp">Live App</span>
+      </div>
+      <p class="proj-desc">Interactive tool to find the optimal vLLM-compatible LLM for any GPU — 108 models filtered by VRAM, quantization, and KV-cache fit across A100 → B200.</p>
+      <div class="proj-stack">
+        <span class="proj-tag">JavaScript</span><span class="proj-tag">vLLM</span><span class="proj-tag">GPU Sizing</span>
+      </div>
+      <div class="proj-links"><a href="https://ylnhari.github.io/vllm-model-chooser/" target="_blank" rel="noopener">Open live app ↗</a><a href="https://github.com/ylnhari/vllm-model-chooser" target="_blank" rel="noopener">Code ↗</a></div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-head">
+        <div class="proj-name">AI News Aggregator</div>
+        <span class="proj-emp">GenAI</span>
+      </div>
+      <p class="proj-desc">Daily AI news brief from free sources (RSS, arXiv, Hacker News), synthesised with Gemini and exported as a polished PDF + Markdown.</p>
+      <div class="proj-stack">
+        <span class="proj-tag">Python</span><span class="proj-tag">Gemini</span><span class="proj-tag">RAG-style synthesis</span>
+      </div>
+      <div class="proj-links"><a href="https://github.com/ylnhari/ai-news-aggregator" target="_blank" rel="noopener">Explore repo ↗</a></div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-head">
+        <div class="proj-name">Local AI Agent (MLX)</div>
+        <span class="proj-emp">Local LLM</span>
+      </div>
+      <p class="proj-desc">Run any LLM fully locally on a Mac with a single command — private, offline, and zero cloud dependency.</p>
+      <div class="proj-stack">
+        <span class="proj-tag">Python</span><span class="proj-tag">Apple MLX</span><span class="proj-tag">Local Inference</span>
+      </div>
+      <div class="proj-links"><a href="https://github.com/ylnhari/local-ai-agent-mlx" target="_blank" rel="noopener">Explore repo ↗</a></div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-head">
+        <div class="proj-name">Rover</div>
+        <span class="proj-emp">Infra</span>
+      </div>
+      <p class="proj-desc">Remote command executor &amp; project launcher — single binary, zero dependencies, real-time SSE streaming.</p>
+      <div class="proj-stack">
+        <span class="proj-tag">Go</span><span class="proj-tag">SSE</span><span class="proj-tag">CLI / Infra</span>
+      </div>
+      <div class="proj-links"><a href="https://github.com/ylnhari/rover" target="_blank" rel="noopener">Explore repo ↗</a></div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-head">
+        <div class="proj-name">Family Finance App</div>
+        <span class="proj-emp">Local-first</span>
+      </div>
+      <p class="proj-desc">A self-contained personal &amp; family finance tracker that runs entirely on your machine — no accounts, no cloud, no dependencies. Just Python and a browser.</p>
+      <div class="proj-stack">
+        <span class="proj-tag">Python</span><span class="proj-tag">JavaScript</span><span class="proj-tag">Local-first</span>
+      </div>
+      <div class="proj-links"><a href="https://github.com/ylnhari/family-finance-app" target="_blank" rel="noopener">Explore repo ↗</a></div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-head">
+        <div class="proj-name">LLM Inference Internals (in progress)</div>
+        <span class="proj-emp">Public build</span>
+      </div>
+      <p class="proj-desc">Building LLM inference internals from scratch — KV-cache, paged attention, and speculative decoding — alongside a config-driven LoRA → eval → vLLM-serve pipeline. Shipping in public through 2026.</p>
+      <div class="proj-stack">
+        <span class="proj-tag">PyTorch</span><span class="proj-tag">KV-cache</span><span class="proj-tag">Paged Attention</span><span class="proj-tag">Speculative Decoding</span>
+      </div>
+      <div class="proj-links"><a href="https://github.com/ylnhari?tab=repositories" target="_blank" rel="noopener">All repositories ↗</a></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ── WRITING & COMMUNITY ─────────────────────────── -->
+<div class="card">
+  <div class="card-head">
+    <div class="card-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4338ca" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg></div>
+    <h2 class="card-title">Writing &amp; Community</h2>
+  </div>
+  <div class="link-row">
+    <a class="link-item" href="https://ylnhari.medium.com/" target="_blank" rel="noopener">
+      <div class="link-ico">✍️</div>
+      <div><div class="link-title">Medium &amp; Blog</div><div class="link-sub">Applied ML, LLM engineering &amp; MLOps · also at ylnhari.github.io/blog</div></div>
+    </a>
+    <a class="link-item" href="https://leetcode.com/ylnhari/" target="_blank" rel="noopener">
+      <div class="link-ico">🧩</div>
+      <div><div class="link-title">LeetCode</div><div class="link-sub">Data structures &amp; algorithms — approaches documented in my DSA repo</div></div>
+    </a>
+    <a class="link-item" href="https://github.com/ylnhari" target="_blank" rel="noopener">
+      <div class="link-ico">💻</div>
+      <div><div class="link-title">GitHub — @ylnhari</div><div class="link-sub">27+ public repositories · ML/DL utilities, notebooks &amp; tools</div></div>
+    </a>
+    <a class="link-item" href="https://ylnhari.github.io" target="_blank" rel="noopener">
+      <div class="link-ico">🌐</div>
+      <div><div class="link-title">Portfolio</div><div class="link-sub">ylnhari.github.io — work, writing &amp; contact</div></div>
+    </a>
+  </div>
+</div>
+
+<!-- ── COURSES ────────────────────────────────────── -->
+<div class="card">
+  <div class="card-head">
+    <div class="card-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4338ca" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+    <h2 class="card-title">Courses &amp; Training</h2>
+  </div>
+  <div class="skill-tags">
+    <span class="skill-tag">AppliedAiCourse — AppliedAICourse.com</span>
+    <span class="skill-tag">Supply Chain Analytics with Python</span>
+    <span class="skill-tag">Neural Networks — Introduction (Coursera)</span>
+    <span class="skill-tag">Modernisation of Mainframes (XML, Web Services, MQ) — Infosys</span>
+    <span class="skill-tag">Mainframes (JCL, COBOL, DB2, FileAid) — Infosys</span>
+    <span class="skill-tag">Microsoft SQL Server — Infosys</span>
+    <span class="skill-tag">Python &amp; OOP Concepts — Infosys</span>
   </div>
 </div>
 
@@ -634,78 +923,106 @@ footer a{color:var(--indigo);text-decoration:none}
     <div class="cert-item">
       <div class="cert-ico" style="background:#fee2e2">☁️</div>
       <div>
-        <div class="cert-name">Generative AI Certified Professional</div>
-        <div class="cert-meta"><span class="cert-issuer">Oracle Cloud Infrastructure</span><span class="cert-badge cb-or">Oracle Cloud</span></div>
-      </div>
-    </div>
-    <div class="cert-item">
-      <div class="cert-ico" style="background:#e0f2fe">🔷</div>
-      <div>
-        <div class="cert-name">Microsoft Certified: Azure AI Engineer Associate</div>
-        <div class="cert-meta"><span class="cert-issuer">Microsoft</span><span class="cert-badge cb-ms">Microsoft</span></div>
-      </div>
-    </div>
-    <div class="cert-item">
-      <div class="cert-ico" style="background:#e0f2fe">🔷</div>
-      <div>
-        <div class="cert-name">Microsoft Certified: Azure Data Scientist Associate</div>
-        <div class="cert-meta"><span class="cert-issuer">Microsoft</span><span class="cert-badge cb-ms">Microsoft</span></div>
-      </div>
-    </div>
-    <div class="cert-item">
-      <div class="cert-ico" style="background:#e0f2fe">🔷</div>
-      <div>
-        <div class="cert-name">Microsoft Certified: Power BI Data Analyst Associate</div>
-        <div class="cert-meta"><span class="cert-issuer">Microsoft</span><span class="cert-badge cb-ms">Microsoft</span></div>
-      </div>
-    </div>
-    <div class="cert-item">
-      <div class="cert-ico" style="background:#e0f2fe">🔷</div>
-      <div>
-        <div class="cert-name">Microsoft Certified: Power Platform Fundamentals</div>
-        <div class="cert-meta"><span class="cert-issuer">Microsoft</span><span class="cert-badge cb-ms">Microsoft</span></div>
+        <div class="cert-name">Oracle Cloud Infrastructure 2024 Generative AI Certified Professional</div>
+        <div class="cert-meta"><span class="cert-issuer">Oracle · May 2024</span><span class="cert-badge cb-or">Oracle Cloud</span></div>
       </div>
     </div>
     <div class="cert-item">
       <div class="cert-ico" style="background:#fef9c3">🟡</div>
       <div>
         <div class="cert-name">Google Cloud Gen AI L3</div>
-        <div class="cert-meta"><span class="cert-issuer">Google (via Wipro)</span><span class="cert-badge cb-go">Google Cloud</span></div>
+        <div class="cert-meta"><span class="cert-issuer">Google (via Wipro) · Mar 2024</span><span class="cert-badge cb-go">Google Cloud</span></div>
       </div>
     </div>
     <div class="cert-item">
-      <div class="cert-ico" style="background:#fef9c3">🟡</div>
+      <div class="cert-ico" style="background:#fef3c7">🧠</div>
       <div>
-        <div class="cert-name">Google Cloud and ML Onboarding</div>
-        <div class="cert-meta"><span class="cert-issuer">Google</span><span class="cert-badge cb-go">Google Cloud</span></div>
+        <div class="cert-name">WeGa 101 — Enterprise Generative AI</div>
+        <div class="cert-meta"><span class="cert-issuer">Wipro · Mar 2025</span><span class="cert-badge" style="background:#fde68a;color:#92400e">Wipro</span></div>
+      </div>
+    </div>
+    <div class="cert-item">
+      <div class="cert-ico" style="background:#e0f2fe">🔷</div>
+      <div>
+        <div class="cert-name">Microsoft Certified: Azure AI Engineer Associate</div>
+        <div class="cert-meta"><span class="cert-issuer">Microsoft · Jan 2020</span><span class="cert-badge cb-ms">Microsoft</span></div>
+      </div>
+    </div>
+    <div class="cert-item">
+      <div class="cert-ico" style="background:#e0f2fe">🔷</div>
+      <div>
+        <div class="cert-name">Microsoft Certified: Azure Data Scientist Associate</div>
+        <div class="cert-meta"><span class="cert-issuer">Microsoft · Dec 2021</span><span class="cert-badge cb-ms">Microsoft</span></div>
+      </div>
+    </div>
+    <div class="cert-item">
+      <div class="cert-ico" style="background:#e0f2fe">🔷</div>
+      <div>
+        <div class="cert-name">Microsoft Certified: Power BI Data Analyst Associate</div>
+        <div class="cert-meta"><span class="cert-issuer">Microsoft · Feb 2023</span><span class="cert-badge cb-ms">Microsoft</span></div>
+      </div>
+    </div>
+    <div class="cert-item">
+      <div class="cert-ico" style="background:#e0f2fe">🔷</div>
+      <div>
+        <div class="cert-name">Microsoft Certified: Power Platform Fundamentals</div>
+        <div class="cert-meta"><span class="cert-issuer">Microsoft · Dec 2021</span><span class="cert-badge cb-ms">Microsoft</span></div>
       </div>
     </div>
     <div class="cert-item">
       <div class="cert-ico" style="background:#dcfce7">🎓</div>
       <div>
         <div class="cert-name">Neural Networks and Deep Learning</div>
-        <div class="cert-meta"><span class="cert-issuer">Coursera / deeplearning.ai · Andrew Ng · ID: BDM2BNURLW6M</span><span class="cert-badge cb-co">Coursera</span></div>
+        <div class="cert-meta"><span class="cert-issuer">Coursera / deeplearning.ai · Andrew Ng · Jan 2018 · ID: BDM2BNURLW6M</span><span class="cert-badge cb-co">Coursera</span></div>
       </div>
     </div>
     <div class="cert-item">
       <div class="cert-ico" style="background:#ede9fe">📊</div>
       <div>
         <div class="cert-name">Supply Chain Analytics in Python</div>
-        <div class="cert-meta"><span class="cert-issuer">DataCamp</span><span class="cert-badge cb-dc">DataCamp</span></div>
+        <div class="cert-meta"><span class="cert-issuer">DataCamp · Nov 2021</span><span class="cert-badge cb-dc">DataCamp</span></div>
+      </div>
+    </div>
+    <div class="cert-item">
+      <div class="cert-ico" style="background:#f3e8ff">📐</div>
+      <div>
+        <div class="cert-name">Practitioner Certificate in Requirements Engineering</div>
+        <div class="cert-meta"><span class="cert-issuer">Udemy · Jan 2025</span><span class="cert-badge" style="background:#ede9fe;color:#6d28d9">Udemy</span></div>
+      </div>
+    </div>
+    <div class="cert-item">
+      <div class="cert-ico" style="background:#f3e8ff">📐</div>
+      <div>
+        <div class="cert-name">Business Analysis: Functional &amp; Non-Functional Requirements</div>
+        <div class="cert-meta"><span class="cert-issuer">Udemy · Jan 2025</span><span class="cert-badge" style="background:#ede9fe;color:#6d28d9">Udemy</span></div>
+      </div>
+    </div>
+    <div class="cert-item">
+      <div class="cert-ico" style="background:#f3e8ff">📐</div>
+      <div>
+        <div class="cert-name">IT Project Management: Delivering Successful IT Projects</div>
+        <div class="cert-meta"><span class="cert-issuer">Udemy · Jan 2025</span><span class="cert-badge" style="background:#ede9fe;color:#6d28d9">Udemy</span></div>
+      </div>
+    </div>
+    <div class="cert-item">
+      <div class="cert-ico" style="background:#fef9c3">🟡</div>
+      <div>
+        <div class="cert-name">Google Cloud and ML Onboarding</div>
+        <div class="cert-meta"><span class="cert-issuer">Google · Sep 2019</span><span class="cert-badge cb-go">Google Cloud</span></div>
       </div>
     </div>
     <div class="cert-item">
       <div class="cert-ico" style="background:#f0f9ff">⚙️</div>
       <div>
         <div class="cert-name">Certified Automation Engineer (Level – Specialist)</div>
-        <div class="cert-meta"><span class="cert-issuer">Accenture India</span><span class="cert-badge cb-ac">Accenture</span></div>
+        <div class="cert-meta"><span class="cert-issuer">Accenture India · Jun 2022</span><span class="cert-badge cb-ac">Accenture</span></div>
       </div>
     </div>
     <div class="cert-item">
       <div class="cert-ico" style="background:#f0f9ff">⚙️</div>
       <div>
         <div class="cert-name">Certified Automation Practitioner (Level – Foundation)</div>
-        <div class="cert-meta"><span class="cert-issuer">Accenture India</span><span class="cert-badge cb-ac">Accenture</span></div>
+        <div class="cert-meta"><span class="cert-issuer">Accenture India · Jun 2022</span><span class="cert-badge cb-ac">Accenture</span></div>
       </div>
     </div>
   </div>
@@ -722,48 +1039,71 @@ footer a{color:var(--indigo);text-decoration:none}
     <div class="awards-co-name">Best Buy India</div>
     <div class="award-row">
       <div class="award-title">Leadership — Talent Quotient</div>
-      <div class="award-info">Best Buy India</div>
-      <div class="award-desc">Recognized for rapid onboarding and outsized impact during the holiday season — improved performance by ~20%, strengthening business resilience during a high-risk period. Demonstrated strong ownership and forward-thinking by proactively exploring self-hosted open-source LLMs as an alternative to Gemini — an initiative with potential to drive nearly $300K in annual cost savings.</div>
+      <div class="award-info">Best Buy India · Apr 2026</div>
+      <div class="award-desc">"Learn From Challenge and Change." Recognized as instrumental in delivering impactful outcomes across Cybersecurity and Fraud Detection. Despite limited prior GCP exposure, ramped up within weeks; during the critical holiday season improved score coverage by ~20%, strengthening detection reliability and supporting business resilience in a high-risk period. Proactively explored self-hosted open-source LLMs as an alternative to Gemini — an initiative with potential to drive nearly $300K in annual cost savings.</div>
+    </div>
+    <div class="award-row">
+      <div class="award-title">AML Hall of Fame — Above &amp; Beyond</div>
+      <div class="award-info">Best Buy · Feb 2024</div>
+      <div class="award-desc">For implementing and expanding the cyber DGX framework and helping guide other offshore members with activation projects.</div>
     </div>
   </div>
 
   <div class="awards-co">
     <div class="awards-co-name">Wipro</div>
     <div class="award-row">
-      <div class="award-title">Wipro Pinnacle Award — September 2024</div>
-      <div class="award-info">Wipro Data · September 2024</div>
-    </div>
-    <div class="award-row">
-      <div class="award-title">AML Hall of Fame — Above &amp; Beyond</div>
-      <div class="award-info">Wipro Applied Machine Learning team</div>
-    </div>
-    <div class="award-row">
-      <div class="award-title">Above &amp; Beyond Award</div>
-      <div class="award-info">Wipro · Recognized for innovative ideas and impactful contributions</div>
+      <div class="award-title">Being Responsive (Unit Award)</div>
+      <div class="award-info">Wipro · Jul 2025</div>
+      <div class="award-desc">For contribution in hiring new talent for the AIS practice.</div>
     </div>
     <div class="award-row">
       <div class="award-title">Inspiring Performance Award</div>
-      <div class="award-info">Wipro</div>
+      <div class="award-info">Wipro Limited · Mar 2025</div>
+      <div class="award-desc">For efforts toward fulfilment of open positions for the Best Buy – DAI portfolio.</div>
     </div>
     <div class="award-row">
-      <div class="award-title">Being Responsive Award (×2)</div>
-      <div class="award-info">Wipro · Unit Award</div>
+      <div class="award-title">Above &amp; Beyond Award</div>
+      <div class="award-info">Wipro · Mar 2025</div>
+      <div class="award-desc">From the Account Delivery Executive: instrumental in expanding Wipro's presence in the Best Buy AML space; technical expertise driving both BBY and Wipro teams across use cases, increasing member deal conversion and improving customer experience; gained customer confidence quickly and consistently went above and beyond in delivery execution excellence.</div>
     </div>
     <div class="award-row">
-      <div class="award-title">Annual Appraisal Recognition</div>
-      <div class="award-info">Wipro</div>
+      <div class="award-title">Wipro Pinnacle Award — September 2024</div>
+      <div class="award-info">Wipro Data &amp; AI Practice · Sep 2024</div>
+      <div class="award-desc">"Pivotal in expanding Wipro's presence in the AI/ML space for Best Buy. Expertise in Python and ML Eng/ML Ops, and dedication to improving customer experience, gained customer trust and delivered exceptional results."</div>
+    </div>
+    <div class="award-row">
+      <div class="award-title">Being Responsive Award</div>
+      <div class="award-info">Wipro · Sep 2024</div>
+      <div class="award-desc">For contributions to hiring new talent into the AIS practice.</div>
+    </div>
+    <div class="award-row">
+      <div class="award-title">Being Responsive Award</div>
+      <div class="award-info">Wipro · Jul 2024</div>
+      <div class="award-desc">For contribution in hiring new talent for the AIS practice.</div>
+    </div>
+    <div class="award-row">
+      <div class="award-title">Annual Appraisal — Rating 4 (Exceptional Performance)</div>
+      <div class="award-info">Wipro Ltd · Mar 2024</div>
+      <div class="award-desc">Received a rating of 4 (Exceptional performance) for the financial year 2024–2025.</div>
     </div>
   </div>
 
   <div class="awards-co">
     <div class="awards-co-name">Accenture</div>
     <div class="award-row">
-      <div class="award-title">Kudos Recognition Award (×2)</div>
-      <div class="award-info">Accenture · 2021 – 2023</div>
+      <div class="award-title">Kudos Recognition Award</div>
+      <div class="award-info">Accenture · Aug 2022</div>
+      <div class="award-desc">"Helping gratitude grow" — Team Player category. From supervisor: "Hari helped the team on multiple occasions to unblock and gives suggestions to make the system better."</div>
     </div>
     <div class="award-row">
-      <div class="award-title">Recognition Award</div>
-      <div class="award-info">Accenture · 2021</div>
+      <div class="award-title">Kudos Recognition Award</div>
+      <div class="award-info">Accenture · Feb 2022</div>
+      <div class="award-desc">Delivery Excellence, "Respect for the Individual" category: earned a good impression with the client in a short span; analysis on Freshold and Hub analytics well acknowledged; quickly cross-skilled in Azure ML, Logic App, Function App, and Azure storage without compromising deadlines.</div>
+    </div>
+    <div class="award-row">
+      <div class="award-title">Recognition — Delivery Excellence</div>
+      <div class="award-info">Accenture · Aug 2021</div>
+      <div class="award-desc">For automating the machine learning process in the Azure ecosystem: "In spite of being new to the Azure eco system you took the opportunity and automated the model training and deployment process without much hiccups. Great work."</div>
     </div>
   </div>
 
@@ -771,11 +1111,18 @@ footer a{color:var(--indigo);text-decoration:none}
     <div class="awards-co-name">Infosys</div>
     <div class="award-row">
       <div class="award-title">Best Rating in Project — OUTSTANDING</div>
-      <div class="award-info">Infosys</div>
+      <div class="award-info">Infosys · Dec 2018</div>
+      <div class="award-desc">Received the best rating within the project — OUTSTANDING.</div>
     </div>
     <div class="award-row">
-      <div class="award-title">Insta Award (×2)</div>
-      <div class="award-info">Infosys · Spot recognition for exceptional performance</div>
+      <div class="award-title">Insta Award</div>
+      <div class="award-info">Infosys · May 2018</div>
+      <div class="award-desc">For developing a tool to automate impact analysis.</div>
+    </div>
+    <div class="award-row">
+      <div class="award-title">Insta Award</div>
+      <div class="award-info">Infosys · Feb 2018</div>
+      <div class="award-desc">For delivering continuous defect-free sprints.</div>
     </div>
   </div>
 </div>
@@ -795,36 +1142,25 @@ footer a{color:var(--indigo);text-decoration:none}
         <p>He's a go-to consultant for any AML related challenge — always ready with insights, strategies and hands-on support. His ability to drive impactful outcomes makes him an invaluable asset to any organization."</p>
       </div>
       <div class="rec-by">
-        <div class="rec-ava">W</div>
+        <div class="rec-ava">S</div>
         <div>
-          <div class="rec-name">Senior Colleague, Applied Machine Learning</div>
-          <div class="rec-role">Wipro</div>
+          <div class="rec-name">Sundar Natarajan</div>
+          <div class="rec-role">Delivery Manager, Wipro Technologies · managed Hari directly</div>
         </div>
       </div>
     </div>
 
     <div class="rec">
       <div class="rec-quote">
-        <p>"Mr. Hari is a very dedicated and passionate person. He has a habit of diving deep into technicals and understands each and every aspect of it before approaching — which motivates me. He has been a good and understanding Manager to me."</p>
+        <p>"I was reporting to Hari until very recently my manager changed. I can say that Mr. Hari is a very dedicated and passionate person with great technical skills and managerial capabilities.</p>
+        <p>He has a knack for diving deep into technicals and understands each and every aspect of it before approaching the problem which kinda motivates me.</p>
+        <p>He has been a good and understanding Manager to me."</p>
       </div>
       <div class="rec-by">
-        <div class="rec-ava">W</div>
+        <div class="rec-ava">Y</div>
         <div>
-          <div class="rec-name">Direct Report, ML Engineering</div>
-          <div class="rec-role">Wipro</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="rec">
-      <div class="rec-quote">
-        <p>"Despite limited prior exposure, Hari onboarded rapidly — within weeks he was fully productive and during the holiday season improved performance by ~20%, strengthening business resilience during a high-risk period. Beyond execution, Hari consistently demonstrates strong ownership and forward-thinking. He proactively identifies performance improvements and brings well-reasoned solutions, including exploring self-hosted open-source LLMs as an alternative to Gemini — an initiative with potential to drive nearly $300K in annual cost savings. His ability to learn quickly, navigate ambiguity, and translate new knowledge into tangible impact makes him a strong example of thriving through change."</p>
-      </div>
-      <div class="rec-by">
-        <div class="rec-ava">B</div>
-        <div>
-          <div class="rec-name">Leadership Recognition</div>
-          <div class="rec-role">Best Buy India · Talent Quotient Award</div>
+          <div class="rec-name">Yaser Sakkaf</div>
+          <div class="rec-role">Technical Lead: AI Cognitive · reported to Hari directly</div>
         </div>
       </div>
     </div>
@@ -839,9 +1175,9 @@ footer a{color:var(--indigo);text-decoration:none}
     <h2 class="card-title">Languages</h2>
   </div>
   <div class="lang-list">
-    <div class="lang-chip"><span class="lang-name">English</span><span class="lang-level">Professional working</span></div>
-    <div class="lang-chip"><span class="lang-name">Telugu</span><span class="lang-level">Native or bilingual</span></div>
-    <div class="lang-chip"><span class="lang-name">Hindi</span><span class="lang-level">Working proficiency</span></div>
+    <div class="lang-chip"><span class="lang-name">English</span><span class="lang-level">Full professional proficiency</span></div>
+    <div class="lang-chip"><span class="lang-name">Telugu</span><span class="lang-level">Native or bilingual proficiency</span></div>
+    <div class="lang-chip"><span class="lang-name">Hindi</span><span class="lang-level">Professional working proficiency</span></div>
   </div>
 </div>
 
