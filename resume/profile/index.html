@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hari Yelesetty — Full Profile</title>
+<meta name="description" content="Full professional profile of Hari Yelesetty — Lead AI Engineer, LLM Systems, Production GenAI, GCP · Azure · NVIDIA DGX">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --navy:#0f172a;--indigo:#4338ca;--indigo-l:#6366f1;
+  --sl50:#f8fafc;--sl100:#f1f5f9;--sl200:#e2e8f0;--sl300:#cbd5e1;
+  --sl400:#94a3b8;--sl500:#64748b;--sl600:#475569;--sl700:#334155;--sl800:#1e293b;
+  --in50:#eef2ff;--in100:#e0e7ff;--in200:#c7d2fe;--in700:#4338ca;--in800:#3730a3;
+  --green:#059669;--green-l:#d1fae5;--green-d:#065f46;
+  --violet:#7c3aed;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',-apple-system,sans-serif;background:var(--sl100);color:var(--sl800);line-height:1.6;font-size:15px}
+
+/* NAV */
+nav{background:var(--navy);padding:0 40px;height:56px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:50;box-shadow:0 2px 16px rgba(0,0,0,.3)}
+.nav-brand{font-family:'Space Grotesk',sans-serif;font-size:15px;font-weight:700;color:white;text-decoration:none}
+.nav-brand span{color:#7dd3fc}
+.nav-links{display:flex;gap:22px;align-items:center}
+.nav-links a{font-size:13px;color:var(--sl400);text-decoration:none;transition:color .15s;display:flex;align-items:center;gap:5px}
+.nav-links a:hover{color:white}
+
+/* HERO */
+.hero{background:linear-gradient(160deg,var(--navy) 0%,#1e1b4b 60%,#0f172a 100%);padding:56px 40px 48px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.03) 1px,transparent 1px);background-size:22px 22px;pointer-events:none}
+.hero::after{content:'';position:absolute;top:-80px;right:-80px;width:400px;height:400px;background:radial-gradient(circle,rgba(99,102,241,.12) 0%,transparent 65%);pointer-events:none}
+.hero-inner{max-width:860px;margin:0 auto;position:relative;z-index:1}
+.hero-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(99,102,241,.2);color:#a5b4fc;font-size:11px;font-weight:600;padding:4px 12px;border-radius:20px;letter-spacing:.07em;text-transform:uppercase;margin-bottom:16px;border:1px solid rgba(165,180,252,.2)}
+.hero-name{font-family:'Space Grotesk',sans-serif;font-size:44px;font-weight:800;color:white;line-height:1.05;letter-spacing:-1.5px;margin-bottom:4px}
+.hero-fullname{font-size:13px;color:var(--sl400);margin-bottom:14px;font-style:italic}
+.hero-headline{font-size:15px;color:#c7d2fe;font-weight:500;margin-bottom:24px;line-height:1.5;max-width:680px}
+.hero-contact{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:32px}
+.contact-link{display:flex;align-items:center;gap:6px;color:var(--sl400);text-decoration:none;font-size:12.5px;transition:color .15s}
+.contact-link:hover{color:white}
+.hero-metrics{display:flex;gap:32px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.08);padding-top:24px}
+.metric{display:flex;flex-direction:column}
+.metric-val{font-family:'Space Grotesk',sans-serif;font-size:26px;font-weight:700;color:white;line-height:1}
+.metric-label{font-size:11px;color:var(--sl400);margin-top:3px}
+.grad-bar{height:3px;background:linear-gradient(90deg,#4338ca 0%,#7c3aed 45%,#0891b2 100%)}
+
+/* LAYOUT */
+main{max-width:860px;margin:0 auto;padding:32px 24px 80px}
+
+/* CARD */
+.card{background:white;border-radius:12px;border:1px solid var(--sl200);padding:26px 28px;margin-bottom:16px}
+.card-head{display:flex;align-items:center;gap:10px;margin-bottom:20px;padding-bottom:14px;border-bottom:1px solid var(--sl100)}
+.card-icon{width:28px;height:28px;background:var(--in50);border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid var(--in200)}
+.card-title{font-family:'Space Grotesk',sans-serif;font-size:17px;font-weight:700;color:var(--sl800)}
+
+/* ABOUT */
+.about-text{color:var(--sl700);line-height:1.8;font-size:14.5px}
+.about-text p{margin-bottom:14px}
+.about-text p:last-child{margin-bottom:0}
+.about-text strong{color:var(--sl800);font-weight:600}
+.about-text em{color:var(--sl500)}
+
+/* EXPERIENCE — timeline */
+.timeline{display:flex;flex-direction:column}
+.exp-item{display:grid;grid-template-columns:16px 1fr;gap:0 18px}
+.exp-dot-col{display:flex;flex-direction:column;align-items:center;padding-top:5px}
+.exp-dot{width:12px;height:12px;border-radius:50%;background:var(--indigo);flex-shrink:0;border:2px solid var(--in200)}
+.exp-dot.current{background:var(--green);border-color:var(--green-l);box-shadow:0 0 0 3px rgba(5,150,105,.1)}
+.exp-connector{width:2px;background:var(--sl200);flex:1;margin:5px 0}
+.exp-item:last-child .exp-connector{display:none}
+.exp-content{padding:0 0 26px}
+.exp-item:last-child .exp-content{padding-bottom:0}
+.exp-row{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:2px;flex-wrap:wrap}
+.exp-title{font-family:'Space Grotesk',sans-serif;font-size:14.5px;font-weight:700;color:var(--sl800)}
+.exp-period{font-size:12px;color:var(--sl400);white-space:nowrap;flex-shrink:0;margin-top:2px}
+.exp-co{font-size:13.5px;font-weight:600;color:var(--indigo);margin-bottom:1px}
+.exp-sub{font-size:12px;color:var(--sl500);margin-bottom:8px}
+.exp-client{display:inline-flex;align-items:center;font-size:11.5px;color:var(--sl600);background:var(--sl50);border:1px solid var(--sl200);padding:2px 9px;border-radius:10px;margin-bottom:8px}
+.exp-ul{list-style:none;display:flex;flex-direction:column;gap:5px}
+.exp-ul li{font-size:13.5px;color:var(--sl600);line-height:1.65;padding-left:14px;position:relative}
+.exp-ul li::before{content:'·';position:absolute;left:0;color:var(--indigo);font-weight:700;font-size:17px;line-height:1.4}
+.exp-ul strong{color:var(--sl700)}
+
+/* EDUCATION */
+.edu-list{display:flex;flex-direction:column;gap:16px}
+.edu-row{display:flex;align-items:flex-start;gap:14px}
+.edu-icon{width:38px;height:38px;border-radius:8px;background:var(--sl100);border:1px solid var(--sl200);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.edu-degree{font-size:14px;font-weight:600;color:var(--sl800)}
+.edu-school{font-size:13.5px;font-weight:500;color:var(--indigo);margin-top:1px}
+.edu-meta{font-size:12px;color:var(--sl400);margin-top:2px}
+
+/* SKILLS */
+.skill-groups{display:flex;flex-direction:column;gap:16px}
+.skill-group-label{font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--sl400);margin-bottom:6px}
+.skill-tags{display:flex;flex-wrap:wrap;gap:6px}
+.skill-tag{font-size:12.5px;font-weight:500;color:var(--sl700);background:var(--sl100);border:1px solid var(--sl200);padding:4px 11px;border-radius:20px;transition:background .15s}
+.skill-tag.hi{background:var(--in50);color:var(--in700);border-color:var(--in200)}
+
+/* PROJECTS */
+.proj-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(350px,1fr));gap:14px}
+.proj-card{border:1px solid var(--sl200);border-radius:10px;padding:16px 18px;background:var(--sl50);transition:box-shadow .2s,transform .15s}
+.proj-card:hover{box-shadow:0 5px 20px rgba(15,23,42,.09);transform:translateY(-2px);background:white}
+.proj-head{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:6px}
+.proj-name{font-family:'Space Grotesk',sans-serif;font-size:13.5px;font-weight:700;color:var(--sl800);line-height:1.3}
+.proj-emp{font-size:10.5px;font-weight:600;color:var(--indigo);background:var(--in50);border:1px solid var(--in200);padding:2px 8px;border-radius:10px;white-space:nowrap;flex-shrink:0}
+.proj-desc{font-size:13px;color:var(--sl600);line-height:1.6;margin-bottom:10px}
+.proj-stack{display:flex;flex-wrap:wrap;gap:5px}
+.proj-tag{font-size:10.5px;color:var(--sl500);background:var(--sl100);border:1px solid var(--sl200);padding:2px 7px;border-radius:8px}
+
+/* CERTIFICATIONS */
+.cert-list{display:flex;flex-direction:column;gap:10px}
+.cert-item{display:flex;align-items:center;gap:14px;padding:12px 14px;background:var(--sl50);border-radius:8px;border:1px solid var(--sl200)}
+.cert-ico{width:34px;height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:17px}
+.cert-name{font-size:13.5px;font-weight:600;color:var(--sl800)}
+.cert-meta{display:flex;align-items:center;gap:8px;margin-top:2px;flex-wrap:wrap}
+.cert-issuer{font-size:12px;color:var(--sl500)}
+.cert-badge{font-size:10.5px;font-weight:600;padding:2px 8px;border-radius:10px}
+.cb-ms{background:#e0f2fe;color:#0369a1}
+.cb-go{background:#fef9c3;color:#854d0e}
+.cb-or{background:#fee2e2;color:#991b1b}
+.cb-co{background:#dcfce7;color:#166534}
+.cb-dc{background:#ede9fe;color:#5b21b6}
+.cb-ac{background:#f0f9ff;color:#0c4a6e}
+
+/* AWARDS */
+.awards-co{margin-bottom:22px}
+.awards-co:last-child{margin-bottom:0}
+.awards-co-name{font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--sl500);margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.awards-co-name::after{content:'';flex:1;height:1px;background:var(--sl200)}
+.award-row{padding:8px 0 8px 14px;border-left:2px solid var(--in200);margin-bottom:7px}
+.award-row:last-child{margin-bottom:0}
+.award-title{font-size:13.5px;font-weight:600;color:var(--sl800)}
+.award-info{font-size:12px;color:var(--sl400);margin-top:1px}
+.award-desc{font-size:13px;color:var(--sl600);line-height:1.65;margin-top:6px}
+
+/* RECOMMENDATIONS */
+.rec-list{display:flex;flex-direction:column;gap:18px}
+.rec{border-left:3px solid var(--indigo);padding:16px 18px;background:var(--in50);border-radius:0 8px 8px 0}
+.rec-quote{font-size:13.5px;color:var(--sl700);line-height:1.8;margin-bottom:12px;font-style:italic}
+.rec-quote p{margin-bottom:10px}
+.rec-quote p:last-child{margin-bottom:0}
+.rec-by{display:flex;align-items:center;gap:10px}
+.rec-ava{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,var(--indigo) 0%,var(--violet) 100%);display:flex;align-items:center;justify-content:center;color:white;font-size:13px;font-weight:700;flex-shrink:0;font-family:'Space Grotesk',sans-serif}
+.rec-name{font-size:13px;font-weight:600;color:var(--sl800)}
+.rec-role{font-size:12px;color:var(--sl400)}
+
+/* LANGUAGES */
+.lang-list{display:flex;gap:10px;flex-wrap:wrap}
+.lang-chip{padding:7px 16px;background:var(--sl50);border:1px solid var(--sl200);border-radius:20px;display:flex;align-items:baseline;gap:6px}
+.lang-name{font-size:13.5px;font-weight:600;color:var(--sl800)}
+.lang-level{font-size:11.5px;color:var(--sl400)}
+
+/* FOOTER */
+footer{text-align:center;padding:28px 24px;font-size:12px;color:var(--sl400)}
+footer a{color:var(--indigo);text-decoration:none}
+
+/* RESPONSIVE */
+@media(max-width:700px){
+  .hero{padding:36px 20px 32px}
+  .hero-name{font-size:32px}
+  nav{padding:0 20px}
+  main{padding:18px 12px 60px}
+  .card{padding:20px 16px}
+  .proj-grid{grid-template-columns:1fr}
+  .hero-metrics{gap:20px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-brand" href="https://ylnhari.github.io">Hari <span>YLN</span></a>
+  <div class="nav-links">
+    <a href="https://ylnhari.github.io">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+      Portfolio
+    </a>
+    <a href="https://linkedin.com/in/ylnhari" target="_blank" rel="noopener">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8.34 9.5H5.67V18h2.67V9.5zM7 5.88a1.55 1.55 0 1 0 0 3.1 1.55 1.55 0 0 0 0-3.1zM18.34 18v-4.67c0-2.5-1.34-3.66-3.12-3.66-1.44 0-2.08.8-2.44 1.36V9.5h-2.67V18h2.67v-4.5c0-1.2.63-1.78 1.4-1.78.78 0 1.49.55 1.49 1.85V18h2.67z"/></svg>
+      LinkedIn
+    </a>
+    <a href="https://github.com/ylnhari" target="_blank" rel="noopener">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.22.66-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.1-1.47-1.1-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.16.57.67.48A10 10 0 0 0 22 12 10 10 0 0 0 12 2z"/></svg>
+      GitHub
+    </a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <span class="hero-tag">Full Professional Profile</span>
+    <h1 class="hero-name">Hari Yelesetty</h1>
+    <p class="hero-fullname">Laxmi Narasimha Hari Yelesetty</p>
+    <p class="hero-headline">AI/ML/LLM Engineer &nbsp;·&nbsp; Data Scientist &nbsp;·&nbsp; MLOps Specialist<br>Proficient in Google Cloud &amp; Azure &nbsp;·&nbsp; Lead AI Engineer at Best Buy India</p>
+    <div class="hero-contact">
+      <a class="contact-link" href="mailto:ylnharimailme@gmail.com">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        ylnharimailme@gmail.com
+      </a>
+      <a class="contact-link" href="tel:+919916112881">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.61 4.32 2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.1 6.1l.92-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        +91 99161 12881
+      </a>
+      <a class="contact-link" href="https://linkedin.com/in/ylnhari" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8.34 9.5H5.67V18h2.67V9.5zM7 5.88a1.55 1.55 0 1 0 0 3.1 1.55 1.55 0 0 0 0-3.1zM18.34 18v-4.67c0-2.5-1.34-3.66-3.12-3.66-1.44 0-2.08.8-2.44 1.36V9.5h-2.67V18h2.67v-4.5c0-1.2.63-1.78 1.4-1.78.78 0 1.49.55 1.49 1.85V18h2.67z"/></svg>
+        linkedin.com/in/ylnhari
+      </a>
+      <a class="contact-link" href="https://github.com/ylnhari" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.22.66-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.1-1.47-1.1-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.16.57.67.48A10 10 0 0 0 22 12 10 10 0 0 0 12 2z"/></svg>
+        github.com/ylnhari
+      </a>
+      <span class="contact-link">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        India
+      </span>
+    </div>
+    <div class="hero-metrics">
+      <div class="metric"><span class="metric-val">$300K</span><span class="metric-label">saved · self-hosted LLMs</span></div>
+      <div class="metric"><span class="metric-val">40k/sec</span><span class="metric-label">real-time inference</span></div>
+      <div class="metric"><span class="metric-val">8×A100</span><span class="metric-label">GPU cybersecurity ML</span></div>
+      <div class="metric"><span class="metric-val">2×</span><span class="metric-label">cases vs prior pipeline</span></div>
+      <div class="metric"><span class="metric-val">130→160+</span><span class="metric-label">trucks/day optimized</span></div>
+      <div class="metric"><span class="metric-val">10+</span><span class="metric-label">years production AI/ML</span></div>
+    </div>
+  </div>
+</div>
+<div class="grad-bar"></div>
+
+<main>
+
+<!-- ── ABOUT ─────────────────────────────────────── -->
+<div class="card">
+  <div class="card-head">
+    <div class="card-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4338ca" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
+    <h2 class="card-title">About</h2>
+  </div>
+  <div class="about-text">
+    <p>I'm a production AI/ML systems engineer with <strong>10+ years</strong> of experience shipping models from notebook to real traffic. I specialize in the hardest part of AI: making it actually work at scale in production.</p>
+    <p>Currently at <strong>Best Buy India</strong> as Lead AI Engineer, I architect and build the full LLM lifecycle — fine-tuning open-source models with LoRA (Unsloth + PEFT + HuggingFace Accelerate), serving them via <strong>vLLM on GKE</strong> with HPA autoscaling and Istio routing, and powering retail applications — fraud detection, search, personalization, cybersecurity — at <strong>40,000+ transactions per second</strong>. This work replaced external LLM APIs entirely, saving <strong>$300K annually</strong> while strengthening data governance and compliance.</p>
+    <p>Before that, I built <strong>GPU-accelerated cybersecurity ML at Wipro</strong> on NVIDIA DGX (8×A100, 1TB RAM) using NVIDIA Morpheus: behavioral anomaly detection for AWS account security, phishing email classification, and automated abuse inbox routing — double the case volume of the prior pipeline, each threat automatically routed to the right security team.</p>
+    <p>At <strong>Accenture</strong>, I led last-mile delivery optimization using Google OR-Tools (Vehicle Routing Problem), scaling a logistics fleet from 130 to 160+ trucks per day, alongside Azure ML quality prediction pipelines for BamaGruppen (Norway) and computer vision defect detection for Amkor (South Korea).</p>
+    <p>My roots go deeper: time-series forecasting across 8 industrial verticals at GD Research, computer vision at TCS, and ML-powered BI at Infosys — including a stint in Mainframe (COBOL/JCL) that gave me a real appreciation for what "production" means.</p>
+    <p><em>The specialist for the gap between "works in a notebook" and "serves real traffic."</em></p>
+  </div>
+</div>
+
+<!-- ── EXPERIENCE ─────────────────────────────────── -->
+<div class="card">
+  <div class="card-head">
+    <div class="card-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4338ca" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></div>
+    <h2 class="card-title">Experience</h2>
+  </div>
+  <div class="timeline">
+
+    <div class="exp-item">
+      <div class="exp-dot-col"><div class="exp-dot current"></div><div class="exp-connector"></div></div>
+      <div class="exp-content">
+        <div class="exp-row">
+          <div class="exp-title">Lead Artificial Intelligence Engineer</div>
+          <div class="exp-period">Jul 2025 – Present · 1 yr</div>
+        </div>
+        <div class="exp-co">Best Buy India</div>
+        <div class="exp-sub">Bengaluru, India · Full-time</div>
+        <ul class="exp-ul">
+          <li>Built a <strong>config-driven LoRA adapter fine-tuning framework</strong> for open-source causal LLMs — Unsloth (2× speedup, 60–80% VRAM reduction via QLoRA) + HuggingFace PEFT dual-backend; zero-Python task addition via YAML; multi-task single-adapter training.</li>
+          <li>Deployed <strong>vLLM OpenAI-compatible serving on GKE</strong> with HPA autoscaling, Istio traffic routing, hot-swap adapter support; GCS model store, Artifact Registry versioning, Cloud Build CI, GMP PodMonitoring, Prometheus/Grafana observability stack.</li>
+          <li>Self-hosted open-source LLMs at enterprise scale — eliminated external API dependency, <strong>saved $300K annually</strong>, strengthened data governance and compliance posture.</li>
+          <li>Architecting GenAI and LLM solutions on GCP Vertex AI for <strong>40,000+ transactions per second</strong> across retail use cases: search, personalization, fraud detection, cybersecurity.</li>
+          <li>Defining AI engineering standards, infrastructure patterns, and deployment best practices for large-scale retail GenAI.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-dot-col"><div class="exp-dot"></div><div class="exp-connector"></div></div>
+      <div class="exp-content">
+        <div class="exp-row">
+          <div class="exp-title">ML Lead Engineer — Machine Learning Engineering &amp; Operations</div>
+          <div class="exp-period">Aug 2023 – Jul 2025 · 2 yrs</div>
+        </div>
+        <div class="exp-co">Wipro</div>
+        <div class="exp-sub">Hyderabad, Telangana, India · Full-time</div>
+        <div class="exp-client">Client: Major US Retail Corporation</div>
+        <ul class="exp-ul">
+          <li>Engineered <strong>GPU-accelerated cybersecurity ML pipelines on NVIDIA DGX (8×A100, 1TB RAM)</strong> using NVIDIA Morpheus: behavioral anomaly detection, phishing classification, and abuse inbox routing — <strong>double the previous pipeline's case volume</strong>, each threat automatically routed to the right team.</li>
+          <li>Built <strong>unsupervised autoencoder models per entity</strong> (account/user/service/machine) for AWS account behavioral fingerprinting — training on billion-row CloudTrail datasets; model management via MLflow; Grafana alerts to security analysts.</li>
+          <li>Processed <strong>billion-row datasets</strong> for fraud and cybersecurity feature extraction using RAPIDS (cuDF/CuPy) on GPU; orchestrated batch inference and training across concurrent DGX workloads.</li>
+          <li>Led AI fraud detection processing <strong>millions of transactional events</strong> across multiple retail lifecycle stages using GCP ML and on-prem GPU computing.</li>
+          <li>Led team of ML/MLOps engineers; served as <strong>offshore SPOC for the Applied Machine Learning (AML) team</strong>.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-dot-col"><div class="exp-dot"></div><div class="exp-connector"></div></div>
+      <div class="exp-content">
+        <div class="exp-row">
+          <div class="exp-title">Application Development Team Lead — Data Science / Azure ML</div>
+          <div class="exp-period">May 2021 – Aug 2023 · 2 yrs 4 mo</div>
+        </div>
+        <div class="exp-co">Accenture</div>
+        <div class="exp-sub">India · Full-time</div>
+        <ul class="exp-ul">
+          <li>Led <strong>last-mile delivery optimization using OR-Tools VRP</strong>, scaling daily delivery coverage from <strong>130 to 160+ trucks</strong> through improved route planning, time windows, capacity constraints, and departure scheduling.</li>
+          <li>Developed end-to-end <strong>Azure ML quality prediction pipeline for BamaGruppen (Norway)</strong> — predicts product quality at warehouse arrival to enable proactive inspection scheduling. Stack: Azure ML Studio, Logic Apps, Azure Pipelines, Azure Storage.</li>
+          <li>Led <strong>computer vision defect detection at Amkor (South Korea)</strong> — transfer learning for multi-class semiconductor defect detection on hybrid cloud + on-prem; eliminated manual inspection bottlenecks.</li>
+          <li>Designed cross-functional <strong>supply chain simulation framework</strong> for strategic hub location optimization, improving distribution efficiency and reducing global carbon footprint.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-dot-col"><div class="exp-dot"></div><div class="exp-connector"></div></div>
+      <div class="exp-content">
+        <div class="exp-row">
+          <div class="exp-title">Data Scientist</div>
+          <div class="exp-period">May 2020 – May 2021 · 1 yr</div>
+        </div>
+        <div class="exp-co">GD Research Centre Pvt Ltd</div>
+        <div class="exp-sub">India · Full-time</div>
+        <div class="exp-client">Client: UK-based intelligence firm</div>
+        <ul class="exp-ul">
+          <li>Built company-wide <strong>time-series forecasting system</strong> delivering ML-driven intelligence across 8 industrial verticals: Consumer Goods, Oil &amp; Gas, Power, Financial Services, Retail, Technology, Construction, and Mining.</li>
+          <li>Informed strategic decisions and resource allocation for UK-based clients across diverse industrial domains.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-dot-col"><div class="exp-dot"></div><div class="exp-connector"></div></div>
+      <div class="exp-content">
+        <div class="exp-row">
+          <div class="exp-title">Systems Engineer</div>
+          <div class="exp-period">Jul 2019 – Mar 2020 · 9 mo</div>
+        </div>
+        <div class="exp-co">Tata Consultancy Services (TCS)</div>
+        <div class="exp-sub">India · Full-time</div>
+        <ul class="exp-ul">
+          <li>Deployed <strong>hybrid cloud + on-prem computer vision system</strong> for multi-class image classification in semiconductor manufacturing using transfer learning.</li>
+          <li>Successfully deployed at <strong>Amkor Technology's South Korea manufacturing site</strong>, enhancing quality control and reducing production losses.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-dot-col"><div class="exp-dot"></div></div>
+      <div class="exp-content">
+        <div class="exp-row">
+          <div class="exp-title">Senior System Engineer</div>
+          <div class="exp-period">May 2016 – Jul 2019 · 3 yrs 2 mo</div>
+        </div>
+        <div class="exp-co">Infosys</div>
+        <div class="exp-sub">India · Full-time</div>
+        <ul class="exp-ul">
+          <li>Built Business Intelligence applications and <strong>ML-powered Lead Conversion Prediction</strong> system using Microsoft BI tools and classical ML (logistic regression).</li>
+          <li>Career started in <strong>Mainframe (COBOL/JCL)</strong> before transitioning into data science and ML within the same tenure.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ── EDUCATION ──────────────────────────────────── -->
+<div class="card">
+  <div class="card-head">
+    <div class="card-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4338ca" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+    <h2 class="card-title">Education</h2>
+  </div>
+  <div class="edu-list">
+    <div class="edu-row">
+      <div class="edu-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+      <div>
+        <div class="edu-degree">Bachelor of Engineering (B.E.) — Electrical and Electronics Engineering</div>
+        <div class="edu-school">Andhra University, Visakhapatnam</div>
+        <div class="edu-meta">2012 – 2016 &nbsp;·&nbsp; 80%</div>
+      </div>
+    </div>
+    <div class="edu-row">
+      <div class="edu-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+      <div>
+        <div class="edu-degree">Intermediate — Mathematics, Physics, Chemistry (MPC)</div>
+        <div class="edu-school">Sri Chaitanya College of Education</div>
+        <div class="edu-meta">High School Equivalent (12th Standard)</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── SKILLS ─────────────────────────────────────── -->
+<div class="card">
+  <div class="card-head">
+    <div class="card-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4338ca" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+    <h2 class="card-title">Skills</h2>
+  </div>
+  <div class="skill-groups">
+    <div>
+      <div class="skill-group-label">LLM &amp; Generative AI</div>
+      <div class="skill-tags">
+        <span class="skill-tag hi">Large Language Models (LLM)</span>
+        <span class="skill-tag hi">LoRA / QLoRA Fine-tuning</span>
+        <span class="skill-tag hi">vLLM</span>
+        <span class="skill-tag hi">Unsloth</span>
+        <span class="skill-tag hi">PEFT</span>
+        <span class="skill-tag">HuggingFace Transformers</span>
+        <span class="skill-tag">HuggingFace Accelerate</span>
+        <span class="skill-tag">Retrieval-Augmented Generation (RAG)</span>
+        <span class="skill-tag">Prompt Engineering</span>
+        <span class="skill-tag">Self-hosted LLM Operations</span>
+        <span class="skill-tag">Generative AI</span>
+        <span class="skill-tag">LLM Evaluation</span>
+      </div>
+    </div>
+    <div>
+      <div class="skill-group-label">Machine Learning &amp; Deep Learning</div>
+      <div class="skill-tags">
+        <span class="skill-tag hi">Machine Learning Operations (MLOps)</span>
+        <span class="skill-tag">Deep Learning</span>
+        <span class="skill-tag">PyTorch</span>
+        <span class="skill-tag">TensorFlow / Keras</span>
+        <span class="skill-tag">Scikit-learn</span>
+        <span class="skill-tag">Computer Vision</span>
+        <span class="skill-tag">Natural Language Processing (NLP)</span>
+        <span class="skill-tag">Anomaly Detection</span>
+        <span class="skill-tag">Time-Series Forecasting</span>
+        <span class="skill-tag">Transfer Learning</span>
+        <span class="skill-tag">Unsupervised Learning</span>
+        <span class="skill-tag">Classical Machine Learning</span>
+      </div>
+    </div>
+    <div>
+      <div class="skill-group-label">GPU &amp; High-Performance Computing</div>
+      <div class="skill-tags">
+        <span class="skill-tag hi">GPU-Accelerated Computing</span>
+        <span class="skill-tag hi">NVIDIA DGX (8×A100)</span>
+        <span class="skill-tag hi">NVIDIA Morpheus</span>
+        <span class="skill-tag">RAPIDS (cuDF / CuPy)</span>
+        <span class="skill-tag">NVIDIA CUDA</span>
+        <span class="skill-tag">Distributed Training</span>
+      </div>
+    </div>
+    <div>
+      <div class="skill-group-label">MLOps &amp; Infrastructure</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Kubernetes / GKE / AKS</span>
+        <span class="skill-tag">Docker</span>
+        <span class="skill-tag">Helm</span>
+        <span class="skill-tag">Istio</span>
+        <span class="skill-tag">MLflow</span>
+        <span class="skill-tag">FastAPI</span>
+        <span class="skill-tag">Grafana</span>
+        <span class="skill-tag">Prometheus</span>
+        <span class="skill-tag">GitHub Actions</span>
+        <span class="skill-tag">ELK Stack</span>
+        <span class="skill-tag">Kubeflow</span>
+      </div>
+    </div>
+    <div>
+      <div class="skill-group-label">Cloud Platforms</div>
+      <div class="skill-tags">
+        <span class="skill-tag hi">Google Cloud Platform (GCP)</span>
+        <span class="skill-tag">GCP Vertex AI</span>
+        <span class="skill-tag">Google Cloud Build</span>
+        <span class="skill-tag">Google Cloud Storage</span>
+        <span class="skill-tag hi">Microsoft Azure</span>
+        <span class="skill-tag">Azure ML Studio</span>
+        <span class="skill-tag">Azure DevOps</span>
+        <span class="skill-tag">Azure Logic Apps</span>
+        <span class="skill-tag">Azure Kubernetes Service</span>
+      </div>
+    </div>
+    <div>
+      <div class="skill-group-label">Data Engineering &amp; Languages</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">SQL</span>
+        <span class="skill-tag">Pandas / NumPy</span>
+        <span class="skill-tag">Apache Spark</span>
+        <span class="skill-tag">MS SQL Server</span>
+        <span class="skill-tag">IBM DB2</span>
+        <span class="skill-tag">Azure Data Explorer (KQL)</span>
+        <span class="skill-tag">Power BI</span>
+      </div>
+    </div>
+    <div>
+      <div class="skill-group-label">Operations Research</div>
+      <div class="skill-tags">
+        <span class="skill-tag">OR-Tools</span>
+        <span class="skill-tag">Vehicle Routing Problem (VRP)</span>
+        <span class="skill-tag">Linear Optimization</span>
+        <span class="skill-tag">Supply Chain Optimization</span>
+        <span class="skill-tag">Simulation Frameworks</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── PROJECTS ───────────────────────────────────── -->
+<div class="card">
+  <div class="card-head">
+    <div class="card-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4338ca" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+    <h2 class="card-title">Projects</h2>
+  </div>
+  <div class="proj-grid">
+
+    <div class="proj-card">
+      <div class="proj-head">
+        <div class="proj-name">LLM Fine-tuning Framework</div>
+        <span class="proj-emp">Best Buy</span>
+      </div>
+      <p class="proj-desc">Config-driven LoRA adapter fine-tuning for open-source causal LLMs. Enabled rapid experimentation and production deployment for classification, information extraction, and generation. Eliminated external API dependency — <strong>$300K saved</strong>. Multi-task single-adapter training; zero-Python task addition via YAML.</p>
+      <div class="proj-stack">
+        <span class="proj-tag">LoRA / QLoRA</span><span class="proj-tag">Unsloth</span><span class="proj-tag">PEFT</span><span class="proj-tag">HuggingFace Accelerate</span><span class="proj-tag">vLLM</span><span class="proj-tag">GKE</span><span class="proj-tag">Istio</span>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-head">
+        <div class="proj-name">AWS Account Behavioral Fingerprinting</div>
+        <span class="proj-emp">Wipro</span>
+      </div>
+      <p class="proj-desc">Behavioral anomaly detection for AWS account security. Each entity (account/user/service/machine) gets an unsupervised autoencoder fingerprint trained on its historical activity. Scale: 20 days × 3 accounts = 1 billion+ rows per training run. Alerts via Grafana to cybersecurity team.</p>
+      <div class="proj-stack">
+        <span class="proj-tag">NVIDIA Morpheus</span><span class="proj-tag">NVIDIA DGX</span><span class="proj-tag">Autoencoders</span><span class="proj-tag">cuDF / RAPIDS</span><span class="proj-tag">MLflow</span><span class="proj-tag">Grafana</span>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-head">
+        <div class="proj-name">Phishing Mail Detection</div>
+        <span class="proj-emp">Wipro</span>
+      </div>
+      <p class="proj-desc">End-to-end ML pipeline to detect phishing emails and protect users from malicious attacks. Classification models trained on email content and metadata, integrated into the real-time cybersecurity pipeline.</p>
+      <div class="proj-stack">
+        <span class="proj-tag">NLP</span><span class="proj-tag">Classification</span><span class="proj-tag">GCP</span><span class="proj-tag">Cybersecurity ML</span>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-head">
+        <div class="proj-name">Abuse Inbox Management</div>
+        <span class="proj-emp">Wipro</span>
+      </div>
+      <p class="proj-desc">Extracted structured information from customer-forwarded suspicious, fraud, and spam emails. Automated routing to the appropriate security response team — eliminating manual triage and handling double the case volume of the prior system.</p>
+      <div class="proj-stack">
+        <span class="proj-tag">NLP / NER</span><span class="proj-tag">Information Extraction</span><span class="proj-tag">Automated Routing</span><span class="proj-tag">GCP</span>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-head">
+        <div class="proj-name">Vehicle Routing &amp; Transportation Optimization</div>
+        <span class="proj-emp">Accenture</span>
+      </div>
+      <p class="proj-desc">OR-Tools Vehicle Routing Problem (VRP) for last-mile delivery optimization. Constrained by time windows, vehicle capacity, geographic clustering, departure schedules, and product load rules. Scaled daily fleet from 130 to 160+ active trucks — significant annual cost savings.</p>
+      <div class="proj-stack">
+        <span class="proj-tag">OR-Tools</span><span class="proj-tag">VRP</span><span class="proj-tag">Python</span><span class="proj-tag">Operations Research</span>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-head">
+        <div class="proj-name">Quality Prediction in Supply Chain</div>
+        <span class="proj-emp">Accenture</span>
+      </div>
+      <p class="proj-desc">End-to-end Azure ML pipeline predicting product quality at warehouse arrival for BamaGruppen (Norway). Routes defective shipments to inspection before they enter the warehouse, improving efficiency and reducing customer complaints.</p>
+      <div class="proj-stack">
+        <span class="proj-tag">Azure ML Studio</span><span class="proj-tag">Logic Apps</span><span class="proj-tag">Azure Pipelines</span><span class="proj-tag">Azure Storage</span>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-head">
+        <div class="proj-name">Computer Vision — Semiconductor Defect Detection</div>
+        <span class="proj-emp">Accenture · TCS</span>
+      </div>
+      <p class="proj-desc">Deep learning for multi-class defect detection in semiconductor manufacturing. Transfer learning on a pre-trained CNN deployed on hybrid cloud + on-prem at Amkor Technology's South Korea site. Replaced manual visual inspection, reducing production losses.</p>
+      <div class="proj-stack">
+        <span class="proj-tag">Computer Vision</span><span class="proj-tag">Transfer Learning</span><span class="proj-tag">CNN</span><span class="proj-tag">Hybrid Cloud</span><span class="proj-tag">PyTorch</span>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-head">
+        <div class="proj-name">Supply Chain Optimization Simulation</div>
+        <span class="proj-emp">Accenture</span>
+      </div>
+      <p class="proj-desc">Simulation framework for supply chain network optimization — identifying strategic hub locations to improve distribution efficiency and reduce the global carbon footprint. Operations Research-based evaluation of hub placement scenarios.</p>
+      <div class="proj-stack">
+        <span class="proj-tag">Operations Research</span><span class="proj-tag">Simulation</span><span class="proj-tag">Network Optimization</span><span class="proj-tag">Python</span>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-head">
+        <div class="proj-name">Global Forecasting System</div>
+        <span class="proj-emp">GD Research</span>
+      </div>
+      <p class="proj-desc">Company-wide time-series forecasting delivering intelligence across 8 verticals: Consumer Goods, Oil &amp; Gas, Power, Financial Services, Retail, Technology, Construction, and Mining. Informed strategic decisions for UK-based clients.</p>
+      <div class="proj-stack">
+        <span class="proj-tag">Time-Series</span><span class="proj-tag">Forecasting</span><span class="proj-tag">Python</span><span class="proj-tag">Multi-Domain ML</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ── CERTIFICATIONS ─────────────────────────────── -->
+<div class="card">
+  <div class="card-head">
+    <div class="card-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4338ca" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="m15.477 12.89 1.515 5.526A1 1 0 0 1 15.82 19.7l-3.32-1.8a1 1 0 0 0-.96 0l-3.32 1.8a1 1 0 0 1-1.172-1.284l1.515-5.526"/></svg></div>
+    <h2 class="card-title">Licenses &amp; Certifications</h2>
+  </div>
+  <div class="cert-list">
+    <div class="cert-item">
+      <div class="cert-ico" style="background:#fee2e2">☁️</div>
+      <div>
+        <div class="cert-name">Generative AI Certified Professional</div>
+        <div class="cert-meta"><span class="cert-issuer">Oracle Cloud Infrastructure</span><span class="cert-badge cb-or">Oracle Cloud</span></div>
+      </div>
+    </div>
+    <div class="cert-item">
+      <div class="cert-ico" style="background:#e0f2fe">🔷</div>
+      <div>
+        <div class="cert-name">Microsoft Certified: Azure AI Engineer Associate</div>
+        <div class="cert-meta"><span class="cert-issuer">Microsoft</span><span class="cert-badge cb-ms">Microsoft</span></div>
+      </div>
+    </div>
+    <div class="cert-item">
+      <div class="cert-ico" style="background:#e0f2fe">🔷</div>
+      <div>
+        <div class="cert-name">Microsoft Certified: Azure Data Scientist Associate</div>
+        <div class="cert-meta"><span class="cert-issuer">Microsoft</span><span class="cert-badge cb-ms">Microsoft</span></div>
+      </div>
+    </div>
+    <div class="cert-item">
+      <div class="cert-ico" style="background:#e0f2fe">🔷</div>
+      <div>
+        <div class="cert-name">Microsoft Certified: Power BI Data Analyst Associate</div>
+        <div class="cert-meta"><span class="cert-issuer">Microsoft</span><span class="cert-badge cb-ms">Microsoft</span></div>
+      </div>
+    </div>
+    <div class="cert-item">
+      <div class="cert-ico" style="background:#e0f2fe">🔷</div>
+      <div>
+        <div class="cert-name">Microsoft Certified: Power Platform Fundamentals</div>
+        <div class="cert-meta"><span class="cert-issuer">Microsoft</span><span class="cert-badge cb-ms">Microsoft</span></div>
+      </div>
+    </div>
+    <div class="cert-item">
+      <div class="cert-ico" style="background:#fef9c3">🟡</div>
+      <div>
+        <div class="cert-name">Google Cloud Gen AI L3</div>
+        <div class="cert-meta"><span class="cert-issuer">Google (via Wipro)</span><span class="cert-badge cb-go">Google Cloud</span></div>
+      </div>
+    </div>
+    <div class="cert-item">
+      <div class="cert-ico" style="background:#fef9c3">🟡</div>
+      <div>
+        <div class="cert-name">Google Cloud and ML Onboarding</div>
+        <div class="cert-meta"><span class="cert-issuer">Google</span><span class="cert-badge cb-go">Google Cloud</span></div>
+      </div>
+    </div>
+    <div class="cert-item">
+      <div class="cert-ico" style="background:#dcfce7">🎓</div>
+      <div>
+        <div class="cert-name">Neural Networks and Deep Learning</div>
+        <div class="cert-meta"><span class="cert-issuer">Coursera / deeplearning.ai · Andrew Ng · ID: BDM2BNURLW6M</span><span class="cert-badge cb-co">Coursera</span></div>
+      </div>
+    </div>
+    <div class="cert-item">
+      <div class="cert-ico" style="background:#ede9fe">📊</div>
+      <div>
+        <div class="cert-name">Supply Chain Analytics in Python</div>
+        <div class="cert-meta"><span class="cert-issuer">DataCamp</span><span class="cert-badge cb-dc">DataCamp</span></div>
+      </div>
+    </div>
+    <div class="cert-item">
+      <div class="cert-ico" style="background:#f0f9ff">⚙️</div>
+      <div>
+        <div class="cert-name">Certified Automation Engineer (Level – Specialist)</div>
+        <div class="cert-meta"><span class="cert-issuer">Accenture India</span><span class="cert-badge cb-ac">Accenture</span></div>
+      </div>
+    </div>
+    <div class="cert-item">
+      <div class="cert-ico" style="background:#f0f9ff">⚙️</div>
+      <div>
+        <div class="cert-name">Certified Automation Practitioner (Level – Foundation)</div>
+        <div class="cert-meta"><span class="cert-issuer">Accenture India</span><span class="cert-badge cb-ac">Accenture</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── HONORS & AWARDS ────────────────────────────── -->
+<div class="card">
+  <div class="card-head">
+    <div class="card-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4338ca" stroke-width="2"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+    <h2 class="card-title">Honors &amp; Awards</h2>
+  </div>
+
+  <div class="awards-co">
+    <div class="awards-co-name">Best Buy India</div>
+    <div class="award-row">
+      <div class="award-title">Leadership — Talent Quotient</div>
+      <div class="award-info">Best Buy India</div>
+      <div class="award-desc">Recognized for rapid onboarding and outsized impact during the holiday season — improved performance by ~20%, strengthening business resilience during a high-risk period. Demonstrated strong ownership and forward-thinking by proactively exploring self-hosted open-source LLMs as an alternative to Gemini — an initiative with potential to drive nearly $300K in annual cost savings.</div>
+    </div>
+  </div>
+
+  <div class="awards-co">
+    <div class="awards-co-name">Wipro</div>
+    <div class="award-row">
+      <div class="award-title">Wipro Pinnacle Award — September 2024</div>
+      <div class="award-info">Wipro Data · September 2024</div>
+    </div>
+    <div class="award-row">
+      <div class="award-title">AML Hall of Fame — Above &amp; Beyond</div>
+      <div class="award-info">Wipro Applied Machine Learning team</div>
+    </div>
+    <div class="award-row">
+      <div class="award-title">Above &amp; Beyond Award</div>
+      <div class="award-info">Wipro · Recognized for innovative ideas and impactful contributions</div>
+    </div>
+    <div class="award-row">
+      <div class="award-title">Inspiring Performance Award</div>
+      <div class="award-info">Wipro</div>
+    </div>
+    <div class="award-row">
+      <div class="award-title">Being Responsive Award (×2)</div>
+      <div class="award-info">Wipro · Unit Award</div>
+    </div>
+    <div class="award-row">
+      <div class="award-title">Annual Appraisal Recognition</div>
+      <div class="award-info">Wipro</div>
+    </div>
+  </div>
+
+  <div class="awards-co">
+    <div class="awards-co-name">Accenture</div>
+    <div class="award-row">
+      <div class="award-title">Kudos Recognition Award (×2)</div>
+      <div class="award-info">Accenture · 2021 – 2023</div>
+    </div>
+    <div class="award-row">
+      <div class="award-title">Recognition Award</div>
+      <div class="award-info">Accenture · 2021</div>
+    </div>
+  </div>
+
+  <div class="awards-co">
+    <div class="awards-co-name">Infosys</div>
+    <div class="award-row">
+      <div class="award-title">Best Rating in Project — OUTSTANDING</div>
+      <div class="award-info">Infosys</div>
+    </div>
+    <div class="award-row">
+      <div class="award-title">Insta Award (×2)</div>
+      <div class="award-info">Infosys · Spot recognition for exceptional performance</div>
+    </div>
+  </div>
+</div>
+
+<!-- ── RECOMMENDATIONS ────────────────────────────── -->
+<div class="card">
+  <div class="card-head">
+    <div class="card-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4338ca" stroke-width="2"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg></div>
+    <h2 class="card-title">Recommendations</h2>
+  </div>
+  <div class="rec-list">
+
+    <div class="rec">
+      <div class="rec-quote">
+        <p>"I've had the privilege of working closely with Laxmi Narasimha Hari Yelesetty and have consistently been impressed by his deep ownership, technical expertise and unwavering passion for innovation in the Applied Machine Learning (AML) space.</p>
+        <p>As the offshore SPOC for the AML team, Hari has been instrumental in expanding Wipro's presence and capabilities in this domain. His leadership has not only strengthened delivery but also fostered a culture of excellence and collaboration. Whether it's coordinating complex transitions, mentoring new team members or solving intricate technical challenges, Hari approaches every task with clarity, commitment and a solution-oriented mindset.</p>
+        <p>He's a go-to consultant for any AML related challenge — always ready with insights, strategies and hands-on support. His ability to drive impactful outcomes makes him an invaluable asset to any organization."</p>
+      </div>
+      <div class="rec-by">
+        <div class="rec-ava">W</div>
+        <div>
+          <div class="rec-name">Senior Colleague, Applied Machine Learning</div>
+          <div class="rec-role">Wipro</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="rec">
+      <div class="rec-quote">
+        <p>"Mr. Hari is a very dedicated and passionate person. He has a habit of diving deep into technicals and understands each and every aspect of it before approaching — which motivates me. He has been a good and understanding Manager to me."</p>
+      </div>
+      <div class="rec-by">
+        <div class="rec-ava">W</div>
+        <div>
+          <div class="rec-name">Direct Report, ML Engineering</div>
+          <div class="rec-role">Wipro</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="rec">
+      <div class="rec-quote">
+        <p>"Despite limited prior exposure, Hari onboarded rapidly — within weeks he was fully productive and during the holiday season improved performance by ~20%, strengthening business resilience during a high-risk period. Beyond execution, Hari consistently demonstrates strong ownership and forward-thinking. He proactively identifies performance improvements and brings well-reasoned solutions, including exploring self-hosted open-source LLMs as an alternative to Gemini — an initiative with potential to drive nearly $300K in annual cost savings. His ability to learn quickly, navigate ambiguity, and translate new knowledge into tangible impact makes him a strong example of thriving through change."</p>
+      </div>
+      <div class="rec-by">
+        <div class="rec-ava">B</div>
+        <div>
+          <div class="rec-name">Leadership Recognition</div>
+          <div class="rec-role">Best Buy India · Talent Quotient Award</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ── LANGUAGES ──────────────────────────────────── -->
+<div class="card">
+  <div class="card-head">
+    <div class="card-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4338ca" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+    <h2 class="card-title">Languages</h2>
+  </div>
+  <div class="lang-list">
+    <div class="lang-chip"><span class="lang-name">English</span><span class="lang-level">Professional working</span></div>
+    <div class="lang-chip"><span class="lang-name">Telugu</span><span class="lang-level">Native or bilingual</span></div>
+    <div class="lang-chip"><span class="lang-name">Hindi</span><span class="lang-level">Working proficiency</span></div>
+  </div>
+</div>
+
+</main>
+
+<footer>
+  <p>Hari Yelesetty &nbsp;·&nbsp; <a href="https://ylnhari.github.io">ylnhari.github.io</a> &nbsp;·&nbsp; <a href="https://linkedin.com/in/ylnhari">LinkedIn</a> &nbsp;·&nbsp; <a href="https://github.com/ylnhari">GitHub</a> &nbsp;·&nbsp; <a href="mailto:ylnharimailme@gmail.com">ylnharimailme@gmail.com</a></p>
+</footer>
+
+</body>
+</html>
