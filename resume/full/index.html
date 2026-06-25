@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hari Yelesetty — Resume 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --navy:#0f172a;--indigo:#4338ca;--indigo-light:#6366f1;
+  --sl50:#f8fafc;--sl100:#f1f5f9;--sl200:#e2e8f0;--sl300:#cbd5e1;
+  --sl400:#94a3b8;--sl500:#64748b;--sl600:#475569;--sl700:#334155;--sl800:#1e293b;
+  --in50:#eef2ff;--in100:#e0e7ff;--in200:#c7d2fe;--in800:#3730a3;
+}
+body{font-family:'Inter',-apple-system,sans-serif;background:#dde3ee;color:var(--sl800);font-size:9pt;line-height:1.5}
+
+.print-bar{position:sticky;top:0;z-index:100;background:white;border-bottom:1px solid var(--sl200);padding:10px 24px;display:flex;align-items:center;gap:14px;box-shadow:0 1px 4px rgba(0,0,0,.08)}
+.print-btn{background:var(--indigo);color:white;border:none;padding:8px 18px;border-radius:6px;font-family:'Inter',sans-serif;font-size:13px;font-weight:500;cursor:pointer;display:flex;align-items:center;gap:7px;transition:background .15s}
+.print-btn:hover{background:var(--indigo-light)}
+.back-btn{background:transparent;color:var(--indigo);border:1px solid var(--in200);padding:7px 14px;border-radius:6px;font-family:'Inter',sans-serif;font-size:13px;font-weight:500;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+.print-hint{font-size:11.5px;color:var(--sl500)}
+.print-hint strong{color:var(--sl700)}
+
+.resume{width:210mm;margin:20px auto 40px;background:white;box-shadow:0 8px 40px rgba(15,23,42,.18)}
+
+.header{background:var(--navy);padding:30px 36px 26px;display:flex;justify-content:space-between;align-items:flex-start;gap:20px;position:relative;overflow:hidden}
+.header::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.045) 1px,transparent 1px);background-size:18px 18px;pointer-events:none}
+.header::after{content:'';position:absolute;top:-40px;right:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(99,102,241,.22) 0%,transparent 70%);pointer-events:none}
+.header-left{position:relative;z-index:1}
+.name-pre{font-family:'Space Grotesk',sans-serif;font-size:8pt;font-weight:500;color:var(--sl400);letter-spacing:.14em;text-transform:uppercase;display:block;margin-bottom:3px}
+.name-main{font-family:'Space Grotesk',sans-serif;font-size:32pt;font-weight:800;color:#f8fafc;letter-spacing:-1px;line-height:1;display:block;margin-bottom:9px}
+.title-line{font-size:8.5pt;font-weight:400;color:#7dd3fc;display:block;letter-spacing:.02em}
+.header-right{position:relative;z-index:1;display:flex;flex-direction:column;gap:6px;align-items:flex-end;padding-top:2px;flex-shrink:0}
+.c-row{display:flex;align-items:center;gap:7px;font-size:7.5pt;color:var(--sl300)}
+.c-icon{width:13px;height:13px;flex-shrink:0;color:#818cf8}
+
+.grad-bar{height:3px;background:linear-gradient(90deg,#4338ca 0%,#7c3aed 45%,#0891b2 100%)}
+
+.body{display:grid;grid-template-columns:194px 1fr}
+
+.left-col{background:var(--sl50);border-right:1px solid var(--sl200);padding:22px 15px}
+.l-section{margin-bottom:19px}
+.l-heading{font-family:'Space Grotesk',sans-serif;font-size:6.5pt;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--indigo);padding-bottom:5px;border-bottom:1.5px solid var(--in100);margin-bottom:9px}
+.skill-group{margin-bottom:9px}
+.skill-label{font-size:7pt;font-weight:600;color:var(--sl500);display:block;margin-bottom:4px}
+.tags{display:flex;flex-wrap:wrap;gap:3px}
+.tag{font-size:6.5pt;font-weight:500;padding:2px 6px;border-radius:3px}
+.t-light{background:var(--in50);color:var(--in800);border:1px solid var(--in200)}
+.t-dark{background:#1e1b4b;color:#a5b4fc;border:1px solid #312e81}
+.cert{margin-bottom:7px}
+.cert-org{font-size:7.5pt;font-weight:600;color:var(--sl800);display:block;line-height:1.3}
+.cert-name{font-size:7pt;color:var(--sl500);display:block;line-height:1.3}
+.edu-degree{font-size:8pt;font-weight:600;color:var(--sl800);display:block;margin-bottom:2px}
+.edu-detail{font-size:7pt;color:var(--sl500);display:block;line-height:1.5}
+
+.right-col{padding:22px 26px}
+.summary{background:linear-gradient(135deg,#eef2ff 0%,#f0f4ff 100%);border-left:3px solid var(--indigo);border-radius:0 5px 5px 0;padding:11px 14px;margin-bottom:18px}
+.summary p{font-size:8.5pt;color:var(--sl700);line-height:1.7}
+.metric{font-weight:700;color:var(--indigo)}
+.r-heading{font-family:'Space Grotesk',sans-serif;font-size:7.5pt;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--navy);display:flex;align-items:center;gap:8px;margin-bottom:12px;padding-bottom:4px;border-bottom:1px solid var(--sl200)}
+.r-heading::before{content:'';display:block;width:14px;height:2.5px;background:var(--indigo);flex-shrink:0}
+
+.timeline{position:relative}
+.exp-item{position:relative;padding-left:18px;margin-bottom:14px;page-break-inside:avoid}
+.exp-item::before{content:'';position:absolute;left:0;top:6px;width:8px;height:8px;background:var(--indigo);border-radius:50%;border:2px solid white;box-shadow:0 0 0 1.5px var(--indigo);z-index:1}
+.exp-item:not(:last-child)::after{content:'';position:absolute;left:3.5px;top:15px;width:1px;bottom:-7px;background:var(--in200)}
+.exp-row{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:3px}
+.exp-role{font-family:'Space Grotesk',sans-serif;font-size:9pt;font-weight:700;color:var(--sl800);line-height:1.3}
+.exp-company{font-size:7.5pt;font-weight:500;color:var(--indigo-light);margin-top:1px;display:block}
+.exp-date{font-size:7pt;font-weight:500;color:var(--sl500);white-space:nowrap;flex-shrink:0;background:var(--sl100);padding:2px 7px;border-radius:3px;border:1px solid var(--sl200);margin-top:1px}
+.bullets{list-style:none;margin-top:5px}
+.bullets li{font-size:8pt;color:var(--sl600);padding-left:11px;position:relative;margin-bottom:3px;line-height:1.55}
+.bullets li::before{content:'▸';position:absolute;left:0;top:.5px;color:var(--indigo-light);font-size:7pt}
+
+.earlier-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:4px}
+.mini-card{background:var(--sl50);border:1px solid var(--sl200);border-top:2.5px solid var(--in200);border-radius:4px;padding:8px 10px;page-break-inside:avoid}
+.mini-role{font-size:7.5pt;font-weight:700;color:var(--sl800);display:block;margin-bottom:1px;font-family:'Space Grotesk',sans-serif}
+.mini-co{font-size:7pt;font-weight:600;color:var(--indigo);display:block}
+.mini-date{font-size:6.5pt;color:var(--sl400);display:block;margin-bottom:4px}
+.mini-desc{font-size:7pt;color:var(--sl500);line-height:1.5}
+
+@media print{
+  body{background:white}
+  .print-bar{display:none!important}
+  .resume{width:100%;margin:0;box-shadow:none}
+  *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+}
+@page{size:A4;margin:0}
+</style>
+</head>
+<body>
+
+<div class="print-bar">
+  <a class="back-btn" href="/resume/">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+    Resume Hub
+  </a>
+  <button class="print-btn" onclick="window.print()">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+    Print / Save as PDF
+  </button>
+  <span class="print-hint">Paper: <strong>A4</strong> · Margins: <strong>None</strong> · Enable <strong>Background graphics</strong></span>
+</div>
+
+<div class="resume">
+  <div class="header">
+    <div class="header-left">
+      <span class="name-pre">Laxmi Narasimha</span>
+      <span class="name-main">Hari Yelesetty</span>
+      <span class="title-line">Lead AI Engineer &nbsp;·&nbsp; LLM Systems &amp; Production GenAI &nbsp;·&nbsp; GCP · Azure · GPU Infra</span>
+    </div>
+    <div class="header-right">
+      <div class="c-row"><svg class="c-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/></svg>ylnharimailme@gmail.com</div>
+      <div class="c-row"><svg class="c-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.6 19.79 19.79 0 0 1 1.54 5c-.11-1.2.73-2.2 1.93-2.2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 10.09a16 16 0 0 0 6 6l.72-.72a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.03z"/></svg>+91 99161 12881</div>
+      <div class="c-row"><svg class="c-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>linkedin.com/in/ylnhari</div>
+      <div class="c-row"><svg class="c-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>github.com/ylnhari</div>
+      <div class="c-row"><svg class="c-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>ylnhari.github.io</div>
+    </div>
+  </div>
+  <div class="grad-bar"></div>
+
+  <div class="body">
+    <div class="left-col">
+
+      <div class="l-section">
+        <div class="l-heading">LLM &amp; GenAI</div>
+        <div class="tags">
+          <span class="tag t-dark">vLLM</span><span class="tag t-dark">Unsloth</span>
+          <span class="tag t-dark">LoRA / QLoRA</span><span class="tag t-dark">PEFT</span>
+          <span class="tag t-dark">Transformers</span>
+          <span class="tag t-dark">Self-hosted LLM Ops</span>
+          <span class="tag t-dark">RAG</span>
+          <span class="tag t-dark">Prompt Engineering</span>
+          <span class="tag t-dark">LLM Evaluation</span>
+        </div>
+      </div>
+
+      <div class="l-section">
+        <div class="l-heading">ML &amp; Deep Learning</div>
+        <div class="tags">
+          <span class="tag t-light">PyTorch</span><span class="tag t-light">TensorFlow</span>
+          <span class="tag t-light">Keras</span><span class="tag t-light">Scikit-learn</span>
+          <span class="tag t-light">RAPIDS (cuDF/CuPy)</span>
+          <span class="tag t-light">CUDA</span>
+          <span class="tag t-light">NVIDIA Morpheus</span>
+          <span class="tag t-light">Computer Vision</span>
+          <span class="tag t-light">NLP</span><span class="tag t-light">Time-Series</span>
+        </div>
+      </div>
+
+      <div class="l-section">
+        <div class="l-heading">MLOps &amp; Platforms</div>
+        <div class="skill-group">
+          <span class="skill-label">Cloud</span>
+          <div class="tags">
+            <span class="tag t-light">GCP Vertex AI</span>
+            <span class="tag t-light">GKE</span><span class="tag t-light">GCS</span>
+            <span class="tag t-light">Azure ML Studio</span>
+            <span class="tag t-light">Kubeflow</span>
+            <span class="tag t-light">Azure DevOps</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <span class="skill-label">Serving &amp; Packaging</span>
+          <div class="tags">
+            <span class="tag t-light">Kubernetes</span><span class="tag t-light">Helm</span>
+            <span class="tag t-light">Istio</span><span class="tag t-light">Docker</span>
+            <span class="tag t-light">FastAPI</span><span class="tag t-light">MLflow</span>
+            <span class="tag t-light">Accelerate</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <span class="skill-label">Observability</span>
+          <div class="tags">
+            <span class="tag t-light">Grafana</span><span class="tag t-light">Prometheus</span>
+            <span class="tag t-light">ELK Stack</span><span class="tag t-light">Power BI</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="l-section">
+        <div class="l-heading">Languages &amp; Data</div>
+        <div class="tags">
+          <span class="tag t-light">Python</span><span class="tag t-light">SQL</span>
+          <span class="tag t-light">Pandas</span><span class="tag t-light">GitHub Actions</span>
+          <span class="tag t-light">MS SQL Server</span><span class="tag t-light">IBM DB2</span>
+        </div>
+      </div>
+
+      <div class="l-section">
+        <div class="l-heading">Certifications</div>
+        <div class="cert"><span class="cert-org">Oracle Cloud</span><span class="cert-name">GenAI Certified Professional</span></div>
+        <div class="cert"><span class="cert-org">Microsoft Certified</span><span class="cert-name">Azure AI Engineer Associate</span></div>
+        <div class="cert"><span class="cert-org">Microsoft Certified</span><span class="cert-name">Azure Data Scientist Associate</span></div>
+        <div class="cert"><span class="cert-org">Microsoft Certified</span><span class="cert-name">Power BI Data Analyst Associate</span></div>
+        <div class="cert"><span class="cert-org">Microsoft Certified</span><span class="cert-name">Power Platform Fundamentals</span></div>
+        <div class="cert"><span class="cert-org">Coursera</span><span class="cert-name">Neural Networks &amp; Deep Learning</span></div>
+      </div>
+
+      <div class="l-section">
+        <div class="l-heading">Education</div>
+        <span class="edu-degree">B.E. Electrical &amp; Electronics</span>
+        <span class="edu-detail">Andhra University, Visakhapatnam</span>
+        <span class="edu-detail">2012 – 2016</span>
+      </div>
+
+    </div>
+
+    <div class="right-col">
+
+      <div class="summary">
+        <p>10+ years engineering AI systems from research to real traffic. At Best Buy: built a config-driven LoRA fine-tuning → vLLM serving pipeline that <span class="metric">saved $300K</span>, serving fraud detection and personalization at <span class="metric">40k+ transactions/sec</span>. At Wipro: GPU-accelerated cybersecurity ML on <span class="metric">NVIDIA DGX (8×A100)</span> — AWS DFP, phishing, and abuse inbox at <span class="metric">2,400/sec (2× prior pipeline)</span> over <span class="metric">billion-row RAPIDS datasets</span>. The specialist for the gap between <em>works in a notebook</em> and <em>serves real traffic</em>.</p>
+      </div>
+
+      <div class="r-heading">Work Experience</div>
+      <div class="timeline">
+
+        <div class="exp-item">
+          <div class="exp-row">
+            <div>
+              <div class="exp-role">Lead Artificial Intelligence Engineer</div>
+              <span class="exp-company">Best Buy &nbsp;·&nbsp; Bengaluru, India</span>
+            </div>
+            <div class="exp-date">Jul 2025 – Present</div>
+          </div>
+          <ul class="bullets">
+            <li>Built config-driven <span class="metric">LoRA fine-tuning framework</span> — Unsloth + PEFT dual-backend (~2× faster, 60–80% less VRAM via QLoRA), single/multi-GPU via Accelerate — with vLLM OpenAI-compatible serving on GKE (HPA autoscaling, Istio routing). Zero-Python task addition via YAML; multi-task single-adapter training.</li>
+            <li>Self-hosted open-source LLMs end-to-end, eliminating external API dependency and <span class="metric">saving $300K</span> while strengthening data governance and compliance.</li>
+            <li>Productionalizing GenAI solutions on GCP for search, personalization, fraud detection, and cybersecurity at <span class="metric">40k+ transactions/sec</span> — Vertex AI, GKE, GCS model store, Artifact Registry, Cloud Build CI.</li>
+            <li>Established Prometheus/Grafana observability and GMP PodMonitoring for all LLM serving infrastructure.</li>
+          </ul>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-row">
+            <div>
+              <div class="exp-role">ML Lead Engineer — ML Engineering &amp; Operations</div>
+              <span class="exp-company">Wipro &nbsp;·&nbsp; Client: Major US Retail Corporation</span>
+            </div>
+            <div class="exp-date">Aug 2023 – Jul 2025</div>
+          </div>
+          <ul class="bullets">
+            <li>Engineered GPU-accelerated cybersecurity ML on <span class="metric">NVIDIA DGX (8×A100)</span> with <span class="metric">NVIDIA Morpheus</span> — <span class="metric">AWS Digital Fingerprinting (DFP)</span>, phishing email detection, and abuse inbox management — reaching <span class="metric">2,400 events/sec</span> (<span class="metric">2× previous pipeline</span>).</li>
+            <li>Built <span class="metric">RAPIDS (cuDF/CuPy)</span> data engineering pipelines processing <span class="metric">billion-row datasets</span> on GPU for fraud and cybersecurity feature extraction; designed batch inference and training orchestration on the DGX cluster.</li>
+            <li>Led fraud detection AI processing millions of transactional events across multiple retail lifecycle stages using GCP ML capabilities and on-prem GPU computing.</li>
+          </ul>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-row">
+            <div>
+              <div class="exp-role">Application Dev Team Lead — Data Science / Azure ML</div>
+              <span class="exp-company">Accenture</span>
+            </div>
+            <div class="exp-date">May 2021 – Aug 2023</div>
+          </div>
+          <ul class="bullets">
+            <li>Led last-mile delivery optimization using OR-Tools — <span class="metric">130 → 160+ trucks/day</span> — with significant annual logistics cost savings through improved route planning and departure scheduling.</li>
+            <li>Developed end-to-end ML model for warehouse product quality prediction (BamaGruppen, Norway), improving inspection efficiency and customer satisfaction.</li>
+            <li>Led computer vision defect detection system for semiconductor manufacturing (Amkor, South Korea); designed supply chain hub simulation framework.</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="r-heading" style="margin-top:16px">Earlier Experience</div>
+      <div class="earlier-grid">
+        <div class="mini-card">
+          <span class="mini-role">Data Scientist</span>
+          <span class="mini-co">GD Research Centre Pvt Ltd</span>
+          <span class="mini-date">May 2020 – May 2021</span>
+          <span class="mini-desc">Built company-wide time-series forecasting across multiple intelligence centers (Consumer Goods, Oil &amp; Gas, Power, Retail, Finance).</span>
+        </div>
+        <div class="mini-card">
+          <span class="mini-role">Systems Engineer</span>
+          <span class="mini-co">Tata Consultancy Services</span>
+          <span class="mini-date">Jul 2019 – Mar 2020</span>
+          <span class="mini-desc">Deployed hybrid cloud + on-prem CV system for multi-class image classification in semiconductor manufacturing (transfer learning).</span>
+        </div>
+        <div class="mini-card">
+          <span class="mini-role">Senior System Engineer</span>
+          <span class="mini-co">Infosys</span>
+          <span class="mini-date">May 2016 – Jul 2019</span>
+          <span class="mini-desc">Built ML-powered Lead Conversion Prediction system and Business Intelligence applications using Microsoft BI tools.</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</body>
+</html>
