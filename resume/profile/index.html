@@ -279,7 +279,7 @@ footer a{color:var(--indigo);text-decoration:none}
   <div class="about-text">
     <p>I'm a production AI/ML systems engineer with <strong>10+ years</strong> of experience shipping models from notebook to real traffic. I specialize in the hardest part of AI: making it actually work at scale in production.</p>
     <p>Currently at <strong>Best Buy India</strong> as Lead AI Engineer, I architect and build the full LLM lifecycle — fine-tuning open-source models with LoRA (Unsloth + PEFT + HuggingFace Accelerate), serving them via <strong>vLLM on GKE</strong> with HPA autoscaling and Istio routing, and powering retail applications — fraud detection, search, personalization, cybersecurity — at <strong>40,000+ transactions per second</strong>. This work replaced external LLM APIs entirely, saving <strong>$300K annually</strong> while strengthening data governance and compliance.</p>
-    <p>Before that, I built <strong>GPU-accelerated cybersecurity ML at Wipro</strong> on NVIDIA DGX (8×A100, 1TB RAM) using NVIDIA Morpheus: behavioral anomaly detection for AWS account security, phishing email classification, and automated abuse inbox routing — double the case volume of the prior pipeline, each threat automatically routed to the right security team.</p>
+    <p>Before that, I built <strong>GPU-accelerated cybersecurity ML at Wipro</strong> on NVIDIA DGX (8×A100, 1TB RAM) using NVIDIA Morpheus: behavioral anomaly detection for AWS account security over billion-row datasets, phishing email classification at 2× throughput, and automated abuse-inbox triage handling <strong>2× the prior pipeline's case volume</strong> — each threat automatically routed to the right security team.</p>
     <p>At <strong>Accenture</strong>, I built Azure ML quality-prediction pipelines for BamaGruppen (Norway) — lifting warehouse trucks inspected per day from 130 to 160 and saving <strong>$2.5M annually</strong> — and led last-mile delivery optimization with Google OR-Tools (Vehicle Routing Problem) and cross-functional supply-chain simulation frameworks.</p>
     <p>My roots go deeper: time-series forecasting across 8 industrial verticals at GD Research; <strong>computer-vision semiconductor defect detection at TCS</strong>, deployed in production at Amkor Technology's South Korea site; and ML-powered BI at Infosys — including a stint in Mainframe (COBOL/JCL) that gave me a real appreciation for what "production" means.</p>
     <p><em>The specialist for the gap between "works in a notebook" and "serves real traffic."</em></p>
@@ -310,7 +310,7 @@ footer a{color:var(--indigo);text-decoration:none}
     </div>
     <div class="impact-item">
       <div class="impact-num">2×</div>
-      <div class="impact-txt">Cybersecurity case volume vs. the prior pipeline, each threat auto-routed to the right team.</div>
+      <div class="impact-txt">Abuse-inbox case volume vs. the prior pipeline — each threat auto-routed to the right security team.</div>
       <div class="impact-emp">Wipro</div>
     </div>
     <div class="impact-item">
@@ -375,10 +375,9 @@ footer a{color:var(--indigo);text-decoration:none}
         <div class="exp-sub">Hyderabad, Telangana, India · Full-time</div>
         <div class="exp-client">Client: Major US Retail Corporation</div>
         <ul class="exp-ul">
-          <li>Engineered <strong>GPU-accelerated cybersecurity ML pipelines on NVIDIA DGX (8×A100, 1TB RAM)</strong> using NVIDIA Morpheus: behavioral anomaly detection, phishing classification, and abuse inbox routing — <strong>double the previous pipeline's case volume</strong>, each threat automatically routed to the right team.</li>
+          <li>Engineered <strong>GPU-accelerated cybersecurity ML pipelines on NVIDIA DGX (8×A100, 1TB RAM)</strong> using NVIDIA Morpheus: behavioral anomaly detection, phishing classification (2× throughput), and abuse-inbox triage at <strong>2× the prior pipeline's case volume</strong> — each threat automatically routed to the right team.</li>
           <li>Built <strong>unsupervised autoencoder models per entity</strong> (account/user/service/machine) for AWS account behavioral fingerprinting — training on billion-row CloudTrail datasets; model management via MLflow; Grafana alerts to security analysts.</li>
-          <li>Processed <strong>billion-row datasets</strong> for fraud and cybersecurity feature extraction using RAPIDS (cuDF/CuPy) on GPU; orchestrated batch inference and training across concurrent DGX workloads.</li>
-          <li>Led AI fraud detection processing <strong>millions of transactional events</strong> across multiple retail lifecycle stages using GCP ML and on-prem GPU computing.</li>
+          <li>Processed <strong>billion-row datasets</strong> for cybersecurity feature extraction using RAPIDS (cuDF/CuPy) on GPU; orchestrated batch inference and training across concurrent DGX workloads.</li>
           <li>Led a team of ML/MLOps engineers and served as <strong>offshore SPOC for the Applied Machine Learning (AML) team</strong> — reviewing 300+ résumés and conducting 50+ interviews to expand the India practice.</li>
         </ul>
       </div>
@@ -633,7 +632,7 @@ footer a{color:var(--indigo);text-decoration:none}
       </div>
       <div class="proj-period">May 2024 – Aug 2025</div>
       <p class="proj-desc">Helped Cyber Security act faster on critical threats reported to the "abuse" mailbox. Two-part solution in active use: (1) an <strong>email-routing structure</strong> that classifies inbound abuse mail with ML, strips junk, and forwards to the right action teams; (2) an <strong>extraction pipeline</strong> that pulls scammers' email addresses and phone numbers — even when hidden in HTML, images, PDFs/PNGs, multi-coloured digits, or whitespace tricks — using OCR (pytesseract) and rule-based parsing, then notifies stakeholders (mail partners such as Google and iCloud, the cyber threat-response team, and the phishing team) so partners can block the numbers and shut down the scammers.</p>
-      <div class="proj-impact"><span class="lbl">Impact</span>Reduced brand infringement by automating triage of the abuse inbox and feeding actionable scammer identifiers to telecom/mail partners for takedown — cutting manual review and accelerating threat response.</div>
+      <div class="proj-impact"><span class="lbl">Impact</span>Handled <strong>2× the prior pipeline's case volume</strong> — auto-routing each threat to the right team; reduced brand infringement by feeding actionable scammer identifiers to telecom/mail partners for takedown, cutting manual review and accelerating threat response.</div>
       <div class="proj-stack">
         <span class="proj-tag">Python</span><span class="proj-tag">cuDF (GPU)</span><span class="proj-tag">pytesseract / OCR</span><span class="proj-tag">Outlook API SDK</span><span class="proj-tag">ML Classification</span>
       </div>
