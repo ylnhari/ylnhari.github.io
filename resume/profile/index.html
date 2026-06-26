@@ -60,6 +60,12 @@ main{max-width:860px;margin:0 auto;padding:32px 24px 80px}
 .card-head{display:flex;align-items:center;gap:10px;margin-bottom:20px;padding-bottom:14px;border-bottom:1px solid var(--sl100)}
 .card-icon{width:28px;height:28px;background:var(--in50);border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid var(--in200)}
 .card-title{font-family:'Space Grotesk',sans-serif;font-size:17px;font-weight:700;color:var(--sl800)}
+.card-head{cursor:pointer;user-select:none}
+.card-chevron{margin-left:auto;display:flex;align-items:center;color:var(--sl400);flex-shrink:0;transition:transform .2s}
+.card-head:hover .card-chevron{color:var(--indigo)}
+.card.collapsed .card-chevron{transform:rotate(-90deg)}
+.card.collapsed .card-head{margin-bottom:0;padding-bottom:0;border-bottom:none}
+.card.collapsed>:not(.card-head){display:none}
 
 /* ABOUT */
 .about-text{color:var(--sl700);line-height:1.8;font-size:14.5px}
@@ -96,6 +102,10 @@ main{max-width:860px;margin:0 auto;padding:32px 24px 80px}
 .edu-degree{font-size:14px;font-weight:600;color:var(--sl800)}
 .edu-school{font-size:13.5px;font-weight:500;color:var(--indigo);margin-top:1px}
 .edu-meta{font-size:12px;color:var(--sl400);margin-top:2px}
+.edu-achv{list-style:none;display:flex;flex-direction:column;gap:3px;margin-top:7px}
+.edu-achv li{font-size:12.5px;color:var(--sl600);line-height:1.55;padding-left:14px;position:relative}
+.edu-achv li::before{content:'★';position:absolute;left:0;color:var(--violet);font-size:10px;top:2px}
+.edu-achv b{color:var(--sl800);font-weight:600}
 
 /* SKILLS */
 .skill-groups{display:flex;flex-direction:column;gap:16px}
@@ -151,6 +161,9 @@ main{max-width:860px;margin:0 auto;padding:32px 24px 80px}
 .rec-ava{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,var(--indigo) 0%,var(--violet) 100%);display:flex;align-items:center;justify-content:center;color:white;font-size:13px;font-weight:700;flex-shrink:0;font-family:'Space Grotesk',sans-serif}
 .rec-name{font-size:13px;font-weight:600;color:var(--sl800)}
 .rec-role{font-size:12px;color:var(--sl400)}
+.rec.pending{border-left-color:var(--sl300);background:var(--sl50)}
+.rec.pending .rec-quote{color:var(--sl400)}
+.rec.pending .rec-ava{background:var(--sl300)}
 
 /* LANGUAGES */
 .lang-list{display:flex;gap:10px;flex-wrap:wrap}
@@ -259,14 +272,6 @@ footer a{color:var(--indigo);text-decoration:none}
         1-Page Résumé
       </a>
     </div>
-    <div class="hero-metrics">
-      <div class="metric"><span class="metric-val">$300K</span><span class="metric-label">saved · self-hosted LLMs</span></div>
-      <div class="metric"><span class="metric-val">40k/sec</span><span class="metric-label">real-time inference</span></div>
-      <div class="metric"><span class="metric-val">8×A100</span><span class="metric-label">GPU cybersecurity ML</span></div>
-      <div class="metric"><span class="metric-val">2×</span><span class="metric-label">cases vs prior pipeline</span></div>
-      <div class="metric"><span class="metric-val">130→160+</span><span class="metric-label">trucks/day optimized</span></div>
-      <div class="metric"><span class="metric-val">10+</span><span class="metric-label">years production AI/ML</span></div>
-    </div>
   </div>
 </div>
 <div class="grad-bar"></div>
@@ -283,8 +288,8 @@ footer a{color:var(--indigo);text-decoration:none}
     <p>I'm a production AI/ML systems engineer with <strong>10+ years</strong> of experience shipping models from notebook to real traffic. I specialize in the hardest part of AI: making it actually work at scale in production.</p>
     <p>Currently at <strong>Best Buy India</strong> as Lead AI Engineer, I architect and build the full LLM lifecycle — fine-tuning open-source models with LoRA (Unsloth + PEFT + HuggingFace Accelerate), serving them via <strong>vLLM on GKE</strong> with HPA autoscaling and Istio routing, and powering retail applications — fraud detection, search, personalization, cybersecurity — at <strong>40,000+ transactions per second</strong>. This work replaced external LLM APIs entirely, saving <strong>$300K annually</strong> while strengthening data governance and compliance.</p>
     <p>Before that, I built <strong>GPU-accelerated cybersecurity ML at Wipro</strong> on NVIDIA DGX (8×A100, 1TB RAM) using NVIDIA Morpheus: behavioral anomaly detection for AWS account security, phishing email classification, and automated abuse inbox routing — double the case volume of the prior pipeline, each threat automatically routed to the right security team.</p>
-    <p>At <strong>Accenture</strong>, I led last-mile delivery optimization using Google OR-Tools (Vehicle Routing Problem), scaling a logistics fleet from 130 to 160+ trucks per day, alongside Azure ML quality prediction pipelines for BamaGruppen (Norway) and computer vision defect detection for Amkor (South Korea).</p>
-    <p>My roots go deeper: time-series forecasting across 8 industrial verticals at GD Research, computer vision at TCS, and ML-powered BI at Infosys — including a stint in Mainframe (COBOL/JCL) that gave me a real appreciation for what "production" means.</p>
+    <p>At <strong>Accenture</strong>, I built Azure ML quality-prediction pipelines for BamaGruppen (Norway) — lifting warehouse trucks inspected per day from 130 to 160 and saving <strong>$2.5M annually</strong> — and led last-mile delivery optimization with Google OR-Tools (Vehicle Routing Problem) and cross-functional supply-chain simulation frameworks.</p>
+    <p>My roots go deeper: time-series forecasting across 8 industrial verticals at GD Research; <strong>computer-vision semiconductor defect detection at TCS</strong>, deployed in production at Amkor Technology's South Korea site; and ML-powered BI at Infosys — including a stint in Mainframe (COBOL/JCL) that gave me a real appreciation for what "production" means.</p>
     <p><em>The specialist for the gap between "works in a notebook" and "serves real traffic."</em></p>
   </div>
 </div>
@@ -398,10 +403,9 @@ footer a{color:var(--indigo);text-decoration:none}
         <div class="exp-sub">India · Hybrid · Full-time</div>
         <div class="exp-client">Two positions: Team Lead (Nov 2022 – Sep 2023) · Senior Analyst (May 2021 – Nov 2022)</div>
         <ul class="exp-ul">
-          <li>Led <strong>last-mile delivery optimization using OR-Tools VRP</strong>, scaling daily delivery coverage from <strong>130 to 160+ trucks</strong> through improved route planning, time windows, capacity constraints, and departure scheduling.</li>
-          <li>Developed end-to-end <strong>Azure ML quality prediction pipeline for BamaGruppen (Norway)</strong> — predicts product quality at warehouse arrival to enable proactive inspection scheduling. Stack: Azure ML Studio, Logic Apps, Azure Pipelines, Azure Storage.</li>
-          <li>Led <strong>computer vision defect detection at Amkor (South Korea)</strong> — transfer learning for multi-class semiconductor defect detection on hybrid cloud + on-prem; eliminated manual inspection bottlenecks.</li>
-          <li>Designed cross-functional <strong>supply chain simulation framework</strong> for strategic hub location optimization, improving distribution efficiency and reducing global carbon footprint.</li>
+          <li>Developed an end-to-end <strong>Azure ML quality-prediction pipeline for BamaGruppen (Norway)</strong> — predicting product quality at warehouse arrival to prioritise inspections: <strong>$2.5M annual savings</strong>, trucks inspected/day <strong>130 → 160</strong>, <strong>+17%</strong> low-quality detection, <strong>+20%</strong> customer approval. Stack: Azure ML Studio, Logic Apps, Azure Pipelines, Azure Storage.</li>
+          <li>Led <strong>last-mile delivery optimization with OR-Tools (Vehicle Routing Problem)</strong> — improved route planning, time windows, capacity constraints, and departure scheduling, yielding significant annual logistics cost savings.</li>
+          <li>Designed a cross-functional <strong>supply-chain simulation framework</strong> for strategic hub-location optimization, improving distribution efficiency and reducing global carbon footprint.</li>
         </ul>
       </div>
     </div>
@@ -478,7 +482,11 @@ footer a{color:var(--indigo);text-decoration:none}
       <div>
         <div class="edu-degree">Intermediate — Mathematics, Physics, Chemistry (MPC)</div>
         <div class="edu-school">Sri Chaitanya College of Education</div>
-        <div class="edu-meta">High School Equivalent (12th Standard)</div>
+        <div class="edu-meta">2010 – 2012 &nbsp;·&nbsp; Hyderabad, Telangana, India &nbsp;·&nbsp; 12th Standard</div>
+        <ul class="edu-achv">
+          <li>Secured <b>975 / 1000</b> marks.</li>
+          <li>Secured rank <b>1200</b> in the EAMCET examination (out of 320,000 participants).</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -606,7 +614,7 @@ footer a{color:var(--indigo);text-decoration:none}
         <span class="proj-emp">Best Buy</span>
       </div>
       <div class="proj-period">Dec 2025 – Present</div>
-      <p class="proj-desc">A config-driven framework for LoRA adapter fine-tuning of open-source causal LLMs — enabling rapid experimentation and production deployment for classification, information extraction, and free-form generation. <strong>Training layer:</strong> dual-backend engine (Unsloth — ~2× faster, 60–80% less VRAM via QLoRA — plus HuggingFace PEFT/Transformers), single- and multi-GPU via Accelerate with automatic backend selection. <strong>Inference layer:</strong> standard PEFT adapters hot-loadable into a vLLM OpenAI-compatible server alongside a frozen base model — no separate deployment per fine-tuned model; containerised on GKE with HPA autoscaling and Istio routing. <strong>MLOps:</strong> end-to-end artefact lifecycle (model resolution local HF cache → GCS → HF Hub), automated post-training evaluation, and GCS artefact upload. Zero-Python task addition via YAML + prompt file + CSV; multi-task single-adapter training.</p>
+      <p class="proj-desc">A config-driven framework for LoRA adapter fine-tuning of open-source causal LLMs — enabling rapid experimentation and production deployment for classification, information extraction, and free-form generation. <strong>Training layer:</strong> dual-backend engine (Unsloth — ~2× faster, 60–80% less VRAM via QLoRA — plus HuggingFace PEFT/Transformers), single- and multi-GPU via Accelerate with automatic backend selection. <strong>Inference layer:</strong> standard PEFT adapters hot-loadable into a vLLM OpenAI-compatible server alongside a frozen base model — no separate deployment per fine-tuned model; containerised on GKE with HPA autoscaling and Istio routing. <strong>MLOps:</strong> end-to-end artefact lifecycle (model resolution local HF cache → GCS → HF Hub), automated post-training evaluation (accuracy, confusion matrix, MSE) with structured JSON results and auto-generated vLLM serve commands, and GCS artefact upload; Kubernetes manifests with PVC model caching and GMP PodMonitoring. Zero-Python task addition via YAML + prompt file + CSV; multi-task single-adapter training.</p>
       <div class="proj-impact"><span class="lbl">Impact</span><strong>$300K annual savings</strong> by self-hosting open-source LLMs and eliminating external API dependency; stronger data governance and compliance; sharply faster time-to-value for new GenAI use cases.</div>
       <div class="proj-stack">
         <span class="proj-tag">LoRA / QLoRA</span><span class="proj-tag">Unsloth</span><span class="proj-tag">PEFT</span><span class="proj-tag">HF Accelerate</span><span class="proj-tag">vLLM</span><span class="proj-tag">GKE</span><span class="proj-tag">Istio</span><span class="proj-tag">GCS</span><span class="proj-tag">Prometheus/Grafana</span>
@@ -619,7 +627,7 @@ footer a{color:var(--indigo);text-decoration:none}
         <span class="proj-emp">Best Buy</span>
       </div>
       <div class="proj-period">Aug 2025 – Jan 2026</div>
-      <p class="proj-desc">A high-scale fraud detection ecosystem that intercepts threats across the fulfilment journey — payment, refund, reship — by analysing real-time behavioural signals, clickstream, and historical patterns. <strong>Streaming:</strong> Apache Beam pipelines on GCP Dataflow processing 40k events/sec at peak, transforming raw interactions into dynamic features for the Vertex AI Feature Store. <strong>Inference:</strong> real-time endpoints on GKE holding a 200&nbsp;ms scoring SLA. <strong>Training:</strong> continued training via Vertex AI Pipelines. Transitioned validated XGBoost models to production with Helm + Vertex AI Model Registry; provisioned GCP resources (Pub/Sub, Buckets, Dataflow) via Google KCC; GitOps with Cloud Build + ArgoCD; JWT-secured endpoints with rigorous load testing; Prometheus/Grafana + Cloud Monitoring alerting to Slack/email.</p>
+      <p class="proj-desc">A high-scale fraud detection ecosystem that intercepts threats across the fulfilment journey — payment, refund, reship — by analysing real-time behavioural signals, clickstream, and historical patterns. <strong>Streaming:</strong> Apache Beam pipelines on GCP Dataflow processing 40k events/sec at peak, transforming raw interactions into dynamic features for the Vertex AI Feature Store. <strong>Inference:</strong> real-time endpoints on GKE holding a 200&nbsp;ms scoring SLA. <strong>Training:</strong> continued training via Vertex AI Pipelines. Transitioned validated XGBoost models to production with Helm + Vertex AI Model Registry; provisioned GCP resources (Pub/Sub, Buckets, Dataflow) via Google KCC; GitOps with Cloud Build + ArgoCD; tracked experiments and model versions in a bespoke in-house MLOps portal; JWT-secured endpoints with rigorous load testing via Cloud Functions; Prometheus/Grafana + Cloud Monitoring alerting to Slack/email.</p>
       <div class="proj-impact"><span class="lbl">Impact</span>Real-time fraud scoring at <strong>40,000 events/sec</strong> under a <strong>200&nbsp;ms SLA</strong>, intercepting chargebacks and "item not received" abuse early across the fulfilment lifecycle — preventing an estimated multi-million-USD annual fraud loss.</div>
       <div class="proj-stack">
         <span class="proj-tag">Apache Beam</span><span class="proj-tag">Dataflow</span><span class="proj-tag">Vertex AI</span><span class="proj-tag">Seldon Core</span><span class="proj-tag">XGBoost</span><span class="proj-tag">GKE</span><span class="proj-tag">ArgoCD</span><span class="proj-tag">Pub/Sub</span><span class="proj-tag">KCC</span>
@@ -1160,10 +1168,139 @@ footer a{color:var(--indigo);text-decoration:none}
         <div class="rec-ava">Y</div>
         <div>
           <div class="rec-name">Yaser Sakkaf</div>
-          <div class="rec-role">Technical Lead: AI Cognitive · reported to Hari directly</div>
+          <div class="rec-role">Technical Lead: AI Cognitive · reported to Hari directly · May 2025</div>
         </div>
       </div>
     </div>
+
+    <div class="rec">
+      <div class="rec-quote">
+        <p>"An exceptional leader in machine learning, driving innovation with deep technical expertise, strategic vision, and collaborative spirit. Delivers scalable AI solutions with precision, mentoring teams to achieve outstanding results."</p>
+      </div>
+      <div class="rec-by">
+        <div class="rec-ava">A</div>
+        <div>
+          <div class="rec-name">Ananya Saha Chakraborty</div>
+          <div class="rec-role">Technical Project Manager · worked with Hari on different teams · May 2025</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="rec">
+      <div class="rec-quote">
+        <p>"Hari is a problem solver and dedicated person who was very professional and helped me with my induction and guided me through his stint in our team. He is a team buddy!!!"</p>
+      </div>
+      <div class="rec-by">
+        <div class="rec-ava">M</div>
+        <div>
+          <div class="rec-name">Marthala Naveenkumar Reddy</div>
+          <div class="rec-role">Senior Data Scientist · Gen AI · RAG · LLMs · NLP · MLOps · same team · Sep 2021</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PENDING: full verbatim text to be pasted by Hari (LinkedIn previews are truncated). -->
+
+    <div class="rec pending">
+      <div class="rec-quote"><p>Recommendation text to be added.</p></div>
+      <div class="rec-by">
+        <div class="rec-ava">S</div>
+        <div>
+          <div class="rec-name">Siddhesh Pisal</div>
+          <div class="rec-role">AI Engineering Solutions Architect · GenAI &amp; LLM Platforms · same team · May 2025</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="rec pending">
+      <div class="rec-quote"><p>Recommendation text to be added.</p></div>
+      <div class="rec-by">
+        <div class="rec-ava">R</div>
+        <div>
+          <div class="rec-name">Raajesh Laguduva Rameshbabu</div>
+          <div class="rec-role">Engineer focused on MLOps and LLMOps · reported to Hari directly · May 2025</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="rec pending">
+      <div class="rec-quote"><p>Recommendation text to be added.</p></div>
+      <div class="rec-by">
+        <div class="rec-ava">M</div>
+        <div>
+          <div class="rec-name">Mohammad Noor Ul Hasan</div>
+          <div class="rec-role">AI Engineer · reported to Hari directly · Aug 2024</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="rec pending">
+      <div class="rec-quote"><p>Recommendation text to be added.</p></div>
+      <div class="rec-by">
+        <div class="rec-ava">P</div>
+        <div>
+          <div class="rec-name">Piyush Raj</div>
+          <div class="rec-role">Software Engineer at Accenture · GenAI, LLMs &amp; Agentic Workflows · reported to Hari directly · Aug 2023</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="rec pending">
+      <div class="rec-quote"><p>Recommendation text to be added.</p></div>
+      <div class="rec-by">
+        <div class="rec-ava">O</div>
+        <div>
+          <div class="rec-name">Ole Jakob Slette</div>
+          <div class="rec-role">Utvikler hos Cappelen Damm · was Hari's client · Jun 2022</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="rec pending">
+      <div class="rec-quote"><p>Recommendation text to be added.</p></div>
+      <div class="rec-by">
+        <div class="rec-ava">M</div>
+        <div>
+          <div class="rec-name">Madhu Makadi</div>
+          <div class="rec-role">Technical Architect at iLink Digital · studied together · Jun 2022</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="rec pending">
+      <div class="rec-quote"><p>Recommendation text to be added.</p></div>
+      <div class="rec-by">
+        <div class="rec-ava">N</div>
+        <div>
+          <div class="rec-name">Nalini Pucha</div>
+          <div class="rec-role">BFSI — Financial Crime &amp; Risk Management · Data &amp; Business Analytics · studied together · Jun 2022</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="rec pending">
+      <div class="rec-quote"><p>Recommendation text to be added.</p></div>
+      <div class="rec-by">
+        <div class="rec-ava">N</div>
+        <div>
+          <div class="rec-name">Naveen Kumar Matcha</div>
+          <div class="rec-role">ServiceNow CTA · Senior Software Engineer at ServiceNow · worked with Hari on different teams · Oct 2021</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="rec pending">
+      <div class="rec-quote"><p>Recommendation text to be added.</p></div>
+      <div class="rec-by">
+        <div class="rec-ava">S</div>
+        <div>
+          <div class="rec-name">Surya Teja Bandlamudi</div>
+          <div class="rec-role">Senior AI Engineer at Micron Technology · Systems + AI + EDA + Compilers · same team · Feb 2021</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LinkedIn lists 15 recommendations total; 2 beyond Surya Teja were cut off in the captured screenshot — Hari to supply their names + text. -->
 
   </div>
 </div>
@@ -1182,6 +1319,35 @@ footer a{color:var(--indigo);text-decoration:none}
 </div>
 
 </main>
+
+<script>
+(function(){
+  var CHEV = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>';
+  document.querySelectorAll('main > .card').forEach(function(card){
+    var head = card.querySelector('.card-head');
+    if(!head) return;
+    var chev = document.createElement('span');
+    chev.className = 'card-chevron';
+    chev.innerHTML = CHEV;
+    head.appendChild(chev);
+    head.setAttribute('role','button');
+    head.setAttribute('tabindex','0');
+    var title = head.querySelector('.card-title');
+    var name = title ? title.textContent.trim() : '';
+    var openByDefault = (name === 'About' || name.indexOf('Impact') === 0);
+    if(!openByDefault) card.classList.add('collapsed');
+    head.setAttribute('aria-expanded', openByDefault ? 'true' : 'false');
+    function toggle(){
+      var collapsed = card.classList.toggle('collapsed');
+      head.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
+    }
+    head.addEventListener('click', toggle);
+    head.addEventListener('keydown', function(e){
+      if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); toggle(); }
+    });
+  });
+})();
+</script>
 
 <footer>
   <p>Hari Yelesetty &nbsp;·&nbsp; <a href="https://ylnhari.github.io">ylnhari.github.io</a> &nbsp;·&nbsp; <a href="https://linkedin.com/in/ylnhari">LinkedIn</a> &nbsp;·&nbsp; <a href="https://github.com/ylnhari">GitHub</a> &nbsp;·&nbsp; <a href="mailto:ylnharimailme@gmail.com">ylnharimailme@gmail.com</a></p>
