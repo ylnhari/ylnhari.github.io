@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hari YLN - Google Staff AI/ML Resume 2026</title>
+<meta name="author" content="Laxmi Narasimha Hari Yelesetty">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --navy:#0f172a;--indigo:#4338ca;--indigo-light:#6366f1;
+  --sl50:#f8fafc;--sl100:#f1f5f9;--sl200:#e2e8f0;--sl300:#cbd5e1;
+  --sl400:#94a3b8;--sl500:#64748b;--sl600:#475569;--sl700:#334155;--sl800:#1e293b;
+  --in50:#eef2ff;--in100:#e0e7ff;--in200:#c7d2fe;--in800:#3730a3;
+}
+body{font-family:'Inter',-apple-system,sans-serif;background:#dde3ee;color:var(--sl800);font-size:9pt;line-height:1.5}
+
+.print-bar{position:sticky;top:0;z-index:100;background:white;border-bottom:1px solid var(--sl200);padding:10px 24px;display:flex;align-items:center;gap:14px;box-shadow:0 1px 4px rgba(0,0,0,.08);flex-wrap:wrap}
+.bar-link{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--indigo);text-decoration:none;padding:8px 14px;border:1px solid var(--indigo);border-radius:6px;transition:background .15s,color .15s}
+.bar-link:hover{background:var(--indigo);color:#fff}
+.bar-link svg{width:14px;height:14px}
+.print-btn{background:var(--indigo);color:white;border:none;padding:8px 18px;border-radius:6px;font-family:'Inter',sans-serif;font-size:13px;font-weight:500;cursor:pointer;display:flex;align-items:center;gap:7px;transition:background .15s}
+.print-btn:hover{background:var(--indigo-light)}
+.print-hint{font-size:11.5px;color:var(--sl500)}
+.print-hint strong{color:var(--sl700)}
+
+.resume{width:210mm;margin:20px auto 40px;background:white;box-shadow:0 8px 40px rgba(15,23,42,.18)}
+
+.header{background:var(--navy);padding:30px 36px 26px;display:flex;justify-content:space-between;align-items:flex-start;gap:20px;position:relative;overflow:hidden}
+.header::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.045) 1px,transparent 1px);background-size:18px 18px;pointer-events:none}
+.header::after{content:'';position:absolute;top:-40px;right:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(99,102,241,.22) 0%,transparent 70%);pointer-events:none}
+.header-left{position:relative;z-index:1}
+.name-pre{font-family:'Space Grotesk',sans-serif;font-size:8pt;font-weight:500;color:var(--sl400);letter-spacing:.14em;text-transform:uppercase;display:block;margin-bottom:3px}
+.name-main{font-family:'Space Grotesk',sans-serif;font-size:32pt;font-weight:800;color:#f8fafc;letter-spacing:-1px;line-height:1;display:block;margin-bottom:9px}
+.title-line{font-size:8.5pt;font-weight:400;color:#7dd3fc;display:block;letter-spacing:.02em}
+.header-right{position:relative;z-index:1;display:flex;flex-direction:column;gap:6px;align-items:flex-end;padding-top:2px;flex-shrink:0}
+.c-row{display:flex;align-items:center;gap:7px;font-size:7.5pt;color:var(--sl300)}
+.c-icon{width:13px;height:13px;flex-shrink:0;color:#818cf8}
+
+.grad-bar{height:3px;background:linear-gradient(90deg,#4338ca 0%,#7c3aed 45%,#0891b2 100%)}
+
+.body{display:grid;grid-template-columns:194px 1fr}
+
+.left-col{background:var(--sl50);border-right:1px solid var(--sl200);padding:22px 15px}
+.l-section{margin-bottom:19px}
+.l-heading{font-family:'Space Grotesk',sans-serif;font-size:6.5pt;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--indigo);padding-bottom:5px;border-bottom:1.5px solid var(--in100);margin-bottom:9px}
+.skill-group{margin-bottom:9px}
+.skill-label{font-size:7pt;font-weight:600;color:var(--sl500);display:block;margin-bottom:4px}
+.tags{display:flex;flex-wrap:wrap;gap:3px}
+.tag{font-size:6.5pt;font-weight:500;padding:2px 6px;border-radius:3px}
+.t-light{background:var(--in50);color:var(--in800);border:1px solid var(--in200)}
+.t-dark{background:#1e1b4b;color:#a5b4fc;border:1px solid #312e81}
+.cert{margin-bottom:7px}
+.cert-org{font-size:7.5pt;font-weight:600;color:var(--sl800);display:block;line-height:1.3}
+.cert-name{font-size:7pt;color:var(--sl500);display:block;line-height:1.3}
+.edu-degree{font-size:8pt;font-weight:600;color:var(--sl800);display:block;margin-bottom:2px}
+.edu-detail{font-size:7pt;color:var(--sl500);display:block;line-height:1.5}
+
+.right-col{padding:22px 26px}
+.summary{background:linear-gradient(135deg,#eef2ff 0%,#f0f4ff 100%);border-left:3px solid var(--indigo);border-radius:0 5px 5px 0;padding:11px 14px;margin-bottom:18px}
+.summary p{font-size:8.5pt;color:var(--sl700);line-height:1.7}
+.metric{font-weight:700;color:var(--indigo)}
+.r-heading{font-family:'Space Grotesk',sans-serif;font-size:7.5pt;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--navy);display:flex;align-items:center;gap:8px;margin-bottom:12px;padding-bottom:4px;border-bottom:1px solid var(--sl200)}
+.r-heading::before{content:'';display:block;width:14px;height:2.5px;background:var(--indigo);flex-shrink:0}
+
+.timeline{position:relative}
+.exp-item{position:relative;padding-left:18px;margin-bottom:14px;page-break-inside:avoid}
+.exp-item::before{content:'';position:absolute;left:0;top:6px;width:8px;height:8px;background:var(--indigo);border-radius:50%;border:2px solid white;box-shadow:0 0 0 1.5px var(--indigo);z-index:1}
+.exp-item:not(:last-child)::after{content:'';position:absolute;left:3.5px;top:15px;width:1px;bottom:-7px;background:var(--in200)}
+.exp-row{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:3px}
+.exp-role{font-family:'Space Grotesk',sans-serif;font-size:9pt;font-weight:700;color:var(--sl800);line-height:1.3}
+.exp-company{font-size:7.5pt;font-weight:500;color:var(--indigo-light);margin-top:1px;display:block}
+.exp-date{font-size:7pt;font-weight:500;color:var(--sl500);white-space:nowrap;flex-shrink:0;background:var(--sl100);padding:2px 7px;border-radius:3px;border:1px solid var(--sl200);margin-top:1px}
+.bullets{list-style:none;margin-top:5px}
+.bullets li{font-size:8pt;color:var(--sl600);padding-left:11px;position:relative;margin-bottom:3px;line-height:1.55}
+.bullets li::before{content:'▸';position:absolute;left:0;top:.5px;color:var(--indigo-light);font-size:7pt}
+
+.earlier-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:4px}
+.mini-card{background:var(--sl50);border:1px solid var(--sl200);border-top:2.5px solid var(--in200);border-radius:4px;padding:8px 10px;page-break-inside:avoid}
+.mini-role{font-size:7.5pt;font-weight:700;color:var(--sl800);display:block;margin-bottom:1px;font-family:'Space Grotesk',sans-serif}
+.mini-co{font-size:7pt;font-weight:600;color:var(--indigo);display:block}
+.mini-date{font-size:6.5pt;color:var(--sl400);display:block;margin-bottom:4px}
+.mini-desc{font-size:7pt;color:var(--sl500);line-height:1.5}
+
+.proj-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:4px}
+.proj-card{background:white;border:1px solid var(--sl200);border-left:3px solid var(--in200);border-radius:4px;padding:10px 12px;page-break-inside:avoid}
+.proj-title{font-family:'Space Grotesk',sans-serif;font-size:8pt;font-weight:700;color:var(--sl800);display:block;margin-bottom:2px}
+.proj-employer{font-size:7pt;font-weight:600;color:var(--indigo);display:block;margin-bottom:5px}
+.proj-desc{font-size:7.5pt;color:var(--sl600);line-height:1.55;margin-bottom:5px}
+.proj-stack{display:flex;flex-wrap:wrap;gap:3px}
+.proj-tag{font-size:6pt;padding:1.5px 5px;border-radius:3px;background:var(--sl100);color:var(--sl600);border:1px solid var(--sl200)}
+.proj-metric{font-size:6.5pt;font-weight:700;color:var(--indigo);margin-top:4px;display:block}
+
+@media print{
+  body{background:white}
+  .print-bar{display:none!important}
+  .resume{width:100%;margin:0;box-shadow:none}
+  *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+}
+@page{size:A4;margin:0}
+</style>
+</head>
+<body>
+
+<div class="print-bar">
+  <button class="print-btn" onclick="window.print()">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+    Print / Save as PDF
+  </button>
+  <span class="print-hint">Paper: <strong>A4</strong> &nbsp;·&nbsp; Margins: <strong>None</strong> &nbsp;·&nbsp; Enable <strong>Background graphics</strong></span>
+  <a class="bar-link" style="margin-left:auto" href="https://ylnhari.github.io" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Portfolio</a>
+  <a class="bar-link" href="https://linkedin.com/in/ylnhari" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8.34 9.5H5.67V18h2.67V9.5zM7 5.88a1.55 1.55 0 1 0 0 3.1 1.55 1.55 0 0 0 0-3.1zM18.34 18v-4.67c0-2.5-1.34-3.66-3.12-3.66-1.44 0-2.08.8-2.44 1.36V9.5h-2.67V18h2.67v-4.5c0-1.2.63-1.78 1.4-1.78.78 0 1.49.55 1.49 1.85V18h2.67z"/></svg>LinkedIn</a>
+  <a class="bar-link" href="https://github.com/ylnhari" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.22.66-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.1-1.47-1.1-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.16.57.67.48A10 10 0 0 0 22 12 10 10 0 0 0 12 2z"/></svg>GitHub</a>
+  <a href="/resume/profile/" style="display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--indigo);text-decoration:none;padding:8px 14px;border:1px solid var(--indigo);border-radius:6px;transition:background .15s,color .15s" onmouseover="this.style.background='var(--indigo)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--indigo)'">View Full Profile
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</div>
+
+<div class="resume">
+  <div class="header">
+    <div class="header-left">
+      <span class="name-pre">Laxmi Narasimha</span>
+      <span class="name-main">Hari Yelesetty</span>
+      <span class="title-line">Staff-level AI/ML Systems Engineer &nbsp;·&nbsp; GenAI &amp; ML Infrastructure &nbsp;·&nbsp; Distributed Systems &nbsp;·&nbsp; GCP</span>
+    </div>
+    <div class="header-right">
+      <div class="c-row"><svg class="c-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/></svg>ylnharimailme@gmail.com</div>
+      <div class="c-row"><svg class="c-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.6 19.79 19.79 0 0 1 1.54 5c-.11-1.2.73-2.2 1.93-2.2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 10.09a16 16 0 0 0 6 6l.72-.72a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.03z"/></svg>+91 99161 12881</div>
+      <div class="c-row"><svg class="c-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>linkedin.com/in/ylnhari</div>
+      <div class="c-row"><svg class="c-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>github.com/ylnhari</div>
+      <div class="c-row"><svg class="c-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>ylnhari.github.io</div>
+    </div>
+  </div>
+  <div class="grad-bar"></div>
+
+  <div class="body">
+    <div class="left-col">
+
+      <div class="l-section">
+        <div class="l-heading">GenAI &amp; LLM Systems</div>
+        <div class="tags">
+          <span class="tag t-dark">LLMs</span><span class="tag t-dark">LoRA / QLoRA</span>
+          <span class="tag t-dark">PEFT</span><span class="tag t-dark">Unsloth</span>
+          <span class="tag t-dark">vLLM</span><span class="tag t-dark">Transformers</span>
+          <span class="tag t-dark">HF Accelerate</span>
+          <span class="tag t-dark">Fine-tuning</span>
+          <span class="tag t-dark">Model Evaluation</span>
+          <span class="tag t-dark">LLM Deployment</span>
+        </div>
+      </div>
+
+      <div class="l-section">
+        <div class="l-heading">ML &amp; Deep Learning</div>
+        <div class="tags">
+          <span class="tag t-light">PyTorch</span><span class="tag t-light">TensorFlow</span>
+          <span class="tag t-light">XGBoost</span><span class="tag t-light">Scikit-learn</span>
+          <span class="tag t-light">RAPIDS (cuDF/CuPy)</span>
+          <span class="tag t-light">CUDA</span>
+          <span class="tag t-light">NVIDIA Morpheus</span>
+          <span class="tag t-light">Computer Vision</span>
+          <span class="tag t-light">Autoencoders</span>
+          <span class="tag t-light">Distributed Training</span>
+          <span class="tag t-light">Feature Engineering</span>
+        </div>
+      </div>
+
+      <div class="l-section">
+        <div class="l-heading">MLOps &amp; Platforms</div>
+        <div class="skill-group">
+          <span class="skill-label">Cloud &amp; Orchestration</span>
+          <div class="tags">
+            <span class="tag t-light">GCP Vertex AI</span>
+            <span class="tag t-light">GKE</span><span class="tag t-light">Dataflow</span>
+            <span class="tag t-light">Pub/Sub</span><span class="tag t-light">GCS</span>
+            <span class="tag t-light">Azure ML Studio</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <span class="skill-label">Serving &amp; Packaging</span>
+          <div class="tags">
+            <span class="tag t-light">Kubernetes</span><span class="tag t-light">Helm</span>
+            <span class="tag t-light">Istio</span><span class="tag t-light">Docker</span>
+            <span class="tag t-light">Seldon Core</span><span class="tag t-light">MLflow</span>
+            <span class="tag t-light">Model Registry</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <span class="skill-label">Observability &amp; CI/CD</span>
+          <div class="tags">
+            <span class="tag t-light">Grafana</span><span class="tag t-light">Prometheus</span>
+            <span class="tag t-light">Cloud Build</span>
+            <span class="tag t-light">ArgoCD</span><span class="tag t-light">Google KCC</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="l-section">
+        <div class="l-heading">Languages &amp; Architecture</div>
+        <div class="tags">
+          <span class="tag t-light">Python</span><span class="tag t-light">SQL</span>
+          <span class="tag t-light">Java / Beam</span><span class="tag t-light">Go</span>
+          <span class="tag t-light">Distributed Systems</span>
+          <span class="tag t-light">Software Architecture</span>
+          <span class="tag t-light">Real-time Streaming</span>
+          <span class="tag t-light">Testing &amp; Debugging</span>
+        </div>
+      </div>
+
+      <div class="l-section">
+        <div class="l-heading">Certifications</div>
+        <div class="cert"><span class="cert-org">Oracle Cloud</span><span class="cert-name">GenAI Certified Professional</span></div>
+        <div class="cert"><span class="cert-org">Google Cloud</span><span class="cert-name">Gen AI L3</span></div>
+        <div class="cert"><span class="cert-org">Microsoft Certified</span><span class="cert-name">Azure AI Engineer Associate</span></div>
+        <div class="cert"><span class="cert-org">Microsoft Certified</span><span class="cert-name">Azure Data Scientist Associate</span></div>
+      </div>
+
+      <div class="l-section">
+        <div class="l-heading">Education</div>
+        <span class="edu-degree">B.E. Electrical &amp; Electronics</span>
+        <span class="edu-detail">Andhra University, Visakhapatnam</span>
+        <span class="edu-detail">2012 - 2016 &nbsp;·&nbsp; 80%</span>
+      </div>
+
+    </div>
+
+    <div class="right-col">
+
+      <div class="summary">
+        <p>Staff-level AI/ML systems engineer with <span class="metric">10+ years</span> in software, <span class="metric">8+ years</span> building production Python/ML systems, and <span class="metric">5+ years</span> leading ML design, infrastructure, testing, and launches. Architected GenAI fine-tuning, evaluation, and vLLM serving on GKE, saving <span class="metric">$300K+ annually</span>; led real-time ML at <span class="metric">40,000 events/sec</span> under a <span class="metric">200ms SLA</span> and billion-row GPU workloads. Brings 3+ years of architecture and technical direction across distributed, cross-functional teams, with full-lifecycle ownership from data preparation and debugging through deployment and monitoring.</p>
+      </div>
+
+      <div class="r-heading">Work Experience</div>
+      <div class="timeline">
+
+        <div class="exp-item">
+          <div class="exp-row">
+            <div>
+              <div class="exp-role">Lead Artificial Intelligence Engineer</div>
+              <span class="exp-company">Best Buy &nbsp;·&nbsp; Bengaluru, India</span>
+            </div>
+            <div class="exp-date">Jul 2025 - Present</div>
+          </div>
+          <ul class="bullets">
+            <li>Architected a config-driven Python <span class="metric">LoRA/QLoRA fine-tuning and evaluation framework</span> using Unsloth, PEFT, Transformers, and Accelerate; vLLM on GKE with autoscaling, Istio, blue-green releases, and observability saved <span class="metric">$300K+ annually</span>.</li>
+            <li>Led a Beam/Dataflow and Vertex AI Feature Store fraud platform sustaining <span class="metric">40,000 events/sec</span> under a <span class="metric">200ms SLA</span>; load-tested and monitored production endpoints.</li>
+            <li>Set technical direction across data science, platform, fraud, and security teams; established GitOps delivery with Cloud Build, ArgoCD, and KCC, and scaled the India AI hub through <span class="metric">300+ screens and 50+ interviews</span>.</li>
+          </ul>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-row">
+            <div>
+              <div class="exp-role">ML Lead Engineer - ML Engineering &amp; Operations</div>
+              <span class="exp-company">Wipro &nbsp;·&nbsp; Client: Major US Retail Corporation</span>
+            </div>
+            <div class="exp-date">Aug 2023 - Jul 2025</div>
+          </div>
+          <ul class="bullets">
+            <li>Led ML/MLOps engineers and Morpheus/RAPIDS model lifecycles on <span class="metric">NVIDIA DGX (8×A100)</span>, training per-entity autoencoders on <span class="metric">billion-row CloudTrail datasets</span> with continuous evaluation, debugging, and Grafana alerting.</li>
+            <li>Launched phishing classification at <span class="metric">2,400 emails/sec - 2× prior throughput</span> and OCR-based abuse-inbox triage that doubled case volume, integrating predictions with Microsoft Sentinel and security-response workflows.</li>
+          </ul>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-row">
+            <div>
+              <div class="exp-role">Application Dev Team Lead - Data Science / Azure ML</div>
+              <span class="exp-company">Accenture</span>
+            </div>
+            <div class="exp-date">May 2021 - Sep 2023</div>
+          </div>
+          <ul class="bullets">
+            <li>Led cross-functional architecture and launch of an Azure ML quality-prediction product: <span class="metric">$2.5M annual savings</span>, inspections <span class="metric">130 → 160/day</span>, <span class="metric">+17%</span> defect detection, and <span class="metric">+20%</span> customer approval.</li>
+            <li>Operationalized data preparation, optimization, retraining, monitoring, and CI/CD; designed OR-Tools services, mentored engineers, and coordinated business, data science, platform, and client stakeholders.</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="r-heading" style="margin-top:16px">Earlier Experience</div>
+      <div class="earlier-grid">
+        <div class="mini-card">
+          <span class="mini-role">Data Scientist</span>
+          <span class="mini-co">GD Research Centre Pvt Ltd</span>
+          <span class="mini-date">May 2020 - May 2021</span>
+          <span class="mini-desc">Designed and deployed Python forecasting pipelines across 15+ industry verticals, from heterogeneous data preparation through client-facing results.</span>
+        </div>
+        <div class="mini-card">
+          <span class="mini-role">Deep Learning Engineer</span>
+          <span class="mini-co">Tata Consultancy Services</span>
+          <span class="mini-date">Jul 2019 - Mar 2020</span>
+          <span class="mini-desc">Built a Python/TensorFlow CV platform on ~1M wafer images with distributed GPU training and deployed it at Amkor's South Korea fabrication site.</span>
+        </div>
+        <div class="mini-card">
+          <span class="mini-role">Senior Software Engineer - ML</span>
+          <span class="mini-co">Infosys</span>
+          <span class="mini-date">May 2016 - Jul 2019</span>
+          <span class="mini-desc">Delivered design, coding, unit/integration testing, and production support; transitioned to Python ML in 2018 and shipped lead-conversion prediction.</span>
+        </div>
+      </div>
+
+      <div class="r-heading" style="margin-top:18px;page-break-before:always">Selected Projects</div>
+      <div class="proj-grid">
+
+        <div class="proj-card">
+          <span class="proj-title">LLM Fine-tuning &amp; Serving Framework</span>
+          <span class="proj-employer">Best Buy &nbsp;·&nbsp; Jul 2025 - Present</span>
+          <p class="proj-desc">Config-driven Python platform for LoRA/QLoRA fine-tuning, data preparation, multi-task training, automated evaluation, artifact management, and vLLM serving. Supports Unsloth and PEFT/Transformers with Accelerate; adapters hot-load into a shared GKE deployment.</p>
+          <div class="proj-stack">
+            <span class="proj-tag">Unsloth</span><span class="proj-tag">PEFT</span><span class="proj-tag">vLLM</span>
+            <span class="proj-tag">GKE</span><span class="proj-tag">HF Accelerate</span><span class="proj-tag">GCS</span>
+          </div>
+          <span class="proj-metric">$300K saved &nbsp;·&nbsp; ~2× training speedup &nbsp;·&nbsp; 60-80% VRAM reduction</span>
+        </div>
+
+        <div class="proj-card">
+          <span class="proj-title">Real-time Retail Fraud ML Platform</span>
+          <span class="proj-employer">Best Buy &nbsp;·&nbsp; Aug 2025 - Jan 2026</span>
+          <p class="proj-desc">Large-scale Beam/Dataflow pipelines transform clickstream and transaction events into Vertex AI Feature Store signals. XGBoost models deploy through Seldon Core on GKE with JWT security, load testing, GitOps releases, and production monitoring.</p>
+          <div class="proj-stack">
+            <span class="proj-tag">Apache Beam</span><span class="proj-tag">Dataflow</span>
+            <span class="proj-tag">Vertex AI</span><span class="proj-tag">Seldon Core</span><span class="proj-tag">GKE</span>
+          </div>
+          <span class="proj-metric">40,000 events/sec &nbsp;·&nbsp; 200ms SLA &nbsp;·&nbsp; Full lifecycle deployment</span>
+        </div>
+
+        <div class="proj-card">
+          <span class="proj-title">AWS Account Behavioral Fingerprinting</span>
+          <span class="proj-employer">Wipro &nbsp;·&nbsp; Jan 2024 - Aug 2025</span>
+          <p class="proj-desc">Per-entity autoencoders learn normal AWS account, user, service, and machine activity. Morpheus/RAPIDS training and inference run on DGX (8×A100) over billion-row CloudTrail datasets with continuous retraining and Grafana alerts.</p>
+          <div class="proj-stack">
+            <span class="proj-tag">NVIDIA Morpheus</span><span class="proj-tag">Autoencoders</span>
+            <span class="proj-tag">RAPIDS / cuDF</span><span class="proj-tag">MLflow</span><span class="proj-tag">Grafana</span>
+          </div>
+          <span class="proj-metric">Billion-row datasets/run &nbsp;·&nbsp; Continuous model lifecycle &nbsp;·&nbsp; 8×A100 DGX</span>
+        </div>
+
+        <div class="proj-card">
+          <span class="proj-title">Semiconductor Computer Vision Platform</span>
+          <span class="proj-employer">TCS / Amkor Technology &nbsp;·&nbsp; Jul 2019 - Mar 2020</span>
+          <p class="proj-desc">DenseNet defect classification on ~1M wafer images with concurrent ingestion, distributed multi-GPU training, parallel evaluation, and ~3-hour training cycles. Packaged inference with Docker and TensorFlow Serving and deployed on-site in South Korea.</p>
+          <div class="proj-stack">
+            <span class="proj-tag">Python</span><span class="proj-tag">TensorFlow</span>
+            <span class="proj-tag">DenseNet</span><span class="proj-tag">Distributed GPU</span><span class="proj-tag">Docker</span>
+          </div>
+          <span class="proj-metric">~1M images &nbsp;·&nbsp; ~3-hour training cycles &nbsp;·&nbsp; Production launch in South Korea</span>
+        </div>
+
+        <div class="proj-card">
+          <span class="proj-title">Proofpoint Phishing Classification</span>
+          <span class="proj-employer">Wipro &nbsp;·&nbsp; Oct 2023 - Feb 2024</span>
+          <p class="proj-desc">Built Morpheus training and inference pipelines on DGX for preprocessing, feature engineering, model evaluation, and live scoring. Integrated security-team feedback and Microsoft Sentinel data to catch phishing that bypassed initial filters.</p>
+          <div class="proj-stack">
+            <span class="proj-tag">NVIDIA Morpheus</span><span class="proj-tag">RAPIDS</span>
+            <span class="proj-tag">DGX</span><span class="proj-tag">Microsoft Sentinel</span><span class="proj-tag">Model Evaluation</span>
+          </div>
+          <span class="proj-metric">2,400 emails/sec &nbsp;·&nbsp; 2× prior throughput &nbsp;·&nbsp; Production security workflow</span>
+        </div>
+
+        <div class="proj-card">
+          <span class="proj-title">Azure ML Product Quality Platform</span>
+          <span class="proj-employer">Accenture / BamaGruppen &nbsp;·&nbsp; May 2021 - Dec 2021</span>
+          <p class="proj-desc">Led an end-to-end ML product from data preparation and model optimization through automated retraining, CI/CD, monitoring, client demonstrations, and ongoing production support on Azure.</p>
+          <div class="proj-stack">
+            <span class="proj-tag">Python</span><span class="proj-tag">Azure ML</span>
+            <span class="proj-tag">Logic Apps</span><span class="proj-tag">CI/CD</span><span class="proj-tag">Monitoring</span>
+          </div>
+          <span class="proj-metric">$2.5M/year &nbsp;·&nbsp; +17% detection &nbsp;·&nbsp; +20% approval &nbsp;·&nbsp; Launched product</span>
+        </div>
+
+      </div>
+
+      <div class="r-heading" style="margin-top:18px">Staff-level Leadership &amp; Delivery</div>
+      <div class="earlier-grid">
+        <div class="mini-card">
+          <span class="mini-role">Technical Direction</span>
+          <span class="mini-co">Architecture &amp; Engineering Standards</span>
+          <span class="mini-desc">Sets priorities and design direction for production ML platforms spanning fine-tuning, evaluation, serving, streaming data, and observability.</span>
+        </div>
+        <div class="mini-card">
+          <span class="mini-role">Cross-functional Influence</span>
+          <span class="mini-co">Distributed, Matrixed Teams</span>
+          <span class="mini-desc">Aligns data science, platform, security, fraud, business, and client teams; coaches engineers and translates ambiguous goals into delivery plans.</span>
+        </div>
+        <div class="mini-card">
+          <span class="mini-role">Software Product Lifecycle</span>
+          <span class="mini-co">Design Through Production</span>
+          <span class="mini-desc">Owns architecture, implementation, testing, launch, monitoring, debugging, iteration, and production support across cloud and on-prem systems.</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</body>
+</html>
