@@ -52,6 +52,17 @@ main{max-width:900px;margin:0 auto;padding:36px 24px 60px}
 /* RESUME CARDS */
 .cards-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
 
+/* EXPANDABLE ARCHIVE */
+.variant-archive{grid-column:1/-1}
+.variant-archive>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:10px;background:white;border:1px solid var(--sl200);border-radius:10px;padding:14px 18px;font-family:'Space Grotesk',sans-serif;font-size:12.5px;font-weight:700;color:var(--sl600);transition:box-shadow .2s,border-color .15s}
+.variant-archive>summary::-webkit-details-marker{display:none}
+.variant-archive>summary::marker{content:''}
+.variant-archive>summary:hover{border-color:var(--indigo);box-shadow:0 8px 30px rgba(15,23,42,.12);color:var(--sl800)}
+.variant-archive>summary svg{color:var(--sl400);transition:transform .2s;flex-shrink:0}
+.variant-archive[open]>summary svg{transform:rotate(90deg)}
+.archive-count{margin-left:auto;font-size:11px;font-weight:600;color:var(--sl500);background:var(--sl100);border:1px solid var(--sl200);border-radius:12px;padding:2px 9px}
+.archive-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;margin-top:16px}
+
 .resume-card{background:white;border-radius:10px;border:1px solid var(--sl200);overflow:hidden;transition:box-shadow .2s,transform .15s;text-decoration:none;display:flex;flex-direction:column}
 .resume-card:hover{box-shadow:0 8px 30px rgba(15,23,42,.12);transform:translateY(-2px)}
 .resume-card.featured{border-color:var(--indigo);box-shadow:0 0 0 2px var(--in200)}
@@ -190,7 +201,7 @@ footer a{color:var(--indigo);text-decoration:none}
   <div class="section-head" style="margin-top:36px">
     <span class="section-title">Targeted Variants</span>
     <div class="section-line"></div>
-    <span style="font-size:11px;color:var(--sl400)">Per company &amp; role</span>
+    <span style="font-size:11px;color:var(--sl400)">Latest 3 · earlier ones below</span>
   </div>
 
   <div class="cards-grid" id="targeted-cards">
@@ -216,16 +227,15 @@ footer a{color:var(--indigo);text-decoration:none}
           <span class="badge badge-new">New · Staff AI Platform</span>
         </div>
         <div class="card-title">Rippling — Staff Software Engineer, AI Platform</div>
-        <div class="card-date">August 2026 · 2 pages (A4)</div>
-        <div class="card-desc">Platform-first reframe for Rippling's AI Platform role: large-scale distributed systems, real-time streaming at 40K events/sec, GitOps and internal developer tooling, LLM fine-tuning/eval/serving infrastructure, and open-source Go and inference-internals work.</div>
+        <div class="card-date">19 August 2026 · 2 pages (A4)</div>
+        <div class="card-desc">Platform-first reframe for Rippling's AI Platform role: large-scale distributed systems, real-time streaming at 40K events/sec, GitOps and internal developer tooling, LLM fine-tuning/eval/serving infrastructure, and open-source Go work.</div>
       </div>
       <div class="card-footer">
         <span class="card-link">View &amp; Print <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
         <span class="card-format">HTML → PDF</span>
       </div>
     </a>
-
-    <a class="resume-card featured" href="/resume/targeted/google/">
+    <a class="resume-card featured" href="/resume/targeted/salient/">
       <div class="card-preview">
         <div class="preview-lines">
           <div class="pl name"></div>
@@ -239,18 +249,48 @@ footer a{color:var(--indigo);text-decoration:none}
       </div>
       <div class="card-top">
         <div class="card-badges">
-          <span class="badge badge-current">Google</span>
-          <span class="badge badge-new">Staff AI/ML</span>
+          <span class="badge badge-current">Salient</span>
+          <span class="badge badge-new">Doha AI/ML</span>
         </div>
-        <div class="card-title">Google — Staff Software Engineer, AI/ML GenAI, Google Ads</div>
-        <div class="card-date">August 2026 · 2 pages (A4)</div>
-        <div class="card-desc">Tailored for Google's Staff AI/ML role: Python, GenAI and LLM design, model evaluation and deployment, production ML infrastructure, distributed systems, software architecture, and technical leadership.</div>
+        <div class="card-title">Salient — AI/ML Engineer, Doha</div>
+        <div class="card-date">17 August 2026 · 2 pages (A4)</div>
+        <div class="card-desc">Tailored for the Doha AI/ML mandate: production model delivery from data pipelines to APIs and operations, Python and deep learning, Kubernetes, cloud and GPU infrastructure, stakeholder delivery, and relocation readiness.</div>
       </div>
       <div class="card-footer">
         <span class="card-link">View &amp; Print <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
         <span class="card-format">HTML → PDF</span>
       </div>
     </a>
+    <a class="resume-card featured" href="/resume/targeted/la-fosse/">
+      <div class="card-preview">
+        <div class="preview-lines">
+          <div class="pl name"></div>
+          <div class="pl title"></div>
+          <div class="pl w60 accent" style="margin-top:3px"></div>
+          <div class="pl w75"></div>
+          <div class="pl w45"></div>
+          <div class="pl w60"></div>
+          <div class="pl w50"></div>
+        </div>
+      </div>
+      <div class="card-top">
+        <div class="card-badges">
+          <span class="badge badge-current">La Fosse</span>
+          <span class="badge badge-new">Principal AI</span>
+        </div>
+        <div class="card-title">La Fosse — Principal AI Engineer</div>
+        <div class="card-date">17 August 2026 · 2 pages (A4)</div>
+        <div class="card-desc">Tailored for a principal-level AI mandate: production AI/ML architecture, GenAI infrastructure, full model lifecycle, cloud and GPU platforms, consulting delivery, platform standards, and senior technical leadership.</div>
+      </div>
+      <div class="card-footer">
+        <span class="card-link">View &amp; Print <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        <span class="card-format">HTML → PDF</span>
+      </div>
+    </a>
+
+    <details class="variant-archive">
+      <summary><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg> Earlier targeted variants<span class="archive-count">2</span></summary>
+      <div class="archive-grid">
 
     <a class="resume-card featured" href="/resume/targeted/g42/">
       <div class="card-preview">
@@ -270,7 +310,7 @@ footer a{color:var(--indigo);text-decoration:none}
           <span class="badge badge-new">Lead ML Engineering</span>
         </div>
         <div class="card-title">G42 — Lead Engineer, Machine Learning</div>
-        <div class="card-date">August 2026 · 2 pages (A4)</div>
+        <div class="card-date">17 August 2026 · 2 pages (A4)</div>
         <div class="card-desc">Tailored for hands-on ML engineering leadership: end-to-end model lifecycle ownership, Python and deep learning, Kubernetes and GPU platforms, MLOps, technical direction, mentoring, and client-facing delivery.</div>
       </div>
       <div class="card-footer">
@@ -278,8 +318,7 @@ footer a{color:var(--indigo);text-decoration:none}
         <span class="card-format">HTML → PDF</span>
       </div>
     </a>
-
-    <a class="resume-card featured" href="/resume/targeted/la-fosse/">
+    <a class="resume-card featured" href="/resume/targeted/google/">
       <div class="card-preview">
         <div class="preview-lines">
           <div class="pl name"></div>
@@ -293,12 +332,12 @@ footer a{color:var(--indigo);text-decoration:none}
       </div>
       <div class="card-top">
         <div class="card-badges">
-          <span class="badge badge-current">La Fosse</span>
-          <span class="badge badge-new">Principal AI</span>
+          <span class="badge badge-current">Google</span>
+          <span class="badge badge-new">Staff AI/ML</span>
         </div>
-        <div class="card-title">La Fosse — Principal AI Engineer</div>
-        <div class="card-date">August 2026 · 2 pages (A4)</div>
-        <div class="card-desc">Tailored for a principal-level AI mandate: production AI/ML architecture, GenAI infrastructure, full model lifecycle, cloud and GPU platforms, consulting delivery, platform standards, and senior technical leadership.</div>
+        <div class="card-title">Google — Staff Software Engineer, AI/ML GenAI, Google Ads</div>
+        <div class="card-date">12 August 2026 · 2 pages (A4)</div>
+        <div class="card-desc">Tailored for Google's Staff AI/ML role: Python, GenAI and LLM design, model evaluation and deployment, production ML infrastructure, distributed systems, software architecture, and technical leadership.</div>
       </div>
       <div class="card-footer">
         <span class="card-link">View &amp; Print <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
@@ -306,32 +345,12 @@ footer a{color:var(--indigo);text-decoration:none}
       </div>
     </a>
 
-    <a class="resume-card featured" href="/resume/targeted/salient/">
-      <div class="card-preview">
-        <div class="preview-lines">
-          <div class="pl name"></div>
-          <div class="pl title"></div>
-          <div class="pl w60 accent" style="margin-top:3px"></div>
-          <div class="pl w75"></div>
-          <div class="pl w45"></div>
-          <div class="pl w60"></div>
-          <div class="pl w50"></div>
-        </div>
       </div>
-      <div class="card-top">
-        <div class="card-badges">
-          <span class="badge badge-current">Salient</span>
-          <span class="badge badge-new">Doha AI/ML</span>
-        </div>
-        <div class="card-title">Salient — AI/ML Engineer, Doha</div>
-        <div class="card-date">August 2026 · 2 pages (A4)</div>
-        <div class="card-desc">Tailored for the Doha AI/ML mandate: production model delivery from data pipelines to APIs and operations, Python and deep learning, Kubernetes, cloud and GPU infrastructure, stakeholder delivery, and relocation readiness.</div>
-      </div>
-      <div class="card-footer">
-        <span class="card-link">View &amp; Print <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-        <span class="card-format">HTML → PDF</span>
-      </div>
-    </a>
+    </details>
+
+
+
+
 
     <div style="grid-column:1/-1;background:white;border-radius:10px;border:1px solid var(--sl200);padding:28px 24px;display:flex;gap:24px;align-items:flex-start">
       <div style="flex-shrink:0;width:40px;height:40px;background:var(--in50);border-radius:8px;border:1px solid var(--in200);display:flex;align-items:center;justify-content:center">
