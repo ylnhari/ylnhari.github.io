@@ -113,6 +113,7 @@ main{max-width:900px;margin:0 auto;padding:36px 24px 60px}
 
 /* ARCHIVE TABLE */
 .archive-table{width:100%;border-collapse:collapse;background:white;border-radius:10px;border:1px solid var(--sl200);overflow:hidden}
+.archive-table-scroll{max-width:100%;overflow-x:auto;border-radius:10px;-webkit-overflow-scrolling:touch}
 .archive-table th{text-align:left;font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--sl500);padding:10px 16px;background:var(--sl50);border-bottom:1px solid var(--sl200)}
 .archive-table td{padding:11px 16px;font-size:12.5px;border-bottom:1px solid var(--sl100);vertical-align:middle}
 .archive-table tr:last-child td{border-bottom:none}
@@ -235,26 +236,32 @@ footer a{color:var(--indigo);text-decoration:none}
     <summary aria-controls="targeted-extra">
       <span class="targeted-show-all">Show all resumes</span>
       <span class="targeted-show-less">Show fewer resumes</span>
-      <span class="archive-count">72 more</span>
+      <span class="archive-count">73 more</span>
       <svg class="targeted-toggle-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
     </summary>
     <div class="cards-grid targeted-extra" id="targeted-extra">
 
+    <a class="resume-card featured" href="/resume/targeted/google-search-intelligence/">
+      <div class="card-preview"><div class="preview-lines"><div class="pl name"></div><div class="pl title"></div><div class="pl short"></div><div class="pl"></div><div class="pl"></div><div class="pl short"></div></div></div>
+      <div class="card-top"><div class="card-badges"><span class="badge badge-current">Google</span><span class="badge badge-new">Search Intelligence</span></div><div class="card-title">Staff Software Engineer, Search Intelligence</div><div class="card-date">29 August 2026 · 2 pages (A4)</div><div class="card-desc">Production ML infrastructure, large-scale streaming, model serving, system reliability, technical direction, and cross-functional delivery.</div></div>
+      <div class="card-footer"><span class="card-link">View &amp; Print →</span><span class="card-format">HTML → PDF</span></div>
+    </a>
+
     <a class="resume-card featured" href="/resume/targeted/analog-principal-ai-engineer/">
       <div class="card-preview"><div class="preview-lines"><div class="pl name"></div><div class="pl title"></div><div class="pl short"></div><div class="pl"></div><div class="pl"></div><div class="pl short"></div></div></div>
-      <div class="card-top"><div class="card-badges"><span class="badge badge-current">Analog</span><span class="badge badge-new">Abu Dhabi</span></div><div class="card-title">Principal AI Engineer</div><div class="card-date">28 August 2026 · 1 page (A4)</div><div class="card-desc">Model evaluation, production LLM platforms, secure AI delivery, reliability, governance, technical direction, and cross-team leadership.</div></div>
+      <div class="card-top"><div class="card-badges"><span class="badge badge-current">Analog</span><span class="badge badge-new">Abu Dhabi</span></div><div class="card-title">Principal AI Engineer</div><div class="card-date">28 August 2026 · 2 pages (A4)</div><div class="card-desc">Model evaluation, production LLM platforms, secure AI delivery, reliability, governance, technical direction, and cross-team leadership.</div></div>
       <div class="card-footer"><span class="card-link">View &amp; Print →</span><span class="card-format">HTML → PDF</span></div>
     </a>
 
     <a class="resume-card featured" href="/resume/targeted/halian-senior-ai-engineer/">
       <div class="card-preview"><div class="preview-lines"><div class="pl name"></div><div class="pl title"></div><div class="pl short"></div><div class="pl"></div><div class="pl"></div><div class="pl short"></div></div></div>
-      <div class="card-top"><div class="card-badges"><span class="badge badge-current">Halian</span><span class="badge badge-new">Abu Dhabi</span></div><div class="card-title">Senior AI Engineer</div><div class="card-date">28 August 2026 · 1 page (A4)</div><div class="card-desc">Enterprise LLM systems, Python, Java, cloud MLOps, secure APIs, model evaluation, observability, reliability, and technical leadership.</div></div>
+      <div class="card-top"><div class="card-badges"><span class="badge badge-current">Halian</span><span class="badge badge-new">Abu Dhabi</span></div><div class="card-title">Senior AI Engineer</div><div class="card-date">28 August 2026 · 2 pages (A4)</div><div class="card-desc">Enterprise LLM systems, Python, Java, cloud MLOps, secure APIs, model evaluation, observability, reliability, and technical leadership.</div></div>
       <div class="card-footer"><span class="card-link">View &amp; Print →</span><span class="card-format">HTML → PDF</span></div>
     </a>
 
     <a class="resume-card featured" href="/resume/targeted/openai-applied-ai-engineer-abu-dhabi/">
       <div class="card-preview"><div class="preview-lines"><div class="pl name"></div><div class="pl title"></div><div class="pl short"></div><div class="pl"></div><div class="pl"></div><div class="pl short"></div></div></div>
-      <div class="card-top"><div class="card-badges"><span class="badge badge-current">OpenAI</span><span class="badge badge-new">Abu Dhabi</span></div><div class="card-title">Applied AI Engineer</div><div class="card-date">26 August 2026 · 1 page (A4)</div><div class="card-desc">Enterprise AI delivery, evaluation, production LLM systems, secure integrations, observability, reliability, cost control, and measurable customer outcomes.</div></div>
+      <div class="card-top"><div class="card-badges"><span class="badge badge-current">OpenAI</span><span class="badge badge-new">Abu Dhabi</span></div><div class="card-title">Applied AI Engineer</div><div class="card-date">26 August 2026 · 2 pages (A4)</div><div class="card-desc">Enterprise AI delivery, evaluation, production LLM systems, secure integrations, observability, reliability, cost control, and measurable customer outcomes.</div></div>
       <div class="card-footer"><span class="card-link">View &amp; Print →</span><span class="card-format">HTML → PDF</span></div>
     </a>
 
@@ -275,7 +282,7 @@ footer a{color:var(--indigo);text-decoration:none}
           <span class="badge badge-new">Abu Dhabi</span>
         </div>
         <div class="card-title">Forward Deployed Engineer - UAE</div>
-        <div class="card-date">26 August 2026 · 1 page (A4)</div>
+        <div class="card-date">26 August 2026 · 2 pages (A4)</div>
       </div>
       <p class="card-desc">Production AI and LLM systems, Python and JavaScript, APIs, cloud delivery, reliability, secure deployment, stakeholder discovery, and measurable outcomes.</p>
       <div class="card-footer">
@@ -301,7 +308,7 @@ footer a{color:var(--indigo);text-decoration:none}
           <span class="badge badge-new">UAE / Middle East</span>
         </div>
         <div class="card-title">Forward Deployed Engineer, Infrastructure Specialist</div>
-        <div class="card-date">26 August 2026 · 1 page (A4)</div>
+        <div class="card-date">26 August 2026 · 2 pages (A4)</div>
       </div>
       <p class="card-desc">Private and hybrid-cloud AI deployment, Kubernetes, Helm, CI/CD, on-prem GPU infrastructure, security, observability, troubleshooting, and client delivery.</p>
       <div class="card-footer">
@@ -327,7 +334,7 @@ footer a{color:var(--indigo);text-decoration:none}
           <span class="badge badge-new">Senior Tech Lead</span>
         </div>
         <div class="card-title">Senior Tech Lead</div>
-        <div class="card-date">25 August 2026 · 1 page (A4)</div>
+        <div class="card-date">25 August 2026 · 2 pages (A4)</div>
       </div>
       <p class="card-desc">Distributed platforms, cloud architecture, Python, APIs, reliability, secure delivery, automation, and hands-on technical leadership.</p>
       <div class="card-footer">
@@ -353,7 +360,7 @@ footer a{color:var(--indigo);text-decoration:none}
           <span class="badge badge-new">Abu Dhabi</span>
         </div>
         <div class="card-title">Customer Engineering / Solutions Architect</div>
-        <div class="card-date">26 August 2026 · 1 page (A4)</div>
+        <div class="card-date">26 August 2026 · 2 pages (A4)</div>
       </div>
       <p class="card-desc">AI and cloud solution architecture, production ML, hybrid GPU systems, model serving, distributed platforms, client delivery, reliability, and performance.</p>
       <div class="card-footer">
@@ -379,7 +386,7 @@ footer a{color:var(--indigo);text-decoration:none}
           <span class="badge badge-new">Abu Dhabi</span>
         </div>
         <div class="card-title">Forward Deployment Architect</div>
-        <div class="card-date">26 August 2026 · 1 page (A4)</div>
+        <div class="card-date">26 August 2026 · 2 pages (A4)</div>
       </div>
       <p class="card-desc">Production LLM and ML platforms, Python, cloud, APIs, workflow automation, secure delivery, observability, cost and latency optimisation, and technical leadership.</p>
       <div class="card-footer">
@@ -405,7 +412,7 @@ footer a{color:var(--indigo);text-decoration:none}
           <span class="badge badge-new">Abu Dhabi · Lead</span>
         </div>
         <div class="card-title">Lead Infrastructure &amp; Cloud Engineering</div>
-        <div class="card-date">27 August 2026 · 1 page (A4)</div>
+        <div class="card-date">27 August 2026 · 2 pages (A4)</div>
       </div>
       <p class="card-desc">Cloud-native AI infrastructure, Kubernetes, GitOps, CI/CD, observability, reliability, GPU platforms, incident debugging, technical standards, and mentoring.</p>
       <div class="card-footer">
@@ -431,7 +438,7 @@ footer a{color:var(--indigo);text-decoration:none}
           <span class="badge badge-new">UAE · AI Infrastructure</span>
         </div>
         <div class="card-title">Principal Core Infrastructure Engineer</div>
-        <div class="card-date">27 August 2026 · 1 page (A4)</div>
+        <div class="card-date">27 August 2026 · 2 pages (A4)</div>
       </div>
       <p class="card-desc">Forward-deployed AI/ML infrastructure, GPU systems, Python, Kubernetes, Linux, production troubleshooting, observability, mentoring, and client delivery.</p>
       <div class="card-footer">
@@ -457,7 +464,7 @@ footer a{color:var(--indigo);text-decoration:none}
           <span class="badge badge-new">Principal Software</span>
         </div>
         <div class="card-title">Principal Software Engineer</div>
-        <div class="card-date">27 August 2026 · 1 page (A4)</div>
+        <div class="card-date">27 August 2026 · 2 pages (A4)</div>
       </div>
       <p class="card-desc">Cloud-native AI platforms, distributed systems, Python APIs, Kubernetes, GitOps, CI/CD, reliability, observability, security, and technical mentoring.</p>
       <div class="card-footer">
@@ -483,7 +490,7 @@ footer a{color:var(--indigo);text-decoration:none}
           <span class="badge badge-new">Solution Architecture</span>
         </div>
         <div class="card-title">Senior Solution Architect</div>
-        <div class="card-date">25 August 2026 · 1 page (A4)</div>
+        <div class="card-date">25 August 2026 · 2 pages (A4)</div>
       </div>
       <p class="card-desc">Enterprise AI platforms, cloud and data architecture, distributed systems, secure integration, production ML, and client delivery.</p>
       <div class="card-footer">
@@ -509,7 +516,7 @@ footer a{color:var(--indigo);text-decoration:none}
           <span class="badge badge-new">Staff · India</span>
         </div>
         <div class="card-title">Cloud Platform Development Engineer</div>
-        <div class="card-date">25 August 2026 · 1 page (A4)</div>
+        <div class="card-date">25 August 2026 · 2 pages (A4)</div>
       </div>
       <p class="card-desc">Cloud platforms, Kubernetes, Python, Go, Java, automation, CI/CD, observability, reliability, security controls, and technical leadership.</p>
       <div class="card-footer">
@@ -535,7 +542,7 @@ footer a{color:var(--indigo);text-decoration:none}
           <span class="badge badge-new">Senior to Staff</span>
         </div>
         <div class="card-title">Machine Learning Engineer</div>
-        <div class="card-date">25 August 2026 · 1 page (A4)</div>
+        <div class="card-date">25 August 2026 · 2 pages (A4)</div>
       </div>
       <p class="card-desc">Production ML platforms, model training and serving, GPU pipelines, lifecycle automation, reliability, performance, and technical leadership.</p>
       <div class="card-footer">
@@ -561,7 +568,7 @@ footer a{color:var(--indigo);text-decoration:none}
           <span class="badge badge-new">Principal Lead</span>
         </div>
         <div class="card-title">Principal Lead, AI Platform &amp; Solutions</div>
-        <div class="card-date">25 August 2026 · 1 page (A4)</div>
+        <div class="card-date">25 August 2026 · 2 pages (A4)</div>
       </div>
       <p class="card-desc">AI-platform architecture, production LLM serving, secure cloud delivery, governance, technical standards, and cross-team leadership.</p>
       <div class="card-footer">
@@ -587,7 +594,7 @@ footer a{color:var(--indigo);text-decoration:none}
           <span class="badge badge-new">Dubai</span>
         </div>
         <div class="card-title">Forward Deployed Engineer, Agentic AI</div>
-        <div class="card-date">25 August 2026 · 1 page (A4)</div>
+        <div class="card-date">25 August 2026 · 2 pages (A4)</div>
       </div>
       <p class="card-desc">Production AI platforms, model serving, enterprise delivery, secure APIs, reliability, performance, and client handover.</p>
       <div class="card-footer">
@@ -613,7 +620,7 @@ footer a{color:var(--indigo);text-decoration:none}
           <span class="badge badge-new">Abu Dhabi</span>
         </div>
         <div class="card-title">Artificial Intelligence Engineer</div>
-        <div class="card-date">24 August 2026 · 1 page (A4)</div>
+        <div class="card-date">24 August 2026 · 2 pages (A4)</div>
       </div>
       <p class="card-desc">Production AI and GenAI, deep learning, cloud MLOps, architecture, governance, consulting delivery, and technical leadership.</p>
       <div class="card-footer">
@@ -639,7 +646,7 @@ footer a{color:var(--indigo);text-decoration:none}
           <span class="badge badge-new">Dubai</span>
         </div>
         <div class="card-title">Lead AI Engineer</div>
-        <div class="card-date">24 August 2026 · 1 page (A4)</div>
+        <div class="card-date">24 August 2026 · 2 pages (A4)</div>
       </div>
       <p class="card-desc">Enterprise AI architecture, production LLM systems, MLOps, cloud and on-prem delivery, observability, and client-facing technical leadership.</p>
       <div class="card-footer">
@@ -665,7 +672,7 @@ footer a{color:var(--indigo);text-decoration:none}
           <span class="badge badge-new">AI Platform</span>
         </div>
         <div class="card-title">Senior Engineer, Platform Engineering and Architecture</div>
-        <div class="card-date">24 August 2026 · 1 page (A4)</div>
+        <div class="card-date">24 August 2026 · 2 pages (A4)</div>
       </div>
       <p class="card-desc">Production LLM serving, Kubernetes, secure delivery, observability, and platform leadership aligned to FAB requisition 2325.</p>
       <div class="card-footer">
@@ -692,7 +699,7 @@ footer a{color:var(--indigo);text-decoration:none}
           <span class="badge badge-new">Senior AI Engineer</span>
         </div>
         <div class="card-title">Senior AI Engineer</div>
-        <div class="card-date">24 August 2026 · 1 page (A4)</div>
+        <div class="card-date">24 August 2026 · 2 pages (A4)</div>
         <div class="card-desc">Applied-AI variant focused on production LLM training and serving, reusable model APIs, automated evaluation, security, governance, observability, cloud delivery, and technical mentoring.</div>
       </div>
       <div class="card-footer">
@@ -719,7 +726,7 @@ footer a{color:var(--indigo);text-decoration:none}
           <span class="badge badge-new">Data / AI Expert</span>
         </div>
         <div class="card-title">Data and AI Engineering Expert</div>
-        <div class="card-date">24 August 2026 · 1 page (A4)</div>
+        <div class="card-date">24 August 2026 · 2 pages (A4)</div>
         <div class="card-desc">Enterprise data-and-AI platform variant: Azure ML, Beam and Dataflow pipelines, MLOps, governed model lifecycle, Kubernetes delivery, security, reliability, and technical leadership.</div>
       </div>
       <div class="card-footer">
@@ -746,7 +753,7 @@ footer a{color:var(--indigo);text-decoration:none}
           <span class="badge badge-new">AI Architect</span>
         </div>
         <div class="card-title">AI Architect</div>
-        <div class="card-date">24 August 2026 · 1 page (A4)</div>
+        <div class="card-date">24 August 2026 · 2 pages (A4)</div>
         <div class="card-desc">Architecture-focused production AI variant: LLM training and serving, secure model APIs, Kubernetes delivery, automated evaluation, observability, governance, reliability, and technical leadership.</div>
       </div>
       <div class="card-footer">
@@ -773,7 +780,7 @@ footer a{color:var(--indigo);text-decoration:none}
           <span class="badge badge-new">AI Engineering Expert</span>
         </div>
         <div class="card-title">AI Software Engineering Domain Expert</div>
-        <div class="card-date">24 August 2026 · 1 page (A4)</div>
+        <div class="card-date">24 August 2026 · 2 pages (A4)</div>
         <div class="card-desc">Review-focused AI engineering variant: system architecture, technical design, prompt configuration, automated LLM evaluation, code and system quality, testing, debugging, and clear technical communication.</div>
       </div>
       <div class="card-footer">
@@ -800,7 +807,7 @@ footer a{color:var(--indigo);text-decoration:none}
           <span class="badge badge-new">Infrastructure Director</span>
         </div>
         <div class="card-title">Director of Infrastructure Engineering</div>
-        <div class="card-date">24 August 2026 · 1 page (A4)</div>
+        <div class="card-date">24 August 2026 · 2 pages (A4)</div>
         <div class="card-desc">Leadership-focused AI infrastructure variant: multi-cloud production systems, Kubernetes, Google KCC infrastructure as code, CI/CD, GitOps, observability, reliability, cost control, GPU platforms, and engineering-team growth.</div>
       </div>
       <div class="card-footer">
@@ -827,7 +834,7 @@ footer a{color:var(--indigo);text-decoration:none}
           <span class="badge badge-new">MTS Inference</span>
         </div>
         <div class="card-title">Member of Technical Staff, Inference</div>
-        <div class="card-date">22 August 2026 · 1 page (A4)</div>
+        <div class="card-date">22 August 2026 · 2 pages (A4)</div>
         <div class="card-desc">Inference-focused variant: production vLLM serving, LoRA/QLoRA and model quantization, GPU ML pipelines, high-throughput systems, GKE delivery, observability, and an in-progress inference-internals project.</div>
       </div>
       <div class="card-footer">
@@ -854,7 +861,7 @@ footer a{color:var(--indigo);text-decoration:none}
           <span class="badge badge-new">Inference Systems</span>
         </div>
         <div class="card-title">Member of Technical Staff, Inference &amp; RL</div>
-        <div class="card-date">22 August 2026 · 1 page (A4)</div>
+        <div class="card-date">22 August 2026 · 2 pages (A4)</div>
         <div class="card-desc">Inference-led variant: vLLM serving, LoRA/QLoRA and quantization, GPU ML pipelines, high-throughput production systems, GKE delivery, observability, and an in-progress inference-internals project.</div>
       </div>
       <div class="card-footer">
@@ -881,7 +888,7 @@ footer a{color:var(--indigo);text-decoration:none}
           <span class="badge badge-new">Staff Engineering</span>
         </div>
         <div class="card-title">Staff Software Engineer, UAE</div>
-        <div class="card-date">22 August 2026 · 1 page (A4)</div>
+        <div class="card-date">22 August 2026 · 2 pages (A4)</div>
         <div class="card-desc">Applied-AI systems variant: end-to-end production delivery, LLM serving, distributed ML platforms, GPU work, measurable product outcomes, stakeholder partnership, and hands-on technical ownership.</div>
       </div>
       <div class="card-footer">
@@ -908,7 +915,7 @@ footer a{color:var(--indigo);text-decoration:none}
           <span class="badge badge-new">Model Inference</span>
         </div>
         <div class="card-title">Software Engineer, Model Inference</div>
-        <div class="card-date">22 August 2026 · 1 page (A4)</div>
+        <div class="card-date">22 August 2026 · 2 pages (A4)</div>
         <div class="card-desc">Inference-led variant: shared LoRA/QLoRA training and vLLM serving, adapter lifecycle, model quantization, GPU systems, high-throughput production ML, safe rollout, observability, and performance diagnosis.</div>
       </div>
       <div class="card-footer">
@@ -935,7 +942,7 @@ footer a{color:var(--indigo);text-decoration:none}
           <span class="badge badge-new">Principal AI Ops</span>
         </div>
         <div class="card-title">Principal AI Ops Architect</div>
-        <div class="card-date">21 August 2026 · 1 page (A4)</div>
+        <div class="card-date">21 August 2026 · 2 pages (A4)</div>
         <div class="card-desc">Production-AI operations variant: Kubernetes and vLLM lifecycle ownership, real-time reliability, safe delivery, observability, secure endpoints, data governance, high-throughput systems, and international client communication.</div>
       </div>
       <div class="card-footer">
@@ -962,7 +969,7 @@ footer a{color:var(--indigo);text-decoration:none}
           <span class="badge badge-new">Senior ML Engineer</span>
         </div>
         <div class="card-title">Senior Machine Learning Engineer</div>
-        <div class="card-date">21 August 2026 · 1 page (A4)</div>
+        <div class="card-date">21 August 2026 · 2 pages (A4)</div>
         <div class="card-desc">Production-ML variant: Python and modern ML frameworks; reusable training and evaluation; batch and online serving; APIs and feature workflows; distributed data and GPUs; cloud MLOps, observability, security, architecture, and mentoring.</div>
       </div>
       <div class="card-footer">
@@ -989,7 +996,7 @@ footer a{color:var(--indigo);text-decoration:none}
           <span class="badge badge-new">Lead ML Engineer</span>
         </div>
         <div class="card-title">Lead Machine Learning Engineer</div>
-        <div class="card-date">21 August 2026 · 1 page (A4)</div>
+        <div class="card-date">21 August 2026 · 2 pages (A4)</div>
         <div class="card-desc">Lead-ML variant: Python, PyTorch and TensorFlow; large-scale training and serving; cloud MLOps; GPU pipelines; production monitoring; measurable model outcomes; architecture, mentoring, and technical hiring.</div>
       </div>
       <div class="card-footer">
@@ -1016,7 +1023,7 @@ footer a{color:var(--indigo);text-decoration:none}
           <span class="badge badge-new">MLOps Engineer</span>
         </div>
         <div class="card-title">MLOps Engineer</div>
-        <div class="card-date">21 August 2026 · 1 page (A4)</div>
+        <div class="card-date">21 August 2026 · 2 pages (A4)</div>
         <div class="card-desc">End-to-end MLOps variant: Azure and GCP production delivery, Kubernetes model serving, lifecycle automation, CI/CD and controlled releases, observability, security, GPU workloads, and reusable platform standards.</div>
       </div>
       <div class="card-footer">
@@ -1043,7 +1050,7 @@ footer a{color:var(--indigo);text-decoration:none}
           <span class="badge badge-new">Senior MLOps</span>
         </div>
         <div class="card-title">Senior MLOps Engineer</div>
-        <div class="card-date">21 August 2026 · 1 page (A4)</div>
+        <div class="card-date">21 August 2026 · 2 pages (A4)</div>
         <div class="card-desc">Production-platform variant: Kubernetes model serving, vLLM and Seldon, CI/CD and safe rollout, ML lifecycle automation, evaluation, observability, GPU workloads, cloud delivery, and technical standards.</div>
       </div>
       <div class="card-footer">
@@ -1070,7 +1077,7 @@ footer a{color:var(--indigo);text-decoration:none}
           <span class="badge badge-new">AI Platform</span>
         </div>
         <div class="card-title">AI Platform &amp; Infrastructure Engineer</div>
-        <div class="card-date">21 August 2026 · 1 page (A4)</div>
+        <div class="card-date">21 August 2026 · 2 pages (A4)</div>
         <div class="card-desc">Gap-aware platform variant: Kubernetes, distributed systems, AI inference and data pipelines, CI/CD, observability, secure delivery, autoscaling, performance diagnosis, architecture, and mentoring.</div>
       </div>
       <div class="card-footer">
@@ -1097,7 +1104,7 @@ footer a{color:var(--indigo);text-decoration:none}
           <span class="badge badge-new">AI Infrastructure</span>
         </div>
         <div class="card-title">Software Engineer, AI Infra</div>
-        <div class="card-date">21 August 2026 · 1 page (A4)</div>
+        <div class="card-date">21 August 2026 · 2 pages (A4)</div>
         <div class="card-desc">AI-infrastructure variant: production model serving, Kubernetes, GPU systems, distributed workloads, autoscaling, safe releases, observability, performance diagnosis, and Python/Go systems work.</div>
       </div>
       <div class="card-footer">
@@ -1124,7 +1131,7 @@ footer a{color:var(--indigo);text-decoration:none}
           <span class="badge badge-new">Infrastructure</span>
         </div>
         <div class="card-title">Software Engineer, ChatGPT Infrastructure</div>
-        <div class="card-date">21 August 2026 · 1 page (A4)</div>
+        <div class="card-date">21 August 2026 · 2 pages (A4)</div>
         <div class="card-desc">Infrastructure-led variant: distributed systems, high-throughput production services, staged delivery, observability, reliability, performance diagnosis, Kubernetes, and production AI platforms.</div>
       </div>
       <div class="card-footer">
@@ -1151,7 +1158,7 @@ footer a{color:var(--indigo);text-decoration:none}
           <span class="badge badge-new">AI Platform Head</span>
         </div>
         <div class="card-title">Head of Platform Engineering - AI-Native Platform</div>
-        <div class="card-date">21 August 2026 · 1 page (A4)</div>
+        <div class="card-date">21 August 2026 · 2 pages (A4)</div>
         <div class="card-desc">Platform-leadership variant: production LLM infrastructure, cloud architecture, Kubernetes, GitOps, observability, security controls, real-time ML, GPU platforms, cost ownership, and senior stakeholder delivery.</div>
       </div>
       <div class="card-footer">
@@ -1178,7 +1185,7 @@ footer a{color:var(--indigo);text-decoration:none}
           <span class="badge badge-new">Principal AI/ML Systems</span>
         </div>
         <div class="card-title">Cognite — Principal Engineer, AI/ML Systems</div>
-        <div class="card-date">21 August 2026 · 1 page (A4)</div>
+        <div class="card-date">21 August 2026 · 2 pages (A4)</div>
         <div class="card-desc">Production AI-platform variant: LLM fine-tuning and vLLM serving, low-latency streaming systems, Kubernetes, MLOps, GPU workloads, technical architecture, and supply-chain AI delivery.</div>
       </div>
       <div class="card-footer">
@@ -1233,7 +1240,7 @@ footer a{color:var(--indigo);text-decoration:none}
         </div>
         <div class="card-title">Atlassian — Principal Machine Learning Engineer</div>
         <div class="card-date">20 August 2026 · 2 pages (A4)</div>
-        <div class="card-desc">Tailored for principal-level AI in Jira Service Management: production LLM pipelines, evaluation and benchmarking, Python ML, quality/latency/cost/reliability trade-offs, MLOps, experimentation platforms, and technical direction.</div>
+        <div class="card-desc">Production LLM pipelines, evaluation and benchmarking, Python ML, quality, latency, cost and reliability trade-offs, MLOps, experimentation platforms, and technical direction.</div>
       </div>
       <div class="card-footer">
         <span class="card-link">View &amp; Print <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
@@ -1260,7 +1267,7 @@ footer a{color:var(--indigo);text-decoration:none}
         </div>
         <div class="card-title">Technology Innovation Institute — Senior AI Engineer</div>
         <div class="card-date">20 August 2026 · 2 pages (A4)</div>
-        <div class="card-desc">Tailored for TII's research-to-production AI role: LLM fine-tuning and low-latency vLLM serving, distributed GPU workloads, computer vision, cloud platforms, and production AI at scale.</div>
+        <div class="card-desc">LLM fine-tuning and low-latency vLLM serving, distributed GPU workloads, computer vision, cloud platforms, and research-to-production AI at scale.</div>
       </div>
       <div class="card-footer">
         <span class="card-link">View &amp; Print <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
@@ -1297,67 +1304,67 @@ footer a{color:var(--indigo);text-decoration:none}
 
     <a class="resume-card featured" href="/resume/targeted/ai71-edge-mle/">
       <div class="card-preview"><div class="preview-lines"><div class="pl name"></div><div class="pl title"></div><div class="pl short"></div><div class="pl"></div><div class="pl"></div><div class="pl short"></div></div></div>
-      <div class="card-top"><div class="card-badges"><span class="badge badge-current">AI71</span><span class="badge badge-new">EDGE</span></div><div class="card-title">Machine Learning Engineer — EDGE</div><div class="card-date">25 August 2026 · 1 page (A4)</div><div class="card-desc">Production ML, LLM systems, model serving, MLOps, APIs, reliability, and hands-on engineering.</div></div>
+      <div class="card-top"><div class="card-badges"><span class="badge badge-current">AI71</span><span class="badge badge-new">EDGE</span></div><div class="card-title">Machine Learning Engineer — EDGE</div><div class="card-date">25 August 2026 · 2 pages (A4)</div><div class="card-desc">Production ML, LLM systems, model serving, MLOps, APIs, reliability, and hands-on engineering.</div></div>
       <div class="card-footer"><span class="card-link">View &amp; Print →</span><span class="card-format">HTML → PDF</span></div>
     </a>
     <a class="resume-card featured" href="/resume/targeted/anthropic-london-distributed-systems/">
       <div class="card-preview"><div class="preview-lines"><div class="pl name"></div><div class="pl title"></div><div class="pl short"></div><div class="pl"></div><div class="pl"></div><div class="pl short"></div></div></div>
-      <div class="card-top"><div class="card-badges"><span class="badge badge-current">Anthropic</span><span class="badge badge-new">London</span></div><div class="card-title">Staff Software Engineer, Infrastructure</div><div class="card-date">August 2026 · 1 page (A4)</div><div class="card-desc">Distributed systems, production AI infrastructure, reliability, observability, Kubernetes, and technical leadership.</div></div>
+      <div class="card-top"><div class="card-badges"><span class="badge badge-current">Anthropic</span><span class="badge badge-new">London</span></div><div class="card-title">Staff Software Engineer, Infrastructure</div><div class="card-date">August 2026 · 2 pages (A4)</div><div class="card-desc">Distributed systems, production AI infrastructure, reliability, observability, Kubernetes, and technical leadership.</div></div>
       <div class="card-footer"><span class="card-link">View &amp; Print →</span><span class="card-format">HTML → PDF</span></div>
     </a>
     <a class="resume-card featured" href="/resume/targeted/cinder-ai-ml/">
       <div class="card-preview"><div class="preview-lines"><div class="pl name"></div><div class="pl title"></div><div class="pl short"></div><div class="pl"></div><div class="pl"></div><div class="pl short"></div></div></div>
-      <div class="card-top"><div class="card-badges"><span class="badge badge-current">Cinder</span><span class="badge badge-new">AI/ML</span></div><div class="card-title">AI/ML Engineer</div><div class="card-date">August 2026 · 1 page (A4)</div><div class="card-desc">Applied ML, LLM engineering, production pipelines, cloud deployment, evaluation, and reliable delivery.</div></div>
+      <div class="card-top"><div class="card-badges"><span class="badge badge-current">Cinder</span><span class="badge badge-new">AI/ML</span></div><div class="card-title">AI/ML Engineer</div><div class="card-date">August 2026 · 2 pages (A4)</div><div class="card-desc">Applied ML, LLM engineering, production pipelines, cloud deployment, evaluation, and reliable delivery.</div></div>
       <div class="card-footer"><span class="card-link">View &amp; Print →</span><span class="card-format">HTML → PDF</span></div>
     </a>
     <a class="resume-card featured" href="/resume/targeted/confido-senior-applied-ai-ml/">
       <div class="card-preview"><div class="preview-lines"><div class="pl name"></div><div class="pl title"></div><div class="pl short"></div><div class="pl"></div><div class="pl"></div><div class="pl short"></div></div></div>
-      <div class="card-top"><div class="card-badges"><span class="badge badge-current">Confido</span><span class="badge badge-new">Applied AI/ML</span></div><div class="card-title">Senior Applied AI/ML Engineer</div><div class="card-date">August 2026 · 1 page (A4)</div><div class="card-desc">Applied AI, production ML systems, LLM serving, cloud infrastructure, APIs, and senior engineering.</div></div>
+      <div class="card-top"><div class="card-badges"><span class="badge badge-current">Confido</span><span class="badge badge-new">Applied AI/ML</span></div><div class="card-title">Senior Applied AI/ML Engineer</div><div class="card-date">August 2026 · 2 pages (A4)</div><div class="card-desc">Applied AI, production ML systems, LLM serving, cloud infrastructure, APIs, and senior engineering.</div></div>
       <div class="card-footer"><span class="card-link">View &amp; Print →</span><span class="card-format">HTML → PDF</span></div>
     </a>
     <a class="resume-card featured" href="/resume/targeted/edison-smart-lead-ai/">
       <div class="card-preview"><div class="preview-lines"><div class="pl name"></div><div class="pl title"></div><div class="pl short"></div><div class="pl"></div><div class="pl"></div><div class="pl short"></div></div></div>
-      <div class="card-top"><div class="card-badges"><span class="badge badge-current">Edison Smart</span><span class="badge badge-new">Lead AI</span></div><div class="card-title">Lead AI Engineer</div><div class="card-date">August 2026 · 1 page (A4)</div><div class="card-desc">Production AI/ML architecture, LLM systems, cloud delivery, APIs, observability, and technical leadership.</div></div>
+      <div class="card-top"><div class="card-badges"><span class="badge badge-current">Edison Smart</span><span class="badge badge-new">Lead AI</span></div><div class="card-title">Lead AI Engineer</div><div class="card-date">August 2026 · 2 pages (A4)</div><div class="card-desc">Production AI/ML architecture, LLM systems, cloud delivery, APIs, observability, and technical leadership.</div></div>
       <div class="card-footer"><span class="card-link">View &amp; Print →</span><span class="card-format">HTML → PDF</span></div>
     </a>
     <a class="resume-card featured" href="/resume/targeted/fireworks-ai-cloud-infrastructure/">
       <div class="card-preview"><div class="preview-lines"><div class="pl name"></div><div class="pl title"></div><div class="pl short"></div><div class="pl"></div><div class="pl"></div><div class="pl short"></div></div></div>
-      <div class="card-top"><div class="card-badges"><span class="badge badge-current">Fireworks AI</span><span class="badge badge-new">Singapore</span></div><div class="card-title">MTS, Cloud Infrastructure</div><div class="card-date">August 2026 · 1 page (A4)</div><div class="card-desc">Cloud and GPU infrastructure, Kubernetes, model serving, reliability, observability, and platform engineering.</div></div>
+      <div class="card-top"><div class="card-badges"><span class="badge badge-current">Fireworks AI</span><span class="badge badge-new">Singapore</span></div><div class="card-title">MTS, Cloud Infrastructure</div><div class="card-date">August 2026 · 2 pages (A4)</div><div class="card-desc">Cloud and GPU infrastructure, Kubernetes, model serving, reliability, observability, and platform engineering.</div></div>
       <div class="card-footer"><span class="card-link">View &amp; Print →</span><span class="card-format">HTML → PDF</span></div>
     </a>
     <a class="resume-card featured" href="/resume/targeted/flipkart-ai-inference/">
       <div class="card-preview"><div class="preview-lines"><div class="pl name"></div><div class="pl title"></div><div class="pl short"></div><div class="pl"></div><div class="pl"></div><div class="pl short"></div></div></div>
-      <div class="card-top"><div class="card-badges"><span class="badge badge-current">Flipkart</span><span class="badge badge-new">AI Inference</span></div><div class="card-title">Platform Engineer, AI Inference — SDE3</div><div class="card-date">1 September 2026 · 1 page (A4)</div><div class="card-desc">Low-latency model serving, distributed systems, Kubernetes, observability, and production AI platform engineering.</div></div>
+      <div class="card-top"><div class="card-badges"><span class="badge badge-current">Flipkart</span><span class="badge badge-new">AI Inference</span></div><div class="card-title">Platform Engineer, AI Inference — SDE3</div><div class="card-date">1 September 2026 · 2 pages (A4)</div><div class="card-desc">Low-latency model serving, distributed systems, Kubernetes, observability, and production AI platform engineering.</div></div>
       <div class="card-footer"><span class="card-link">View &amp; Print →</span><span class="card-format">HTML → PDF</span></div>
     </a>
     <a class="resume-card featured" href="/resume/targeted/monzo-lead-ml-scientist-fincrime/">
       <div class="card-preview"><div class="preview-lines"><div class="pl name"></div><div class="pl title"></div><div class="pl short"></div><div class="pl"></div><div class="pl"></div><div class="pl short"></div></div></div>
-      <div class="card-top"><div class="card-badges"><span class="badge badge-current">Monzo</span><span class="badge badge-new">FinCrime</span></div><div class="card-title">Lead Machine Learning Scientist</div><div class="card-date">August 2026 · 1 page (A4)</div><div class="card-desc">Fraud and abuse detection, high-throughput ML, real-time features, monitoring, and technical leadership.</div></div>
+      <div class="card-top"><div class="card-badges"><span class="badge badge-current">Monzo</span><span class="badge badge-new">FinCrime</span></div><div class="card-title">Lead Machine Learning Scientist</div><div class="card-date">August 2026 · 2 pages (A4)</div><div class="card-desc">Fraud and abuse detection, high-throughput ML, real-time features, monitoring, and technical leadership.</div></div>
       <div class="card-footer"><span class="card-link">View &amp; Print →</span><span class="card-format">HTML → PDF</span></div>
     </a>
     <a class="resume-card featured" href="/resume/targeted/monzo-machine-learning-tech-lead/">
       <div class="card-preview"><div class="preview-lines"><div class="pl name"></div><div class="pl title"></div><div class="pl short"></div><div class="pl"></div><div class="pl"></div><div class="pl short"></div></div></div>
-      <div class="card-top"><div class="card-badges"><span class="badge badge-current">Monzo</span><span class="badge badge-new">Tech Lead</span></div><div class="card-title">Machine Learning Tech Lead</div><div class="card-date">August 2026 · 1 page (A4)</div><div class="card-desc">Production ML architecture, fraud systems, cloud platforms, model lifecycle, reliability, and engineering leadership.</div></div>
+      <div class="card-top"><div class="card-badges"><span class="badge badge-current">Monzo</span><span class="badge badge-new">Tech Lead</span></div><div class="card-title">Machine Learning Tech Lead</div><div class="card-date">August 2026 · 2 pages (A4)</div><div class="card-desc">Production ML architecture, fraud systems, cloud platforms, model lifecycle, reliability, and engineering leadership.</div></div>
       <div class="card-footer"><span class="card-link">View &amp; Print →</span><span class="card-format">HTML → PDF</span></div>
     </a>
     <a class="resume-card featured" href="/resume/targeted/nvidia-ai-runtime-sre/">
       <div class="card-preview"><div class="preview-lines"><div class="pl name"></div><div class="pl title"></div><div class="pl short"></div><div class="pl"></div><div class="pl"></div><div class="pl short"></div></div></div>
-      <div class="card-top"><div class="card-badges"><span class="badge badge-current">NVIDIA</span><span class="badge badge-new">AI Runtime</span></div><div class="card-title">Senior Staff Site Reliability Engineer</div><div class="card-date">August 2026 · 1 page (A4)</div><div class="card-desc">AI runtime reliability, GPU infrastructure, Kubernetes, observability, incident response, and platform engineering.</div></div>
+      <div class="card-top"><div class="card-badges"><span class="badge badge-current">NVIDIA</span><span class="badge badge-new">AI Runtime</span></div><div class="card-title">Senior Staff Site Reliability Engineer</div><div class="card-date">August 2026 · 2 pages (A4)</div><div class="card-desc">AI runtime reliability, GPU infrastructure, Kubernetes, observability, incident response, and platform engineering.</div></div>
       <div class="card-footer"><span class="card-link">View &amp; Print →</span><span class="card-format">HTML → PDF</span></div>
     </a>
     <a class="resume-card featured" href="/resume/targeted/openai-model-deployment-london/">
       <div class="card-preview"><div class="preview-lines"><div class="pl name"></div><div class="pl title"></div><div class="pl short"></div><div class="pl"></div><div class="pl"></div><div class="pl short"></div></div></div>
-      <div class="card-top"><div class="card-badges"><span class="badge badge-current">OpenAI</span><span class="badge badge-new">London</span></div><div class="card-title">Software Engineer, Model Deployment</div><div class="card-date">August 2026 · 1 page (A4)</div><div class="card-desc">Model deployment, inference infrastructure, distributed systems, reliability, observability, and production operations.</div></div>
+      <div class="card-top"><div class="card-badges"><span class="badge badge-current">OpenAI</span><span class="badge badge-new">London</span></div><div class="card-title">Software Engineer, Model Deployment</div><div class="card-date">August 2026 · 2 pages (A4)</div><div class="card-desc">Model deployment, inference infrastructure, distributed systems, reliability, observability, and production operations.</div></div>
       <div class="card-footer"><span class="card-link">View &amp; Print →</span><span class="card-format">HTML → PDF</span></div>
     </a>
     <a class="resume-card featured" href="/resume/targeted/perplexity-model-platform/">
       <div class="card-preview"><div class="preview-lines"><div class="pl name"></div><div class="pl title"></div><div class="pl short"></div><div class="pl"></div><div class="pl"></div><div class="pl short"></div></div></div>
-      <div class="card-top"><div class="card-badges"><span class="badge badge-current">Perplexity</span><span class="badge badge-new">Model Platform</span></div><div class="card-title">Software Engineer, Model Platform</div><div class="card-date">August 2026 · 1 page (A4)</div><div class="card-desc">LLM platform engineering, model serving, distributed systems, Kubernetes, observability, and performance.</div></div>
+      <div class="card-top"><div class="card-badges"><span class="badge badge-current">Perplexity</span><span class="badge badge-new">Model Platform</span></div><div class="card-title">Software Engineer, Model Platform</div><div class="card-date">August 2026 · 2 pages (A4)</div><div class="card-desc">LLM platform engineering, model serving, distributed systems, Kubernetes, observability, and performance.</div></div>
       <div class="card-footer"><span class="card-link">View &amp; Print →</span><span class="card-format">HTML → PDF</span></div>
     </a>
     <a class="resume-card featured" href="/resume/targeted/scale-ai-serving-platform/">
       <div class="card-preview"><div class="preview-lines"><div class="pl name"></div><div class="pl title"></div><div class="pl short"></div><div class="pl"></div><div class="pl"></div><div class="pl short"></div></div></div>
-      <div class="card-top"><div class="card-badges"><span class="badge badge-current">Scale AI</span><span class="badge badge-new">Serving Platform</span></div><div class="card-title">AI Infrastructure Engineer, Serving Platform</div><div class="card-date">August 2026 · 1 page (A4)</div><div class="card-desc">Scalable model serving, GPU infrastructure, Kubernetes, distributed systems, observability, and platform reliability.</div></div>
+      <div class="card-top"><div class="card-badges"><span class="badge badge-current">Scale AI</span><span class="badge badge-new">Serving Platform</span></div><div class="card-title">AI Infrastructure Engineer, Serving Platform</div><div class="card-date">August 2026 · 2 pages (A4)</div><div class="card-desc">Scalable model serving, GPU infrastructure, Kubernetes, distributed systems, observability, and platform reliability.</div></div>
       <div class="card-footer"><span class="card-link">View &amp; Print →</span><span class="card-format">HTML → PDF</span></div>
     </a>
 
@@ -1409,7 +1416,7 @@ footer a{color:var(--indigo);text-decoration:none}
 
         <a class="resume-card featured" href="/resume/targeted/multibank-senior-mle/">
           <div class="card-preview"><div class="preview-lines"><div class="pl name"></div><div class="pl title"></div><div class="pl short"></div><div class="pl"></div><div class="pl"></div><div class="pl short"></div></div></div>
-          <div class="card-top"><div class="card-badges"><span class="badge badge-current">MultiBank</span><span class="badge badge-new">Dubai</span></div><div class="card-title">Senior Machine Learning Engineer</div><div class="card-date">24 August 2026 · 1 page (A4)</div><div class="card-desc">Production ML, model training and serving, MLOps, Kubernetes, monitoring, and technical mentoring.</div></div>
+          <div class="card-top"><div class="card-badges"><span class="badge badge-current">MultiBank</span><span class="badge badge-new">Dubai</span></div><div class="card-title">Senior Machine Learning Engineer</div><div class="card-date">24 August 2026 · 2 pages (A4)</div><div class="card-desc">Production ML, model training and serving, MLOps, Kubernetes, monitoring, and technical mentoring.</div></div>
           <div class="card-footer"><span class="card-link">View &amp; Print →</span><span class="card-format">HTML → PDF</span></div>
         </a>
 
@@ -1489,7 +1496,7 @@ footer a{color:var(--indigo);text-decoration:none}
         </div>
         <div class="card-title">Salient — AI/ML Engineer, Doha</div>
         <div class="card-date">17 August 2026 · 2 pages (A4)</div>
-        <div class="card-desc">Tailored for the Doha AI/ML mandate: production model delivery from data pipelines to APIs and operations, Python and deep learning, Kubernetes, cloud and GPU infrastructure, stakeholder delivery, and relocation readiness.</div>
+        <div class="card-desc">Production model delivery from data pipelines to APIs and operations, Python and deep learning, Kubernetes, cloud and GPU infrastructure, and stakeholder delivery.</div>
       </div>
       <div class="card-footer">
         <span class="card-link">View &amp; Print <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
@@ -1516,7 +1523,7 @@ footer a{color:var(--indigo);text-decoration:none}
         </div>
         <div class="card-title">La Fosse — Principal AI Engineer</div>
         <div class="card-date">17 August 2026 · 2 pages (A4)</div>
-        <div class="card-desc">Tailored for a principal-level AI mandate: production AI/ML architecture, GenAI infrastructure, full model lifecycle, cloud and GPU platforms, consulting delivery, platform standards, and senior technical leadership.</div>
+        <div class="card-desc">Production AI/ML architecture, GenAI infrastructure, full model lifecycle, cloud and GPU platforms, consulting delivery, platform standards, and senior technical leadership.</div>
       </div>
       <div class="card-footer">
         <span class="card-link">View &amp; Print <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
@@ -1569,7 +1576,7 @@ footer a{color:var(--indigo);text-decoration:none}
         </div>
         <div class="card-title">Google — Staff Software Engineer, AI/ML GenAI, Google Ads</div>
         <div class="card-date">12 August 2026 · 2 pages (A4)</div>
-        <div class="card-desc">Tailored for Google's Staff AI/ML role: Python, GenAI and LLM design, model evaluation and deployment, production ML infrastructure, distributed systems, software architecture, and technical leadership.</div>
+        <div class="card-desc">Python, GenAI and LLM design, model evaluation and deployment, production ML infrastructure, distributed systems, software architecture, and technical leadership.</div>
       </div>
       <div class="card-footer">
         <span class="card-link">View &amp; Print <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
@@ -1663,6 +1670,7 @@ footer a{color:var(--indigo);text-decoration:none}
 
   <p style="font-size:12px;color:var(--sl500);line-height:1.6;margin:-4px 0 12px">Archive links may require Google access; anonymous download is not currently verified.</p>
 
+  <div class="archive-table-scroll" role="region" aria-label="Previous resume versions" tabindex="0">
   <table class="archive-table">
     <thead>
       <tr>
@@ -1726,6 +1734,7 @@ footer a{color:var(--indigo);text-decoration:none}
       </tr>
     </tbody>
   </table>
+  </div>
 
 </main>
 

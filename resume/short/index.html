@@ -125,22 +125,19 @@ body{font-family:'Inter',-apple-system,sans-serif;background:#dde3ee;color:var(-
         <div class="tags">
           <span class="tag t-dark">vLLM</span><span class="tag t-dark">LoRA/QLoRA</span>
           <span class="tag t-dark">Unsloth</span><span class="tag t-dark">PEFT</span>
-          <span class="tag t-dark">HF Accelerate</span>
-          <span class="tag t-dark">Self-hosted LLM Ops</span>
-          <span class="tag t-dark">RAG</span><span class="tag t-dark">LLM Eval</span>
+          <span class="tag t-dark">Transformers</span>
+          <span class="tag t-dark">Self-hosted LLM Serving</span><span class="tag t-dark">LLM Eval</span>
         </div>
       </div>
 
       <div class="l-section">
         <div class="l-heading">ML / DL / GPU</div>
         <div class="tags">
+          <span class="tag t-light">XGBoost</span><span class="tag t-light">Autoencoders</span>
           <span class="tag t-light">PyTorch</span><span class="tag t-light">TensorFlow</span>
-          <span class="tag t-light">RAPIDS (cuDF/CuPy)</span>
-          <span class="tag t-light">CUDA</span>
-          <span class="tag t-light">NVIDIA Morpheus</span>
-          <span class="tag t-light">Scikit-learn</span>
-          <span class="tag t-light">CV &amp; NLP</span>
-          <span class="tag t-light">Anomaly Detection</span>
+          <span class="tag t-light">CUDA</span><span class="tag t-light">RAPIDS cuDF/CuPy</span>
+          <span class="tag t-light">NVIDIA Morpheus</span><span class="tag t-light">Computer Vision</span>
+          <span class="tag t-light">Time-Series</span><span class="tag t-light">Google OR-Tools</span>
         </div>
       </div>
 
@@ -148,12 +145,12 @@ body{font-family:'Inter',-apple-system,sans-serif;background:#dde3ee;color:var(-
         <div class="l-heading">MLOps &amp; Cloud</div>
         <div class="tags">
           <span class="tag t-light">GCP Vertex AI</span><span class="tag t-light">GKE</span>
-          <span class="tag t-light">Azure ML</span>
+          <span class="tag t-light">Dataflow / Beam</span><span class="tag t-light">Azure ML</span>
           <span class="tag t-light">Kubernetes</span><span class="tag t-light">Helm</span>
           <span class="tag t-light">Istio</span><span class="tag t-light">Docker</span>
-          <span class="tag t-light">MLflow</span><span class="tag t-light">Kubeflow</span>
+          <span class="tag t-light">Seldon Core</span><span class="tag t-light">ArgoCD</span>
           <span class="tag t-light">Grafana</span><span class="tag t-light">Prometheus</span>
-          <span class="tag t-light">Cloud Build</span><span class="tag t-light">GitHub Actions</span>
+          <span class="tag t-light">Cloud Build</span><span class="tag t-light">GitOps</span>
         </div>
       </div>
 
@@ -163,13 +160,13 @@ body{font-family:'Inter',-apple-system,sans-serif;background:#dde3ee;color:var(-
         <div class="cert"><strong>Microsoft</strong>Azure AI Engineer Associate</div>
         <div class="cert"><strong>Microsoft</strong>Azure Data Scientist Associate</div>
         <div class="cert"><strong>Microsoft</strong>Power BI Data Analyst Associate</div>
-        <div class="cert"><strong>Coursera</strong>Neural Networks &amp; Deep Learning</div>
       </div>
 
       <div class="l-section">
         <div class="l-heading">Education</div>
         <span class="edu-degree">B.E. Electrical &amp; Electronics</span>
         <span class="edu-detail">Andhra University · 2012–2016 · 80%</span>
+        <span class="edu-detail" style="margin-top:7px"><strong>Achievements:</strong> Best Buy Talent Quotient 2026 · Wipro Exceptional rating · EAMCET rank 1,200/320,000</span>
       </div>
 
     </div>
@@ -177,7 +174,7 @@ body{font-family:'Inter',-apple-system,sans-serif;background:#dde3ee;color:var(-
     <div class="right-col">
 
       <div class="summary">
-        <p>10+ years building AI systems end-to-end — from fine-tuning to production traffic. Built a LoRA fine-tuning → vLLM pipeline that <span class="metric">saved $300K</span>, powering fraud detection and personalization at <span class="metric">40k+ transactions/sec</span>. GPU-accelerated cybersecurity ML on <span class="metric">NVIDIA DGX (8×A100)</span> — behavioral anomaly detection over <span class="metric">billion-row RAPIDS datasets</span>, phishing classification at <span class="metric">2× throughput</span>, and abuse-inbox triage at <span class="metric">2× the prior pipeline's case volume</span>, each threat routed to the right security team. Delivered <span class="metric">$2.5M in annual savings</span> via an Azure ML quality-prediction system and optimized last-mile logistics with OR-Tools. Across 10 years and six companies, I've earned the <span class="metric">top performance rating at every one</span>.</p>
+        <p><span class="metric">10+ years</span> building production AI/ML systems end-to-end. At Best Buy I built LoRA fine-tuning and self-hosted vLLM serving that <span class="metric">saves $300K/year</span>. Separately, I productionized retail fraud systems at <span class="metric">40,000+ events/sec</span> under a <span class="metric">200ms SLA</span>. Earlier work includes GPU cybersecurity ML on NVIDIA DGX, Azure ML quality prediction <span class="metric">saving $2.5M/year</span>, OR-Tools optimization, forecasting, and computer vision. I remain hands-on while leading architecture, mentoring engineers, and supporting technical hiring.</p>
       </div>
 
       <div class="r-heading">Experience</div>
@@ -188,9 +185,9 @@ body{font-family:'Inter',-apple-system,sans-serif;background:#dde3ee;color:var(-
           <div class="exp-date">Jul 2025 – Present</div>
         </div>
         <ul class="bullets">
-          <li>Built config-driven <span class="metric">LoRA fine-tuning framework</span> (Unsloth + PEFT, multi-GPU via HF Accelerate → vLLM on GKE with HPA + Istio), <span class="metric">saving $300K</span> via self-hosted open-source LLMs; YAML-driven task addition with zero Python changes.</li>
-          <li>Productionalizing GenAI pipelines on GCP (Vertex AI, GKE, GCS, Cloud Build) for retail search, personalization, fraud detection, and cybersecurity at <span class="metric">40k+ transactions/sec</span>.</li>
-          <li>Established Prometheus/Grafana/GMP PodMonitoring observability for all LLM serving infrastructure; defined AI engineering standards across teams.</li>
+          <li>Built a config-driven <span class="metric">LoRA fine-tuning framework</span> with Unsloth and PEFT, single- and multi-GPU training, and vLLM serving on GKE with HPA and Istio; self-hosting open-source LLMs <span class="metric">saves $300K/year</span>.</li>
+          <li>Productionized fraud inference on GCP using Apache Beam, Dataflow, Vertex AI, GKE, Helm, and Seldon Core at <span class="metric">40,000+ events/sec</span> under a <span class="metric">200ms SLA</span>.</li>
+          <li>Lead architecture, delivery standards, and Prometheus/Grafana observability; helped scale the India AI hub through <span class="metric">300+ résumé screens</span>, <span class="metric">50+ interviews</span>, and mentoring.</li>
         </ul>
       </div>
 
@@ -201,17 +198,17 @@ body{font-family:'Inter',-apple-system,sans-serif;background:#dde3ee;color:var(-
         </div>
         <ul class="bullets">
           <li>Built behavioral anomaly detection on <span class="metric">NVIDIA DGX (8×A100)</span> with <span class="metric">NVIDIA Morpheus</span> — trained unsupervised autoencoder models per AWS account/user/service to fingerprint normal activity and surface threats in real time; billion-row log datasets per training run.</li>
-          <li>Built phishing detection (NVIDIA Morpheus) at <span class="metric">2,400 emails/sec (2× throughput)</span> and automated abuse-inbox triage handling <span class="metric">2× the prior pipeline's case volume</span>, auto-routing each threat to the right team; designed <span class="metric">RAPIDS (cuDF/CuPy)</span> GPU feature engineering across all cybersecurity workloads.</li>
+          <li>Built phishing detection at <span class="metric">2,400 emails/sec (2× throughput)</span>; led ML/MLOps engineers across cybersecurity workloads, designed <span class="metric">RAPIDS (cuDF/CuPy)</span> pipelines, mentored team members, and coordinated client/NVIDIA delivery.</li>
         </ul>
       </div>
 
       <div class="exp-item">
         <div class="exp-row">
-          <div><div class="exp-role">Application Dev Team Lead — Data Science / Azure ML</div><span class="exp-company">Accenture</span></div>
-          <div class="exp-date">May 2021 – Aug 2023</div>
+          <div><div class="exp-role">Application Dev Team Lead — Data Science / Azure ML</div><span class="exp-company">Accenture &nbsp;·&nbsp; promoted from Senior Analyst</span></div>
+          <div class="exp-date">May 2021 – Sep 2023</div>
         </div>
         <ul class="bullets">
-          <li>Azure ML quality prediction pipeline (BamaGruppen, Norway) — <span class="metric">$2.5M saved, 130 → 160 inspected/day, +17% detection</span>; OR-Tools Vehicle Routing optimization with significant annual logistics cost savings; supply chain hub simulation framework.</li>
+          <li>Built an Azure ML quality-prediction pipeline — <span class="metric">$2.5M saved, 130 → 160 inspected/day, +17% detection</span> — plus OR-Tools routing and supply-chain simulation; led cross-functional delivery and mentored junior data scientists.</li>
         </ul>
       </div>
 
