@@ -95,6 +95,7 @@ body{font-family:'Inter',-apple-system,sans-serif;background:#dde3ee;color:var(-
 
 @media print{
   body{background:white}
+  .skill-group{break-inside:avoid}
   .print-bar{display:none!important}
   .resume{width:100%;margin:0;box-shadow:none}
   *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
@@ -141,26 +142,38 @@ body{font-family:'Inter',-apple-system,sans-serif;background:#dde3ee;color:var(-
       <div class="l-section">
         <div class="l-heading">LLM &amp; GenAI</div>
         <div class="tags">
-          <span class="tag t-dark">vLLM</span><span class="tag t-dark">Unsloth</span>
-          <span class="tag t-dark">LoRA / QLoRA</span><span class="tag t-dark">PEFT</span>
-          <span class="tag t-dark">Transformers</span>
-          <span class="tag t-dark">Self-hosted LLM Serving</span>
+          <span class="tag t-dark">LLM Fine-tuning</span><span class="tag t-dark">LoRA / QLoRA</span>
+          <span class="tag t-dark">vLLM Serving</span>
+          <span class="tag t-dark">Self-hosted LLMs</span>
+          <span class="tag t-dark">Unsloth</span>
+          <span class="tag t-dark">HF Transformers / PEFT</span>
+          <span class="tag t-dark">Multi-GPU Training</span><span class="tag t-dark">Accelerate</span>
+          <span class="tag t-dark">Quantization (4/8-bit)</span>
           <span class="tag t-dark">LLM Evaluation</span>
+          <span class="tag t-dark">LLMOps</span>
+          <span class="tag t-dark">KV-cache · PagedAttention</span>
         </div>
       </div>
 
       <div class="l-section">
         <div class="l-heading">ML &amp; Deep Learning</div>
         <div class="tags">
-          <span class="tag t-light">XGBoost</span><span class="tag t-light">Autoencoders</span>
-          <span class="tag t-light">PyTorch</span><span class="tag t-light">TensorFlow</span>
-          <span class="tag t-light">Keras</span><span class="tag t-light">DenseNet</span>
-          <span class="tag t-light">Logistic Regression</span>
-          <span class="tag t-light">Computer Vision</span>
-          <span class="tag t-light">Time-Series Forecasting</span>
-          <span class="tag t-light">Behavioral Anomaly Detection</span>
           <span class="tag t-light">CUDA</span><span class="tag t-light">RAPIDS cuDF / CuPy</span>
           <span class="tag t-light">NVIDIA Morpheus</span>
+          <span class="tag t-light">XGBoost</span><span class="tag t-light">Autoencoders</span>
+          <span class="tag t-light">Behavioral Anomaly Detection</span>
+          <span class="tag t-light">PyTorch</span><span class="tag t-light">TensorFlow</span>
+          <span class="tag t-light">Keras</span>
+          <span class="tag t-light">Computer Vision</span>
+          <span class="tag t-light">DenseNet</span>
+          <span class="tag t-light">Transfer Learning</span>
+          <span class="tag t-light">Distributed Model Training</span>
+          <span class="tag t-light">TensorFlow Serving</span>
+          <span class="tag t-light">Time-Series Forecasting</span>
+          <span class="tag t-light">Feature Engineering</span>
+          
+          
+          <span class="tag t-light">Logistic Regression</span>
         </div>
         <div class="skill-group">
           <span class="skill-label">Optimisation &amp; Simulation</span>
@@ -179,9 +192,15 @@ body{font-family:'Inter',-apple-system,sans-serif;background:#dde3ee;color:var(-
         <div class="skill-group">
           <span class="skill-label">Cloud &amp; Orchestration</span>
           <div class="tags">
-            <span class="tag t-light">GCP Vertex AI</span>
-            <span class="tag t-light">GKE</span><span class="tag t-light">Dataflow / Apache Beam</span>
-            <span class="tag t-light">Pub/Sub</span><span class="tag t-light">Azure ML Studio</span>
+            <span class="tag t-light">Google Cloud Platform</span>
+            <span class="tag t-light">Microsoft Azure</span>
+            <span class="tag t-light">GKE</span>
+            <span class="tag t-light">Dataflow / Apache Beam</span>
+            <span class="tag t-light">Vertex AI</span><span class="tag t-light">Feature Store</span>
+            <span class="tag t-light">Stream Processing</span>
+            <span class="tag t-light">Pub/Sub</span>
+            <span class="tag t-light">GCS · Artifact Registry</span>
+            <span class="tag t-light">Azure ML Studio</span>
             <span class="tag t-light">Azure DevOps</span>
           </div>
         </div>
@@ -198,6 +217,7 @@ body{font-family:'Inter',-apple-system,sans-serif;background:#dde3ee;color:var(-
           <span class="skill-label">Observability &amp; CI/CD</span>
           <div class="tags">
             <span class="tag t-light">Grafana</span><span class="tag t-light">Prometheus</span>
+            <span class="tag t-light">MLflow</span>
             <span class="tag t-light">Model Monitoring</span><span class="tag t-light">CI/CD</span>
             <span class="tag t-light">GitOps</span>
           </div>
@@ -208,8 +228,11 @@ body{font-family:'Inter',-apple-system,sans-serif;background:#dde3ee;color:var(-
         <div class="l-heading">Languages &amp; Data</div>
         <div class="tags">
           <span class="tag t-light">Python</span><span class="tag t-light">SQL</span>
-          <span class="tag t-light">Pandas</span><span class="tag t-light">MS SQL Server</span>
+          <span class="tag t-light">Pandas</span><span class="tag t-light">NumPy</span>
+          <span class="tag t-light">MS SQL Server</span>
           <span class="tag t-light">Power BI</span>
+          <span class="tag t-light">Linux &amp; Shell Scripting</span>
+          <span class="tag t-light">Git</span>
         </div>
       </div>
 
@@ -227,10 +250,28 @@ body{font-family:'Inter',-apple-system,sans-serif;background:#dde3ee;color:var(-
         <span class="edu-degree">B.E. Electrical &amp; Electronics</span>
         <span class="edu-detail">Andhra University, Visakhapatnam</span>
         <span class="edu-detail">2012 – 2016 &nbsp;·&nbsp; 80%</span>
-        <span class="skill-label" style="margin-top:10px">Achievements</span>
-        <span class="edu-detail">15 honors and awards across Best Buy, Wipro, Accenture, and Infosys.</span>
-        <span class="edu-detail">Best Buy Talent Quotient 2026 &nbsp;·&nbsp; Wipro Exceptional rating.</span>
-        <span class="edu-detail">EAMCET rank 1,200 of 320,000 candidates.</span>
+        <span class="edu-detail" style="margin-top:6px">EAMCET rank 1,200 of 320,000 candidates.</span>
+      </div>
+
+      <div class="l-section">
+        <div class="l-heading">Honors &amp; Awards</div>
+        <div class="cert"><span class="cert-org">Best Buy — Talent Quotient 2026</span><span class="cert-name">Fraud-score coverage +20% · $300K LLM savings</span></div>
+        <div class="cert"><span class="cert-org">Best Buy — AML Hall of Fame 2024</span><span class="cert-name">Above &amp; Beyond recognition</span></div>
+        <div class="cert"><span class="cert-org">Wipro — Rating 4 (Exceptional)</span><span class="cert-name">Top appraisal band, FY 2024–25</span></div>
+        <div class="cert"><span class="cert-org">Wipro — 6 further awards</span><span class="cert-name">Above &amp; Beyond · Pinnacle · Being Responsive ×3 (2024–25)</span></div>
+        <div class="cert"><span class="cert-org">Accenture</span><span class="cert-name">Delivery Excellence · Kudos ×2</span></div>
+        <div class="cert"><span class="cert-org">Infosys</span><span class="cert-name">OUTSTANDING project rating (2018) · Insta Award ×2</span></div>
+      </div>
+
+      <div class="l-section">
+        <div class="l-heading">Domain &amp; Client Breadth</div>
+        <span class="edu-detail">Retail &amp; e-commerce &nbsp;·&nbsp; Cybersecurity &nbsp;·&nbsp; Supply chain &amp; logistics &nbsp;·&nbsp; Semiconductor manufacturing &nbsp;·&nbsp; Market intelligence (15+ verticals) &nbsp;·&nbsp; Insurance.</span>
+        <span class="edu-detail" style="margin-top:6px">Clients across the US, Norway, South Korea, and the UK.</span>
+      </div>
+
+      <div class="l-section">
+        <div class="l-heading">Leadership &amp; Delivery</div>
+        <span class="edu-detail">ML system architecture &nbsp;·&nbsp; Team leadership &amp; mentoring &nbsp;·&nbsp; Technical hiring &nbsp;·&nbsp; Cross-functional delivery &nbsp;·&nbsp; Stakeholder management.</span>
       </div>
 
     </div>
