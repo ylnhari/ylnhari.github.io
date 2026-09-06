@@ -8,6 +8,10 @@ This is a public static portfolio and resume site. A push to `main` deploys it t
 - Verify internal links, asset paths, responsive layout, and public-facing metadata after site changes.
 - Do not commit, push, or trigger publication unless explicitly requested.
 
+## Gates
+
+- `python scripts/check_links.py` — fails if any internal href/asset path doesn't resolve to a real file; also warns (non-fatal) about tracked files no page links to.
+
 ## Living artifacts
 
 **Re-check weekly; refresh on drift.**
