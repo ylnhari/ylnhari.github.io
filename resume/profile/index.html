@@ -111,7 +111,7 @@ main{max-width:860px;margin:0 auto;padding:32px 24px 80px}
 .skill-tag.hi{background:var(--in50);color:var(--in700);border-color:var(--in200)}
 
 /* PROJECTS */
-.proj-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(350px,1fr));gap:14px}
+.proj-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(350px,1fr));gap:14px;align-items:start}
 .proj-card{border:1px solid var(--sl200);border-radius:10px;padding:16px 18px;background:var(--sl50);transition:box-shadow .2s,transform .15s}
 .proj-card:hover{box-shadow:0 5px 20px rgba(15,23,42,.09);transform:translateY(-2px);background:white}
 .proj-head{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:6px}
@@ -120,6 +120,20 @@ main{max-width:860px;margin:0 auto;padding:32px 24px 80px}
 .proj-desc{font-size:13px;color:var(--sl600);line-height:1.6;margin-bottom:10px}
 .proj-stack{display:flex;flex-wrap:wrap;gap:5px}
 .proj-tag{font-size:10.5px;color:var(--sl500);background:var(--sl100);border:1px solid var(--sl200);padding:2px 7px;border-radius:8px}
+.proj-controls{display:flex;justify-content:flex-end;gap:8px;margin:-4px 0 14px;flex-wrap:wrap}
+.proj-control{appearance:none;border:1px solid var(--in200);border-radius:8px;background:white;color:var(--in700);font:600 11.5px/1 'Inter',sans-serif;padding:8px 11px;cursor:pointer}
+.proj-control:hover{background:var(--in50);border-color:var(--indigo)}
+.proj-control:focus-visible,.proj-full>summary:focus-visible{outline:3px solid rgba(79,70,229,.24);outline-offset:2px}
+.proj-full{margin-top:12px;border-top:1px solid var(--sl200);padding-top:10px}
+.proj-full>summary{display:flex;align-items:center;justify-content:space-between;gap:10px;list-style:none;cursor:pointer;color:var(--in700);font-size:11.5px;font-weight:700;line-height:1.4}
+.proj-full>summary::-webkit-details-marker{display:none}
+.proj-full>summary::after{content:'+';display:grid;place-items:center;width:20px;height:20px;border-radius:50%;background:var(--in50);border:1px solid var(--in200);font-size:15px;line-height:1;flex-shrink:0}
+.proj-full[open]>summary::after{content:'−'}
+.proj-full-hide{display:none}
+.proj-full[open] .proj-full-show{display:none}
+.proj-full[open] .proj-full-hide{display:inline}
+.proj-full-body{margin-top:10px;padding:11px 12px;background:white;border:1px solid var(--sl200);border-radius:8px}
+.proj-full-body p{font-size:12.5px;color:var(--sl700);line-height:1.7;margin:0}
 
 /* CERTIFICATIONS */
 .cert-list{display:flex;flex-direction:column;gap:10px}
@@ -603,14 +617,20 @@ footer a{color:var(--indigo);text-decoration:none}
 </div>
 
 <!-- ── PROJECTS ───────────────────────────────────── -->
-<div class="card">
+<div class="card projects-card" id="projects">
   <div class="card-head">
     <div class="card-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4338ca" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
     <h2 class="card-title">Projects</h2>
   </div>
+  <!-- PROJECT_DETAIL_CONTROLS_START -->
+  <div class="proj-controls" role="group" aria-label="Project detail controls">
+    <button class="proj-control" id="projects-expand-all" type="button">Expand all project details</button>
+    <button class="proj-control" id="projects-collapse-all" type="button">Collapse all project details</button>
+  </div>
+  <!-- PROJECT_DETAIL_CONTROLS_END -->
   <div class="proj-grid">
 
-    <div class="proj-card">
+    <div class="proj-card" data-canonical-project="1">
       <div class="proj-head">
         <div class="proj-name">LLM Fine-tuning Framework</div>
         <span class="proj-emp">Best Buy</span>
@@ -621,9 +641,20 @@ footer a{color:var(--indigo);text-decoration:none}
       <div class="proj-stack">
         <span class="proj-tag">LoRA / QLoRA</span><span class="proj-tag">Unsloth</span><span class="proj-tag">PEFT</span><span class="proj-tag">HF Accelerate</span><span class="proj-tag">vLLM</span><span class="proj-tag">GKE</span><span class="proj-tag">Istio</span><span class="proj-tag">GCS</span><span class="proj-tag">Prometheus/Grafana</span>
       </div>
+      <!-- FULL_PROJECT_DETAILS_START -->
+      <details class="proj-full" data-canonical-project="1">
+        <summary aria-label="Toggle full details for LLM Finetuning Framework">
+          <span class="proj-full-show">Show full LinkedIn project description</span>
+          <span class="proj-full-hide">Hide full LinkedIn project description</span>
+        </summary>
+        <div class="proj-full-body">
+          <p>Designed and built a config-driven framework for LoRA adapter fine-tuning of open-source causal language models, enabling rapid experimentation and production deployment of fine-tuned LLMs for classification, information extraction, and free-form generation tasks. Implemented Solution: Training Layer: Dual-backend training engine supporting Unsloth (~2× faster, 60–80% less VRAM via QLoRA) and HuggingFace PEFT/Transformers. Handles single-GPU and distributed multi-GPU runs via Accelerate with automatic backend selection from config. Inference Layer: Adapter artifacts are standard PEFT format, hot-loadable into a vLLM OpenAI-compatible server alongside a frozen base model — no separate deployment per fine-tuned model. Containerised serving via Docker + Kubernetes (GKE) with HPA autoscaling and Istio routing. MLOps Pipeline: End-to-end artefact lifecycle — model resolution (local HF cache → GCS → HF Hub), post-training evaluation, and GCS upload of adapter weights and metrics. Responsibilities: Framework Architecture: Zero-Python task addition via YAML config + prompt file + CSV dataset — decoupling experimentation from engineering. Multi-task Training: Single adapter trained across multiple tasks simultaneously with shared backbone. Evaluation &amp; Observability: Automated post-training evaluation (accuracy, confusion matrix, MSE) with structured JSON results and vLLM serve command generation. Infrastructure: GCS model store integration, Kubernetes manifests with PVC model caching, GMP PodMonitoring, and Prometheus/Grafana observability. Technologies/Tools Used: Languages/Frameworks: Python, HuggingFace Transformers, PEFT, Unsloth, vLLM, Accelerate. GCP Ecosystem: GCS, GKE, Artifact Registry, Cloud Build, CUDA, Nvidia Accelerating Computing, LLM engineering, LLMOps Orchestration &amp; DevOps: Docker, Kubernetes, Helm, Istio, Prometheus, Grafana.</p>
+        </div>
+      </details>
+      <!-- FULL_PROJECT_DETAILS_END -->
     </div>
 
-    <div class="proj-card">
+    <div class="proj-card" data-canonical-project="2">
       <div class="proj-head">
         <div class="proj-name">Retail Fraud Detection &amp; Prevention Ecosystem</div>
         <span class="proj-emp">Best Buy</span>
@@ -634,9 +665,20 @@ footer a{color:var(--indigo);text-decoration:none}
       <div class="proj-stack">
         <span class="proj-tag">Apache Beam</span><span class="proj-tag">Dataflow</span><span class="proj-tag">Vertex AI</span><span class="proj-tag">Seldon Core</span><span class="proj-tag">XGBoost</span><span class="proj-tag">GKE</span><span class="proj-tag">ArgoCD</span><span class="proj-tag">Pub/Sub</span><span class="proj-tag">KCC</span>
       </div>
+      <!-- FULL_PROJECT_DETAILS_START -->
+      <details class="proj-full" data-canonical-project="2">
+        <summary aria-label="Toggle full details for Retail Fraud Detection &amp; Prevention Ecosystem">
+          <span class="proj-full-show">Show full LinkedIn project description</span>
+          <span class="proj-full-hide">Hide full LinkedIn project description</span>
+        </summary>
+        <div class="proj-full-body">
+          <p>Architected a high-scale fraud detection ecosystem for a retail giant. The system intercepts threats across the fulfilment journey—from payment to refund/reship—by analysing real-time behavioural signals, clickstream, and historical patterns. Implemented Solution: 1. Streaming Engine: Developed Apache Beam pipelines on GCP Dataflow processing 40k events/sec at peak. Transforms raw interactions into dynamic features for Vertex AI Feature Store. 2. Inference Layer: Real time endpoints on GKE. Maintains a 200ms SLA for real-time fraud scoring. 3. Training Layer: Continued training using Vertex AI Pipelines. Responsibilities: - ML Productionalization: Transitioned validated XGBoost models to production via custom inference scripts, Helm charts for scaling, and Vertex AI Model Registry. - Infrastructure &amp; GitOps: Automated the provisioning of GCP resources (Pub/Sub, Buckets, Dataflow) using Google KCC (Kubernetes Cloud Configurator). Implemented a GitOps workflow where Cloud Build and ArgoCD handle seamless deployment transitions. - Custom MLOps Portal: Used a bespoke MLOps platform for experiment tracking and model versioning. - System Resiliency &amp; Security: Secured inference endpoints using JWT authentication and conducted rigorous load testing via Cloud Functions to ensure stability under peak retail loads. - Monitoring &amp; Observability: Configured Prometheus and Grafana dashboards to monitor model performance and system health, utilising Google Cloud Monitoring for real-time alerting via Slack and email. Technologies/Tools Used: Languages/Frameworks: Python, Apache Beam (Java/Python SDK), Seldon Core. GCP Ecosystem: Dataflow, Vertex AI (Feature Store/Registry), Pub/Sub, GKE, Cloud Build, KCC. Orchestration &amp; DevOps: ArgoCD, Helm, GitOps, Prometheus, Grafana, JWT. Skills: MLOps · Stream Processing · Google Cloud Platform (GCP) · Distributed Systems · Fraud Detection</p>
+        </div>
+      </details>
+      <!-- FULL_PROJECT_DETAILS_END -->
     </div>
 
-    <div class="proj-card">
+    <div class="proj-card" data-canonical-project="3">
       <div class="proj-head">
         <div class="proj-name">Brand Infringement — Abuse Inbox Analysis</div>
         <span class="proj-emp">Wipro</span>
@@ -647,9 +689,20 @@ footer a{color:var(--indigo);text-decoration:none}
       <div class="proj-stack">
         <span class="proj-tag">Python</span><span class="proj-tag">cuDF (GPU)</span><span class="proj-tag">pytesseract / OCR</span><span class="proj-tag">Outlook API SDK</span><span class="proj-tag">ML Classification</span>
       </div>
+      <!-- FULL_PROJECT_DETAILS_START -->
+      <details class="proj-full" data-canonical-project="3">
+        <summary aria-label="Toggle full details for Brand infringement : Abuse Inbox Analysis">
+          <span class="proj-full-show">Show full LinkedIn project description</span>
+          <span class="proj-full-hide">Hide full LinkedIn project description</span>
+        </summary>
+        <div class="proj-full-body">
+          <p>Cyber Security has asked us to look into the &quot;abuse&quot; mailbox. The goal is to help them more efficiently review and action on critical threats reported by customers and thereby reduce brand infringement. Implemented solution: There are two parts to the solution that is in active use and also being parallelly developed. 1. Email Routing Structure - primary goal of this part of the solution is to classify the types of emails being sent to the Abuse inbox and then reduce noise by removing junk and forwarding messages to the appropriate action teams/inboxes using ML classification algorithms. 2. Extract useful information from the forwarded mails such as scammer&#39;s mail addresses and telephone numbers using optical character recognition and regular expressions and forward the details to the security team who work alongside the mail and telecom partners to take necessary actions such a blocking the number and stopping scammers use their services thereby reducing Brand infringement. Responsibilities: - Engineering pipelines via python scripts to extract necessary information such as scammer&#39;s mail id&#39;s and telephone numbers and notify all stakeholders ( mail partners such as Google, iCloud etc. , Cyber security threat response team, Phishing team etc.) - .Extracting telephone numbers from emails requires meticulous attention to detail and the establishment of numerous rules. This is because email bodies can come in various formats such as text, HTML, and images, while attachments may have different extensions like PDF, PNG, and JPEG. Additionally, scammers often employ techniques such as using different colors for different digits in the numbers and incorporating white spaces or images that resemble text within the email body. Technologies/Tools Used: - python. - python open source libraries such as cudf for GPU acceleration, pytesseract for OCR, Outlook API SDK to access and manipulate outlook mailbox.</p>
+        </div>
+      </details>
+      <!-- FULL_PROJECT_DETAILS_END -->
     </div>
 
-    <div class="proj-card">
+    <div class="proj-card" data-canonical-project="4">
       <div class="proj-head">
         <div class="proj-name">AWS Account Digital Fingerprinting</div>
         <span class="proj-emp">Wipro</span>
@@ -660,9 +713,20 @@ footer a{color:var(--indigo);text-decoration:none}
       <div class="proj-stack">
         <span class="proj-tag">NVIDIA Morpheus</span><span class="proj-tag">NVIDIA DGX (8×A100)</span><span class="proj-tag">Autoencoders</span><span class="proj-tag">cuDF / RAPIDS</span><span class="proj-tag">MLflow</span><span class="proj-tag">Grafana</span>
       </div>
+      <!-- FULL_PROJECT_DETAILS_START -->
+      <details class="proj-full" data-canonical-project="4">
+        <summary aria-label="Toggle full details for AWS Account DigitalFingerprint">
+          <span class="proj-full-show">Show full LinkedIn project description</span>
+          <span class="proj-full-hide">Hide full LinkedIn project description</span>
+        </summary>
+        <div class="proj-full-body">
+          <p>Cyber Security has asked for assistance parsing AWS security logs with the intention of profiling AWS account activity to better identify anomalous/nefarious activity. The goal is to utilize the new Nvidia DGX and Morpheus to perform digital fingerprinting for known AWS accounts and activity. Implemented Solution: Every account, user, service, and machine has a digital fingerprint that represents the typical actions performed and not performed over a given period of time. Understanding every entity&#39;s day-to-day, moment-by-moment work helps us identify anomalous behavior and uncover potential threats in the environment​. So by building digital fingerprint models for our AWS accounts by making use of training pipelines and using inference pipelines to monitor and detect any malicious activity (deviation from the finger print) happening in our AWS accounts. To construct this digital fingerprint model, we will be training unsupervised behavioral models (Auto encoders) for each account to monitor their behavior. These models are continuously updated and retrained over time​, and alerts are triggered when deviations from normality occur for any account​. Responsibilities: - Engineered training and inference pipelines using NVIDIA Morpheus, a Cybersecurity AI application framework. - Leveraged the parallelization capabilities of GPU-accelerated libraries on an NVIDIA DGX server equipped with a terabyte of RAM and 8 A100 GPUs. - Designing and operating these pipelines for each AWS account involves handling large-scale data. For example, 20 days&#39; worth of data across 3 AWS accounts can amount to more than billion rows. Training and inferring autoencoder models with such extensive datasets and high feature cardinality is a challenging task. - Predictions were served to cyber security team using Grafana. Technologies/Tools Used: - NVIDIA Morpheus AI Framework - GPU accelerated libs such as cudf. - ML-Flow for model management. - Grafana for serving.</p>
+        </div>
+      </details>
+      <!-- FULL_PROJECT_DETAILS_END -->
     </div>
 
-    <div class="proj-card">
+    <div class="proj-card" data-canonical-project="5">
       <div class="proj-head">
         <div class="proj-name">Proofpoint Phishing Mail Detection</div>
         <span class="proj-emp">Wipro</span>
@@ -673,9 +737,20 @@ footer a{color:var(--indigo);text-decoration:none}
       <div class="proj-stack">
         <span class="proj-tag">NVIDIA Morpheus</span><span class="proj-tag">cuDF / cuPy</span><span class="proj-tag">Microsoft Sentinel</span><span class="proj-tag">Elastic Search</span><span class="proj-tag">GPU Pipelines</span>
       </div>
+      <!-- FULL_PROJECT_DETAILS_START -->
+      <details class="proj-full" data-canonical-project="5">
+        <summary aria-label="Toggle full details for Proofpoint phishing mail detection">
+          <span class="proj-full-show">Show full LinkedIn project description</span>
+          <span class="proj-full-hide">Hide full LinkedIn project description</span>
+        </summary>
+        <div class="proj-full-body">
+          <p>Developed sophisticated training and inference pipelines to score phishing email probability and analyze trends in incoming messages. The project aimed to augment existing Proofpoint detection systems, targeting phishing attempts that bypassed initial filters and accelerating the quarantine response time. Detecting such mails will help security team to take appropriate actions such as removing the mail from the inbox , asking the employee stop to interacting with the mail or initiate an investigation. Implemented Solution: Data originally in Elastic Search was later transitioned to Microsoft Sentinel. The Morpheus (Nvidia&#39;s Cyber security pipeline framework ) pipelines consist of several stages. The initial step in the inference pipeline is the raw data download to a GPU server, which operates in a loop for a time delta. Subsequent steps include pre-processing, featurization, inference, and alerting the security team based on predictions. The training pipeline, on the other hand, involves downloading or using cached training data on the server, combining this data with feedback from the security team (based on model performance), followed by pre-processing, featurization, and model saving. Responsibilities: - Engineered training and inference pipelines using NVIDIA Morpheus, a Cybersecurity AI application framework. - Leveraged the parallelization capabilities of GPU-accelerated libraries on an NVIDIA DGX server equipped with a terabyte of RAM and 8 A100 GPUs. - Enhanced message processing speed, achieving a throughput of 2400 emails per second, doubling the pre-existing rate. Technologies/Tools Used: - NVIDIA Morpheus AI Framework - GPU-Accelerated Libraries for Parallel Processing such as cudf, cupy etc.</p>
+        </div>
+      </details>
+      <!-- FULL_PROJECT_DETAILS_END -->
     </div>
 
-    <div class="proj-card">
+    <div class="proj-card" data-canonical-project="6">
       <div class="proj-head">
         <div class="proj-name">Vehicle Routing &amp; Last-Mile Optimization</div>
         <span class="proj-emp">Accenture</span>
@@ -686,9 +761,20 @@ footer a{color:var(--indigo);text-decoration:none}
       <div class="proj-stack">
         <span class="proj-tag">OR-Tools</span><span class="proj-tag">VRP</span><span class="proj-tag">Google Maps API</span><span class="proj-tag">Python</span><span class="proj-tag">Operations Research</span>
       </div>
+      <!-- FULL_PROJECT_DETAILS_START -->
+      <details class="proj-full" data-canonical-project="6">
+        <summary aria-label="Toggle full details for Vehicle Routing Optimization (Last mile in a supply chain management and transportation planning)">
+          <span class="proj-full-show">Show full LinkedIn project description</span>
+          <span class="proj-full-hide">Hide full LinkedIn project description</span>
+        </summary>
+        <div class="proj-full-body">
+          <p>In this project, we focused on optimizing the last mile in supply chain management and transportation planning. The last mile refers to the final leg of the journey, involving the transportation of pallets of goods from a depot to multiple grocery chain stores located across the region using distribution trucks. The existing route planning process was manually adjusted periodically or on an ad hoc basis, considering factors such as demand fluctuations and local weather conditions. Our objective was to explore the feasibility of building or utilizing a model that could generate more optimized routes in terms of time and distance while meeting various constraints such as the number of vehicles used, time intervals for store visits, waiting times at stores, and fulfilling the demand for all stores. Solution Implemented: The problem we aimed to solve falls under the category of the vehicle routing problem, a subcategory of optimization problems. Google&#39;s OR-Tools library provided a specialized module for formulating and solving such problems. Once we solved the problem with initial input parameters and options, we calculated key performance metrics and derived useful interpretations of the results. This allowed us to compare the generated routes with manually planned ones, and the data was saved in Excel files for future reference. We conducted multiple runs with different inputs to analyze the model&#39;s performance. Responsibilities: 1) Designing and implementing the entire solution. Technologies/Tools: The project utilized various technologies and tools, including: Google Maps services for obtaining location coordinates and direction services, Jupyter Notebook for development and analysis, and Python with the OR-Tools library for formulating and solving the vehicle routing problem, GitHub for version control and code management.</p>
+        </div>
+      </details>
+      <!-- FULL_PROJECT_DETAILS_END -->
     </div>
 
-    <div class="proj-card">
+    <div class="proj-card" data-canonical-project="7">
       <div class="proj-head">
         <div class="proj-name">Norsk Oppstrøm — Supply-Chain Simulation</div>
         <span class="proj-emp">Accenture</span>
@@ -699,9 +785,20 @@ footer a{color:var(--indigo);text-decoration:none}
       <div class="proj-stack">
         <span class="proj-tag">Google OR-Tools</span><span class="proj-tag">Azure ML</span><span class="proj-tag">Azure Blob</span><span class="proj-tag">Power BI</span><span class="proj-tag">Python / Jupyter</span>
       </div>
+      <!-- FULL_PROJECT_DETAILS_START -->
+      <details class="proj-full" data-canonical-project="7">
+        <summary aria-label="Toggle full details for Norsk Oppstrom">
+          <span class="proj-full-show">Show full LinkedIn project description</span>
+          <span class="proj-full-hide">Hide full LinkedIn project description</span>
+        </summary>
+        <div class="proj-full-body">
+          <p>In this project, we designed and implemented a simulation framework to model the movement of products from vendors and producers to customers and intermediate warehouses. The framework incorporated an optimization model to optimize the flow of goods across all touchpoints in the supply chain. By utilizing this framework, we tracked and analyzed various key performance indicators (KPIs) such as operational costs, product freshness, and carbon footprint. Through simulations of different scenarios, we gained valuable insights that informed critical business decisions. One notable outcome was the identification of the need for multiple small hubs across the country to optimize product distribution between vendors, customers, and warehouses. We determined the optimal number of hubs and their respective locations, addressing related queries. Responsibilities: As a Data Scientist and MLOPS Engineer in the project, my responsibilities included: 1) Developing a Simulation Framework capable of efficiently processing data, executing the optimization module, and recording relevant KPIs. 2) Building robust pipelines to streamline the integration of simulation results into Power BI for visualization purposes. 3) Managing MLOPS (Machine Learning Operations) operations to ensure the smooth deployment and monitoring of the project. Technologies/Tools: The project utilized various technologies and tools, including: Google OR-Tools for implementing the optimization model within the simulation framework, Power BI for visualizing and analyzing the simulation results, Azure Machine Learning for compute power required, Azure Blob storage for storing and accessing relevant data, Python and Jupyter for developing and executing the simulation framework, GitHub for version control and collaboration within the team.</p>
+        </div>
+      </details>
+      <!-- FULL_PROJECT_DETAILS_END -->
     </div>
 
-    <div class="proj-card">
+    <div class="proj-card" data-canonical-project="8">
       <div class="proj-head">
         <div class="proj-name">Mellom Transport Optimization</div>
         <span class="proj-emp">Accenture</span>
@@ -713,9 +810,20 @@ footer a{color:var(--indigo);text-decoration:none}
         <span class="proj-tag">OR-Tools (MIP)</span><span class="proj-tag">Azure Function Apps</span><span class="proj-tag">Logic Apps</span><span class="proj-tag">Azure DevOps</span><span class="proj-tag">RPA</span><span class="proj-tag">Slack</span>
       </div>
       <div class="proj-links"><a href="https://github.com/bamaml/mellomtransport" target="_blank" rel="noopener">Project repo ↗</a></div>
+      <!-- FULL_PROJECT_DETAILS_START -->
+      <details class="proj-full" data-canonical-project="8">
+        <summary aria-label="Toggle full details for Mellon Transport Optimization for Norway&#39;s largest vegetable and Fruit Distributor.">
+          <span class="proj-full-show">Show full LinkedIn project description</span>
+          <span class="proj-full-hide">Hide full LinkedIn project description</span>
+        </summary>
+        <div class="proj-full-body">
+          <p>Our AIM was focused on minimizing transportation costs while considering all requirements and constraints for daily transport between terminals in a city and distribution centers. The existing planning process, known as &quot;ProductTransport,&quot; was highly manual and performed in Excel done by the SME&#39;s using their own experience. The aim was to optimize the planning process by using AI/ML/Optimization techniques. Implemented solution: We utilized Google&#39;s OR-tools, an optimization research framework, to frame our problem as a MIP Assignment problem. We created variables and constraints to define relationships and an optimization function for the solver to find the optimal solution. The final transport model code was hosted on Azure Cloud&#39;s Function Apps, accessible via API endpoints, and managed by a Logic App routing requests based on location. A scheduled RPA process interacted with the Logic App to receive optimized transport plans. Slack notifications were integrated for stakeholder updates on request statuses. Technologies Utilized: The project involved Azure Cloud technologies such as Function Apps for hosting, Azure DevOps for project management, Python with Google OR-TOOLS for optimization modeling, and GitHub for code versioning and CI/CD. Responsibilities: As an Azure Machine Learning Developer on the team, my responsibilities included: 1) Built an Optimization model which would give a transport plan that planners could use to plan the transport departures every day. 2) Building CI/CD pipelines to automate testing and streamline the deployment of Azure Function Apps, triggered by commits to the GitHub repository (MLOPS). 3) Integrating Slack notifications into the system to notify stakeholders about the status of their requests. 4) Providing technical support and troubleshooting any issues that arose during development and deployment.</p>
+        </div>
+      </details>
+      <!-- FULL_PROJECT_DETAILS_END -->
     </div>
 
-    <div class="proj-card">
+    <div class="proj-card" data-canonical-project="9">
       <div class="proj-head">
         <div class="proj-name">Hub Analytics (Distribution-Hub POC)</div>
         <span class="proj-emp">Accenture</span>
@@ -726,9 +834,20 @@ footer a{color:var(--indigo);text-decoration:none}
       <div class="proj-stack">
         <span class="proj-tag">Python</span><span class="proj-tag">Pandas</span><span class="proj-tag">Azure Cloud</span><span class="proj-tag">Azure DevOps</span><span class="proj-tag">Simulation</span>
       </div>
+      <!-- FULL_PROJECT_DETAILS_START -->
+      <details class="proj-full" data-canonical-project="9">
+        <summary aria-label="Toggle full details for Hub Analytics (Analyzing a potential ​distribution hub at a strategic Location in the Supply Chain System of Norwegian Largest Vegetable Distributor)">
+          <span class="proj-full-show">Show full LinkedIn project description</span>
+          <span class="proj-full-hide">Hide full LinkedIn project description</span>
+        </summary>
+        <div class="proj-full-body">
+          <p>As a Data Scientist, I was involved in a Proof of Concept (POC) focused on analyzing the impact of introducing a distributing center at strategic locations in a logistics network. The objective was to assess whether the introduction of these centers could reduce volumes through main warehouses, resulting in cost savings and the ability to deliver fresh products more efficiently to customers. Technologies Utilized: The project involved utilizing various technologies, including Python, the Pandas library for data manipulation and analysis, Azure Cloud services for data storage and processing, a Slack app for communication and collaboration, and Azure DevOps for project management and version control. Responsibilities: In this role, my responsibilities included: 1) Collecting, cleaning, and preprocessing the raw data provided for the logistics network analysis. 2) Analyzing the data to understand the current flow of goods in the network and identifying areas where the introduction of distributing centers could be beneficial. 3) Designing approaches to simulate real-world scenarios and evaluate the impact of introducing a new hub on the logistics network. 4) Discovering new scenarios or opportunities where the introduction of hubs could bring additional benefits to the logistics network. 5) Deriving insights from the analysis, such as identifying the customers or vendors that could benefit the most from the introduction of a hub. 6) Communicating findings and recommendations effectively to the relevant stakeholders, including presenting results and providing actionable insights. Overall, my role as a Data Scientist involved conducting data analysis, simulation modeling, and iterative collaboration with the team and stakeholders to analyze the impact of introducing distributing centers in the logistics network and derive insights for cost reduction and improved delivery efficiency.</p>
+        </div>
+      </details>
+      <!-- FULL_PROJECT_DETAILS_END -->
     </div>
 
-    <div class="proj-card">
+    <div class="proj-card" data-canonical-project="10">
       <div class="proj-head">
         <div class="proj-name">Product Quality Prediction</div>
         <span class="proj-emp">Accenture · BamaGruppen</span>
@@ -740,9 +859,20 @@ footer a{color:var(--indigo);text-decoration:none}
         <span class="proj-tag">Azure ML Studio</span><span class="proj-tag">Logic Apps</span><span class="proj-tag">Azure Pipelines</span><span class="proj-tag">Azure Storage</span><span class="proj-tag">Python</span>
       </div>
       <div class="proj-links"><a href="https://drive.google.com/file/d/1JZLFRq6xTeIDfWlb5slipLibGdKjZS1K/view" target="_blank" rel="noopener">Project write-up ↗</a></div>
+      <!-- FULL_PROJECT_DETAILS_START -->
+      <details class="proj-full" data-canonical-project="10">
+        <summary aria-label="Toggle full details for Product Quality Prediction for Norway&#39;s largest vegetable and Fruit Distributor.">
+          <span class="proj-full-show">Show full LinkedIn project description</span>
+          <span class="proj-full-hide">Hide full LinkedIn project description</span>
+        </summary>
+        <div class="proj-full-body">
+          <p>As an Azure Machine Learning Engineer, I led a project focused on designing, implementing, and maintaining a machine learning model to predict the quality of goods upon their arrival at the warehouse. The primary objective was to develop a model that could promptly identify low-quality goods upon arrival, allowing the inspection team to prioritize their efforts efficiently. The entire solution was built on the Azure Cloud platform, leveraging Azure Machine Learning Studio, Logic Apps for workflow design, Pipelines for automating retraining, and Azure storage services. Technologies Utilized: The project involved Python for model development, Azure Cloud services for hosting and managing the solution, a Slack app for communication and collaboration, and DevOps for continuous integration and deployment. Responsibilities: my responsibilities included: 1) Designing and implementing retraining strategies (MLOPS) to ensure the model&#39;s optimal performance. 2) Optimizing the machine learning model to enhance its predictive capabilities and efficiency. 3) Presenting the solution to clients, demonstrating its functionalities, and addressing inquiries. Monitoring model performance and identifying opportunities for further enhancements. 4) Working closely with stakeholders to measure and track the impact of the implemented solution. 5) Overseeing the maintenance and ongoing support of the deployed solution. Results: The implemented solution yielded significant improvements and benefits, including: Increase in average trucks inspected per day from 130 to 160, indicating improved inspection efficiency. 17% increase in the detection of low-quality products, enhancing quality control. 20% increase in customer approval, indicating improved customer satisfaction. Achieving an annual cost savings of 2.5 million US dollars through optimized inspections and enhanced identification of low-quality goods.</p>
+        </div>
+      </details>
+      <!-- FULL_PROJECT_DETAILS_END -->
     </div>
 
-    <div class="proj-card">
+    <div class="proj-card" data-canonical-project="11">
       <div class="proj-head">
         <div class="proj-name">Global Forecasting System</div>
         <span class="proj-emp">GD Research</span>
@@ -753,9 +883,20 @@ footer a{color:var(--indigo);text-decoration:none}
       <div class="proj-stack">
         <span class="proj-tag">Time-Series</span><span class="proj-tag">Forecasting</span><span class="proj-tag">Python</span><span class="proj-tag">Multi-Domain ML</span>
       </div>
+      <!-- FULL_PROJECT_DETAILS_START -->
+      <details class="proj-full" data-canonical-project="11">
+        <summary aria-label="Toggle full details for Forecasting Project for UK Based global business intelligence Provider.">
+          <span class="proj-full-show">Show full LinkedIn project description</span>
+          <span class="proj-full-hide">Hide full LinkedIn project description</span>
+        </summary>
+        <div class="proj-full-body">
+          <p>As a Data Scientist, I was involved in building and deploying a forecasting system to predict company-wide data across multiple intelligence centers. These intelligence centers spanned various domains, including Consumer, Oil &amp; Gas, Power, Financial Services, Retail, Technology, Construction, Mining, and more. Technologies Utilized: The project involved utilizing technologies such as Python, Microsoft Excel, and various machine learning packages to develop the forecasting system. Responsibilities: In this role, my responsibilities included: 1) Conducting in-depth data research and analysis to gather insights and understand trends. 2) Generating forecasts and adjusting the forecasts according to various scenarios depending upon various domains such as Market Intelligence, Competitive Insights, Pharmaceuticals, Medical, Consumer, Oil &amp; Gas, Power, Financial Services, Retail, Technology, Construction, Mining, Aerospace, Defense &amp; Security, Telecommunication, Automotive, Travel &amp; Tourism, Channel and Sales Management, Strategic Planning, Innovation and New Product Development, and Marketing, among others.</p>
+        </div>
+      </details>
+      <!-- FULL_PROJECT_DETAILS_END -->
     </div>
 
-    <div class="proj-card">
+    <div class="proj-card" data-canonical-project="12">
       <div class="proj-head">
         <div class="proj-name">Computer Vision — Semiconductor Defect Detection</div>
         <span class="proj-emp">TCS · Amkor</span>
@@ -766,9 +907,20 @@ footer a{color:var(--indigo);text-decoration:none}
       <div class="proj-stack">
         <span class="proj-tag">TensorFlow / Keras</span><span class="proj-tag">DenseNet</span><span class="proj-tag">GCP</span><span class="proj-tag">TF Serving</span><span class="proj-tag">Docker</span><span class="proj-tag">Distributed GPU</span>
       </div>
+      <!-- FULL_PROJECT_DETAILS_START -->
+      <details class="proj-full" data-canonical-project="12">
+        <summary aria-label="Toggle full details for Computer Vision – Defect Classification Project For a South Korea&#39;s Leading Semiconductor Manufacturing Company">
+          <span class="proj-full-show">Show full LinkedIn project description</span>
+          <span class="proj-full-hide">Hide full LinkedIn project description</span>
+        </summary>
+        <div class="proj-full-body">
+          <p>Creating a robust hybrid on-premise/cloud-based computer vision system for multi-class image classification to classify faulty chips in the production line. Implemented Solution: The solution includes creating training and inference pipelines, and utilizing SQL server for data storage and data ingestion pipelines. The training process employs concurrent systems. Raw data is downloaded to a GCP Compute Cluster using multi-processing and multi-threading. The data ingestion pipeline, model training, and model evaluation are designed to run simultaneously. Training a DenseNet model with 1 million images takes about 3 hours. The raw data download involves fetching images for a specific period, converting them to TF records, and storing them on the main node of compute cluster. Data ingestion loads TF records, performs pre-processing, and prepares data batches for training in an epoch using TF datasets, leveraging the CPU. Training occurs in distributed mode across multiple GPUs. Parallel evaluation is a separate job that gather model checkpoints, performs evaluation, and signals when to stop training. Inference is executed via Docker, using the TensorFlow Serving Server. Technologies Utilized: Python, TensorFlow, Data Science Libraries, Keras, Google Cloud Platform for training purposes, Linux Shell Scripting, Docker for inferencing, SQL Server as the database, Linux Server, SVN subversion for version controlling, and PyCharm. Responsibilities: 1) Building the ML training platform for the Semiconductor Defect Detection System using Python, TensorFlow-GPU, and Google Cloud Platform. 2) Led the team in developing the inferencing, database, and data handling sections of the system. 3) Deploying and demonstrating the system at the client&#39;s manufacturing site in South Korea. 4) Conducted training sessions for the client-side team on operating the system effectively.</p>
+        </div>
+      </details>
+      <!-- FULL_PROJECT_DETAILS_END -->
     </div>
 
-    <div class="proj-card">
+    <div class="proj-card" data-canonical-project="13">
       <div class="proj-head">
         <div class="proj-name">Business Insights — Opportunity Win/Lose Prediction</div>
         <span class="proj-emp">Infosys</span>
@@ -779,9 +931,20 @@ footer a{color:var(--indigo);text-decoration:none}
       <div class="proj-stack">
         <span class="proj-tag">Logistic Regression</span><span class="proj-tag">SSIS</span><span class="proj-tag">SSAS Cube</span><span class="proj-tag">SQL Server</span><span class="proj-tag">Power BI</span>
       </div>
+      <!-- FULL_PROJECT_DETAILS_START -->
+      <details class="proj-full" data-canonical-project="13">
+        <summary aria-label="Toggle full details for Business Insights Project for a US Based Multinational Internet Technologies Company (Classification – Logistic regression)">
+          <span class="proj-full-show">Show full LinkedIn project description</span>
+          <span class="proj-full-hide">Hide full LinkedIn project description</span>
+        </summary>
+        <div class="proj-full-body">
+          <p>As a Data Scientist, my role involved developing an Opportunity win/lose Prediction system for the Sales and Marketing team. The purpose of this system was to enable data-driven decision-making by providing predicted probability scores. Roles and Responsibilities: In this project, my responsibilities included: 1) Developing the Opportunity win/lose Prediction system using the classical machine learning algorithm, logistic regression. 2) Creating a data extraction and load system using SQL Server Integration Services (SSIS) for efficient data processing. 3) Integrating the prediction results into a Power BI dashboard. The dashboard utilized an SSAS cube and SQL Server as data sources.</p>
+        </div>
+      </details>
+      <!-- FULL_PROJECT_DETAILS_END -->
     </div>
 
-    <div class="proj-card">
+    <div class="proj-card" data-canonical-project="14">
       <div class="proj-head">
         <div class="proj-name">Automated ID-Card Generation System</div>
         <span class="proj-emp">Infosys</span>
@@ -792,6 +955,17 @@ footer a{color:var(--indigo);text-decoration:none}
       <div class="proj-stack">
         <span class="proj-tag">COBOL</span><span class="proj-tag">JCL</span><span class="proj-tag">DB2</span><span class="proj-tag">VSAM</span><span class="proj-tag">CICS</span>
       </div>
+      <!-- FULL_PROJECT_DETAILS_START -->
+      <details class="proj-full" data-canonical-project="14">
+        <summary aria-label="Toggle full details for Automated ID Card generation System for a leading US health insurance company">
+          <span class="proj-full-show">Show full LinkedIn project description</span>
+          <span class="proj-full-hide">Hide full LinkedIn project description</span>
+        </summary>
+        <div class="proj-full-body">
+          <p>As a Software Engineer, I was involved in a project focused on generating ID cards for new members enrolled under the client&#39;s insurance policies. This project encompassed various tasks, including estimation, impact analysis, design, coding, review, unit testing, and integration testing, following both agile and waterfall methodologies. Technologies Utilized: The project involved utilizing the following technologies: JCL, COBOL, DB2, VSAM, and CICS. Responsibilities: Throughout the project, my roles and responsibilities included: 1) Performing impact analysis to assess the implications of proposed changes. 2) Designing and coding the necessary components for the adjudication projects. 3) Conducting thorough unit testing to ensure the quality and functionality of the implemented features. 4) Participating in integration testing to verify the proper integration of different system components. 5) Assisting in the implementation of the developed solutions. 6) Undertaking support and enhancement tasks post-implementation. 7) Sharing knowledge with team members by providing knowledge transfer (KT) sessions. 8) Organizing various knowledge management events to foster knowledge sharing and collaboration within the team.</p>
+        </div>
+      </details>
+      <!-- FULL_PROJECT_DETAILS_END -->
     </div>
 
   </div>
@@ -1446,6 +1620,23 @@ footer a{color:var(--indigo);text-decoration:none}
       if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); toggle(); }
     });
   });
+
+  var projects = document.querySelector('.projects-card');
+  if(projects){
+    var projectDetails = projects.querySelectorAll('details.proj-full');
+    var expandAll = document.getElementById('projects-expand-all');
+    var collapseAll = document.getElementById('projects-collapse-all');
+    if(expandAll){
+      expandAll.addEventListener('click', function(){
+        projectDetails.forEach(function(detail){ detail.open = true; });
+      });
+    }
+    if(collapseAll){
+      collapseAll.addEventListener('click', function(){
+        projectDetails.forEach(function(detail){ detail.open = false; });
+      });
+    }
+  }
 })();
 </script>
 
