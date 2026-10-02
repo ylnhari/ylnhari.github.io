@@ -1,0 +1,236 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hari YLN - Plain Resume</title><style>/* Generic print styling for a semantic, two-sheet resume document. */
+@page {
+  size: A4;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  color: #000;
+  background: #fff;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 10.5pt;
+  line-height: 12.5pt;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  color: #000;
+  background: #fff;
+  font: 10pt/1.3 Helvetica, Arial, sans-serif;
+}
+
+.toolbar button,
+.toolbar a {
+  display: inline-block;
+  padding: 0.4rem 0.65rem;
+  border: 1px solid #000;
+  border-radius: 0;
+  color: #000;
+  background: #fff;
+  font: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.sheet {
+  position: relative;
+  width: 210mm;
+  height: 297mm;
+  padding: 26pt 34pt 32pt;
+  overflow: hidden;
+  background: #fff;
+  page-break-after: always;
+  break-after: page;
+}
+
+.sheet:last-child {
+  page-break-after: auto;
+  break-after: auto;
+}
+
+.compact-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+  white-space: nowrap;
+}
+
+.compact-header .name {
+  flex: 0 0 auto;
+  margin: 0;
+  font-size: 14pt;
+  font-weight: 700;
+  line-height: 16pt;
+}
+
+.compact-header .contacts {
+  display: flex;
+  flex: 0 1 auto;
+  justify-content: flex-end;
+  gap: 0.55rem;
+  font-size: 8.5pt;
+  line-height: 10pt;
+  white-space: nowrap;
+}
+
+.headline {
+  margin: 2pt 0 0;
+  font-size: 10pt;
+  line-height: 12pt;
+}
+
+.employment-header {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: baseline;
+  gap: 0;
+  width: 100%;
+}
+
+.employment-header .company {
+  font-size: 10pt;
+  font-weight: 700;
+  text-align: left;
+}
+
+.employment-header .title {
+  font-size: 10pt;
+  font-weight: 700;
+  text-align: left;
+}
+
+.employment-header .date {
+  font-size: 9.5pt;
+  font-weight: 700;
+  text-align: right;
+}
+
+.employment-header .metadata {
+  font-size: 9.5pt;
+  line-height: 12pt;
+  text-align: right;
+}
+
+.employment-header > * {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+p.body {
+  margin: 0 0 2pt;
+}
+
+p.small {
+  margin: 0 0 2pt;
+  font-size: 10pt;
+  line-height: 12pt;
+}
+
+p.bullet {
+  margin: 0 0 2pt;
+  padding-left: 10pt;
+  text-indent: -7pt;
+}
+
+p.heading {
+  margin: 4pt 0 0;
+  font-size: 11pt;
+  font-weight: 700;
+  line-height: 13pt;
+  text-align: center;
+}
+
+hr {
+  height: 0;
+  margin: 7pt 0 4pt;
+  border: 0;
+  border-top: 2.5pt solid #000;
+}
+
+.sheet > footer {
+  position: absolute;
+  right: 34pt;
+  bottom: 16pt;
+  font-size: 8pt;
+  line-height: 10pt;
+  text-align: right;
+}
+
+@media screen {
+  body {
+    padding: 0 0 1rem;
+  }
+
+  .sheet {
+    margin: 0 auto 1rem;
+    box-shadow: 0 0 0 1px #bbb;
+  }
+
+}
+
+@media screen and (max-width: 799px) {
+  .sheet {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    padding: 26pt 24pt 32pt;
+    overflow: visible;
+    box-shadow: none;
+  }
+
+  .compact-header {
+    align-items: flex-start;
+    flex-direction: column;
+    white-space: normal;
+  }
+
+  .compact-header .contacts {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    white-space: normal;
+  }
+}
+
+@media print {
+  html,
+  body {
+    width: 210mm;
+    margin: 0;
+    padding: 0;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  .toolbar {
+    display: none !important;
+  }
+
+  .sheet {
+    width: 210mm;
+    height: 297mm;
+    margin: 0;
+    box-shadow: none;
+    page-break-after: always;
+    break-after: page;
+  }
+
+  .sheet:last-child {
+    page-break-after: auto;
+    break-after: auto;
+  }
+}
+
+p.body{font-size:10.5pt;line-height:13.5pt;margin-bottom:3pt} .compact-header .contacts{display:block;font-size:9pt} .sheet a{color:#000;text-decoration:underline} .employment-header{grid-template-columns:50% 50%;margin:6pt 0 2pt;line-height:12.5pt}.employment-header .title{text-align:left;font-size:10.5pt}.employment-header .metadata{text-align:right;font-size:9.5pt;font-weight:400;line-height:12pt}.sheet{overflow:visible} p.heading{margin:0 0 4pt}
+</style></head><body><nav class="toolbar" aria-label="Resume formats"><a href="/resume/full/">Styled two-page resume</a><a href="/resume/plain-short/">One-page plain resume</a><a href="HariYLN-plain.pdf" download>Download two-page PDF</a><button type="button" onclick="window.print()">Print</button></nav><main><section class="sheet"><header class="compact-header"><strong class="name">Laxmi Narasimha Hari Yelesetty</strong><span class="contacts"><a href="tel:+919916112881">+91 99161 12881</a> | <a href="mailto:ylnharimailme@gmail.com">ylnharimailme@gmail.com</a> | <a href="https://linkedin.com/in/ylnhari">LinkedIn</a> | <a href="https://github.com/ylnhari">GitHub</a> | <a href="https://ylnhari.github.io">Portfolio</a></span></header><p class="small" style="font-size:10.5pt;line-height:13pt;margin-top:0pt;margin-bottom:2pt;">Lead AI Engineer · LLM Systems &amp; Production GenAI · GCP · Azure · GPU Infra</p><div style="height:5pt"></div><p class="body" style="font-size:10.5pt;line-height:13.5pt;margin-top:0pt;margin-bottom:3pt;">Lead AI engineer and data scientist with 10+ years of engineering experience across classical ML, deep learning, forecasting, operations research, and LLM platforms. Built config-driven LoRA fine-tuning and self-hosted vLLM serving at Best Buy, replacing paid APIs and saving $300K/year. Delivered retail fraud inference at 40,000+ events/sec under a 200 ms SLA. Leads the design and cross-functional delivery of AI/ML platforms, mentors engineers, and supports technical hiring.</p><hr><p class="heading" style="font-size:12pt;line-height:14pt;margin-top:0pt;margin-bottom:4pt;font-weight:700;">Skills</p><p class="bullet" style="font-size:10pt;line-height:12pt;margin-top:0pt;margin-bottom:1pt;padding-left:10pt;text-indent:-7pt;">- <b>AI/ML &amp; Analytical Methods:</b> Data Science; Classical ML; Logistic Regression; Deep Learning; Machine Learning; LLM Fine-tuning; LoRA / QLoRA; LLM Evaluation; Autoencoders; Behavioral Anomaly Detection; Computer Vision; Transfer Learning; Time-Series Forecasting; Feature Engineering; Vehicle Routing; Mixed-Integer Programming; Operations Research; Constraint Modelling; Supply-Chain Simulation</p><p class="bullet" style="font-size:10pt;line-height:12pt;margin-top:0pt;margin-bottom:1pt;padding-left:10pt;text-indent:-7pt;">- <b>Frameworks &amp; Libraries:</b> vLLM Serving; Unsloth; Hugging Face Transformers / PEFT; NVIDIA Morpheus; XGBoost; PyTorch; TensorFlow; Keras; TensorFlow Serving; Google OR-Tools; Pandas; NumPy; RAPIDS cuDF / CuPy</p><p class="bullet" style="font-size:10pt;line-height:12pt;margin-top:0pt;margin-bottom:1pt;padding-left:10pt;text-indent:-7pt;">- <b>GPU Computing:</b> Multi-GPU Training; GPU-Accelerated Computing; Distributed Model Training</p><p class="bullet" style="font-size:10pt;line-height:12pt;margin-top:0pt;margin-bottom:1pt;padding-left:10pt;text-indent:-7pt;">- <b>Cloud &amp; MLOps:</b> Self-hosted LLMs; LLMOps; Google Cloud Platform; Microsoft Azure; GKE; Dataflow / Apache Beam; Vertex AI; Stream Processing; Pub/Sub; GCS; Artifact Registry; Azure ML Studio; Azure DevOps; Kubernetes; Helm; Istio; Docker; Seldon Core; Cloud Build; ArgoCD; Google KCC; Grafana; Prometheus; MLflow; Model Monitoring; CI/CD; GitOps</p><p class="bullet" style="font-size:10pt;line-height:12pt;margin-top:0pt;margin-bottom:1pt;padding-left:10pt;text-indent:-7pt;">- <b>Languages &amp; Data:</b> Python; SQL; MS SQL Server; Power BI; Linux &amp; Shell Scripting; Git</p><hr><p class="heading" style="font-size:12pt;line-height:14pt;margin-top:0pt;margin-bottom:4pt;font-weight:700;">Experience</p><div class="employment-header" style="margin-top:6pt"><span class="title">Lead Artificial Intelligence Engineer</span><span class="metadata"><b>Best Buy</b> | Jul 2025 - Present</span></div><p class="bullet" style="font-size:11pt;line-height:14pt;margin-top:0pt;margin-bottom:3pt;">- <b>LLM Fine-tuning Framework:</b> Built a config-driven LoRA framework using Unsloth, PEFT, and QLoRA, achieving ~2x faster training and 60-80% lower VRAM use. Supported single- and multi-GPU runs, multi-task adapters, and automated evaluation. YAML configuration enabled reusable tasks without custom Python; standardized adapter artifacts enabled shared vLLM serving without a separate deployment per task.</p><p class="bullet" style="font-size:11pt;line-height:14pt;margin-top:0pt;margin-bottom:3pt;">- <b>LLM Serving &amp; Impact:</b> Deployed OpenAI-compatible vLLM endpoints on GKE with HPA and Istio; integrated GCS, Artifact Registry, Cloud Build, and Prometheus/Grafana. Self-hosting eliminated paid API dependency, saved $300K/year, and strengthened data governance and compliance posture.</p><p class="bullet" style="font-size:11pt;line-height:14pt;margin-top:0pt;margin-bottom:3pt;">- <b>Retail Fraud Detection &amp; Prevention:</b> Built Apache Beam/Dataflow streaming and GKE inference for XGBoost fraud models at 40,000+ events/sec under a 200 ms SLA. Covered payment, refund, and reship signals; integrated Vertex AI feature, registry, and training services. Used secure endpoints, load testing, monitored releases, and GitOps to support peak retail traffic.</p><p class="bullet" style="font-size:11pt;line-height:14pt;margin-top:0pt;margin-bottom:3pt;">- Leads the design and cross-functional delivery of AI/ML platforms; supported India AI hub growth through 300+ resume screens, 50+ technical interviews, and mentoring.</p><div class="employment-header" style="margin-top:6pt"><span class="title">Lead ML Engineer - ML Engineering &amp; Operations</span><span class="metadata"><b>Wipro</b> | Aug 2023 - Jul 2025</span></div><p class="bullet" style="font-size:11pt;line-height:14pt;margin-top:0pt;margin-bottom:3pt;">- <b>AWS Account Digital Fingerprinting:</b> Built behavioral anomaly detection for AWS account security: trained unsupervised autoencoders per entity (account/user/service/machine) on NVIDIA DGX (8xA100) using NVIDIA Morpheus, learning normal activity fingerprints and surfacing deviations in real time. Used 20+ days of logs across multiple AWS accounts at billion-row scale per training run; integrated continuous retraining, MLflow model management, and Grafana.</p><p class="bullet" style="font-size:11pt;line-height:14pt;margin-top:0pt;margin-bottom:3pt;">- <b>Proofpoint Phishing Detection:</b> Engineered Morpheus training and inference pipelines with RAPIDS cuDF/CuPy, scoring 2,400 emails/sec, double the previous rate. Used security-team feedback and Microsoft Sentinel integration to detect phishing missed by initial filters and accelerate quarantine response.</p><p class="bullet" style="font-size:11pt;line-height:14pt;margin-top:0pt;margin-bottom:3pt;">- <b>Brand Infringement &amp; Abuse-Inbox Analysis:</b> Built ML routing and OCR extraction of scammer identifiers across text, HTML, images, and attachments; routed evidence to security teams and mail partners for takedowns. Automated triage doubled the prior case volume and reduced manual review.</p><p class="bullet" style="font-size:11pt;line-height:14pt;margin-top:0pt;margin-bottom:3pt;">- Led ML/MLOps engineers, mentored team members, shared technical knowledge, and coordinated delivery with client and NVIDIA stakeholders.</p><footer>1</footer></section><section class="sheet"><hr><p class="heading" style="font-size:12pt;line-height:14pt;margin-top:0pt;margin-bottom:4pt;font-weight:700;">Experience - continued</p><div class="employment-header" style="margin-top:6pt"><span class="title">Senior Data Scientist - Data Science / Azure ML</span><span class="metadata"><b>Accenture</b> | May 2021 - Sep 2023</span></div><p class="bullet" style="font-size:11pt;line-height:14.5pt;margin-top:0pt;margin-bottom:4pt;">- <b>Product Quality Prediction - BamaGruppen:</b> Built Azure ML warehouse-arrival quality prediction for the Norwegian distributor, with automated retraining, Logic Apps, Azure Pipelines, storage, and stakeholder alerts. Increased truck inspections from 130 to 160/day, defect detection by 17%, and customer approval by 20%, delivering $2.5M annual savings.</p><p class="bullet" style="font-size:11pt;line-height:14.5pt;margin-top:0pt;margin-bottom:4pt;">- <b>Last-Mile Vehicle Routing:</b> Designed OR-Tools vehicle-routing models with capacity, delivery-window, waiting-time, and store-demand constraints. Compared optimized routes with manual plans to improve resource utilization and reduce logistics costs.</p><p class="bullet" style="font-size:11pt;line-height:14.5pt;margin-top:0pt;margin-bottom:4pt;">- <b>Mellom Transport Optimization:</b> Built mixed-integer assignment models for daily terminal-to-distribution-center transport. Hosted APIs on Azure Function Apps; Logic Apps, RPA, CI/CD, and Slack notifications automated planning and dispatch, replacing manual Excel workflows.</p><p class="bullet" style="font-size:11pt;line-height:14.5pt;margin-top:0pt;margin-bottom:4pt;">- <b>Norsk Oppstrom - Simulation Framework:</b> Modelled product flows across vendors, warehouses, hubs, and customers, comparing cost, freshness, and carbon-footprint scenarios. Integrated simulation results with Power BI and identified the appropriate number and locations of regional hubs.</p><p class="bullet" style="font-size:11pt;line-height:14.5pt;margin-top:0pt;margin-bottom:4pt;">- <b>Hub Analytics POC - Network Impact Study:</b> Analyzed network flows and simulated strategic distribution centers to identify customers and vendors with the greatest benefit, assess warehouse-volume reduction, and present actionable hub-placement recommendations.</p><p class="bullet" style="font-size:11pt;line-height:14.5pt;margin-top:0pt;margin-bottom:4pt;">- Led cross-functional delivery, mentored data scientists, and presented findings and recommendations to Norwegian stakeholders.</p><div class="employment-header" style="margin-top:6pt"><span class="title">Data Scientist</span><span class="metadata"><b>GD Research Centre Pvt Ltd</b> | May 2020 - May 2021</span></div><p class="bullet" style="font-size:11pt;line-height:14.5pt;margin-top:0pt;margin-bottom:4pt;">- <b>GlobalData Forecasting:</b> Built domain-aware forecasts and scenario analysis across 15+ industry verticals, informing strategic market-intelligence reports and resource-allocation decisions.</p><div class="employment-header" style="margin-top:6pt"><span class="title">Deep Learning Engineer</span><span class="metadata"><b>Tata Consultancy Services</b> | Jul 2019 - Mar 2020</span></div><p class="bullet" style="font-size:11pt;line-height:14.5pt;margin-top:0pt;margin-bottom:4pt;">- <b>Semiconductor Defect Classification:</b> Built a distributed DenseNet training pipeline on about one million images with roughly three-hour training cycles. Deployed Docker/TensorFlow Serving inference at Amkor in South Korea, replacing manual visual inspection; trained the client team to operate the system.</p><div class="employment-header" style="margin-top:6pt"><span class="title">Senior Software Engineer - ML</span><span class="metadata"><b>Infosys</b> | May 2016 - Jul 2019</span></div><p class="bullet" style="font-size:11pt;line-height:14.5pt;margin-top:0pt;margin-bottom:4pt;">- <b>Opportunity Win/Lose Prediction:</b> Built logistic-regression scoring with SSIS data pipelines and Power BI/SSAS dashboards for data-driven sales prioritization.</p><p class="bullet" style="font-size:11pt;line-height:14.5pt;margin-top:0pt;margin-bottom:4pt;">- <b>Automated ID-Card Generation:</b> Delivered tested new-member insurance workflows, from impact analysis and design through implementation, support, and team knowledge sharing.</p><hr><p class="heading" style="font-size:12pt;line-height:14pt;margin-top:0pt;margin-bottom:4pt;font-weight:700;">Open-Source Project</p><div class="employment-header project-header"><span class="title">vLLM Model Chooser</span><span class="metadata"><b></b></span></div><p class="small" style="font-size:11pt;line-height:14pt;margin-top:0pt;margin-bottom:3pt;">Built an interactive GPU-to-model matchmaker with VRAM, quantization, and KV-cache fit filters. <a href="https://ylnhari.github.io/vllm-model-chooser/"><u>Demo</u></a>.</p><hr><p class="heading" style="font-size:12pt;line-height:14pt;margin-top:0pt;margin-bottom:4pt;font-weight:700;">Certifications</p><p class="small" style="font-size:10.5pt;line-height:13pt;margin-top:0pt;margin-bottom:2pt;padding-left:10pt;text-indent:-7pt;">- Google Cloud Certified: Generative AI Leader | Microsoft Certified: Azure AI Engineer Associate</p><p class="small" style="font-size:10.5pt;line-height:13pt;margin-top:0pt;margin-bottom:2pt;padding-left:10pt;text-indent:-7pt;">- Microsoft Certified: Azure Data Scientist Associate | Microsoft Certified: Power BI Data Analyst Associate</p><p class="small" style="font-size:10.5pt;line-height:13pt;margin-top:0pt;margin-bottom:2pt;padding-left:10pt;text-indent:-7pt;">- Oracle Cloud Infrastructure 2024 Generative AI Certified Professional</p><hr><p class="heading" style="font-size:12pt;line-height:14pt;margin-top:0pt;margin-bottom:4pt;font-weight:700;">Education</p><div class="employment-header" style="margin-top:6pt"><span class="title">B.E. Electrical &amp; Electronics</span><span class="metadata"><b>Andhra University, Visakhapatnam</b> | 2012 - 2016 · 80%</span></div><footer>2</footer></section></main></body></html>

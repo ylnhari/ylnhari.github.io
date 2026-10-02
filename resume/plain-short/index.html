@@ -1,0 +1,236 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hari YLN - Plain One-page Resume</title><style>/* Generic print styling for a semantic, two-sheet resume document. */
+@page {
+  size: A4;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  color: #000;
+  background: #fff;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 10.5pt;
+  line-height: 12.5pt;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  color: #000;
+  background: #fff;
+  font: 10pt/1.3 Helvetica, Arial, sans-serif;
+}
+
+.toolbar button,
+.toolbar a {
+  display: inline-block;
+  padding: 0.4rem 0.65rem;
+  border: 1px solid #000;
+  border-radius: 0;
+  color: #000;
+  background: #fff;
+  font: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.sheet {
+  position: relative;
+  width: 210mm;
+  height: 297mm;
+  padding: 26pt 34pt 32pt;
+  overflow: hidden;
+  background: #fff;
+  page-break-after: always;
+  break-after: page;
+}
+
+.sheet:last-child {
+  page-break-after: auto;
+  break-after: auto;
+}
+
+.compact-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+  white-space: nowrap;
+}
+
+.compact-header .name {
+  flex: 0 0 auto;
+  margin: 0;
+  font-size: 14pt;
+  font-weight: 700;
+  line-height: 16pt;
+}
+
+.compact-header .contacts {
+  display: flex;
+  flex: 0 1 auto;
+  justify-content: flex-end;
+  gap: 0.55rem;
+  font-size: 8.5pt;
+  line-height: 10pt;
+  white-space: nowrap;
+}
+
+.headline {
+  margin: 2pt 0 0;
+  font-size: 10pt;
+  line-height: 12pt;
+}
+
+.employment-header {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: baseline;
+  gap: 0;
+  width: 100%;
+}
+
+.employment-header .company {
+  font-size: 10pt;
+  font-weight: 700;
+  text-align: left;
+}
+
+.employment-header .title {
+  font-size: 10pt;
+  font-weight: 700;
+  text-align: left;
+}
+
+.employment-header .date {
+  font-size: 9.5pt;
+  font-weight: 700;
+  text-align: right;
+}
+
+.employment-header .metadata {
+  font-size: 9.5pt;
+  line-height: 12pt;
+  text-align: right;
+}
+
+.employment-header > * {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+p.body {
+  margin: 0 0 2pt;
+}
+
+p.small {
+  margin: 0 0 2pt;
+  font-size: 10pt;
+  line-height: 12pt;
+}
+
+p.bullet {
+  margin: 0 0 2pt;
+  padding-left: 10pt;
+  text-indent: -7pt;
+}
+
+p.heading {
+  margin: 4pt 0 0;
+  font-size: 11pt;
+  font-weight: 700;
+  line-height: 13pt;
+  text-align: center;
+}
+
+hr {
+  height: 0;
+  margin: 7pt 0 4pt;
+  border: 0;
+  border-top: 2.5pt solid #000;
+}
+
+.sheet > footer {
+  position: absolute;
+  right: 34pt;
+  bottom: 16pt;
+  font-size: 8pt;
+  line-height: 10pt;
+  text-align: right;
+}
+
+@media screen {
+  body {
+    padding: 0 0 1rem;
+  }
+
+  .sheet {
+    margin: 0 auto 1rem;
+    box-shadow: 0 0 0 1px #bbb;
+  }
+
+}
+
+@media screen and (max-width: 799px) {
+  .sheet {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    padding: 26pt 24pt 32pt;
+    overflow: visible;
+    box-shadow: none;
+  }
+
+  .compact-header {
+    align-items: flex-start;
+    flex-direction: column;
+    white-space: normal;
+  }
+
+  .compact-header .contacts {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    white-space: normal;
+  }
+}
+
+@media print {
+  html,
+  body {
+    width: 210mm;
+    margin: 0;
+    padding: 0;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  .toolbar {
+    display: none !important;
+  }
+
+  .sheet {
+    width: 210mm;
+    height: 297mm;
+    margin: 0;
+    box-shadow: none;
+    page-break-after: always;
+    break-after: page;
+  }
+
+  .sheet:last-child {
+    page-break-after: auto;
+    break-after: auto;
+  }
+}
+
+p.body{font-size:10.5pt;line-height:13.5pt;margin-bottom:3pt} .compact-header .contacts{display:block;font-size:9pt} .sheet a{color:#000;text-decoration:underline} .employment-header{grid-template-columns:50% 50%;margin:6pt 0 2pt;line-height:12.5pt}.employment-header .title{text-align:left;font-size:10.5pt}.employment-header .metadata{text-align:right;font-size:9.5pt;font-weight:400;line-height:12pt}.sheet{overflow:visible} p.heading{margin:0 0 4pt}
+</style></head><body><nav class="toolbar" aria-label="Resume formats"><a href="/resume/short/">Styled one-page resume</a><a href="/resume/plain/">Two-page plain resume</a><a href="HariYLN-plain-short.pdf" download>Download one-page PDF</a><button type="button" onclick="window.print()">Print</button></nav><main><section class="sheet"><header class="compact-header"><strong class="name">Laxmi Narasimha Hari Yelesetty</strong><span class="contacts"><a href="tel:+919916112881">+91 99161 12881</a> | <a href="mailto:ylnharimailme@gmail.com">ylnharimailme@gmail.com</a> | <a href="https://linkedin.com/in/ylnhari">LinkedIn</a> | <a href="https://github.com/ylnhari">GitHub</a> | <a href="https://ylnhari.github.io">Portfolio</a></span></header><p class="small" style="font-size:10.5pt;line-height:13pt;margin-top:0pt;margin-bottom:2pt;">Lead AI Engineer · LLM Systems &amp; Production GenAI · GCP · Azure · GPU Infra</p><div style="height:5pt"></div><p class="body" style="font-size:10.5pt;line-height:13.5pt;margin-top:0pt;margin-bottom:3pt;">Lead AI engineer and data scientist with 10+ years of engineering experience across classical ML, forecasting, optimization, and LLM platforms.</p><hr><p class="heading" style="font-size:12pt;line-height:14pt;margin-top:0pt;margin-bottom:4pt;font-weight:700;">Skills</p><p class="bullet" style="font-size:10pt;line-height:12pt;margin-top:0pt;margin-bottom:1pt;padding-left:10pt;text-indent:-7pt;">- <b>AI/ML &amp; Analytical Methods:</b> Data science; classical ML; deep learning; computer vision; forecasting; operations research; logistic regression; LoRA/QLoRA; autoencoders</p><p class="bullet" style="font-size:10pt;line-height:12pt;margin-top:0pt;margin-bottom:1pt;padding-left:10pt;text-indent:-7pt;">- <b>Frameworks &amp; Libraries:</b> PyTorch; TensorFlow; XGBoost; Hugging Face Transformers/PEFT; Unsloth; vLLM; Google OR-Tools; NVIDIA Morpheus; RAPIDS (cuDF/CuPy)</p><p class="bullet" style="font-size:10pt;line-height:12pt;margin-top:0pt;margin-bottom:1pt;padding-left:10pt;text-indent:-7pt;">- <b>GPU Computing:</b> Multi-GPU training; GPU-accelerated ML</p><p class="bullet" style="font-size:10pt;line-height:12pt;margin-top:0pt;margin-bottom:1pt;padding-left:10pt;text-indent:-7pt;">- <b>Cloud &amp; MLOps:</b> GCP; Azure ML; GKE; Dataflow; Vertex AI; Kubernetes; MLflow; Prometheus/Grafana; CI/CD</p><p class="bullet" style="font-size:10pt;line-height:12pt;margin-top:0pt;margin-bottom:1pt;padding-left:10pt;text-indent:-7pt;">- <b>Languages &amp; Data:</b> Python; SQL; MS SQL Server; Power BI</p><hr><p class="heading" style="font-size:12pt;line-height:14pt;margin-top:0pt;margin-bottom:4pt;font-weight:700;">Experience</p><div class="employment-header" style="margin-top:2pt"><span class="title">Lead Artificial Intelligence Engineer</span><span class="metadata"><b>Best Buy</b> | Jul 2025 - Present</span></div><p class="bullet" style="font-size:10pt;line-height:12pt;margin-top:0pt;margin-bottom:2pt;">- <b>LLM Fine-tuning &amp; Serving:</b> Built a LoRA/QLoRA fine-tuning framework with Unsloth/PEFT: ~2x faster training, 60-80% less VRAM. Self-hosted vLLM/GKE serving saves $300K/year; integrated HPA, Istio, CI/CD, and observability.</p><p class="bullet" style="font-size:10pt;line-height:12pt;margin-top:0pt;margin-bottom:2pt;">- <b>Retail Fraud Detection:</b> Delivered 40,000+ events/sec under a 200 ms SLA using GCP streaming, inference, monitoring, and GitOps for payment, refund, and reship fraud.</p><p class="bullet" style="font-size:10pt;line-height:12pt;margin-top:0pt;margin-bottom:2pt;">- <b>Engineering Leadership:</b> Leads the design and delivery of AI/ML platforms; supported AI hub growth through 300+ resume screens, 50+ technical interviews, and mentoring.</p><div class="employment-header" style="margin-top:2pt"><span class="title">Lead ML Engineer - ML Engineering &amp; Operations</span><span class="metadata"><b>Wipro</b> | Aug 2023 - Jul 2025</span></div><p class="bullet" style="font-size:10pt;line-height:12pt;margin-top:0pt;margin-bottom:2pt;">- <b>AWS Digital Fingerprinting:</b> Trained per-entity unsupervised autoencoders with NVIDIA Morpheus on DGX (8xA100), using billion-row AWS datasets spanning 20+ days to learn normal activity fingerprints and surface real-time anomalies.</p><p class="bullet" style="font-size:10pt;line-height:12pt;margin-top:0pt;margin-bottom:2pt;">- <b>Proofpoint Phishing Detection:</b> Built GPU pipelines scoring 2,400 emails/sec, double prior throughput, to accelerate threat response.</p><p class="bullet" style="font-size:10pt;line-height:12pt;margin-top:0pt;margin-bottom:2pt;">- <b>Abuse-Inbox Analysis:</b> Automated OCR and ML routing, doubling case volume; routed evidence to partners for takedowns. Led and mentored ML/MLOps engineers and coordinated client/NVIDIA delivery.</p><div class="employment-header" style="margin-top:2pt"><span class="title">Senior Data Scientist - Data Science / Azure ML</span><span class="metadata"><b>Accenture</b> | May 2021 - Sep 2023</span></div><p class="bullet" style="font-size:10pt;line-height:12pt;margin-top:0pt;margin-bottom:2pt;">- <b>BamaGruppen Quality Prediction:</b> Built Azure ML inspection prioritization: $2.5M/year saved; 130 to 160 truck inspections/day; +17% defect detection; +20% customer approval.</p><p class="bullet" style="font-size:10pt;line-height:12pt;margin-top:0pt;margin-bottom:2pt;">- <b>Last-Mile Routing &amp; Mellom Transport:</b> Built OR-Tools routing models and mixed-integer transport models; automated transport dispatch with Azure Function Apps, Logic Apps, and RPA.</p><p class="bullet" style="font-size:10pt;line-height:12pt;margin-top:0pt;margin-bottom:2pt;">- <b>Norsk Oppstrom &amp; Hub Analytics:</b> Simulated cost, freshness, carbon, and warehouse-volume scenarios to guide hub placement; mentored data scientists and advised Norwegian stakeholders.</p><div class="employment-header" style="margin-top:2pt"><span class="title">Data Scientist</span><span class="metadata"><b>GD Research Centre Pvt Ltd</b> | May 2020 - May 2021</span></div><p class="bullet" style="font-size:10pt;line-height:12pt;margin-top:0pt;margin-bottom:2pt;">- <b>GlobalData Forecasting:</b> Built domain-aware forecasts across 15+ industry verticals for enterprise market-intelligence decisions.</p><div class="employment-header" style="margin-top:2pt"><span class="title">Deep Learning Engineer</span><span class="metadata"><b>Tata Consultancy Services</b> | Jul 2019 - Mar 2020</span></div><p class="bullet" style="font-size:10pt;line-height:12pt;margin-top:0pt;margin-bottom:2pt;">- <b>Semiconductor Defect Classification:</b> Deployed DenseNet inference at Amkor, South Korea, replacing manual inspection; trained the client team.</p><div class="employment-header" style="margin-top:2pt"><span class="title">Senior Software Engineer - ML</span><span class="metadata"><b>Infosys</b> | May 2016 - Jul 2019</span></div><p class="bullet" style="font-size:10pt;line-height:12pt;margin-top:0pt;margin-bottom:2pt;">- <b>Opportunity Scoring:</b> Built logistic-regression/Power BI sales prioritization. <b>ID-Card Generation:</b> Delivered tested insurance-member workflows and shared knowledge with the team.</p><hr><p class="heading" style="font-size:12pt;line-height:14pt;margin-top:0pt;margin-bottom:4pt;font-weight:700;">Certifications</p><p class="small" style="font-size:10.5pt;line-height:13pt;margin-top:0pt;margin-bottom:2pt;padding-left:10pt;text-indent:-7pt;">- Google Cloud Certified: Generative AI Leader | Microsoft Certified: Azure AI Engineer Associate</p><p class="small" style="font-size:10.5pt;line-height:13pt;margin-top:0pt;margin-bottom:2pt;padding-left:10pt;text-indent:-7pt;">- Microsoft Certified: Azure Data Scientist Associate | Microsoft Certified: Power BI Data Analyst Associate</p><p class="small" style="font-size:10.5pt;line-height:13pt;margin-top:0pt;margin-bottom:2pt;padding-left:10pt;text-indent:-7pt;">- Oracle Cloud Infrastructure 2024 Generative AI Certified Professional</p><hr><p class="heading" style="font-size:12pt;line-height:14pt;margin-top:0pt;margin-bottom:4pt;font-weight:700;">Education</p><div class="employment-header" style="margin-top:2pt"><span class="title">B.E. Electrical &amp; Electronics</span><span class="metadata"><b>Andhra University, Visakhapatnam</b> | 2012 - 2016 · 80%</span></div><footer>1</footer></section></main></body></html>

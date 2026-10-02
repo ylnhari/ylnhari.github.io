@@ -216,7 +216,7 @@ body{font-family:'Inter',-apple-system,sans-serif;background:#dde3ee;color:var(-
 
       <div class="l-section">
         <div class="l-heading">Certifications</div>
-        <div class="cert"><span class="cert-org">Oracle Cloud</span><span class="cert-name">GenAI Certified Professional</span></div>
+        <div class="cert"><span class="cert-org">Oracle Cloud Infrastructure 2024</span><span class="cert-name">Generative AI Certified Professional</span></div>
         <div class="cert"><span class="cert-org">Microsoft Certified</span><span class="cert-name">Azure AI Engineer Associate</span></div>
         <div class="cert"><span class="cert-org">Microsoft Certified</span><span class="cert-name">Azure Data Scientist Associate</span></div>
         <div class="cert"><span class="cert-org">Microsoft Certified</span><span class="cert-name">Power BI Data Analyst Associate</span></div>
@@ -238,7 +238,7 @@ body{font-family:'Inter',-apple-system,sans-serif;background:#dde3ee;color:var(-
     <div class="right-col">
 
       <div class="summary">
-        <p>A production AI/ML systems engineer with <span class="metric">10+ years</span> taking models from research notebooks to reliable systems serving live traffic. At Best Buy I built a config-driven LoRA fine-tuning and self-hosted vLLM serving platform on GKE with autoscaling, traffic routing, safe releases, and observability, replacing paid external APIs and <span class="metric">saving $300K/year</span>. Separately, I productionized retail fraud systems processing <span class="metric">40,000+ events/sec</span> under a <span class="metric">200ms SLA</span>. Earlier work includes GPU-accelerated cybersecurity ML on NVIDIA DGX and Azure ML quality prediction <span class="metric">saving $2.5M/year</span>. Alongside hands-on engineering, I lead architecture, cross-functional delivery, production operations, mentoring, and technical hiring.</p>
+        <p>AI/ML engineer with <span class="metric">10+ years</span> taking models from research notebooks to reliable systems serving live traffic. At Best Buy, built a config-driven LoRA fine-tuning and self-hosted vLLM serving platform on GKE with autoscaling, traffic routing, safe releases, and observability, replacing paid external APIs and <span class="metric">saving $300K/year</span>. Delivered retail fraud systems processing <span class="metric">40,000+ events/sec</span> under a <span class="metric">200ms SLA</span>. Earlier work includes GPU-accelerated cybersecurity ML on NVIDIA DGX and Azure ML quality prediction <span class="metric">saving $2.5M/year</span>. Alongside hands-on engineering, leads AI/ML design, cross-functional delivery, production operations, mentoring, and technical hiring.</p>
       </div>
 
       <div class="r-heading">Work Experience</div>
@@ -253,40 +253,40 @@ body{font-family:'Inter',-apple-system,sans-serif;background:#dde3ee;color:var(-
             <div class="exp-date">Jul 2025 – Present</div>
           </div>
           <ul class="bullets">
-            <li>Built config-driven <span class="metric">LoRA fine-tuning framework</span> with Unsloth and PEFT — ~2× faster training and 60–80% less VRAM via QLoRA — supporting single- and multi-GPU runs and multi-task single-adapter training.</li>
-            <li>Deployed <span class="metric">vLLM</span> OpenAI-compatible serving on GKE with HPA autoscaling and Istio traffic routing; added GCS model storage, Artifact Registry versioning, Cloud Build CI, and Prometheus/Grafana monitoring and alerting.</li>
-            <li>Self-hosted open-source LLMs end-to-end, eliminating external API dependency and <span class="metric">saving $300K</span> while strengthening data governance and compliance posture.</li>
-            <li>Lead architecture and productionization across search, personalization, fraud, and cybersecurity; delivered the retail fraud path at <span class="metric">40,000+ events/sec</span> and scaled the India AI hub through <span class="metric">300+ résumé screens</span>, <span class="metric">50+ technical interviews</span>, and mentoring.</li>
+            <li>Built a configurable <span class="metric">LoRA fine-tuning framework</span> using Unsloth, PEFT, and QLoRA, achieving ~2× faster training and 60–80% lower VRAM use; supported single- and multi-GPU runs and multi-task single-adapter training.</li>
+            <li>Deployed OpenAI-compatible <span class="metric">vLLM</span> serving on GKE with HPA autoscaling and Istio routing; integrated GCS storage, Artifact Registry versioning, Cloud Build CI, and Prometheus/Grafana monitoring and alerting. Self-hosting eliminated paid API dependency, <span class="metric">saving $300K/year</span>, and strengthened data governance and compliance posture.</li>
+
+            <li>Leads AI/ML design across search, personalization, fraud, and cybersecurity; delivered retail fraud processing at <span class="metric">40,000+ events/sec</span>. Supported India AI hub growth through <span class="metric">300+ résumé screens</span>, <span class="metric">50+ technical interviews</span>, and mentoring.</li>
           </ul>
         </div>
 
         <div class="exp-item">
           <div class="exp-row">
             <div>
-              <div class="exp-role">ML Lead Engineer — ML Engineering &amp; Operations</div>
+              <div class="exp-role">Lead ML Engineer — ML Engineering &amp; Operations</div>
               <span class="exp-company">Wipro &nbsp;·&nbsp; Client: Major US Retail Corporation</span>
             </div>
             <div class="exp-date">Aug 2023 – Jul 2025</div>
           </div>
           <ul class="bullets">
-            <li>Built behavioral anomaly detection for AWS account security: trained unsupervised autoencoder models per entity (account / user / service) on <span class="metric">NVIDIA DGX (8×A100)</span> via <span class="metric">NVIDIA Morpheus</span> — learning normal activity fingerprints and surfacing deviations in real time. 20+ days of logs across multiple AWS accounts = <span class="metric">billion-row datasets</span> per training run.</li>
-            <li>Built phishing detection with NVIDIA Morpheus scoring <span class="metric">2,400 emails/sec — 2× the prior throughput</span>; automated abuse-inbox triage by extracting scammer identifiers from customer-forwarded messages and routing threats to the appropriate security team.</li>
-            <li>Led ML/MLOps engineers across cybersecurity workloads; designed <span class="metric">RAPIDS (cuDF/CuPy)</span> pipelines, orchestrated DGX training and inference, mentored team members, and coordinated delivery with client and NVIDIA stakeholders.</li>
+            <li>Built AWS account anomaly detection using per-entity autoencoders and NVIDIA Morpheus on <span class="metric">DGX (8×A100)</span>. Trained on 20+ days of logs across multiple AWS accounts, totaling <span class="metric">billion-row datasets</span> per run, to detect deviations from normal activity in real time.</li>
+            <li>Built NVIDIA Morpheus phishing detection processing <span class="metric">2,400 emails/sec</span>, doubling throughput; automated abuse-inbox triage by extracting scammer identifiers and routing threats to security teams.</li>
+            <li>Led ML/MLOps engineers across cybersecurity workloads; designed <span class="metric">RAPIDS (cuDF/CuPy)</span> pipelines, coordinated DGX training and inference, mentored engineers, and managed delivery with client and NVIDIA stakeholders.</li>
           </ul>
         </div>
 
         <div class="exp-item">
           <div class="exp-row">
             <div>
-              <div class="exp-role">Application Dev Team Lead — Data Science / Azure ML</div>
+              <div class="exp-role">Senior Data Scientist — Data Science / Azure ML</div>
               <span class="exp-company">Accenture &nbsp;·&nbsp; promoted from Senior Analyst</span>
             </div>
             <div class="exp-date">May 2021 – Sep 2023</div>
           </div>
           <ul class="bullets">
-            <li>Developed end-to-end Azure ML pipeline for warehouse product quality prediction (BamaGruppen, Norway) — <span class="metric">$2.5M annual savings</span>, trucks inspected/day <span class="metric">130 → 160</span>, <span class="metric">+17%</span> defect detection, <span class="metric">+20%</span> customer approval; stack: Azure ML Studio, Logic Apps, Azure Pipelines, Azure Storage.</li>
-            <li>Led last-mile delivery optimization using OR-Tools (Vehicle Routing Problem) — improving route planning, departure scheduling, and load distribution with significant annual logistics cost savings.</li>
-            <li>Designed a supply-chain simulation framework for hub-location and distribution decisions; led cross-functional delivery, mentored junior data scientists, and presented recommendations to Norway-based stakeholders.</li>
+            <li>Developed an Azure ML pipeline for BamaGruppen (Norway), delivering <span class="metric">$2.5M annual savings</span>; increased truck inspections from <span class="metric">130 to 160/day</span>, defect detection by <span class="metric">17%</span>, and customer approval by <span class="metric">20%</span>.</li>
+            <li>Led last-mile delivery optimization with OR-Tools, improving route planning, departure scheduling, and load distribution while delivering significant annual logistics savings.</li>
+            <li>Designed supply-chain simulation for hub-location and distribution decisions; led cross-functional delivery, mentored junior data scientists, and presented recommendations to Norwegian stakeholders.</li>
           </ul>
         </div>
 
@@ -304,17 +304,17 @@ body{font-family:'Inter',-apple-system,sans-serif;background:#dde3ee;color:var(-
           <span class="mini-role">Deep Learning Engineer</span>
           <span class="mini-co">Tata Consultancy Services</span>
           <span class="mini-date">Jul 2019 – Mar 2020</span>
-          <span class="mini-desc">Built &amp; deployed hybrid cloud + on-prem CV system for multi-class semiconductor defect classification (DenseNet, transfer learning) at Amkor's South Korea site — eliminated manual inspection bottlenecks.</span>
+          <span class="mini-desc">Built and deployed a hybrid cloud and on-premises computer vision system for multiclass semiconductor defect classification using DenseNet and transfer learning at Amkor's site in South Korea, eliminating manual inspection bottlenecks.</span>
         </div>
         <div class="mini-card">
           <span class="mini-role">Senior Software Engineer — ML</span>
           <span class="mini-co">Infosys</span>
           <span class="mini-date">May 2016 – Jul 2019</span>
-          <span class="mini-desc">Built ML-powered Lead Conversion Prediction system and Business Intelligence applications using Microsoft BI tools.</span>
+          <span class="mini-desc">Built an ML-powered lead-conversion prediction system and business intelligence applications using Microsoft BI tools.</span>
         </div>
       </div>
 
-      <div class="r-heading" style="margin-top:18px">Selected Projects</div>
+      <div class="r-heading" style="margin-top:18px">Projects</div>
       <div class="proj-grid">
 
         <div class="proj-card">
@@ -352,7 +352,7 @@ body{font-family:'Inter',-apple-system,sans-serif;background:#dde3ee;color:var(-
 
         <div class="proj-card">
           <span class="proj-title">Product Quality Prediction — BamaGruppen</span>
-          <span class="proj-employer">Accenture (Norway) &nbsp;·&nbsp; May 2021 – Dec 2021</span>
+          <span class="proj-employer">Accenture &nbsp;·&nbsp; May 2021 – Dec 2021</span>
           <p class="proj-desc">End-to-end Azure ML pipeline predicting product quality at warehouse arrival for a Norwegian retail group — enabling proactive inspection scheduling and reducing downstream quality failures. Fully operationalized with automated triggers and pipeline orchestration.</p>
           <div class="proj-stack">
             <span class="proj-tag">Logic Apps</span>

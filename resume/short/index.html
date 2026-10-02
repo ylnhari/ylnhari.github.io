@@ -65,7 +65,7 @@ body{font-family:'Inter',-apple-system,sans-serif;background:#dde3ee;color:var(-
 
 .exp-item{position:relative;padding-left:15px;margin-bottom:12px;page-break-inside:avoid}
 .exp-item::before{content:'';position:absolute;left:0;top:5px;width:7px;height:7px;background:var(--indigo);border-radius:50%;border:1.5px solid white;box-shadow:0 0 0 1.5px var(--indigo);z-index:1}
-.exp-item:not(:last-child)::after{content:'';position:absolute;left:3px;top:13px;width:1px;bottom:-5px;background:var(--in200)}
+.exp-item::after{content:'';position:absolute;left:3px;top:13px;width:1px;bottom:-5px;background:var(--in200)}
 .exp-row{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;margin-bottom:2px}
 .exp-role{font-family:'Space Grotesk',sans-serif;font-size:9pt;font-weight:700;color:var(--sl800);line-height:1.2}
 .exp-company{font-size:7.5pt;font-weight:500;color:var(--indigo-light);display:block;margin-top:1px}
@@ -88,11 +88,35 @@ body{font-family:'Inter',-apple-system,sans-serif;background:#dde3ee;color:var(-
   *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
 }
 @page{size:A4;margin:0}
+
+.earlier-row,.earlier-grid{display:block}
+.mini-card{background:transparent;border:0;border-radius:0;padding:0;margin:10px 0;break-inside:avoid}
+.mini-role{font-size:9pt;margin-bottom:2px}.mini-co{font-size:8pt;display:inline}.mini-date{display:inline;margin-left:8px;font-size:7.5pt}.mini-date::before{content:'| ';}.mini-desc{display:block;font-size:8.5pt;color:var(--sl700);line-height:1.55;margin-top:4px}
+.bullets li{font-size:9pt;line-height:1.55;margin-bottom:4px}
+
+.exp-row{display:grid;grid-template-columns:48% 52%;align-items:baseline;gap:0}
+.exp-meta{text-align:right;font-size:7.5pt;line-height:1.4}
+.exp-company,.exp-date{display:inline;font-size:inherit;margin:0;padding:0;background:none;border:0;border-radius:0;white-space:normal}
+.exp-company{font-weight:600}.exp-date{color:var(--sl500)}
+.mini-card{padding-left:18px;margin:0 0 14px;position:relative}
+.mini-card .mini-role{font-size:9pt;line-height:1.3;margin:0}
+.mini-card .mini-desc{font-size:inherit;line-height:inherit;margin-top:0;color:inherit}
+.mini-date::before{content:none}.mini-date{margin-left:0}
+.earlier-row .mini-card{padding-left:15px;margin-bottom:12px}
+.earlier-row .mini-card:last-child::after,.earlier-grid .mini-card:last-child::after{display:none}
+.exp-item::after{bottom:-18px}
+.l-section{margin-bottom:12px}
+.l-section:last-child{margin-bottom:0}
+.left-col,.right-col{padding-bottom:10px}
+.tag{padding-top:1.5px;padding-bottom:1.5px}
+.l-section{margin-bottom:9px}.tag{padding-top:1px;padding-bottom:1px}
 </style>
 </head>
 <body>
 
 <div class="print-bar">
+  <a class="bar-link" href="/resume/plain-short/">ATS-friendly version</a>
+  <a class="bar-link" href="/resume/plain-short/HariYLN-plain-short.pdf" download>Download ATS PDF</a>
   <button class="print-btn" onclick="window.print()">Print / Save as PDF</button>
   <span class="print-hint">Paper: <strong>A4</strong> &nbsp;·&nbsp; Margins: <strong>None</strong> &nbsp;·&nbsp; Enable <strong>Background graphics</strong></span>
   <a class="bar-link" style="margin-left:auto" href="https://ylnhari.github.io" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Portfolio</a>
@@ -120,54 +144,25 @@ body{font-family:'Inter',-apple-system,sans-serif;background:#dde3ee;color:var(-
   <div class="body">
     <div class="left-col">
 
-      <div class="l-section">
-        <div class="l-heading">LLM &amp; GenAI</div>
-        <div class="tags">
-          <span class="tag t-dark">vLLM</span><span class="tag t-dark">LoRA/QLoRA</span>
-          <span class="tag t-dark">Unsloth</span><span class="tag t-dark">PEFT</span>
-          <span class="tag t-dark">Transformers</span>
-          <span class="tag t-dark">Self-hosted LLM Serving</span><span class="tag t-dark">LLM Eval</span>
-        </div>
-      </div>
-
-      <div class="l-section">
-        <div class="l-heading">ML / DL / GPU</div>
-        <div class="tags">
-          <span class="tag t-light">XGBoost</span><span class="tag t-light">Autoencoders</span>
-          <span class="tag t-light">PyTorch</span><span class="tag t-light">TensorFlow</span>
-          <span class="tag t-light">GPU-Accelerated Computing</span><span class="tag t-light">RAPIDS cuDF/CuPy</span>
-          <span class="tag t-light">NVIDIA Morpheus</span><span class="tag t-light">Computer Vision</span>
-          <span class="tag t-light">Time-Series</span><span class="tag t-light">Google OR-Tools</span>
-        </div>
-      </div>
-
-      <div class="l-section">
-        <div class="l-heading">MLOps &amp; Cloud</div>
-        <div class="tags">
-          <span class="tag t-light">GCP Vertex AI</span><span class="tag t-light">GKE</span>
-          <span class="tag t-light">Dataflow / Beam</span><span class="tag t-light">Azure ML</span>
-          <span class="tag t-light">Kubernetes</span><span class="tag t-light">Helm</span>
-          <span class="tag t-light">Istio</span><span class="tag t-light">Docker</span>
-          <span class="tag t-light">Seldon Core</span><span class="tag t-light">ArgoCD</span>
-          <span class="tag t-light">Grafana</span><span class="tag t-light">Prometheus</span>
-          <span class="tag t-light">Cloud Build</span><span class="tag t-light">GitOps</span>
-        </div>
-      </div>
-
+      <div class="l-section"><div class="l-heading">AI/ML &amp; Analytical Methods</div><div class="tags"><span class="tag t-light">Data Science</span><span class="tag t-light">Classical ML</span><span class="tag t-light">Logistic Regression</span><span class="tag t-light">Deep Learning</span><span class="tag t-light">Computer Vision</span><span class="tag t-light">Forecasting</span><span class="tag t-light">Operations Research</span><span class="tag t-light">LoRA/QLoRA</span><span class="tag t-light">Autoencoders</span><span class="tag t-light">LLM Evaluation</span></div></div>
+      <div class="l-section"><div class="l-heading">Frameworks &amp; Libraries</div><div class="tags"><span class="tag t-light">XGBoost</span><span class="tag t-light">PyTorch</span><span class="tag t-light">TensorFlow</span><span class="tag t-light">Unsloth</span><span class="tag t-light">Hugging Face Transformers / PEFT</span><span class="tag t-light">vLLM</span><span class="tag t-light">NVIDIA Morpheus</span><span class="tag t-light">Google OR-Tools</span><span class="tag t-light">RAPIDS cuDF/CuPy</span></div></div>
+      <div class="l-section"><div class="l-heading">GPU Computing</div><div class="tags"><span class="tag t-light">Multi-GPU Training</span><span class="tag t-light">GPU-Accelerated Computing</span></div></div>
+      <div class="l-section"><div class="l-heading">Cloud &amp; MLOps</div><div class="tags"><span class="tag t-light">GCP / Vertex AI</span><span class="tag t-light">Azure ML</span><span class="tag t-light">GKE</span><span class="tag t-light">Dataflow / Beam</span><span class="tag t-light">Kubernetes</span><span class="tag t-light">MLflow</span><span class="tag t-light">Prometheus / Grafana</span><span class="tag t-light">CI/CD</span><span class="tag t-light">GitOps</span></div></div>
+      <div class="l-section"><div class="l-heading">Languages &amp; Data</div><div class="tags"><span class="tag t-light">Python</span><span class="tag t-light">SQL</span><span class="tag t-light">MS SQL Server</span><span class="tag t-light">Power BI</span></div></div>
       <div class="l-section">
         <div class="l-heading">Certifications</div>
         <div class="cert"><strong>Google Cloud</strong>Certified Generative AI Leader</div>
-        <div class="cert"><strong>Oracle Cloud</strong>GenAI Certified Professional</div>
-        <div class="cert"><strong>Microsoft</strong>Azure AI Engineer Associate</div>
-        <div class="cert"><strong>Microsoft</strong>Azure Data Scientist Associate</div>
-        <div class="cert"><strong>Microsoft</strong>Power BI Data Analyst Associate</div>
+        <div class="cert"><strong>Oracle Cloud Infrastructure 2024</strong>Generative AI Certified Professional</div>
+        <div class="cert"><strong>Microsoft Certified</strong>Azure AI Engineer Associate</div>
+        <div class="cert"><strong>Microsoft Certified</strong>Azure Data Scientist Associate</div>
+        <div class="cert"><strong>Microsoft Certified</strong>Power BI Data Analyst Associate</div>
       </div>
 
       <div class="l-section">
         <div class="l-heading">Education</div>
         <span class="edu-degree">B.E. Electrical &amp; Electronics</span>
         <span class="edu-detail">Andhra University · 2012–2016 · 80%</span>
-        <span class="edu-detail" style="margin-top:7px"><strong>Achievements:</strong> Best Buy Talent Quotient 2026 · Wipro Exceptional rating · EAMCET rank 1,200/320,000</span>
+
       </div>
 
     </div>
@@ -175,64 +170,42 @@ body{font-family:'Inter',-apple-system,sans-serif;background:#dde3ee;color:var(-
     <div class="right-col">
 
       <div class="summary">
-        <p><span class="metric">10+ years</span> building production AI/ML systems end-to-end. At Best Buy I built LoRA fine-tuning and self-hosted vLLM serving that <span class="metric">saves $300K/year</span>. Separately, I productionized retail fraud systems at <span class="metric">40,000+ events/sec</span> under a <span class="metric">200ms SLA</span>. Earlier work includes GPU cybersecurity ML on NVIDIA DGX, Azure ML quality prediction <span class="metric">saving $2.5M/year</span>, OR-Tools optimization, forecasting, and computer vision. I remain hands-on while leading architecture, mentoring engineers, and supporting technical hiring.</p>
+        <p>Lead AI engineer and data scientist with <span class="metric">10+ years</span> of engineering experience across classical ML, deep learning, forecasting, operations research, and LLM platforms. Combines hands-on delivery with technical design, mentoring, hiring, and cross-functional leadership.</p>
       </div>
 
       <div class="r-heading">Experience</div>
 
       <div class="exp-item">
-        <div class="exp-row">
-          <div><div class="exp-role">Lead Artificial Intelligence Engineer</div><span class="exp-company">Best Buy &nbsp;·&nbsp; Bengaluru, India</span></div>
-          <div class="exp-date">Jul 2025 – Present</div>
-        </div>
+        <div class="exp-row"><div class="exp-role">Lead Artificial Intelligence Engineer</div><div class="exp-meta"><span class="exp-company">Best Buy</span><span class="exp-date"> | Jul 2025 – Present</span></div></div>
         <ul class="bullets">
-          <li>Built a config-driven <span class="metric">LoRA fine-tuning framework</span> with Unsloth and PEFT, single- and multi-GPU training, and vLLM serving on GKE with HPA and Istio; self-hosting open-source LLMs <span class="metric">saves $300K/year</span>.</li>
-          <li>Productionized fraud inference on GCP using Apache Beam, Dataflow, Vertex AI, GKE, Helm, and Seldon Core at <span class="metric">40,000+ events/sec</span> under a <span class="metric">200ms SLA</span>.</li>
-          <li>Lead architecture, delivery standards, and Prometheus/Grafana observability; helped scale the India AI hub through <span class="metric">300+ résumé screens</span>, <span class="metric">50+ interviews</span>, and mentoring.</li>
-        </ul>
+            <li><span class="metric">LLM Fine-tuning &amp; Serving:</span> Built a LoRA/QLoRA fine-tuning framework with Unsloth/PEFT: ~2× faster training, 60-80% less VRAM. Self-hosted vLLM/GKE serving saves $300K/year; integrated HPA, Istio, versioned artifacts, CI/CD, and observability.</li>
+            <li><span class="metric">Retail Fraud Detection:</span> Delivered 40,000+ events/sec under a 200 ms SLA using GCP streaming and inference for payment, refund, and reship fraud. Secured endpoints, load-tested releases, and integrated monitoring and GitOps.</li>
+            <li><span class="metric">Engineering Leadership:</span> Leads the design and delivery of AI/ML platforms; supported AI hub growth through 300+ resume screens, 50+ technical interviews, and mentoring.</li>
+          </ul>
       </div>
 
       <div class="exp-item">
-        <div class="exp-row">
-          <div><div class="exp-role">ML Lead Engineer — MLOps &amp; Engineering</div><span class="exp-company">Wipro &nbsp;·&nbsp; US Retail Client</span></div>
-          <div class="exp-date">Aug 2023 – Jul 2025</div>
-        </div>
+        <div class="exp-row"><div class="exp-role">Lead ML Engineer — ML Engineering &amp; Operations</div><div class="exp-meta"><span class="exp-company">Wipro</span><span class="exp-date"> | Aug 2023 – Jul 2025</span></div></div>
         <ul class="bullets">
-          <li>Built behavioral anomaly detection on <span class="metric">NVIDIA DGX (8×A100)</span> with <span class="metric">NVIDIA Morpheus</span> — trained unsupervised autoencoder models per AWS account/user/service to fingerprint normal activity and surface threats in real time; billion-row log datasets per training run.</li>
-          <li>Built phishing detection at <span class="metric">2,400 emails/sec (2× throughput)</span>; led ML/MLOps engineers across cybersecurity workloads, designed <span class="metric">RAPIDS (cuDF/CuPy)</span> pipelines, mentored team members, and coordinated client/NVIDIA delivery.</li>
-        </ul>
+            <li><span class="metric">AWS Digital Fingerprinting:</span> Trained per-entity unsupervised autoencoders with NVIDIA Morpheus on DGX (8×A100), using billion-row AWS datasets spanning 20+ days to learn normal activity fingerprints and surface real-time anomalies; integrated continuous retraining, MLflow, and Grafana.</li>
+            <li><span class="metric">Proofpoint Phishing Detection:</span> Built GPU pipelines scoring 2,400 emails/sec, double prior throughput. Incorporated security-team feedback and Microsoft Sentinel integration to accelerate quarantine response.</li>
+            <li><span class="metric">Abuse-Inbox Analysis:</span> Automated OCR and ML routing, doubling case volume; routed evidence to partners for takedowns. Led and mentored ML/MLOps engineers and coordinated client/NVIDIA delivery.</li>
+          </ul>
       </div>
 
       <div class="exp-item">
-        <div class="exp-row">
-          <div><div class="exp-role">Application Dev Team Lead — Data Science / Azure ML</div><span class="exp-company">Accenture &nbsp;·&nbsp; promoted from Senior Analyst</span></div>
-          <div class="exp-date">May 2021 – Sep 2023</div>
-        </div>
+        <div class="exp-row"><div class="exp-role">Senior Data Scientist — Data Science / Azure ML</div><div class="exp-meta"><span class="exp-company">Accenture</span><span class="exp-date"> | May 2021 – Sep 2023</span></div></div>
         <ul class="bullets">
-          <li>Built an Azure ML quality-prediction pipeline — <span class="metric">$2.5M saved, 130 → 160 inspected/day, +17% detection</span> — plus OR-Tools routing and supply-chain simulation; led cross-functional delivery and mentored junior data scientists.</li>
-        </ul>
+            <li><span class="metric">BamaGruppen Quality Prediction:</span> Built Azure ML inspection prioritization: $2.5M/year saved; 130 to 160 truck inspections/day; +17% defect detection; +20% customer approval.</li>
+            <li><span class="metric">Last-Mile Routing &amp; Mellom Transport:</span> Built OR-Tools routing models and mixed-integer transport models; automated transport dispatch with Azure Function Apps, Logic Apps, and RPA.</li>
+            <li><span class="metric">Norsk Oppstrom &amp; Hub Analytics:</span> Simulated cost, freshness, carbon, and warehouse-volume scenarios to guide hub placement; mentored data scientists and advised Norwegian stakeholders.</li>
+          </ul>
       </div>
 
-      <div class="r-heading" style="margin-top:14px">Earlier Experience</div>
       <div class="earlier-row">
-        <div class="mini-card">
-          <span class="mini-role">Data Scientist</span>
-          <span class="mini-co">GD Research Centre</span>
-          <span class="mini-date">May 2020 – May 2021</span>
-          <span class="mini-desc">Time-series forecasting system across Consumer Goods, Oil &amp; Gas, Power, Retail, Finance intelligence centers.</span>
-        </div>
-        <div class="mini-card">
-          <span class="mini-role">Deep Learning Engineer</span>
-          <span class="mini-co">Tata Consultancy Services</span>
-          <span class="mini-date">Jul 2019 – Mar 2020</span>
-          <span class="mini-desc">Hybrid cloud + on-prem CV for semiconductor defect classification (DenseNet, transfer learning); deployed at Amkor, South Korea.</span>
-        </div>
-        <div class="mini-card">
-          <span class="mini-role">Sr. Software Engineer — ML</span>
-          <span class="mini-co">Infosys</span>
-          <span class="mini-date">May 2016 – Jul 2019</span>
-          <span class="mini-desc">ML-powered Lead Conversion Prediction and Business Intelligence applications using Microsoft BI tools.</span>
-        </div>
+        <div class="exp-item mini-card"><div class="exp-row"><div class="exp-role mini-role">Data Scientist</div><div class="exp-meta"><span class="exp-company mini-co">GD Research Centre</span><span class="exp-date mini-date"> | May 2020 – May 2021</span></div></div><ul class="bullets"><li class="mini-desc"><span class="metric">GlobalData Forecasting:</span> Built domain-aware forecasts across 15+ industry verticals for enterprise market-intelligence decisions.</li></ul></div>
+        <div class="exp-item mini-card"><div class="exp-row"><div class="exp-role mini-role">Deep Learning Engineer</div><div class="exp-meta"><span class="exp-company mini-co">Tata Consultancy Services</span><span class="exp-date mini-date"> | Jul 2019 – Mar 2020</span></div></div><ul class="bullets"><li class="mini-desc"><span class="metric">Semiconductor Defect Classification:</span> Deployed DenseNet inference at Amkor, South Korea, replacing manual inspection; trained the client team.</li></ul></div>
+        <div class="exp-item mini-card"><div class="exp-row"><div class="exp-role mini-role">Senior Software Engineer — ML</div><div class="exp-meta"><span class="exp-company mini-co">Infosys</span><span class="exp-date mini-date"> | May 2016 – Jul 2019</span></div></div><ul class="bullets"><li class="mini-desc"><span class="metric">Opportunity Scoring:</span> Built logistic-regression/Power BI sales prioritization. <span class="metric">ID-Card Generation:</span> Delivered tested insurance-member workflows and shared knowledge with the team.</li></ul></div>
       </div>
 
     </div>
