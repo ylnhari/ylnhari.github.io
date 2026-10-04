@@ -15,15 +15,41 @@
 .job{break-inside:avoid;page-break-inside:avoid;margin-bottom:14px}.job-head{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:start}.job-title{font-size:9pt;font-weight:800;color:#172033}.job-company{font-size:7.5pt;font-weight:700;color:#185abc;margin-top:1px}.date{font-size:7pt;color:#526077;background:#f3f6fa;border:1px solid #dde4ed;border-radius:3px;padding:2px 6px;white-space:nowrap}.bullets{list-style:none;margin:6px 0 0;padding:0}.bullets li{position:relative;padding-left:11px;margin-bottom:4px;color:#415069;font-size:8pt}.bullets li:before{content:"›";position:absolute;left:0;color:#4285f4;font-weight:900}.early-grid,.project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.card{border:1px solid #dce4ef;border-top:3px solid #a8c7fa;border-radius:4px;padding:8px;background:#fbfcfe;break-inside:avoid}.card-title{font-size:7.7pt;font-weight:800}.card-company{font-size:7pt;font-weight:700;color:#185abc}.card-date{font-size:6.5pt;color:#6d7889;margin:2px 0 4px}.card p{font-size:7pt;color:#526077;margin:0;line-height:1.45}.project-grid{grid-template-columns:repeat(2,1fr)}.project-grid .card{padding:10px}.stack{font-size:6.6pt;color:#526077;margin-top:5px}.impact{font-size:6.8pt;color:#185abc;font-weight:800;margin-top:5px}.foot{position:absolute;left:27px;right:27px;bottom:14px;border-top:1px solid #e1e7ef;padding-top:5px;color:#7c8797;font-size:6.5pt;text-align:right}
 @media print{body{background:#fff}.toolbar{display:none}.sheet{width:210mm;margin:0;box-shadow:none}.page{height:297mm;min-height:297mm}*{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}}@page{size:A4;margin:0}
 </style>
+<style id="resume-mobile">
+@media screen and (max-width:850px){
+html,body{max-width:100%;overflow-wrap:anywhere}
+.resume,.sheet{width:100%;max-width:100%;margin:0;box-shadow:none}
+.header{padding:24px;flex-direction:column;gap:14px}
+.header-grid{grid-template-columns:1fr}
+.header-left,.header-right{min-width:0;width:100%;align-items:flex-start}
+.header-right .c-row,.contact{white-space:normal;text-align:left;font-size:13px}
+.title-line,.header .role{font-size:14px;line-height:1.55}
+.body,.content{display:flex;flex-direction:column}
+.right-col,.main{order:0;padding:20px;min-width:0}
+.left-col,.side{order:1;padding:20px;border-right:0;min-width:0}
+.earlier-grid,.early-grid,.proj-grid,.project-grid,.projects{grid-template-columns:1fr}
+.summary p,.summary,.bullets li,.proj-desc,.mini-desc,.card p,.cert-name,.edu-detail,.fact-text{font-size:14px;line-height:1.55}
+.exp-role,.role,.job-title,.proj-title,.mini-role,.card-title{font-size:15px;line-height:1.5}
+.exp-company,.company,.job-company,.proj-meta,.proj-employer,.mini-co,.cert-org{font-size:13px;line-height:1.5}
+.exp-date,.date,.mini-date,.card-date{white-space:normal;font-size:12px}
+.tag,.proj-tag{font-size:12px;line-height:1.45}
+.l-heading,.r-heading,.side h2,.main h2{font-size:12px;line-height:1.5}
+.exp-row,.job-head{display:flex;flex-wrap:wrap;gap:6px}
+.topbar,.print-bar,.toolbar{height:auto;min-height:56px;flex-wrap:wrap;gap:8px;padding:12px}
+.topbar a,.print-bar a,.toolbar a{white-space:normal}
+.page{height:auto;min-height:0}.foot{position:static}
+}
+</style>
 </head>
 <body>
-<div class="toolbar"><button onclick="window.print()">Print / Save as PDF</button><span>A4 · margins none · background graphics enabled</span><a href="/resume/">Resume hub</a><a href="https://ylnhari.github.io" target="_blank" rel="noopener">Portfolio</a><a href="https://linkedin.com/in/ylnhari" target="_blank" rel="noopener">LinkedIn</a></div>
+<div class="toolbar"><a href="HariYLN-google-search-intelligence.pdf" download data-resume-download="primary">Download styled PDF (2 pages)</a><a href="/resume/plain/">General plain / ATS (2 pages)</a><a href="/resume/short/">General styled (1 page)</a>
+<button onclick="window.print()">Print / Save as PDF</button><span>A4 · margins none · background graphics enabled</span><a href="/resume/">Resume hub</a><a href="https://ylnhari.github.io" target="_blank" rel="noopener">Portfolio</a><a href="https://linkedin.com/in/ylnhari" target="_blank" rel="noopener">LinkedIn</a></div>
 
 <main class="sheet">
 <section class="page">
   <header class="header">
     <div class="header-grid">
-      <div><div class="name">Laxmi Narasimha Hari Yelesetty</div><div class="role">AI/ML Systems Engineer · Production ML Infrastructure · GenAI &amp; LLM Systems</div></div>
+      <div><div class="name">Laxmi Narasimha Hari Yelesetty</div><div class="role">Lead AI/ML Engineer &amp; Data Scientist | Production ML &amp; GenAI | Distributed Systems | GCP · Azure · GPU Computing</div></div>
       <div class="contact">Bengaluru, India<br>+91 99161 12881 · ylnharimailme@gmail.com<br><a href="https://linkedin.com/in/ylnhari">linkedin.com/in/ylnhari</a> · <a href="https://github.com/ylnhari">github.com/ylnhari</a><br><a href="https://ylnhari.github.io">ylnhari.github.io</a></div>
     </div>
   </header>

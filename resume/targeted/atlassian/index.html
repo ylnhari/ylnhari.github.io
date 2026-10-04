@@ -102,11 +102,36 @@ body{font-family:'Inter',-apple-system,sans-serif;background:#dde3ee;color:var(-
 }
 @page{size:A4;margin:0}
 </style>
+<style id="resume-mobile">
+@media screen and (max-width:850px){
+html,body{max-width:100%;overflow-wrap:anywhere}
+.resume,.sheet{width:100%;max-width:100%;margin:0;box-shadow:none}
+.header{padding:24px;flex-direction:column;gap:14px}
+.header-grid{grid-template-columns:1fr}
+.header-left,.header-right{min-width:0;width:100%;align-items:flex-start}
+.header-right .c-row,.contact{white-space:normal;text-align:left;font-size:13px}
+.title-line,.header .role{font-size:14px;line-height:1.55}
+.body,.content{display:flex;flex-direction:column}
+.right-col,.main{order:0;padding:20px;min-width:0}
+.left-col,.side{order:1;padding:20px;border-right:0;min-width:0}
+.earlier-grid,.early-grid,.proj-grid,.project-grid,.projects{grid-template-columns:1fr}
+.summary p,.summary,.bullets li,.proj-desc,.mini-desc,.card p,.cert-name,.edu-detail,.fact-text{font-size:14px;line-height:1.55}
+.exp-role,.role,.job-title,.proj-title,.mini-role,.card-title{font-size:15px;line-height:1.5}
+.exp-company,.company,.job-company,.proj-meta,.proj-employer,.mini-co,.cert-org{font-size:13px;line-height:1.5}
+.exp-date,.date,.mini-date,.card-date{white-space:normal;font-size:12px}
+.tag,.proj-tag{font-size:12px;line-height:1.45}
+.l-heading,.r-heading,.side h2,.main h2{font-size:12px;line-height:1.5}
+.exp-row,.job-head{display:flex;flex-wrap:wrap;gap:6px}
+.topbar,.print-bar,.toolbar{height:auto;min-height:56px;flex-wrap:wrap;gap:8px;padding:12px}
+.topbar a,.print-bar a,.toolbar a{white-space:normal}
+.page{height:auto;min-height:0}.foot{position:static}
+}
+</style>
 </head>
 <body>
 
-<div class="print-bar">
-  <button class="print-btn" onclick="window.print()">
+<div class="print-bar"><a class="bar-link" href="HariYLN-atlassian.pdf" download data-resume-download="primary">Download styled PDF (2 pages)</a><a class="bar-link" href="/resume/plain/">General plain / ATS (2 pages)</a><a class="bar-link" href="/resume/short/">General styled (1 page)</a>
+<button class="print-btn" onclick="window.print()">
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
     Print / Save as PDF
   </button>
@@ -116,15 +141,14 @@ body{font-family:'Inter',-apple-system,sans-serif;background:#dde3ee;color:var(-
   <a class="bar-link" href="https://github.com/ylnhari" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.22.66-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.1-1.47-1.1-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.16.57.67.48A10 10 0 0 0 22 12 10 10 0 0 0 12 2z"/></svg>GitHub</a>
   <a href="/resume/profile/" style="display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--indigo);text-decoration:none;padding:8px 14px;border:1px solid var(--indigo);border-radius:6px;transition:background .15s,color .15s" onmouseover="this.style.background='var(--indigo)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--indigo)'">View Full Profile
     <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-  </a>
-</div>
+  </a></div>
 
 <div class="resume">
   <div class="header">
     <div class="header-left">
       <span class="name-pre">Laxmi Narasimha</span>
       <span class="name-main">Hari Yelesetty</span>
-      <span class="title-line">Principal Machine Learning Engineering &nbsp;·&nbsp; Production LLM Systems &amp; Evaluation &nbsp;·&nbsp; Python · GCP</span>
+      <span class="title-line">Lead AI/ML Engineer &amp; Data Scientist | Production ML &amp; GenAI | Distributed Systems | GCP · Azure · GPU Computing</span>
     </div>
     <div class="header-right">
       <div class="c-row"><svg class="c-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/></svg>ylnharimailme@gmail.com</div>
