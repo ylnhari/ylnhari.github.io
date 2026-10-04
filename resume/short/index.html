@@ -142,8 +142,12 @@ html,body{max-width:100%;overflow-wrap:anywhere}
 .page{height:auto;min-height:0}.foot{position:static}
 }
 </style>
-<style id="approved-summary-fit">@media print,screen and (min-width:851px){.summary p{line-height:1.5}.exp-item,.earlier-row .mini-card{margin-bottom:8px}.bullets li{line-height:1.4}}</style>
-</head>
+<style id="short-spacing">
+@media print{.header{padding-top:16px;padding-bottom:14px}.right-col{padding-top:12px;padding-bottom:12px}.summary{padding-top:8px;padding-bottom:8px;margin-bottom:10px}.exp-item{margin-bottom:7px}.bullets li{margin-bottom:2px}.r-heading{margin-bottom:7px}}
+</style>
+<style id="short-reading-spacing">@media print{.bullets li{line-height:1.4;margin-bottom:1px}.summary p{line-height:1.5}}</style>
+<style id="resume-heading-continuation">@media print{.r-heading,.main h2{break-after:avoid;page-break-after:avoid}}</style>
+<style>@media print,screen and (min-width:851px){.summary p{line-height:1.5}.exp-item,.earlier-row .mini-card{margin-bottom:8px}.bullets li{line-height:1.4}}</style></head>
 <body>
 
 <div class="print-bar"><a class="bar-link" href="HariYLN-short.pdf" download data-resume-download="primary">Download styled PDF (1 page)</a><a class="bar-link" href="/resume/plain-short/">Plain / ATS (1 page)</a><a class="bar-link" href="/resume/full/">Styled (2 pages)</a><a class="bar-link" href="/resume/plain/">Plain / ATS (2 pages)</a>
@@ -173,7 +177,7 @@ html,body{max-width:100%;overflow-wrap:anywhere}
       <div class="l-section"><div class="l-heading">LLM Training &amp; Serving</div><div class="tags"><span class="tag t-light">LLM Fine-tuning</span><span class="tag t-light">LoRA / QLoRA</span><span class="tag t-light">Evaluation</span><span class="tag t-light">OpenAI-Compatible Serving</span></div></div>
 
       <div class="l-section"><div class="l-heading">Modelling &amp; Analytical Methods</div><div class="tags"><span class="tag t-light">Classical ML</span><span class="tag t-light">Deep Learning</span><span class="tag t-light">Computer Vision</span><span class="tag t-light">NLP</span><span class="tag t-light">Forecasting</span><span class="tag t-light">Feature Engineering</span><span class="tag t-light">Operations Research</span><span class="tag t-light">Autoencoders</span></div></div>
-      <div class="l-section"><div class="l-heading">Frameworks &amp; APIs</div><div class="tags"><span class="tag t-light">FastAPI</span><span class="tag t-light">scikit-learn</span><span class="tag t-light">XGBoost</span><span class="tag t-light">PyTorch</span><span class="tag t-light">TensorFlow</span><span class="tag t-light">Hugging Face / PEFT</span><span class="tag t-light">Unsloth</span><span class="tag t-light">vLLM</span><span class="tag t-light">OR-Tools</span></div></div>
+      <div class="l-section"><div class="l-heading">Frameworks &amp; APIs</div><div class="tags"><span class="tag t-light">scikit-learn</span><span class="tag t-light">XGBoost</span><span class="tag t-light">PyTorch</span><span class="tag t-light">TensorFlow</span><span class="tag t-light">Hugging Face / PEFT</span><span class="tag t-light">Unsloth</span><span class="tag t-light">vLLM</span><span class="tag t-light">OR-Tools</span></div></div>
       <div class="l-section"><div class="l-heading">GPU &amp; Distributed Computing</div><div class="tags"><span class="tag t-light">Multi-GPU Training</span><span class="tag t-light">RAPIDS cuDF / CuPy</span></div></div>
       <div class="l-section"><div class="l-heading">Model Lifecycle</div><div class="tags"><span class="tag t-light">MLflow</span><span class="tag t-light">Evaluation / Registry</span><span class="tag t-light">Retraining</span><span class="tag t-light">Vertex AI / Azure ML Pipelines</span><span class="tag t-light">Feature Store</span></div></div>
       <div class="l-section"><div class="l-heading">Cloud &amp; Deployment</div><div class="tags"><span class="tag t-light">GCP / Azure</span><span class="tag t-light">GKE / Kubernetes</span><span class="tag t-light">Docker</span><span class="tag t-light">Cloud Run / Functions</span><span class="tag t-light">Azure Functions / Logic Apps</span><span class="tag t-light">Helm / Istio</span></div></div>
@@ -197,9 +201,7 @@ html,body{max-width:100%;overflow-wrap:anywhere}
 
     <div class="right-col">
 
-      <div class="summary">
-        <p>Lead AI and ML engineer and data scientist with <span class="impact">10+ years</span> of experience, building production AI/ML/LLM systems. Leads end-to-end AI delivery, combining hands-on model development with technical leadership to turn business problems into scalable, high-throughput, low-latency production systems. Experience spans predictive modelling, forecasting, operations research, computer vision, and generative AI across retail, cybersecurity, manufacturing, insurance, and supply-chain optimization. Selected contributions include modelling on <span class="impact">billion-row security datasets</span>, supply-chain optimization generating <span class="impact">~$2.5M</span> in savings, and self-hosted LLMs saving an estimated <span class="impact">~$300K</span> annually while improving availability during peak demand.</p>
-      </div>
+      <div class="summary"><p>Lead AI and ML engineer and data scientist with <strong class="impact">10+ years</strong> of experience, building production AI/ML/LLM systems. Leads end-to-end AI delivery, combining hands-on model development with technical leadership to turn business problems into scalable, high-throughput, low-latency production systems. Experience spans predictive modelling, forecasting, operations research, computer vision, and generative AI across retail, cybersecurity, manufacturing, insurance, and supply-chain optimization. Selected contributions include modelling on <strong class="impact">billion-row security datasets</strong>, supply-chain optimization generating <strong class="impact">~$2.5M</strong> in savings, and self-hosted LLMs saving an estimated <strong class="impact">~$300K</strong> annually while improving availability during peak demand.</p></div>
 
       <div class="r-heading">Experience</div>
 
