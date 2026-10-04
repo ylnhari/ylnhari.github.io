@@ -212,7 +212,7 @@ body{font-family:'Inter',-apple-system,sans-serif;background:#dde3ee;color:var(-
         </div>
       </div>
 
-      <div class="l-section">
+      <div class="l-section" style="page-break-inside:avoid">
         <div class="l-heading">Languages &amp; Architecture</div>
         <div class="tags">
           <span class="tag t-light">Python</span><span class="tag t-light">SQL</span>
@@ -226,7 +226,7 @@ body{font-family:'Inter',-apple-system,sans-serif;background:#dde3ee;color:var(-
       <div class="l-section">
         <div class="l-heading">Certifications</div>
         <div class="cert"><span class="cert-org">Oracle Cloud Infrastructure 2024</span><span class="cert-name">Generative AI Certified Professional</span></div>
-        <div class="cert"><span class="cert-org">Google Cloud</span><span class="cert-name">Gen AI L3</span></div>
+        <div class="cert"><span class="cert-org">Google Cloud</span><span class="cert-name">Certified Generative AI Leader</span></div>
         <div class="cert"><span class="cert-org">Microsoft Certified</span><span class="cert-name">Azure AI Engineer Associate</span></div>
         <div class="cert"><span class="cert-org">Microsoft Certified</span><span class="cert-name">Azure Data Scientist Associate</span></div>
       </div>
@@ -238,12 +238,14 @@ body{font-family:'Inter',-apple-system,sans-serif;background:#dde3ee;color:var(-
         <span class="edu-detail">2012 - 2016 &nbsp;·&nbsp; 80%</span>
       </div>
 
-    </div>
+
+<!-- reviewed sidebar continuation: verified canonical skills -->
+<div class="l-section"><div class="l-heading">Optimisation &amp; Simulation</div><div class="tags"><span class="tag t-light">Google OR-Tools</span><span class="tag t-light">Vehicle Routing</span><span class="tag t-light">Mixed-Integer Programming</span><span class="tag t-light">Constraint Modelling</span><span class="tag t-light">Operations Research</span><span class="tag t-light">Supply-Chain Optimization</span></div></div><div class="l-section"><div class="l-heading">Model Lifecycle</div><div class="tags"><span class="tag t-light">Experiment Tracking</span><span class="tag t-light">Automated Retraining</span><span class="tag t-light">Vertex AI Pipelines</span><span class="tag t-light">Azure ML Pipelines</span><span class="tag t-light">Vertex AI Feature Store</span></div></div><div class="l-section"><div class="l-heading">Production Engineering</div><div class="tags"><span class="tag t-light">ML System Architecture</span><span class="tag t-light">Cloud-Native ML Systems</span><span class="tag t-light">JWT Authentication</span><span class="tag t-light">Load Testing</span><span class="tag t-light">Unit / Integration Testing</span></div></div><div class="l-section"><div class="l-heading">Engineering Leadership</div><div class="tags"><span class="tag t-light">Architecture Reviews</span><span class="tag t-light">Technical Mentoring</span><span class="tag t-light">Technical Hiring</span><span class="tag t-light">Team Building</span><span class="tag t-light">Stakeholder Alignment</span><span class="tag t-light">Cross-Functional Delivery</span></div></div></div>
 
     <div class="right-col">
 
       <div class="summary">
-        <p>Platform engineer with <span class="metric">10+ years</span> building the systems that detect and stop abuse at scale: real-time fraud scoring at <span class="metric">40,000 events/sec</span> under a <span class="metric">200ms SLA</span>, GPU-accelerated behavioural anomaly detection over <span class="metric">billion-row</span> audit logs, phishing classification at <span class="metric">2,400 emails/sec</span>, and abuse-inbox triage auto-routing scammer identifiers to takedown and security-response teams. Also architected the LLM platform behind self-hosted serving — fine-tuning, automated evaluation, vLLM on GKE — saving <span class="metric">$300K+ annually</span>. Strong Python, works across the stack, builds internal tooling with the operators who use it, and stays hands-on in production code.</p>
+        <p>Production AI infrastructure engineer with 10+ years of engineering experience. Build fraud feature pipelines at <span class="metric">40,000 events/sec</span> peak with a <span class="metric">200 ms scoring SLA</span>, self-hosted LLM training and serving with estimated annual API-cost savings of <span class="metric">~$300K</span>, and billion-row GPU cybersecurity pipelines. Lead architecture, observability, cross-team delivery, and mentoring while remaining hands-on in Python.</p>
       </div>
 
       <div class="r-heading">Work Experience</div>
@@ -258,9 +260,9 @@ body{font-family:'Inter',-apple-system,sans-serif;background:#dde3ee;color:var(-
             <div class="exp-date">Jul 2025 - Present</div>
           </div>
           <ul class="bullets">
-            <li>Own the architecture of a Beam/Dataflow streaming platform sustaining <span class="metric">40,000 events/sec</span> under a <span class="metric">200ms SLA</span>, feeding a Vertex AI Feature Store that multiple product teams build on; load-tested, secured, and monitored in production.</li>
+            <li>Built fraud systems across batch, streaming, and real-time models. Beam/Dataflow feature pipelines handled <span class="metric">40,000 events/sec</span> at peak; supported a <span class="metric">200 ms scoring SLA</span> with secure, monitored GKE/Seldon Core inference and load testing.</li>
             <li>Established GitOps as reusable internal platform tooling — Cloud Build for CI, ArgoCD for CD, Google KCC for infrastructure-as-code — standardising how teams ship to GKE with autoscaling, Istio routing, and blue-green releases.</li>
-            <li>Architected a config-driven Python <span class="metric">fine-tuning and automated-evaluation framework</span> (LoRA/QLoRA, Unsloth, PEFT, Accelerate) with vLLM serving; replaced external model APIs, saving <span class="metric">$300K+ annually</span> and bringing model data under internal governance.</li>
+            <li>Built reusable LLM fine-tuning, evaluation, and shared vLLM/GKE serving with estimated annual API-cost savings of <span class="metric">~$300K</span>. Kept inputs company-managed and reduced external API exposure during peak demand.</li>
             <li>Lead architecture and production delivery across search, personalization, fraud, and cybersecurity; partner with data scientists to turn validated models into secure, monitored services.</li>
           </ul>
         </div>
@@ -274,7 +276,7 @@ body{font-family:'Inter',-apple-system,sans-serif;background:#dde3ee;color:var(-
             <div class="exp-date">Aug 2023 - Jul 2025</div>
           </div>
           <ul class="bullets">
-            <li>Led ML/MLOps engineers and Morpheus/RAPIDS model lifecycles on <span class="metric">NVIDIA DGX (8×A100)</span>, training per-entity autoencoders on <span class="metric">billion-row CloudTrail datasets</span> with continuous evaluation, debugging, and Grafana alerting.</li>
+            <li>Led ML/MLOps engineers and Morpheus/RAPIDS model lifecycles on <span class="metric">NVIDIA DGX (8×A100)</span>, training per-entity autoencoders on <span class="metric">billion-row CloudTrail datasets</span> with continuous evaluation, debugging, and Grafana alerting. Completed <span class="metric">300+ résumé screens</span> and <span class="metric">50+ technical interviews</span> at Wipro.</li>
             <li>Launched phishing classification at <span class="metric">2,400 emails/sec - 2× prior throughput</span> and OCR-based abuse-inbox triage that doubled case volume, integrating predictions with Microsoft Sentinel and security-response workflows.</li>
           </ul>
         </div>
@@ -307,7 +309,7 @@ body{font-family:'Inter',-apple-system,sans-serif;background:#dde3ee;color:var(-
           <span class="mini-role">Deep Learning Engineer</span>
           <span class="mini-co">Tata Consultancy Services</span>
           <span class="mini-date">Jul 2019 - Mar 2020</span>
-          <span class="mini-desc">Built a Python/TensorFlow CV platform on ~1M wafer images with distributed GPU training and deployed it at Amkor's South Korea fabrication site.</span>
+          <span class="mini-desc">Built and deployed an end-to-end semiconductor ML system: distributed training on <span class="metric">~1 million images in ~3 hours</span>; <span class="metric">90% classification accuracy</span>. Deployed at Amkor, South Korea, and trained the client team.</span>
         </div>
         <div class="mini-card">
           <span class="mini-role">Senior Software Engineer - ML</span>
@@ -327,7 +329,7 @@ body{font-family:'Inter',-apple-system,sans-serif;background:#dde3ee;color:var(-
             <span class="proj-tag">Apache Beam</span>
             <span class="proj-tag">Vertex AI</span>
           </div>
-          <span class="proj-metric">40,000 events/sec &nbsp;·&nbsp; 200ms SLA &nbsp;·&nbsp; Full lifecycle deployment</span>
+          <span class="proj-metric">40k feature events/sec · <span class="metric">200 ms scoring SLA</span> · Full lifecycle deployment</span>
         </div>
 
         <div class="proj-card">
@@ -338,7 +340,7 @@ body{font-family:'Inter',-apple-system,sans-serif;background:#dde3ee;color:var(-
 
             <span class="proj-tag">RAPIDS / cuDF</span>
           </div>
-          <span class="proj-metric">Billion-row datasets/run &nbsp;·&nbsp; Continuous model lifecycle &nbsp;·&nbsp; 8×A100 DGX</span>
+          <span class="proj-metric">Billion-row datasets &nbsp;·&nbsp; Continuous model lifecycle &nbsp;·&nbsp; 8×A100 DGX</span>
         </div>
 
         <div class="proj-card">
@@ -371,7 +373,7 @@ body{font-family:'Inter',-apple-system,sans-serif;background:#dde3ee;color:var(-
 
 
           </div>
-          <span class="proj-metric">$300K saved</span>
+          <span class="proj-metric"><span class="metric">~$300K</span> estimated annual API-cost savings</span>
         </div>
 
       </div>
