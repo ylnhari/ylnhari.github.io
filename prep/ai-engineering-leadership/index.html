@@ -16,7 +16,7 @@
 @media(min-width:701px) and (max-width:900px){.top{padding:15px 0}.top h1{font-size:1.8rem;margin:0 0 5px}.badges{margin-top:9px}.nav .wrap{min-height:49px}main{padding-top:17px}.section-intro{margin-bottom:10px}.agenda-head,.agenda-row{grid-template-columns:50px 1fr 60px;padding:8px 16px}.agenda-row{min-height:49px}.agenda-row a{line-height:1.25}.agenda-row .output,.agenda-head span:nth-child(3){display:none}.section-intro p{line-height:1.35}.sittings{padding-top:8px}}
 @media(max-width:700px){.wrap{width:calc(100% - 28px)}.top{padding:22px 0}.nav .wrap{flex-wrap:wrap;padding:10px 0;gap:10px}.navlinks{gap:18px}.actions{margin-left:auto}.actions .btn{font-size:.8rem;padding:5px 8px}.agenda-head{display:none}.agenda-row{grid-template-columns:40px 1fr 24px;gap:9px;padding:12px}.agenda-row .output{grid-column:2;grid-row:auto;font-size:.9rem}.agenda-row .tick{grid-column:3;grid-row:1 / span 2}.tick span{display:none}.time{grid-row:1 / span 2}.agenda-row a{font-size:1rem}.section-intro{align-items:flex-start}.section-intro h2{font-size:1.2rem}.progress{font-size:.76rem}.session-header{padding:18px}.session h2{font-size:1.3rem}.notes{padding:0 18px 20px}summary{padding:13px 18px}.refs{columns:1}.core-heading{align-items:flex-start}.core-heading h2{font-size:1.45rem}.budget{font-size:.86rem}.sittings{gap:6px}.mock-grid{grid-template-columns:64px 1fr}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
-@media print{ :root{color-scheme:light;--bg:#fff;--paper:#fff;--ink:#000;--muted:#333;--line:#bbb;--accent:#272780;--teal:#174c48}body{background:#fff;font-size:11pt}.wrap{width:100%}.top{background:#fff;color:#000;padding:0 0 12px}.eyebrow,.subtitle,.badge{color:#222}.nav,.actions,.tick,.progress,.skip,.core-heading .btn{display:none!important}.top h1{font-size:25pt}.agenda-row{grid-template-columns:45px 1.25fr 1.5fr;padding:8px 10px;min-height:auto}.agenda-head{grid-template-columns:45px 1.25fr 1.5fr}.agenda-head span:last-child{display:none}.session{break-inside:auto;border-radius:0}.session-header{break-after:avoid}.session h2{font-size:17pt}.study>summary{display:none}.study>.notes{display:block}.extras{break-before:page}.extra:not([open]){display:none}.extra[open] summary{display:block}.footer{font-size:9pt}.print-only{display:block}.badges{margin-top:8px}a{color:#20205b}}
+@media print{ :root{color-scheme:light;--bg:#fff;--paper:#fff;--ink:#000;--muted:#333;--line:#bbb;--accent:#272780;--teal:#174c48}body{background:#fff;font-size:11pt}.wrap{width:100%}.top{background:#fff;color:#000;padding:0 0 12px}.eyebrow,.subtitle,.badge{color:#222}.nav,.actions,.tick,.progress,.skip,.core-heading .btn{display:none!important}.top h1{font-size:25pt}.agenda-row{grid-template-columns:45px 1.25fr 1.5fr;padding:8px 10px;min-height:auto}.agenda-head{grid-template-columns:45px 1.25fr 1.5fr}.agenda-head span:last-child{display:none}.session{break-inside:auto;border-radius:0}.session-header{break-after:avoid}.session h2{font-size:17pt}.study>summary{display:none}.study>.notes{display:block}.extras{break-before:page}.extra:not([open]){display:none}.extra[open] summary{display:block}.footer{display:none}.print-only{display:block}.badges{margin-top:8px}a{color:#20205b}}
 
 .diagram { container-type:inline-size; }
 .diagram-steps {
@@ -112,6 +112,8 @@
   }
 }
 @media print {
+  #mock h3 { margin-top:10px; }
+  #mock .notes { line-height:1.5; }
   .extras:not(:has(.extra[open])) { display:none; }
   .diagram { container-type:normal; break-inside:avoid; padding:10px; }
   .diagram-steps { --gap:15px; }
@@ -119,6 +121,24 @@
   .diagram-steps li strong,.diagram-steps li span,.diagram-branches p,.diagram-cues { font-size:8.5pt; }
   .diagram-comparison { grid-template-columns:1fr; gap:8px; }
   .diagram-steps-parallel { --gap:6px; }
+}
+
+.worked-case { margin:20px 0 0; border-top:1px solid var(--line); }
+.worked-case h3 { margin-top:16px; }
+.sample {
+  margin:12px 0;
+  padding:9px 14px;
+  border-inline-start:3px solid var(--accent);
+  background:var(--bg);
+}
+.sample p:first-child { margin-top:0; }
+.sample p:last-child { margin-bottom:0; }
+.reading { color:var(--muted); font-size:.9rem; }
+.revision-map dt { margin-top:14px; font-weight:700; }
+.revision-map dd { margin:4px 0 0; }
+@media print {
+  .worked-case h3,.revision-map dt { break-after:avoid; }
+  .sample { break-inside:avoid; }
 }
 </style>
 </head>
@@ -144,7 +164,7 @@
 <div class="agenda-row" role="row" data-minutes="60"><span class="time" role="cell">60<small>minutes</small></span><span role="cell"><a href="#mock">Mock interview &amp; review</a></span><span class="output" role="cell">45-minute rehearsal; 15-minute correction of weak answers</span><label class="tick" role="cell"><input type="checkbox" data-review="mock" aria-label="Reviewed mock interview"><span>Done</span></label></div>
 </div>
 <div class="sittings"><span><b>First sitting · 3 hours:</b> agents, platform, LLMs.</span><span><b>Second sitting · 3 hours:</b> production, leadership, quality, mock.</span></div>
-<p class="review-note"><b>For review:</b> topic coverage, depth and priorities. The core plan is capped at six focused hours; breaks and Extras are outside that budget.</p>
+<p class="review-note"><b>How to study.</b> Read the lesson, trace its diagram and try the case before reading the worked steps. Compare your reasoning, then close the notes and produce the practice output. The session budgets cover these steps. Breaks, Extras and linked refreshers are outside the six hours.</p>
 </section>
 <div id="core" class="core-heading"><div><h2>Core study &amp; practice</h2><p>Each session has notes, answered follow-ups and a concrete finish line.</p></div></div>
 
@@ -180,9 +200,21 @@
 <p>Guardrails are enforced checks, not only prompt instructions: least-privilege credentials, scope allowlists, bounded queries, result caps, redaction, retries/timeouts and model/tool/time budgets. Treat logs and retrieved documents as untrusted data. Read-only tools still create confidentiality and resource-consumption risks.</p>
 <h3>Evaluate the answer and how it was reached</h3>
 <p>A quote found in a retrieved result establishes provenance, not correct interpretation or causation. Check resource/time alignment, contradictory evidence, omissions and unsupported confidence. Use expert-reviewed incident cases, deterministic checks for critical constraints and repeated runs. If a model judges results, compare its judgments with human review. Code coverage and a fluent report do not establish diagnostic accuracy.</p>
-<div class="practice"><h3>Practice output</h3><p>Draw the system from memory. Follow a timeout through it, then explain one missing-permission case and one plausible but wrong diagnosis. Separate the parts personally implemented, led and supplied by other teams when discussing a real project.</p></div>
+<div class="worked-case" id="agents-worked">
+<h3>Worked case · Errors rise after a release</h3>
+<p>A serving API starts returning errors during a rollout. A code diff shows that the new revision lowered a dependency timeout. What observation would weaken the hypothesis that this change caused the errors?</p>
+<ol>
+<li><b>Choose the comparison.</b> Request a permitted window covering normal traffic before the rollout and the affected period. Use error rate with request counts for context. Group by region and running revision to avoid mistaking a shift in traffic mix for a regression.</li>
+<li><b>Make one bounded read.</b> Query a read-only telemetry tool for request and error counts by region and runtime revision. A structured result records the source, query parameters, time range, service, revision, counts and coverage gaps. Check release records and loaded configuration to see which revision and settings actually served traffic. Matching a quoted result to the source verifies where it came from. Verify that the measured service, revision and timestamps match the failing requests before interpreting it.</li>
+<li><b>Explain the contradiction.</b> Errors were low before the rollout. During it, both revisions show errors in one region and the new one stays healthy elsewhere. A regional dependency issue could explain the overlap. The available counts cannot distinguish that from an interaction between the dependency and the new timeout. Rollout timing alone establishes correlation. Check matched traces or ask the dependency owner for timing evidence if your permissions end at the serving API.</li>
+<li><b>Choose the smallest investigation architecture.</b> Use one agent loop with scoped tools while the evidence fits in one investigation. Delegate independent questions only if separate permissions or expertise justify the coordination cost. Reconcile results by region, time and revision.</li>
+</ol>
+<blockquote class="sample"><p><b>Sample explanation.</b> I’d report that errors coincided with rollout and affected both revisions in one region. That weakens a revision-only explanation. The timeout change is plausible, but I’d leave cause unresolved until the dependency owner can compare timings for failed and successful requests.</p></blockquote>
+<p class="reading">Optional · 4 min. Compare how the tool sequence and final answer can fail independently. <a href="https://adk.dev/evaluate/#evaluate-trajectory-and-tool-use" target="_blank" rel="noopener noreferrer">Google ADK on evaluating trajectory and tool use</a></p>
+</div>
+<div class="practice"><h3>Closed-book output</h3><p>Redraw the investigation. Explain what one read proves, what observation challenges your first hypothesis and where access ends. For a real project, name the parts you implemented, led or received from other teams.</p></div>
 <dl class="qa"><dt>When should an agent stop?</dt><dd>When the goal is supported, required evidence/access is missing, a safety rule fails or a budget/deadline is reached. Preserve the run and explain the unresolved question.</dd><dt>What does a saved session authorize?</dt><dd>Nothing by itself. Revalidate current access and any required action approval before resuming; stored state is not permission.</dd><dt>What must be versioned?</dt><dd>Model/configuration, instructions, tools, source/runbook revisions, policies and evaluation evidence. Review them as a release bundle.</dd></dl>
-<p class="done">Finish when: the diagram, one design trade-off and one failure path can be explained without notes.</p>
+<p class="done">Finish by drawing and explaining the diagram, one design trade-off and one unresolved failure path in two minutes without notes.</p>
 </div></details></section>
 
 <section class="session" id="platform" aria-labelledby="platform-title"><div class="session-header"><div class="session-label">First sitting · 60 minutes</div><h2 id="platform-title">Platform design &amp; secure retrieval</h2><p class="goal">Design the smallest useful platform, then trace identity, evidence and action authority through it.</p><div class="budget">35 min study · 15 min design · 10 min failure scenario</div></div>
@@ -213,9 +245,20 @@
 <p>Similarity is not authorization. Filtering a restricted passage after it has entered the model is too late. Cached answers need a compatible access scope, source/index versions and revocation policy. Evaluate retrieval relevance separately from answer support: a generator cannot repair missing evidence reliably.</p>
 <h3>Design effects and recovery deliberately</h3><p>A proposed write passes deterministic schema, authorization, target-version and approval checks. Record its intent and idempotency key before dispatch. A timeout can leave the outcome unknown; reconcile against the target system before retrying. Approval must match the exact action and relevant data version. A model fallback does not inherit authority to change the action.</p>
 <p>Session state supports a task; long-term memory persists information across tasks and needs a purpose, access controls, correction/deletion and freshness rules. Start without it unless necessary. Measure grounded task completion, unsafe actions, latency, cost and adoption. Keep incident ownership and a tested rollback or suspension path.</p>
-<div class="practice"><h3>Practice output</h3><p>Draw one authenticated request, one revoked-document permission and one timed-out write. Name the service enforcing each boundary, the stored state and the safe fallback.</p></div>
+<div class="worked-case" id="platform-worked">
+<h3>Worked case · A withdrawn procedure and a requested write</h3>
+<p>In this hypothetical platform, an operator asks for an older procedure and then asks the assistant to mark a business-system task complete. Where should the request stop, and how would an independently approved write recover from a timeout?</p>
+<ol>
+<li><b>Check identity, permission and revision.</b> The application verifies the operator’s identity and uses it to filter retrieval. The retrieval service checks each candidate against the authoritative document’s current access policy and effective revision before adding passages to model context. When the old revision is withdrawn and no permitted replacement is found, state that evidence is unavailable and direct the operator to the document owner.</li>
+<li><b>Check the write independently.</b> Completion requires approved evidence. Without it, leave the task unchanged. If evidence later becomes available, record the proposed target, expected record version and exact change. The approval service checks the requester, evidence and required approver. At dispatch the executor checks the exact approved change, the supporting revision, the requester’s current authority and the target version. If the procedure was withdrawn or materially changed, hold the write and seek fresh approval based on current evidence.</li>
+<li><b>Resolve ambiguous completion.</b> Before dispatch, store the approved operation and an idempotency key, a stable identifier the target can use to recognize repeats. After a timeout, the target might already have applied the write. Look up the recorded operation or verify the result with the target. If still unresolved, hold and escalate. Retry the same operation with the same key only if it remains authorized and the target supports safe replay.</li>
+</ol>
+<blockquote class="sample"><p><b>Sample explanation.</b> The retrieval service checks document access and whether the revision is active. The executor separately checks authority to change the task. I’d keep the timeout pending until the business system confirms the outcome, because a missing response could follow a successful update.</p></blockquote>
+<p class="reading">Optional · 5 min. On the architecture diagram, trace ingestion to the index and retrieval from the index during serving. <a href="https://docs.cloud.google.com/architecture/gen-ai-rag-vertex-ai-vector-search#architecture" target="_blank" rel="noopener noreferrer">Google Cloud RAG ingestion and serving diagram</a></p>
+</div>
+<div class="practice"><h3>Closed-book output</h3><p>Draw one authenticated request, a withdrawn document and a timed-out write. Label the service enforcing each boundary, the recorded intent and the evidence required before any retry.</p></div>
 <dl class="qa"><dt>What should be built versus bought?</dt><dd>Prefer suitable managed infrastructure for identity, durable execution, storage and telemetry. Retain ownership of the organization’s authorization, quality workflow, evaluation evidence and user outcome.</dd><dt>How is an enterprise agent released?</dt><dd>Use representative evaluations, security/access tests, versioned configurations, limited rollout, explicit stop criteria and a human fallback. A high average score cannot excuse a critical unauthorized action.</dd><dt>How should a provider outage be handled?</dt><dd>Bound retries, preserve state and use only a cleared alternative or human process. Reconcile possible side effects before resuming.</dd></dl>
-<p class="done">Finish when: the architecture explains a full request and two failures, not merely a list of components.</p>
+<p class="done">Finish by tracing the request and both failures from memory, naming the permitted outcome at each step.</p>
 </div></details></section>
 
 <section class="session" id="llm" aria-labelledby="llm-title"><div class="session-header"><div class="session-label">First sitting · 60 minutes</div><h2 id="llm-title">LLM fine-tuning &amp; serving</h2><p class="goal">Connect the learning problem to the training strategy, serving capacity, quality and cost.</p><div class="budget">35 min study · 15 min explain · 10 min trade-offs</div></div>
@@ -247,9 +290,21 @@
 <p>Prevent leakage with appropriate time/entity splits and a held-out evaluation set. Inspect important error classes and label quality, not only aggregate accuracy. A release needs the compatible base model, tokenizer, adapter, task configuration, data reference and evaluation results. Test adapter loading and output contracts before promoting an immutable version.</p>
 <h3>Reason about serving rather than GPU count</h3><p>Budget memory for weights, KV cache, workspaces and fragmentation. Longer inputs, outputs and concurrent sequences consume capacity. Continuous batching can improve utilization while changing queue delay. Observe time to first token, per-token latency, queueing, errors and GPU memory/use. CPU utilization alone may miss the limiting resource.</p>
 <p>Autoscaling needs realistic startup time, quotas and warm capacity. Test long requests, bursts, adapter churn and node failure. A fallback model/provider must meet the same data and task-quality requirements. Self-hosting changes control and dependency, but total cost includes utilization, operations, evaluation and human review—not just token or GPU price.</p>
-<div class="practice"><h3>Practice output</h3><p>Explain why a task needs adaptation, how a distributed run works and what an adapter release contains. Then diagnose a serving queue with low compute utilization but high memory use.</p></div>
+<div class="worked-case" id="llm-worked">
+<h3>Worked case · Stable extraction, changing reference facts</h3>
+<p>A model extracts a fixed set of fields from documents and sometimes needs current reference facts to interpret them. A test deployment queues long documents. Which problem would you solve with training, and what would you measure before adding GPUs?</p>
+<ol>
+<li><b>Isolate the two requirements.</b> Start with a prompt and an output schema for the fixed fields. Fetch current facts from a versioned source at request time. If the prompt still misses systematic extraction patterns, compare LoRA on labeled examples. Consider QLoRA when base weights constrain training memory, then measure whether extraction quality and memory use meet the same requirements.</li>
+<li><b>Make the comparison reproducible.</b> Keep document families together and reserve a later period for testing if deployment sees future documents. Freeze the split, preprocessing and label definitions. Record the base and tokenizer revisions, adapter weights and configuration, and serving settings. Verify loading and check field-level precision and recall, malformed output, and high-consequence extraction errors.</li>
+<li><b>Follow the queued requests.</b> Each active sequence retains attention state in the KV cache. Longer inputs and outputs increase the number of cached tokens. In a synthetic estimate with capacity for 24,000 cached tokens, four 6,000-token sequences could fill that budget before scheduler limits and overhead. This is a memory bound under equal sequence lengths. A load test with the actual length mix still needs to satisfy latency, throughput and error gates.</li>
+<li><b>Test the bottleneck.</b> Compare queue time, cache usage and time to first token across length groups. If long requests coincide with cache saturation, test shorter inputs or admission limits before assuming compute is slow. Use data-parallel training to split examples across replicas and synchronize gradients. Consider tensor-parallel inference when spreading a single model’s layer computation across GPUs helps it fit or meet latency goals. Device communication adds a cost.</li>
+</ol>
+<blockquote class="sample"><p><b>Sample explanation.</b> I’d retrieve the changing facts and keep the prompt baseline for extraction until held-out errors justify training. I’d pin the base and adapter together and require quality and load tests. A growing queue with a full KV cache makes long-sequence capacity the first hypothesis I’d test.</p></blockquote>
+<p class="reading">Optional · 5 min. Find the cache token budget and the stated assumption behind its concurrency estimate. <a href="https://docs.vllm.ai/en/stable/serving/parallelism_scaling/" target="_blank" rel="noopener noreferrer">vLLM on parallelism and scaling</a></p>
+</div>
+<div class="practice"><h3>Closed-book output</h3><p>Sketch the prompt, retrieval and adaptation choices. Name the compatible adapter artifacts and the evidence that would distinguish cache saturation from slow computation. Explain data-parallel training and tensor-parallel inference in one sentence each.</p></div>
 <dl class="qa"><dt>Why might eight GPUs be slower than one?</dt><dd>Input processing, data loading, synchronization or small batches can dominate. Measure the actual bottleneck under comparable conditions before changing capacity.</dd><dt>What does a better average score hide?</dt><dd>Rare-class regressions, weak sample sizes, leakage and high-consequence failures. Use per-class/boundary evidence and agreed release limits.</dd><dt>What is the right cost metric?</dt><dd>Cost per successful task at the required quality, latency and availability, including retries, idle capacity, evaluation and review.</dd></dl>
-<p class="done">Finish when: three design choices can be defended with a mechanism, trade-off and evaluation method.</p>
+<p class="done">Finish by defending three choices from memory, each with a mechanism, a trade-off and a test.</p>
 </div></details></section>
 
 <section class="session" id="production" aria-labelledby="production-title"><div class="session-header"><div class="session-label">Second sitting · 45 minutes</div><h2 id="production-title">Production ML &amp; reliability</h2><p class="goal">Follow the data to the decision; distinguish serving health from model and business quality.</p><div class="budget">25 min study · 10 min scenario · 10 min checks</div></div>
@@ -285,9 +340,20 @@
 </figure>
 <h3>Handle late, repeated and stale information</h3><p>Choose event-time windows and allowed lateness from the freshness requirement. Define correction behavior, deduplication and retry-safe sinks. Separate missing data from a valid zero. Track backlog, processing lag, feature age, invalid events and downstream materialization. Processing guarantees inside a framework do not prove end-to-end exactly-once behavior.</p>
 <p>Use shadow traffic to compare a new model without using its decision; it still consumes capacity and can expose request data. Canary releases increase live exposure gradually behind quality and reliability gates. A rollback must restore compatible models, features/configuration and application behavior. Two regions require tested health detection, routing and surviving capacity; deployment count does not establish recovery time.</p>
-<div class="practice"><h3>Practice output</h3><p>The prediction API is healthy, but features are stale. Draw the investigation from source events through pipeline and store to serving. State the affected interval, containment choice, responsible teams and recovery checks.</p></div>
+<div class="worked-case" id="production-worked">
+<h3>Worked case · The API is healthy and the features are stale</h3>
+<p>A recommendation model scores a session at 10:05. An interaction happened at 10:00 but reaches the pipeline at 10:08, followed by a duplicate. A conversion may occur any time in the next day. Which data belong in the original training example?</p>
+<ol>
+<li><b>Rebuild what serving could see.</b> The late interaction belongs in the window that includes 10:00 event time. It was absent from the materialized features at 10:05, so exclude it from that prediction’s training features even if the corrected window contains it later. Keep the label pending until the conversion window and ingestion allowance have elapsed. Evaluate on mature examples. For rare conversions, precision measures the share of predicted positives that converted, and recall the share of conversions found. Check calibration if predicted probabilities drive decisions.</li>
+<li><b>Locate and contain the lag.</b> Compare source arrival, pipeline progress, the store’s latest successful updates and the age or missing rate of features read by serving. Compare by entity or partition to find the affected scope and interval. Count pipeline events/second, store writes/second and inference requests/second at their own boundaries. If serving is reading features past the allowed age, route affected traffic to an approved fallback or suspend those decisions.</li>
+<li><b>Recover with compatible state.</b> Deduplicate by stable event identity so a replay cannot double count. Apply late corrections to the affected window under a defined policy, and verify replay leaves the intended store value unchanged. Check fresh reads and decision coverage before restoring traffic. If reverting a release, restore a compatible application, feature configuration and model together. Confirm the data has also caught up.</li>
+</ol>
+<blockquote class="sample"><p><b>Sample explanation.</b> I’d rebuild the feature vector from what the store could serve at 10:05 and set the conversion label after its window matures. During the incident I’d contain stale reads, confirm the replay counts each event once and verify freshness at serving before restoring the affected traffic.</p></blockquote>
+<p class="reading">Optional · 5 min. Trace an out-of-order event through a window and compare event time with processing time. <a href="https://beam.apache.org/documentation/programming-guide/#watermarks-and-late-data" target="_blank" rel="noopener noreferrer">Apache Beam on watermarks and late data</a></p>
+</div>
+<div class="practice"><h3>Closed-book output</h3><p>Draw source, pipeline, store and serving. Mark where the late event and duplicate belong, who owns containment and how you would verify replay and restored freshness. Identify the affected interval using serving evidence.</p></div>
 <dl class="qa"><dt>What should the dashboards show?</dt><dd>System health, data freshness/completeness, model quality/coverage and decision outcomes. Green infrastructure does not establish useful predictions.</dd><dt>What is a safe response to stale features?</dt><dd>Quantify exposure, locate the stalled stage and use a documented fallback or containment decision appropriate to risk. Verify freshness and coverage after recovery.</dd><dt>How should regional resilience be described?</dt><dd>Explain health checks, routing, capacity and failure testing. State measured recovery separately from targets and assumptions.</dd></dl>
-<p class="done">Finish when: five useful metrics and a safe incident/recovery sequence can be named and justified.</p>
+<p class="done">Finish by naming five metrics from memory and defending one containment, recovery and verification sequence.</p>
 </div></details></section>
 
 <section class="session" id="leadership" aria-labelledby="leadership-title"><div class="session-header"><div class="session-label">Second sitting · 45 minutes</div><h2 id="leadership-title">People leadership</h2><p class="goal">Show how decisions, coaching and delegation improve delivery—using genuine experience.</p><div class="budget">20 min study · 15 min real examples · 10 min feedback</div></div>
@@ -315,9 +381,19 @@
 </figure>
 <h3>Handle poor performance fairly</h3><p>Start with specific examples and a private conversation. Check whether expectations, priorities and resources were clear; listen before deciding the cause. Separate skill gaps, capacity, dependencies, role clarity and conduct. Agree observable improvement, support and review dates, document fairly and follow the company’s process with the accountable manager and HR. Do not speculate about personal circumstances or promise an arbitrary dismissal timetable.</p>
 <p>For stakeholder disagreement, agree the outcome and constraints, compare alternatives using the same evidence and make decision rights explicit. Explain trade-offs in value, risk, cost and delivery. Do not leave an engineer alone to negotiate a commitment imposed by a senior stakeholder. Record the decision and what evidence would justify revisiting it.</p>
-<div class="practice"><h3>Practice output: two real examples</h3><p>Prepare one coaching/delegation example and one prioritization or technical-disagreement example. For each: context, your decision/action, others’ contribution, observed result and lesson. If there is no genuine example, describe a hypothetical approach explicitly; do not invent a past employee case.</p></div>
+<div class="worked-case" id="leadership-worked">
+<h3>Worked case · An unfamiliar dependency threatens a milestone</h3>
+<p>A committed milestone depends on an unfamiliar component exposed by a partner team. The engineer building the integration is blocked by an untested interface. What should the engineer own, and which decision belongs to the stakeholder?</p>
+<ol>
+<li><b>Set task and decision boundaries.</b> The engineer owns a narrow end-to-end prototype and proposes implementation choices. The lead supplies a partner contact and pairing time. Review data contracts and release risk together. The partner owns its interface commitment, and the delivery stakeholder owns the scope/date decision.</li>
+<li><b>Choose an observable checkpoint.</b> Agree to bring a passing test for one supported interface path, or a concrete blocker, to the next checkpoint. Agree when to raise a missing partner response. A checkpoint should give enough time to make a scope decision before the milestone slips.</li>
+<li><b>Put options in front of the decision owner.</b> If the interface remains unsettled, keep the date with a smaller proven scope or move the date to deliver the intended scope. Describe lost value, remaining risk and affected dependencies for each. Ask the accountable stakeholder to choose and record the decision and next review point.</li>
+</ol>
+<blockquote class="sample"><p><b>Hypothetical coaching dialogue.</b> <strong>Lead</strong> “What’s the smallest test that would tell us the interface works?” <strong>Engineer</strong> “One supported record through the partner sandbox. I need them to confirm which fields are stable.” <strong>Lead</strong> “You own the test. I’ll arrange a joint session. Bring the result and the blocker to our checkpoint so I can take the scope options to the sponsor.”</p></blockquote>
+</div>
+<div class="practice"><h3>Closed-book output · Two project stories</h3><p>Tell one coaching or delegation story and one prioritization or disagreement story. Follow the same sequence for each. Context → your decision and action → others’ contribution → observed evidence → limitation or lesson. Use an explicitly hypothetical approach wherever you lack a real example.</p></div>
 <dl class="qa"><dt>How can a manager remain technically credible?</dt><dd>Understand the architecture, review consequential decisions and ask evidence-based questions. Develop engineers’ judgment rather than take back all implementation.</dd><dt>What if a strong engineer harms collaboration?</dt><dd>Discuss specific behavior and delivery impact, set clear expectations and support change. Technical output does not exempt someone from team standards.</dd><dt>What if the business demands a date that skips a required gate?</dt><dd>Show safe scope/date options, involve accountable control owners and document the decision. Reduce scope or delay rather than silently bypass required checks.</dd></dl>
-<p class="done">Finish when: two authentic examples and a coherent coaching approach can survive follow-up questions.</p>
+<p class="done">Finish by telling both stories without notes and answering who owned the decision, what changed and how you know.</p>
 </div></details></section>
 
 <section class="session" id="quality" aria-labelledby="quality-title"><div class="session-header"><div class="session-label">Second sitting · 30 minutes</div><h2 id="quality-title">Healthcare quality &amp; GxP</h2><p class="goal">Understand the vocabulary and its engineering implications; determine applicability with the responsible specialists.</p><div class="budget">15 min study · 10 min scenario · 5 min terms</div></div>
@@ -352,9 +428,20 @@
 <li><b>ALCOA+:</b> attributable, legible, contemporaneous, original, accurate; also complete, consistent, enduring and available. Preserve authoritative records and necessary context, not just convenient logs.</li>
 </ul>
 <h3>Manage a model change as a behavior change</h3><p>Agree requirements, failure modes and acceptance criteria. Version model, prompts, tools, data/index revisions and policy; test relevant cases; record results, deviations and approval. A vendor upgrade can change behavior without a code change. Maintain a cleared fallback or human process when the approved configuration becomes unavailable. Critical holds and authorization belong outside the model.</p>
-<div class="practice"><h3>Practice output</h3><p>A procedure assistant retrieves a withdrawn instruction; a proposed update passes average evaluations but misses a critical hold. Explain source-revision control, intended-use/risk assessment, release authority and a safe fallback. These are illustrative engineering scenarios, not a legal applicability determination.</p></div>
+<div class="worked-case" id="quality-worked">
+<h3>Worked case · The average passes and a critical case fails</h3>
+<p>A procedure assistant returns an obsolete revision during release testing. Average evaluation still passes. How should intended use affect testing and the release decision?</p>
+<ol>
+<li><b>Identify reliance.</b> In the example, operators consult the result for a production step, so a wrong revision can influence their work. Ask the process owner, Quality and Regulatory to confirm intended use, applicable requirements, consequences and assurance depth.</li>
+<li><b>Define evidence for the critical failure.</b> Require current, effective and permitted revisions. Tests should include a withdrawn revision still present in the index, a changed user permission and unavailable source verification. Check retrieved context, the displayed revision and the response when the policy check fails. Record results against the exact configuration under review.</li>
+<li><b>Hold the release and preserve the process.</b> A failed critical case blocks promotion under the agreed criteria. Engineering repairs revision validation and retests the affected paths. The designated release authority reviews the evidence with Quality under the approved process. Use the authoritative, human-run procedure workflow if the assistant cannot verify the approved revision.</li>
+</ol>
+<blockquote class="sample"><p><b>Sample explanation.</b> I’d hold promotion because a user relies on the approved instruction for a production step. I’d require evidence that obsolete and unauthorized revisions stay out of both the model context and the response, then follow the release owner’s review process with Quality.</p></blockquote>
+<p class="reading">Optional · 5 min. Skim Section V.A on intended use and the risk-based approach. <a href="https://www.fda.gov/media/188844/download" target="_blank" rel="noopener noreferrer">FDA computer software assurance guidance</a></p>
+</div>
+<div class="practice"><h3>Closed-book output</h3><p>Write four lines for one critical case covering the requirement, failure consequence, test evidence and accountable approval. State which fallback the operator uses and what you would ask Quality or Regulatory to determine.</p></div>
 <dl class="qa"><dt>Does an audit trail make a system compliant?</dt><dd>No. Its content, protection, retention and review must meet the applicable workflow and record requirements; governance and assurance extend beyond logging.</dd><dt>Does a high average score justify release?</dt><dd>No. Assess critical failure consequences and agreed scenario-level requirements. An aggregate improvement can hide an unacceptable error.</dd><dt>Who decides applicability?</dt><dd>The accountable process, Quality/Regulatory, legal/privacy and engineering specialists establish the requirements together. Do not claim certification from a generic checklist.</dd></dl>
-<p class="done">Finish when: intended use, GxP, QMSR, Part 11, data integrity and controlled change can be explained in plain language.</p>
+<p class="done">Finish by explaining the release hold from memory and defining intended use, GxP, QMSR, Part 11, data integrity and controlled change in plain language.</p>
 </div></details></section>
 
 <section class="session" id="mock" aria-labelledby="mock-title"><div class="session-header"><div class="session-label">Second sitting · 60 minutes</div><h2 id="mock-title">Mock interview &amp; review</h2><p class="goal">Explain from memory, accept interruptions and correct the weakest answers.</p><div class="budget">45 min rehearsal · 15 min review</div></div>
@@ -387,13 +474,52 @@
 </figure>
 <div class="mock-grid"><b>0–3 min</b><span>Introduction: scope, strengths and why engineering leadership.</span><b>3–15</b><span>One actual project: architecture, personal/team ownership, evidence and limitations.</span><b>15–29</b><span>Platform design: requirements, request path, authorization and one failure.</span><b>29–38</b><span>Leadership and quality: coaching, priorities and a risk-sensitive release.</span><b>38–43</b><span>Questions about outcomes, responsibilities, platform constraints and team needs.</span><b>43–45</b><span>Clarify an unresolved point and close.</span></div>
 <h3>Review for 15 minutes</h3><ul><li><b>Five minutes:</b> identify factual errors, unsupported claims and unclear ownership. Correct them first.</li><li><b>Five minutes:</b> identify where the mechanism, alternative or failure path was vague. Redraw the missing part.</li><li><b>Five minutes:</b> answer the two weakest questions again without reading. Choose one next learning action for each.</li></ul>
-<p>Check accuracy, technical depth, trade-offs, reliability, risk, leadership and communication. A fluent answer that fails detailed questions needs more work. The review checklist and local completion marks are learning aids, not a validated hiring score.</p>
+<h3 id="mock-answer-template">Two-minute answer template</h3>
+<p>Use the time cues to rehearse a real project or an explicitly hypothetical design.</p>
+<ol>
+<li><b>0–25 seconds.</b> State the problem, stakes, what you owned and what others supplied.</li>
+<li><b>25–65 seconds.</b> Explain the mechanism by tracing an input, decision and output.</li>
+<li><b>65–90 seconds.</b> Name an alternative, its trade-off and one failure with its recovery path.</li>
+<li><b>90–120 seconds.</b> Give the evidence, its limits and what you would verify next.</li>
+</ol>
+<h3>Five checks for each answer</h3>
+<ul>
+<li><b>Ownership.</b> Could the listener tell which decisions and work were yours and which were the team’s?</li>
+<li><b>Mechanism.</b> Could they trace a request, event or decision through the system?</li>
+<li><b>Trade-off.</b> Did you name a credible alternative and explain what tipped the decision?</li>
+<li><b>Failure.</b> Did you describe a concrete failure, how to detect it and what to do next?</li>
+<li><b>Evidence.</b> Did you state what was observed, what remains uncertain and what the measurement covers?</li>
+</ul>
+<p>Use the five checks as a practice rubric. The review marks record completed review.</p>
 <h3>Useful questions to ask</h3><ul><li>Which initial use cases and outcomes matter most?</li><li>Where do platform, application and quality teams own decisions and approvals?</li><li>What already exists, and what truly needs to be built from scratch?</li><li>What team-development and delivery challenges should this role solve first?</li></ul>
 <dl class="qa"><dt>What if a question reaches beyond actual experience?</dt><dd>State the boundary, connect the nearest relevant experience and explain the proposed approach as a design, not a past achievement.</dd><dt>What if an answer is becoming too long?</dt><dd>Give the conclusion, decision and evidence briefly, then ask which component the interviewer would like explained in more depth.</dd><dt>What should improve after the mock?</dt><dd>Correct factual errors first, then repair two specific weak explanations. Do not substitute memorized wording for understanding.</dd></dl>
-<p class="done">Finish when: two concrete improvements are recorded and rehearsed, rather than another large topic being added.</p>
+<p class="done">Finish by recording two corrections and answering both questions again without notes. Check the revised answers against all five prompts.</p>
 </div></details></section>
 
 <section id="extras" class="extras" aria-labelledby="extras-title"><h2 id="extras-title">Extras · optional depth</h2><p>Outside the six-hour budget. Open only what would address a specific weak answer or useful follow-up.</p>
+<details class="extra" id="project-revision"><summary>Project revision map and concept refreshers</summary><div class="notes">
+<p>Pick a project you actually worked on and redraw the part you can explain in depth. Mark what shipped, what you evaluated and what you would propose next. Use observed evidence for the implementation and name the assumptions behind any proposed extension.</p>
+<dl class="revision-map">
+<dt>Incident investigation</dt>
+<dd><b>Redraw</b> the request, tool gate, evidence and verdict. <b>Revise</b> correlation and runtime provenance. What ties a log or metric to the affected revision? What evidence would change the conclusion?</dd>
+<dt>LLM adaptation and serving</dt>
+<dd><b>Redraw</b> the split, adapter artifact and request queue. <b>Revise</b> memory versus compute bottlenecks. What has to match at load time? How would you tell cache pressure from slow decoding?</dd>
+<dt>Recommendation or streaming fraud</dt>
+<dd><b>Redraw</b> event timestamps, feature state, model decision and feedback. <b>Revise</b> point-in-time joins and delayed labels. Which event could leak future information? How would you verify a replay?</dd>
+<dt>GPU anomaly detection</dt>
+<dd><b>Redraw</b> input, trained model, score and review queue. <b>Revise</b> reconstruction error and thresholds. How could abnormal training records hide future anomalies? Which false alarms can reviewers handle?</dd>
+<dt>Computer-vision pipeline</dt>
+<dd><b>Redraw</b> ingestion, annotation, split, training and evaluation. <b>Revise</b> class imbalance and group leakage. Which frames share an underlying source? Which rare class could fail while aggregate accuracy rises?</dd>
+<dt>Delivery and mentoring</dt>
+<dd><b>Redraw</b> responsibilities, partner dependencies and milestones. <b>Revise</b> coaching and decision rights. What changed after your intervention? What evidence belongs to others’ work?</dd>
+</dl>
+<h3>Three concepts to refresh before a deep dive</h3>
+<ul>
+<li><b>Autoencoder anomaly scores.</b> An autoencoder learns to reconstruct inputs. An unusually large difference between input and reconstruction can flag a review candidate. Contaminated training data can teach it common anomalies, while overlapping train and test records inflate evaluation. Choose the threshold on separate validation data using missed anomalies and review load, then check once on held-out data.</li>
+<li><b>Vision evaluation.</b> Keep related frames or images from the same camera session, object or subject in one split to reduce leakage. For each class, recall is the share of its true examples found and precision is the share of its predictions that are correct. Report rare-class results and sample sizes alongside aggregate metrics.</li>
+<li><b>Distributed bottlenecks.</b> Compare GPU time spent computing, waiting for input and exchanging gradients. More replicas may add little when data delivery is slow. If a training step exceeds device memory, reduce per-device batch size or test a method that splits model or optimizer state. Confirm end-to-end throughput and evaluation quality after the change.</li>
+</ul>
+</div></details>
 <details class="extra"><summary>Multi-agent investigation: a payment failed</summary><div class="notes"><p>A trace identifier links spans of one distributed request, not necessarily a whole shopping journey. Establish permitted customer/order/payment/session identifiers and the time window. A coordinator can assign bounded journey, telemetry and deployment-change investigations, while a payment adapter reads authoritative transaction metadata.</p><figure class="diagram" id="payment-diagram" aria-labelledby="payment-diagram-title">
 <div class="diagram-label" id="payment-diagram-title">Design example · trace a payment failure</div>
 <ol role="list" class="diagram-steps" style="--steps:2">
